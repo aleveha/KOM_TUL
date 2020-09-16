@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="20006ae7-4ef3-4406-8826-f1fe6298f520" name="Default Changelist" comment="init react app">
+      <change afterPath="$PROJECT_DIR$/.idea/KOM_TUL_APP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/src/serviceWorker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/src/setupTests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1hao10nSOdn3euL2UOOQOPK9E8h" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="20006ae7-4ef3-4406-8826-f1fe6298f520" name="Default Changelist" comment="" />
+      <created>1600258346911</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600258346911</updated>
+      <workItem from="1600258348782" duration="724000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init react app" />
+    <option name="LAST_COMMIT_MESSAGE" value="init react app" />
+  </component>
+</project>
