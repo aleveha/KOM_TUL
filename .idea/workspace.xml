@@ -20,35 +20,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20006ae7-4ef3-4406-8826-f1fe6298f520" name="Default Changelist" comment="init react app">
-      <change afterPath="$PROJECT_DIR$/.idea/KOM_TUL_APP.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/src/serviceWorker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/src/setupTests.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/service/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/service/serviceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/service/setupTests.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -59,6 +55,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1hao10nSOdn3euL2UOOQOPK9E8h" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -66,8 +65,19 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/kom" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/kom_tul/src/components/Header" />
+      <recent name="$PROJECT_DIR$/kom_tul/src" />
+      <recent name="$PROJECT_DIR$/kom_tul/src/CSS" />
+      <recent name="$PROJECT_DIR$/kom_tul/src/service" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -77,8 +87,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600258346911</updated>
-      <workItem from="1600258348782" duration="724000" />
+      <workItem from="1600258348782" duration="1721000" />
+      <workItem from="1600260792143" duration="2447000" />
+      <workItem from="1600263369817" duration="9960000" />
     </task>
+    <task id="LOCAL-00001" summary="init react app">
+      <created>1600259180741</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600259180741</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,9 +114,24 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init react app" />
     <option name="LAST_COMMIT_MESSAGE" value="init react app" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="693" y="349" width="524" height="503" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600260884590">
+      <screen x="0" y="294" width="1920" height="906" />
+    </state>
+    <state x="693" y="349" width="524" height="503" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.266.1366.768/0.294.1920.906@0.294.1920.906" timestamp="1600260884590" />
+    <state x="663" y="416" width="424" height="486" key="FileChooserDialogImpl" timestamp="1600263381816">
+      <screen x="0" y="294" width="1920" height="906" />
+    </state>
+    <state x="663" y="416" width="424" height="486" key="FileChooserDialogImpl/1920.266.1366.768/0.294.1920.906@0.294.1920.906" timestamp="1600263381816" />
+    <state x="555" y="336" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1600259210829">
+      <screen x="0" y="294" width="1920" height="906" />
+    </state>
+    <state x="555" y="336" width="800" height="530" key="Vcs.Push.Dialog.v2/1920.266.1366.768/0.294.1920.906@0.294.1920.906" timestamp="1600259210829" />
   </component>
 </project>
