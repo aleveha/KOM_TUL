@@ -3,33 +3,24 @@
     grid-template-columns: 4fr 17fr 1fr;
     grid-template-rows: 1fr;
     min-height: 70px;
-    align-items: center;
-}
-
-.header-content > div {
-    height: 70px;
-    text-align: center;
+    align-content: center;
 }
 
 .headerTabs-content {
     display: grid;
     grid-template-columns: repeat(6, auto);
     grid-template-rows: 1fr;
-    height: 100%;
+}
+
+.tabName, .cng-lang {
+    display: block;
+    /*height: 100%;*/
+    text-decoration: none;
+    color: black;
 }
 
 .headerTab {
-    /*display: block;*/
-    /*height: 100%;*/
-}
-
-.tabName {
-    display: block;
-    height: 100%;
-    text-align: center;
-}
-
-.cng-lang {
-    display: block;
-    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }

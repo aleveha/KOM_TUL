@@ -19,19 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20006ae7-4ef3-4406-8826-f1fe6298f520" name="Default Changelist" comment="init react app">
-      <change afterPath="$PROJECT_DIR$/kom_tul/src/App.tsx" afterDir="false" />
+    <list default="true" id="20006ae7-4ef3-4406-8826-f1fe6298f520" name="Default Changelist" comment="add header and some styles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/service/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/service/serviceWorker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/service/setupTests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/Header.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +58,8 @@
     <property name="last_opened_file_path" value="$USER_HOME$/kom" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/kom_tul/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -89,7 +80,8 @@
       <updated>1600258346911</updated>
       <workItem from="1600258348782" duration="1721000" />
       <workItem from="1600260792143" duration="2447000" />
-      <workItem from="1600263369817" duration="9960000" />
+      <workItem from="1600263369817" duration="10126000" />
+      <workItem from="1600347655951" duration="3716000" />
     </task>
     <task id="LOCAL-00001" summary="init react app">
       <created>1600259180741</created>
@@ -98,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600259180741</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add header and some styles">
+      <created>1600276648837</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1600276648837</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,20 +117,30 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init react app" />
-    <option name="LAST_COMMIT_MESSAGE" value="init react app" />
+    <MESSAGE value="add header and some styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="add header and some styles" />
   </component>
   <component name="WindowStateProjectService">
     <state x="693" y="349" width="524" height="503" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600260884590">
       <screen x="0" y="294" width="1920" height="906" />
     </state>
     <state x="693" y="349" width="524" height="503" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.266.1366.768/0.294.1920.906@0.294.1920.906" timestamp="1600260884590" />
-    <state x="663" y="416" width="424" height="486" key="FileChooserDialogImpl" timestamp="1600263381816">
-      <screen x="0" y="294" width="1920" height="906" />
+    <state x="663" y="436" width="424" height="486" key="FileChooserDialogImpl" timestamp="1600348520424">
+      <screen x="0" y="317" width="1920" height="883" />
     </state>
     <state x="663" y="416" width="424" height="486" key="FileChooserDialogImpl/1920.266.1366.768/0.294.1920.906@0.294.1920.906" timestamp="1600263381816" />
-    <state x="555" y="336" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1600259210829">
+    <state x="663" y="436" key="FileChooserDialogImpl/1920.266.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1600348520424" />
+    <state x="464" y="235" width="992" height="732" key="SettingsEditor" timestamp="1600349266783">
+      <screen x="0" y="317" width="1920" height="883" />
+    </state>
+    <state x="464" y="235" width="992" height="732" key="SettingsEditor/1920.266.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1600349266783" />
+    <state x="555" y="336" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1600276655369">
       <screen x="0" y="294" width="1920" height="906" />
     </state>
-    <state x="555" y="336" width="800" height="530" key="Vcs.Push.Dialog.v2/1920.266.1366.768/0.294.1920.906@0.294.1920.906" timestamp="1600259210829" />
+    <state x="555" y="336" width="800" height="530" key="Vcs.Push.Dialog.v2/1920.266.1366.768/0.294.1920.906@0.294.1920.906" timestamp="1600276655369" />
+    <state x="721" y="477" width="616" height="558" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1600348574531">
+      <screen x="0" y="317" width="1920" height="883" />
+    </state>
+    <state x="721" y="477" width="616" height="558" key="org.intellij.images.editor.actions.BackgroundImageDialog/1920.266.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1600348574531" />
   </component>
 </project>
