@@ -1,0 +1,24 @@
+.historyWayContent {
+    display: flex;
+    justify-content: start;
+    margin-left: 10px;
+}
+
+.pathName {
+    margin: 10px 10px 10px 0;
+    display: flex;
+}
+
+.path-link {
+    font-weight: 400;
+    font-size: 17px;
+    color: grey;
+    text-decoration: none;
+}
+
+.arrow {
+    color: grey;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
