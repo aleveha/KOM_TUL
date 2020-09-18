@@ -4,7 +4,8 @@ import '../../CSS/Header.css';
 
 interface IProps {
     appLang: string,
-    changeLang: (value: string) => void
+    changeLang: (value: string) => void,
+    changePathWay: (value: string) => void
 }
 
 const Header = (props: IProps) => {
@@ -12,9 +13,9 @@ const Header = (props: IProps) => {
         <div className="header">
             <div className="header-content">
                 <div className="kom-logo">
-                    <img src="../../img/kom.png" alt="logo katedry"></img>
+                    KOM
                 </div>
-                <HeaderButtons/>
+                <HeaderButtons changePathWay={props.changePathWay}/>
                 <div className="langButton">
                     <a href="#" className="cng-lang"
                        onClick={() => props.changeLang(props.appLang === 'CZ' ? 'EN' : 'CZ')}>{props.appLang !== 'CZ' ? 'CZ' : 'EN'}</a>

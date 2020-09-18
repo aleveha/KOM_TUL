@@ -19,9 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20006ae7-4ef3-4406-8826-f1fe6298f520" name="Default Changelist" comment="add header and some styles">
+    <list default="true" id="20006ae7-4ef3-4406-8826-f1fe6298f520" name="Default Changelist" comment="add styles to header">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/Header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Header/HeaderButtons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Header/HeaderButtons.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +84,7 @@
       <workItem from="1600258348782" duration="1721000" />
       <workItem from="1600260792143" duration="2447000" />
       <workItem from="1600263369817" duration="10126000" />
-      <workItem from="1600347655951" duration="3716000" />
+      <workItem from="1600347655951" duration="17183000" />
     </task>
     <task id="LOCAL-00001" summary="init react app">
       <created>1600259180741</created>
@@ -97,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600276648837</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add styles to header">
+      <created>1600351399672</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600351399672</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,9 +128,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init react app" />
     <MESSAGE value="add header and some styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="add header and some styles" />
+    <MESSAGE value="add styles to header" />
+    <option name="LAST_COMMIT_MESSAGE" value="add styles to header" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="589" y="281" width="732" height="639" key="#Inspections" timestamp="1600446955235">
+      <screen x="0" y="317" width="1920" height="883" />
+    </state>
+    <state x="589" y="281" width="732" height="639" key="#Inspections/1920.266.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1600446955235" />
     <state x="693" y="349" width="524" height="503" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600260884590">
       <screen x="0" y="294" width="1920" height="906" />
     </state>
@@ -134,10 +149,11 @@
       <screen x="0" y="317" width="1920" height="883" />
     </state>
     <state x="464" y="235" width="992" height="732" key="SettingsEditor/1920.266.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1600349266783" />
-    <state x="555" y="336" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1600276655369">
-      <screen x="0" y="294" width="1920" height="906" />
+    <state x="555" y="358" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1600351413007">
+      <screen x="0" y="317" width="1920" height="883" />
     </state>
     <state x="555" y="336" width="800" height="530" key="Vcs.Push.Dialog.v2/1920.266.1366.768/0.294.1920.906@0.294.1920.906" timestamp="1600276655369" />
+    <state x="555" y="358" key="Vcs.Push.Dialog.v2/1920.266.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1600351413007" />
     <state x="721" y="477" width="616" height="558" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1600348574531">
       <screen x="0" y="317" width="1920" height="883" />
     </state>
