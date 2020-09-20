@@ -3,13 +3,15 @@
   grid-template-rows: 1fr auto;
 }
 
-.padding {
-  padding: 0 20px 0 20px;
-
+.WebContent {
   display: grid;
-  grid-template-rows: 1fr 5fr auto; /*заменить второе значение на auto*/
+  grid-template-rows: 1fr auto auto; /*заменить второе значение на auto*/
 
   min-height: 88vh;
+}
+
+.padding {
+  padding: 0 20px 0 20px;
 }
 
 .App-logo {

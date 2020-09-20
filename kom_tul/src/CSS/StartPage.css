@@ -1,0 +1,23 @@
+.startPage {
+    display: grid;
+    grid-template-rows: 10fr 10fr;
+}
+
+/*Delete after adding photo*/
+.photo {
+    width: 100%;
+    min-height: 522px;
+    background-color: #2B8CB6;
+}
+
+.mainPhoto {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.insidePhotoInfo {
+    position: absolute;
+}

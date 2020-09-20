@@ -16,7 +16,7 @@ const WebSiteMap = (props: IProps) => {
     return (
         <div className="mapContent" style={numberOfTabs}>
             {props.tabs.map((elem) =>
-                <div className="tabColumn">
+                <div className="tabColumn" key={props.tabs.indexOf(elem)}>
                     <div className="tabHeader">
                         <h3>{elem}</h3>
                     </div>

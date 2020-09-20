@@ -34,7 +34,7 @@ function App() {
                 pathWay={pathWay}
                 tabs={headerTabs}
             />
-            <div className="padding">
+            <div className="WebContent">
                 <HistoryWay pathWay={pathWay}/>
                 <MainContent/>
                 <Footer tabs={headerTabs}/>

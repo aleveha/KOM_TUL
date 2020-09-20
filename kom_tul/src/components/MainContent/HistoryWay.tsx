@@ -14,7 +14,7 @@ const HistoryWay = (props: IProps) => {
     )
 
     return (
-        <div className="historyWayContent">
+        <div className="historyWayContent padding">
             <div className="pathName">
                 {pathContent}
             </div>
