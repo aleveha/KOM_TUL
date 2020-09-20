@@ -2,16 +2,33 @@ import * as React from 'react';
 import '../../CSS/Header.css';
 
 interface IProps {
-    changePathWay: (value: string) => void
+    changePathWay: (value: Array<string>) => void,
+    pathArr: Array<string>,
+    tabs: Array<string>
 }
 
 const HeaderButtons = (props: IProps) => {
-    const headerTabs : Array<string> = ['Katedra', 'Pracovníci', 'Projekty', 'Výuka', 'Laboratoře', 'Spolupráce'];
+
+    const ChangePath = (elem: string) => {
+        let pathArr: Array<string> = [...props.pathArr];
+        if (pathArr.length > 1 && elem !== 'KOM') {
+            do {
+                pathArr.pop();
+            } while (pathArr.length > 1);
+            pathArr.push(elem);
+        } else if (elem === 'KOM') {
+            pathArr = ['KOM'];
+        } else {
+            pathArr.push(elem);
+        }
+        props.changePathWay(pathArr);
+    }
+
     return(
         <div className="headerTabs-content">
-            {headerTabs.map((elem) =>
+            {props.tabs.map((elem) =>
                 <div className="headerTab" key={elem}>
-                    <a className="tabName" href="#" onClick={() => props.changePathWay(elem)}>{elem}</a>
+                    <a className="tabName" href="#" onClick={() => ChangePath(elem)}><span>{elem}</span></a>
                 </div>
             )}
         </div>

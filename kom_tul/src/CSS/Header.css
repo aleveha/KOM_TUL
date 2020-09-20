@@ -3,7 +3,6 @@
     grid-template-columns: 4fr 17fr 1fr;
     grid-template-rows: 1fr;
     min-height: 75px;
-    align-content: center;
 }
 
 .headerTabs-content {
@@ -17,8 +16,11 @@
 }
 
 .tabName, .cng-lang {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
+
     text-decoration: none;
     color: black;
     font-weight: 450;
@@ -36,18 +38,22 @@
 }
 
 .langButton :hover {
-    /*background-color: white;*/
-    color: cornflowerblue;
+    color: #2B8CB6;
     font-weight: bold;
 }
 
 .kom-logo {
-    background-color: cornflowerblue;
+    display: flex;
+    justify-content: center;
+
+    background-color: #2B8CB6;
     font-size: 60px;
-    color: white
+    color: white;
 }
 
 .headerTab {
+    display: grid;
+
     border: 1px solid lightgrey;
     border-right: none;
     border-top: none;

@@ -3,23 +3,27 @@ import {useEffect, useState} from 'react';
 import './CSS/App.css';
 import Header from "./components/Header/Header";
 import HistoryWay from "./components/MainContent/HistoryWay";
+import MainContent from "./components/MainContent/MainContent";
+import Footer from "./components/Footer/Footer";
 
 function App() {
     const languages: Array<string> = ['CZ', 'EN'];
     const [appLanguage, setWebLanguage] = useState<string>(languages[0]);
-    const [pathWay, setPathWay] = useState<Array<string>>(['KOM', 'Katedra']);
+    const [pathWay, setPathWay] = useState<Array<string>>(['KOM']);
+
+    const headerTabs: Array<string> = ['Katedra', 'Pracovníci', 'Projekty', 'Výuka', 'Laboratoře', 'Spolupráce'];
 
     const ChangeLanguage = (value: string) => {
         setWebLanguage(value);
     }
 
-    const ChangePathWay = (value: string) => {
-
+    const ChangePathWay = (value: Array<string>) => {
+        setPathWay(value);
     }
 
     useEffect(() => {
         console.log('System language ' + appLanguage)
-    }, [appLanguage])
+    }, [appLanguage]);
 
     return (
         <div className="App">
@@ -27,8 +31,14 @@ function App() {
                 appLang={appLanguage}
                 changeLang={ChangeLanguage}
                 changePathWay={ChangePathWay}
+                pathWay={pathWay}
+                tabs={headerTabs}
             />
-            <HistoryWay pathWay={pathWay}/>
+            <div className="padding">
+                <HistoryWay pathWay={pathWay}/>
+                <MainContent/>
+                <Footer tabs={headerTabs}/>
+            </div>
         </div>
     );
 }

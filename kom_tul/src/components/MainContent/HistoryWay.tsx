@@ -6,9 +6,8 @@ interface IProps {
 }
 
 const HistoryWay = (props: IProps) => {
-    console.log(props.pathWay);
     const pathContent = props.pathWay.map((elem) =>
-        <div className="pathName-content">
+        <div className="pathName-content" key={props.pathWay.indexOf(elem)}>
             {elem !== 'KOM' && <span className="arrow">{">"}</span>}
             <a className="path-link" href="#">{elem}</a>
         </div>
