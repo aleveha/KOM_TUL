@@ -1,5 +1,4 @@
 import * as React from 'react';
-import '../../CSS/Footer.css'
 
 interface IProps {
 
@@ -7,7 +6,7 @@ interface IProps {
 
 const ContactsLine = (props: IProps) => {
     return (
-        <div className="contactInfoContent">
+        <div className="contactInfoContent padding">
             <div className="kom-logo-footer">
                 <div className="kom-logo">
                     <span>KOM</span>
@@ -28,7 +27,7 @@ const ContactsLine = (props: IProps) => {
                         </div>
                     </div>
                     <div className="contacts">
-                        <p><a href="tel:+420485353361">+420 485353 361</a></p>
+                        <p><a href="tel:+420485353361">+420 48 535 3361</a></p>
                         <p><a href="mailto:tereza.vrbova@tul.cz">tereza.vrbova@tul.cz</a></p>
                         <p><a href="#">www.kom.tul.cz</a></p>
                     </div>

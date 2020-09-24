@@ -12,6 +12,10 @@ hr {
     margin: 0;
 }
 
+hr:first-child {
+    margin-top: 30px;
+}
+
 .footer {
     display: grid;
     grid-template-rows: auto auto 1fr;

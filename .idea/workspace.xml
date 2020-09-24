@@ -21,17 +21,19 @@
   <component name="ChangeListManager">
     <list default="true" id="20006ae7-4ef3-4406-8826-f1fe6298f520" name="Default Changelist" comment="add pathWay component and styles for it">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/Footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/MainContent.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/StartPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/StartPage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Footer/ContactsLine.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Footer/ContactsLine.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Footer/CopyRight.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Footer/CopyRight.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Footer/Footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Footer/WebSiteMap.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Footer/WebSiteMap.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/HistoryWay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/HistoryWay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Header/HeaderButtons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Header/HeaderButtons.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/MainContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/MainContent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/StartPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/StartPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +44,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
-        <option value="TypeScript JSX File" />
         <option value="CSS File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -94,7 +96,9 @@
       <workItem from="1600260792143" duration="2447000" />
       <workItem from="1600263369817" duration="10126000" />
       <workItem from="1600347655951" duration="17906000" />
-      <workItem from="1600509054400" duration="34372000" />
+      <workItem from="1600509054400" duration="35163000" />
+      <workItem from="1600697712455" duration="625000" />
+      <workItem from="1600838349395" duration="40499000" />
     </task>
     <task id="LOCAL-00001" summary="init react app">
       <created>1600259180741</created>
@@ -138,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600592562188</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="edit footer, add mainContent and styles">
+      <created>1600623056079</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1600623056079</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +173,8 @@
     <MESSAGE value="add styles to header" />
     <MESSAGE value="add pathWay component and styles for it" />
     <MESSAGE value="add footer and styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="add footer and styles" />
+    <MESSAGE value="edit footer, add mainContent and styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit footer, add mainContent and styles" />
   </component>
   <component name="WindowStateProjectService">
     <state x="589" y="281" width="732" height="639" key="#Inspections" timestamp="1600446955235">
@@ -183,12 +195,12 @@
     </state>
     <state x="464" y="235" width="992" height="732" key="SettingsEditor/1920.266.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1600349266783" />
     <state x="475" y="183" key="SettingsEditor/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1600521791143" />
-    <state x="555" y="358" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1600592570629">
+    <state x="555" y="358" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1600623060349">
       <screen x="0" y="317" width="1920" height="883" />
     </state>
     <state x="555" y="336" width="800" height="530" key="Vcs.Push.Dialog.v2/1920.266.1366.768/0.294.1920.906@0.294.1920.906" timestamp="1600276655369" />
     <state x="555" y="358" width="800" height="530" key="Vcs.Push.Dialog.v2/1920.266.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1600449981641" />
-    <state x="555" y="358" key="Vcs.Push.Dialog.v2/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1600592570629" />
+    <state x="555" y="358" width="800" height="530" key="Vcs.Push.Dialog.v2/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1600623060349" />
     <state x="721" y="477" width="616" height="558" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1600348574531">
       <screen x="0" y="317" width="1920" height="883" />
     </state>

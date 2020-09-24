@@ -1,5 +1,4 @@
 import * as React from 'react';
-import '../../CSS/Footer.css'
 import {useEffect, useState} from "react";
 
 interface IProps {
@@ -14,7 +13,7 @@ const WebSiteMap = (props: IProps) => {
     }, [props.tabs.length]);
 
     return (
-        <div className="mapContent" style={numberOfTabs}>
+        <div className="mapContent padding" style={numberOfTabs}>
             {props.tabs.map((elem) =>
                 <div className="tabColumn" key={props.tabs.indexOf(elem)}>
                     <div className="tabHeader">

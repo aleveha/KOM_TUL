@@ -36,7 +36,11 @@ function App() {
             />
             <div className="WebContent">
                 <HistoryWay pathWay={pathWay}/>
-                <MainContent/>
+                <MainContent
+                    appLanguage={appLanguage}
+                    pathWay={pathWay}
+                    changePathWay={ChangePathWay}
+                />
                 <Footer tabs={headerTabs}/>
             </div>
         </div>

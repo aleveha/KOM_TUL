@@ -10,7 +10,7 @@ interface IProps {
 
 const Footer = (props: IProps) => {
     return (
-        <footer className="footer padding">
+        <footer className="footer">
             <hr />
             <WebSiteMap tabs={props.tabs}/>
             <hr />

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import '../../CSS/Header.css';
 
 interface IProps {
     changePathWay: (value: Array<string>) => void,

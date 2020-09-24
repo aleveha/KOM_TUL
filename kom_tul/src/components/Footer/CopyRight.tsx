@@ -1,5 +1,4 @@
 import * as React from 'react';
-import '../../CSS/Footer.css';
 
 interface IProps {
 
@@ -7,7 +6,7 @@ interface IProps {
 
 const CopyRight = (props: IProps) => {
     return (
-        <div className="copyrightContent">
+        <div className="copyrightContent padding">
             <p>
                 Copyright © 2020 Katedra obrábění a montáže FS TUL
             </p>
