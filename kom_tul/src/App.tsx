@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import HistoryWay from "./components/MainContent/HistoryWay";
 import MainContent from "./components/MainContent/MainContent";
 import Footer from "./components/Footer/Footer";
+import {BrowserRouter as Router} from "react-router-dom";
 
 function App() {
     const languages: Array<string> = ['CZ', 'EN'];
@@ -26,24 +27,26 @@ function App() {
     }, [appLanguage]);
 
     return (
-        <div className="App">
-            <Header
-                appLang={appLanguage}
-                changeLang={ChangeLanguage}
-                changePathWay={ChangePathWay}
-                pathWay={pathWay}
-                tabs={headerTabs}
-            />
-            <div className="WebContent">
-                <HistoryWay pathWay={pathWay}/>
-                <MainContent
-                    appLanguage={appLanguage}
-                    pathWay={pathWay}
+        <Router>
+            <div className="App">
+                <Header
+                    appLang={appLanguage}
+                    changeLang={ChangeLanguage}
                     changePathWay={ChangePathWay}
+                    pathWay={pathWay}
+                    tabs={headerTabs}
                 />
-                <Footer tabs={headerTabs}/>
+                <div className="WebContent">
+                    <HistoryWay pathWay={pathWay}/>
+                    <MainContent
+                        appLanguage={appLanguage}
+                        pathWay={pathWay}
+                        changePathWay={ChangePathWay}
+                    />
+                    <Footer tabs={headerTabs}/>
+                </div>
             </div>
-        </div>
+        </Router>
     );
 }
 

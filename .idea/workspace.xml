@@ -1,39 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20006ae7-4ef3-4406-8826-f1fe6298f520" name="Default Changelist" comment="add pathWay component and styles for it">
+    <list default="true" id="94e6b384-cbdb-46e7-8a37-155a4a48353d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/Footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/MainContent.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/StartPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/StartPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Footer/ContactsLine.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Footer/ContactsLine.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Footer/CopyRight.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Footer/CopyRight.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Footer/WebSiteMap.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Footer/WebSiteMap.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Header/HeaderButtons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Header/HeaderButtons.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/MainContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/MainContent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/StartPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/StartPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,10 +45,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/kom" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/kom_tul/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -84,72 +59,121 @@
       <recent name="$PROJECT_DIR$/kom_tul/src/service" />
     </key>
   </component>
+  <component name="RunManager" selected="Docker.DockerKOM">
+    <configuration name="Docker Image" type="docker-deploy" factoryName="docker-image" singleton="false" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="kom_tul_app:develop" />
+          <option name="command" value="" />
+          <option name="containerName" value="kom_tul_app_dev" />
+          <option name="entrypoint" value="" />
+          <option name="commandLineOptions" value="" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="DockerKOM" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="kom_tul:develop" />
+          <option name="command" value="" />
+          <option name="containerName" value="" />
+          <option name="entrypoint" value="" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="3001" />
+                <option name="hostPort" value="3000" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="commandLineOptions" value="-e CHOKIDAR_USEPOLLING=true -it" />
+          <option name="volumeBindings">
+            <list>
+              <DockerVolumeBindingImpl>
+                <option name="containerPath" value="/kom_tul" />
+                <option name="hostPath" value="$PROJECT_DIR$/kom_tul" />
+              </DockerVolumeBindingImpl>
+              <DockerVolumeBindingImpl>
+                <option name="hostPath" value="/kom_tul/node_modules" />
+              </DockerVolumeBindingImpl>
+            </list>
+          </option>
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="DockerTULApp" type="docker-deploy" factoryName="docker-image" singleton="false" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="sample:dev" />
+          <option name="command" value="" />
+          <option name="containerName" value="kom_tul" />
+          <option name="entrypoint" value="" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="3001" />
+                <option name="hostPort" value="3000" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="commandLineOptions" value="-it -e CHOKIDAR_USEPOLLING=true -v /app/node_modules -v $PROJECT_DIR$/kom_tul:/kom_tul" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="kom_tul/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="" />
+          <option name="buildCliOptions" value="" />
+          <option name="command" value="" />
+          <option name="containerName" value="" />
+          <option name="entrypoint" value="" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="kom_tul/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.DockerTULApp" />
+        <item itemvalue="Docker.DockerKOM" />
+        <item itemvalue="Docker.kom_tul/Dockerfile" />
+        <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="Docker.Docker Image" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="20006ae7-4ef3-4406-8826-f1fe6298f520" name="Default Changelist" comment="" />
-      <created>1600258346911</created>
+      <changelist id="94e6b384-cbdb-46e7-8a37-155a4a48353d" name="Default Changelist" comment="" />
+      <created>1601113285596</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1600258346911</updated>
-      <workItem from="1600258348782" duration="1721000" />
-      <workItem from="1600260792143" duration="2447000" />
-      <workItem from="1600263369817" duration="10126000" />
-      <workItem from="1600347655951" duration="17906000" />
-      <workItem from="1600509054400" duration="35163000" />
-      <workItem from="1600697712455" duration="625000" />
-      <workItem from="1600838349395" duration="40499000" />
+      <updated>1601113285596</updated>
+      <workItem from="1601113288048" duration="13004000" />
+      <workItem from="1601135883607" duration="1914000" />
     </task>
-    <task id="LOCAL-00001" summary="init react app">
-      <created>1600259180741</created>
+    <task id="LOCAL-00001" summary="add changes to gitignore">
+      <created>1601116985944</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1600259180741</updated>
+      <updated>1601116985944</updated>
     </task>
-    <task id="LOCAL-00002" summary="add header and some styles">
-      <created>1600276648837</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1600276648837</updated>
-    </task>
-    <task id="LOCAL-00003" summary="add styles to header">
-      <created>1600351399672</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1600351399672</updated>
-    </task>
-    <task id="LOCAL-00004" summary="add pathWay component and styles for it">
-      <created>1600449903445</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1600449903445</updated>
-    </task>
-    <task id="LOCAL-00005" summary="add pathWay component and styles for it">
-      <created>1600449976467</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1600449976467</updated>
-    </task>
-    <task id="LOCAL-00006" summary="add footer and styles">
-      <created>1600592562188</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1600592562188</updated>
-    </task>
-    <task id="LOCAL-00007" summary="edit footer, add mainContent and styles">
-      <created>1600623056079</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1600623056079</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,19 +192,22 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init react app" />
-    <MESSAGE value="add header and some styles" />
-    <MESSAGE value="add styles to header" />
-    <MESSAGE value="add pathWay component and styles for it" />
-    <MESSAGE value="add footer and styles" />
-    <MESSAGE value="edit footer, add mainContent and styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit footer, add mainContent and styles" />
+    <MESSAGE value="add changes to gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="add changes to gitignore" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2367" y="511" width="461" height="353" key="#Docker" timestamp="1601132208561">
+      <screen x="1920" y="289" width="1366" height="768" />
+    </state>
+    <state x="2367" y="511" width="461" height="353" key="#Docker/1920.289.1366.768/0.317.1920.883@1920.289.1366.768" timestamp="1601132208561" />
     <state x="589" y="281" width="732" height="639" key="#Inspections" timestamp="1600446955235">
       <screen x="0" y="317" width="1920" height="883" />
     </state>
     <state x="589" y="281" width="732" height="639" key="#Inspections/1920.266.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1600446955235" />
+    <state x="2738" y="585" width="398" height="206" key="#Push_Image" timestamp="1601119748573">
+      <screen x="1920" y="289" width="1366" height="768" />
+    </state>
+    <state x="2738" y="585" width="398" height="206" key="#Push_Image/1920.289.1366.768/0.317.1920.883@1920.289.1366.768" timestamp="1601119748573" />
     <state x="693" y="349" width="524" height="503" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600260884590">
       <screen x="0" y="294" width="1920" height="906" />
     </state>
@@ -195,12 +222,27 @@
     </state>
     <state x="464" y="235" width="992" height="732" key="SettingsEditor/1920.266.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1600349266783" />
     <state x="475" y="183" key="SettingsEditor/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1600521791143" />
-    <state x="555" y="358" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1600623060349">
-      <screen x="0" y="317" width="1920" height="883" />
+    <state x="2315" y="325" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1601116992930">
+      <screen x="1920" y="289" width="1366" height="768" />
     </state>
     <state x="555" y="336" width="800" height="530" key="Vcs.Push.Dialog.v2/1920.266.1366.768/0.294.1920.906@0.294.1920.906" timestamp="1600276655369" />
     <state x="555" y="358" width="800" height="530" key="Vcs.Push.Dialog.v2/1920.266.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1600449981641" />
     <state x="555" y="358" width="800" height="530" key="Vcs.Push.Dialog.v2/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1600623060349" />
+    <state x="2315" y="325" key="Vcs.Push.Dialog.v2/1920.289.1366.768/0.317.1920.883@1920.289.1366.768" timestamp="1601116992930" />
+    <state x="302" y="681" width="721" height="270" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize" timestamp="1601136945573">
+      <screen x="0" y="317" width="1920" height="883" />
+    </state>
+    <state x="302" y="681" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1601136945573" />
+    <state x="2135" y="606" width="721" height="270" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize/1920.289.1366.768/0.317.1920.883@1920.289.1366.768" timestamp="1601132380296" />
+    <state x="302" y="681" width="806" height="210" key="com.intellij.docker.deployment.ui.DockerVolumeBindingsField.v173.dialogSize" timestamp="1601137548758">
+      <screen x="0" y="317" width="1920" height="883" />
+    </state>
+    <state x="302" y="681" width="806" height="210" key="com.intellij.docker.deployment.ui.DockerVolumeBindingsField.v173.dialogSize/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1601137548758" />
+    <state x="2135" y="606" width="646" height="179" key="com.intellij.docker.deployment.ui.DockerVolumeBindingsField.v173.dialogSize/1920.289.1366.768/0.317.1920.883@1920.289.1366.768" timestamp="1601133003343" />
+    <state x="766" y="260" width="378" height="681" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601136353391">
+      <screen x="0" y="317" width="1920" height="883" />
+    </state>
+    <state x="766" y="260" width="378" height="681" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1601136353391" />
     <state x="721" y="477" width="616" height="558" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1600348574531">
       <screen x="0" y="317" width="1920" height="883" />
     </state>

@@ -18,3 +18,14 @@ If you want to learn more about creating good readme files then refer the follow
 - [ASP.NET Core](https://github.com/aspnet/Home)
 - [Visual Studio Code](https://github.com/Microsoft/vscode)
 - [Chakra Core](https://github.com/Microsoft/ChakraCore)
+
+# SET UP DOCKER CONTAINERAND OTHER GO TO FOLLOWING LINK
+# https://mherman.org/blog/dockerizing-a-react-app/
+
+#Container configuration
+#-it 
+#--rm 
+#-v ${PWD}:/app (home pc)/home/aleveha/WebstormProjects/KOM_TUL_APP/kom_tul
+#-v /app/node_modules 
+#-p 3000:3001 
+#-e CHOKIDAR_USEPOLLING=true 
