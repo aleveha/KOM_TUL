@@ -5,20 +5,69 @@ import Header from "./components/Header/Header";
 import HistoryWay from "./components/MainContent/HistoryWay";
 import MainContent from "./components/MainContent/MainContent";
 import Footer from "./components/Footer/Footer";
-import {BrowserRouter as Router} from "react-router-dom";
+import LanguageContext from "./Context/LanguageContext";
+import PathContext from "./Context/PathContext";
+import AppContentContext from "./Context/AppContentContext";
 
-function App() {
-    const languages: Array<string> = ['CZ', 'EN'];
-    const [appLanguage, setWebLanguage] = useState<string>(languages[0]);
-    const [pathWay, setPathWay] = useState<Array<string>>(['KOM']);
+interface IAppContent {
+    name: string,
+    link: string,
+    children: Array<IAppContent>
+}
 
-    const headerTabs: Array<string> = ['Katedra', 'Pracovníci', 'Projekty', 'Výuka', 'Laboratoře', 'Spolupráce'];
+interface IPath {
+    name: string,
+    path: string
+}
 
+const App = () => {
+    // const headerTabs: Array<string> = ['Katedra', 'Pracovníci', 'Projekty', 'Výuka', 'Laboratoře', 'Spolupráce'];
+    const appContent: Array<IAppContent> = [
+        {
+            name: 'Katedra',
+            link: '/department',
+            children: [
+                {
+                    name: 'Novinky',
+                    link: '/news',
+                    children: []
+                }
+            ]
+        },
+        {
+            name: 'Pracovníci',
+            link: '/employees',
+            children: []
+        },
+        {
+            name: 'Projekty',
+            link: '/projects',
+            children: []
+        },
+        {
+            name: 'Výuka',
+            link: '/education',
+            children: []
+        },
+        {
+            name: 'Laboratoře',
+            link: '/laboratories',
+            children: []
+        },
+        {
+            name: 'Spolupráce',
+            link: '/cooperation',
+            children: []
+        }
+    ]
+
+    // const languages: Array<string> = ['CZ', 'EN'];
+    const [appLanguage, setWebLanguage] = useState<string>('CZ');
+    const [pathWay, setPathWay] = useState<Array<IPath>>([{name: 'KOM', path: '/home'}]);
     const ChangeLanguage = (value: string) => {
         setWebLanguage(value);
     }
-
-    const ChangePathWay = (value: Array<string>) => {
+    const ChangePathWay = (value: Array<IPath>) => {
         setPathWay(value);
     }
 
@@ -27,26 +76,20 @@ function App() {
     }, [appLanguage]);
 
     return (
-        <Router>
-            <div className="App">
-                <Header
-                    appLang={appLanguage}
-                    changeLang={ChangeLanguage}
-                    changePathWay={ChangePathWay}
-                    pathWay={pathWay}
-                    tabs={headerTabs}
-                />
-                <div className="WebContent">
-                    <HistoryWay pathWay={pathWay}/>
-                    <MainContent
-                        appLanguage={appLanguage}
-                        pathWay={pathWay}
-                        changePathWay={ChangePathWay}
-                    />
-                    <Footer tabs={headerTabs}/>
-                </div>
-            </div>
-        </Router>
+        <LanguageContext.Provider value={{value: appLanguage, changeValue: ChangeLanguage}}>
+            <PathContext.Provider value={{value: pathWay, changeValue: ChangePathWay}}>
+                <AppContentContext.Provider value={{value: appContent}}>
+                    <div className="App">
+                        <Header/>
+                        <div className="WebContent">
+                            <HistoryWay/>
+                            <MainContent/>
+                            <Footer />
+                        </div>
+                    </div>
+                </AppContentContext.Provider>
+            </PathContext.Provider>
+        </LanguageContext.Provider>
     );
 }
 
