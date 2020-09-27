@@ -5,14 +5,14 @@ import ContactsLine from "./ContactsLine";
 import CopyRight from "./CopyRight";
 
 interface IProps {
-    tabs: Array<string>
+
 }
 
 const Footer = (props: IProps) => {
     return (
         <footer className="footer">
             <hr />
-            <WebSiteMap tabs={props.tabs}/>
+            <WebSiteMap />
             <hr />
             <ContactsLine />
             <hr />
