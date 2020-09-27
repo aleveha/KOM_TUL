@@ -1,15 +1,22 @@
 import * as React from 'react';
 import '../../CSS/HisrotyWay.css'
+import {useContext} from "react";
+import PathContext from "../../Context/PathContext";
+import { Link } from 'react-router-dom';
+
 
 interface IProps {
-    pathWay: Array<string>;
+
 }
 
 const HistoryWay = (props: IProps) => {
-    const pathContent = props.pathWay.map((elem) =>
-        <div className="pathName-content" key={props.pathWay.indexOf(elem)}>
-            {elem !== 'KOM' && <span className="arrow">{">"}</span>}
-            <a className="path-link" href="#">{elem}</a>
+    const path = useContext(PathContext);
+    console.log(path);
+
+    const pathContent = path.value.map((elem) =>
+        <div className="pathName-content" key={path.value.indexOf(elem)}>
+            {elem.name !== 'KOM' && <span className="arrow">{">"}</span>}
+            <Link to={elem.path} className="path-link">{elem.name}</Link> {/*change TO attribute*/}
         </div>
     )
 
