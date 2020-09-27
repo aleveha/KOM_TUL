@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
+import LanguageContext from "../../Context/LanguageContext";
 
 interface IProps {
-    appLanguage: string;
+
 };
 
 interface INews {
@@ -15,6 +16,7 @@ const ActualNews = (props: IProps) => {
     const [numberOfNewsColumns, setNumberOfNewsColumns] = useState<object>({'--numberOfNewsColumns': 3});
 
     const [news, setNews] = useState<Array<INews> | null>(null);
+    const language = useContext(LanguageContext);
 
     useEffect(() => {
         setNews([
@@ -44,7 +46,7 @@ const ActualNews = (props: IProps) => {
     return (
         <div className="actualNews padding">
             {news !== null &&
-            <h1 className="newsHeader">{props.appLanguage === 'CZ' ? "Novinky" : "Actual news"}</h1>}
+            <h1 className="newsHeader">{language.value === 'CZ' ? "Novinky" : "Actual news"}</h1>}
             <div className="newsBlocks" style={numberOfNewsColumns}>
                 {news !== null ? news.map(elem =>
                     <div className="newsBlock" key={news.indexOf(elem)}>
@@ -65,7 +67,7 @@ const ActualNews = (props: IProps) => {
             <div className="allNews">
                 <div className="allNewsButton">
                     <a href="#">
-                        <span>{props.appLanguage === 'CZ' ? "Všechny novinky" : "All news"}</span>
+                        <span>{language.value === 'CZ' ? "Všechny novinky" : "All news"}</span>
                     </a>
                 </div>
             </div>}
