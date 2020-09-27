@@ -1,0 +1,148 @@
+/*General for Footer*/
+:root {
+    --numberOfTabHeadersMap: 6;
+}
+
+hr {
+    width: 100%;
+    height: 2px;
+    color: grey;
+    background-color: lightgrey;
+    border-style: none;
+    margin: 0;
+}
+
+hr:first-child {
+    margin-top: 30px;
+}
+
+.footer {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.footer > div {
+    margin: 30px 0 30px 0;
+}
+
+/*Styles for map*/
+.mapContent {
+    display: grid;
+    grid-template-columns: repeat(var(--numberOfTabHeadersMap), 1fr);
+}
+
+.mapContent :first-child {
+    margin-left: 0;
+}
+
+.mapContent :last-child {
+    margin-right: 0;
+}
+
+.tabColumn {
+    margin: 0 20px 0 20px;
+
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.tabHeader h3 {
+    margin: 0;
+    font-weight: 370;
+}
+
+.tabContent {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.tabContent a{
+    margin-top: 7px;
+
+    text-decoration: none;
+    color: #2B8CB6;
+}
+
+/*Styles for contact information*/
+.address p, .contacts p {
+    font-size: 16px;
+    margin: 6px 0;
+}
+
+.contactInfoContent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.contactInformation {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.addressAndContacts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-self: center;
+}
+
+.address {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-right: 10px;
+}
+
+.contacts {
+    margin-left: 10px;
+}
+
+.facultyName > p {
+    font-size: 20px;
+    margin: 7px 0;
+    font-weight: 550;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactInformation > div {
+    margin: 10px 0;
+}
+
+.socialNetworks {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.facultySrojni {
+    position: relative;
+}
+
+.facultySrojni > a {
+    height: 61px;
+    width: 61px;
+    position: absolute;
+}
+
+.copyrightContent p {
+    color: grey;
+    font-size: 14px;
+    margin: 0;
+}
+
+.kom-logo-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kom-logo-footer > .kom-logo {
+    width: 245px;
+    height: 75px;
+}
+
+
