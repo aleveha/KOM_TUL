@@ -8,7 +8,7 @@ import Footer from "./components/Footer/Footer";
 import LanguageContext from "./Context/LanguageContext";
 import PathContext from "./Context/PathContext";
 import AppContentContext from "./Context/AppContentContext";
-import { useLocation } from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 
 
 interface IAppContent {
@@ -25,6 +25,11 @@ interface IPath {
 const App = () => {
     // const headerTabs: Array<string> = ['Katedra', 'Pracovníci', 'Projekty', 'Výuka', 'Laboratoře', 'Spolupráce'];
     const appContent: Array<IAppContent> = [
+        {
+            name: 'KOM',
+            link: '/home',
+            children: []
+        },
         {
             name: 'Katedra',
             link: '/department',
@@ -63,24 +68,41 @@ const App = () => {
         }
     ];
 
-    const location = useLocation();
-
-    appContent.forEach(elem => {
-        elem.link.includes(location.pathname) && console.log(true);
-    });
-
     const [appLanguage, setWebLanguage] = useState<string>('CZ');
     const [pathWay, setPathWay] = useState<Array<IPath>>([{name: 'KOM', path: '/home'}]);
     const ChangeLanguage = (value: string) => {
         setWebLanguage(value);
     }
-    const ChangePathWay = (value: Array<IPath>) => {
-        setPathWay(value);
+    const ChangePathWay = () => {
+        setPathWay(MakePathObject);
     }
 
     useEffect(() => {
         console.log('System language ' + appLanguage)
     }, [appLanguage]);
+
+    const MakePathObject = () => {
+        const location = useLocation();
+        let tempObj: Array<IAppContent> = [...appContent];
+        let tempArr: Array<IPath> = [...pathWay];
+        let erase = true;
+        location.pathname.split("/").forEach(linkPart => {
+            if (linkPart !== "") {
+                for (let element of tempObj) {
+                    if (element.link === "/" + linkPart) {
+                        if (erase) {
+                            tempArr.splice(1, tempArr.length);
+                            erase = false;
+                        }
+                        linkPart !== "home" && tempArr.push({name: element.name, path: element.link});
+                        tempObj = [...element.children];
+                        break;
+                    }
+                }
+            }
+        });
+        return tempArr;
+    };
 
     return (
         <LanguageContext.Provider value={{value: appLanguage, changeValue: ChangeLanguage}}>
@@ -91,7 +113,7 @@ const App = () => {
                         <div className="WebContent">
                             <HistoryWay/>
                             <MainContent/>
-                            <Footer />
+                            <Footer/>
                         </div>
                     </div>
                 </AppContentContext.Provider>

@@ -2,7 +2,7 @@ import React from 'react';
 
 interface IPathContext {
     value: Array<IPath>,
-    changeValue: (value: Array<IPath>) => void
+    changeValue: () => void
 }
 
 export interface IPath {
@@ -10,6 +10,6 @@ export interface IPath {
     path: string
 }
 
-const PathContext = React.createContext<IPathContext>({value: [{name: 'KOM', path: '/home'}], changeValue: (value) => {}});
+const PathContext = React.createContext<IPathContext>({value: [{name: 'KOM', path: '/home'}], changeValue: () => {}});
 
 export default PathContext;
