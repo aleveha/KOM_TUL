@@ -5,7 +5,7 @@ interface IPathContext {
     changeValue: (value: Array<IPath>) => void
 }
 
-interface IPath {
+export interface IPath {
     name: string,
     path: string
 }

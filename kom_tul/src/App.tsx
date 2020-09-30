@@ -8,6 +8,8 @@ import Footer from "./components/Footer/Footer";
 import LanguageContext from "./Context/LanguageContext";
 import PathContext from "./Context/PathContext";
 import AppContentContext from "./Context/AppContentContext";
+import { useLocation } from 'react-router-dom';
+
 
 interface IAppContent {
     name: string,
@@ -59,9 +61,14 @@ const App = () => {
             link: '/cooperation',
             children: []
         }
-    ]
+    ];
 
-    // const languages: Array<string> = ['CZ', 'EN'];
+    const location = useLocation();
+
+    appContent.forEach(elem => {
+        elem.link.includes(location.pathname) && console.log(true);
+    });
+
     const [appLanguage, setWebLanguage] = useState<string>('CZ');
     const [pathWay, setPathWay] = useState<Array<IPath>>([{name: 'KOM', path: '/home'}]);
     const ChangeLanguage = (value: string) => {

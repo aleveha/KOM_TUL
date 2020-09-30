@@ -1,18 +1,20 @@
 import * as React from 'react';
-import {Redirect, Route, Switch, useRouteMatch} from 'react-router-dom';
-import StartPage from "../StartPage";
-import News from "./News";
+import {Route, Switch, useRouteMatch} from 'react-router-dom';
 
 interface IProps {
 
 };
 
+const DepartmentContent = () => {
+    return (<div><h1>Katedra</h1></div>)
+}
+
 const Department = (props: IProps) => {
     let match = useRouteMatch();
-    console.log(match);
     return (
         <div>
             <Switch>
+                <Route path={match.path} exact component={DepartmentContent} />
                 <Route path={match.path + '/news'} component={News}/>
             </Switch>
         </div>
@@ -20,3 +22,13 @@ const Department = (props: IProps) => {
 };
 
 export default Department;
+
+//News Comp
+
+export const News = () => {
+    return (
+        <div>
+            <h1>Novinky</h1>
+        </div>
+    );
+};
