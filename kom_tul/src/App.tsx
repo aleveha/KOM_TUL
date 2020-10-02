@@ -101,7 +101,6 @@ const App = () => {
                 tempArr.push({name: "KOM", path: "/home"});
             }
         });
-        console.log(tempArr);
         return tempArr;
     };
 

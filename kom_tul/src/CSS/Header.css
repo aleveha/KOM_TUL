@@ -23,29 +23,30 @@
 
     text-decoration: none;
     color: black;
-    font-weight: 450;
-    font-size: 19px;
+    font-weight:500;
+    font-size: 21px;
 }
 
 .langButton {
     background-color: black;
     color: white;
-    font-weight: bold;
 }
 
 .cng-lang {
     color: white;
+    font-weight: bold;
 }
 
 .langButton :hover {
     color: #2B8CB6;
-    font-weight: bold;
+    font-weight: 700;
     cursor: pointer;
 }
 
 .kom-logo {
     display: flex;
     justify-content: center;
+    align-items: center;
 
     background-color: #2B8CB6;
     font-size: 60px;

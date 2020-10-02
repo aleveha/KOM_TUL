@@ -138,7 +138,7 @@ hr:first-child {
 
 .kom-logo-footer > .kom-logo {
     width: 245px;
-    height: 75px;
+    min-height: 75px;
 }
 
 
