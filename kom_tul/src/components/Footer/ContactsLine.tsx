@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {Link} from 'react-router-dom';
 
 interface IProps {
 
@@ -29,7 +30,7 @@ const ContactsLine = (props: IProps) => {
                     <div className="contacts">
                         <p><a href="tel:+420485353361">+420 48 535 3361</a></p>
                         <p><a href="mailto:tereza.vrbova@tul.cz">tereza.vrbova@tul.cz</a></p>
-                        <p><a href="#">www.kom.tul.cz</a></p>
+                        <p><Link to="/home">www.kom.tul.cz</Link></p>
                     </div>
                 </div>
             </div>

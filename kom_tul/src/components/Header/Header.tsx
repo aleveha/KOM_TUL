@@ -19,8 +19,8 @@ const Header = (props: IProps) => {
                 </div>
                 <HeaderButtons />
                 <div className="langButton">
-                    <a href="#" className="cng-lang"
-                       onClick={() => language.changeValue(language.value === 'CZ' ? 'EN' : 'CZ')}>{language.value !== 'CZ' ? 'CZ' : 'EN'}</a>
+                    <a className="cng-lang"
+                       onClick={() => language.changeValue(language.value === 'CZ' ? 'EN' : 'CZ')} >{language.value !== 'CZ' ? 'CZ' : 'EN'}</a>
                 </div>
             </div>
         </header>

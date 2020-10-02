@@ -22,57 +22,96 @@ interface IPath {
     path: string
 }
 
+const appContent: Array<IAppContent> = [
+    {
+        name: 'KOM',
+        link: '/home',
+        children: []
+    },
+    {
+        name: 'Katedra',
+        link: '/department',
+        children: [
+            {
+                name: 'Novinky',
+                link: '/news',
+                children: []
+            }
+        ]
+    },
+    {
+        name: 'Pracovníci',
+        link: '/employees',
+        children: []
+    },
+    {
+        name: 'Projekty',
+        link: '/projects',
+        children: []
+    },
+    {
+        name: 'Výuka',
+        link: '/education',
+        children: []
+    },
+    {
+        name: 'Laboratoře',
+        link: '/laboratories',
+        children: []
+    },
+    {
+        name: 'Spolupráce',
+        link: '/cooperation',
+        children: []
+    }
+];
+interface LocationState {
+    from: {
+        pathname: string;
+    };
+}
 const App = () => {
-    // const headerTabs: Array<string> = ['Katedra', 'Pracovníci', 'Projekty', 'Výuka', 'Laboratoře', 'Spolupráce'];
-    const appContent: Array<IAppContent> = [
-        {
-            name: 'KOM',
-            link: '/home',
-            children: []
-        },
-        {
-            name: 'Katedra',
-            link: '/department',
-            children: [
-                {
-                    name: 'Novinky',
-                    link: '/news',
-                    children: []
+    let location = useLocation();
+
+    useEffect(() => {
+        setPathWay(MakePathObject());
+    }, [location]);
+
+    const MakePathObject = () => {
+        let tempObj: Array<IAppContent> = [...appContent];
+        let tempArr: Array<IPath> = [];
+        let erase = true;
+        const pathArr = location.pathname.split("/");
+        pathArr.splice(0, 1);
+        pathArr.forEach(linkPart => {
+            if (linkPart !== "") {
+                for (let element of tempObj) {
+                    if (element.link === "/" + linkPart) {
+                        if (erase) {
+                            tempArr.length = 0;
+                            erase = false;
+                            !location.pathname.includes("home") && tempArr.push({name: "KOM", path: "/home"});
+                        }
+                        tempArr.push({name: element.name, path: element.link});
+                        tempObj = [...element.children];
+                        break;
+                    }
                 }
-            ]
-        },
-        {
-            name: 'Pracovníci',
-            link: '/employees',
-            children: []
-        },
-        {
-            name: 'Projekty',
-            link: '/projects',
-            children: []
-        },
-        {
-            name: 'Výuka',
-            link: '/education',
-            children: []
-        },
-        {
-            name: 'Laboratoře',
-            link: '/laboratories',
-            children: []
-        },
-        {
-            name: 'Spolupráce',
-            link: '/cooperation',
-            children: []
-        }
-    ];
+            } else if (linkPart === "" && pathArr.length === 1) {
+                tempArr.push({name: "KOM", path: "/home"});
+            }
+        });
+        console.log(tempArr);
+        return tempArr;
+    };
 
     const [appLanguage, setWebLanguage] = useState<string>('CZ');
-    const [pathWay, setPathWay] = useState<Array<IPath>>([{name: 'KOM', path: '/home'}]);
+    const [pathWay, setPathWay] = useState<Array<IPath>>(MakePathObject);
+
     const ChangeLanguage = (value: string) => {
         setWebLanguage(value);
     }
+
     const ChangePathWay = () => {
         setPathWay(MakePathObject);
     }
@@ -80,29 +119,6 @@ const App = () => {
     useEffect(() => {
         console.log('System language ' + appLanguage)
     }, [appLanguage]);
-
-    const MakePathObject = () => {
-        const location = useLocation();
-        let tempObj: Array<IAppContent> = [...appContent];
-        let tempArr: Array<IPath> = [...pathWay];
-        let erase = true;
-        location.pathname.split("/").forEach(linkPart => {
-            if (linkPart !== "") {
-                for (let element of tempObj) {
-                    if (element.link === "/" + linkPart) {
-                        if (erase) {
-                            tempArr.splice(1, tempArr.length);
-                            erase = false;
-                        }
-                        linkPart !== "home" && tempArr.push({name: element.name, path: element.link});
-                        tempObj = [...element.children];
-                        break;
-                    }
-                }
-            }
-        });
-        return tempArr;
-    };
 
     return (
         <LanguageContext.Provider value={{value: appLanguage, changeValue: ChangeLanguage}}>

@@ -15,7 +15,7 @@ const ActualNews = (props: IProps) => {
     //styles hooks
     const [numberOfNewsColumns, setNumberOfNewsColumns] = useState<object>({'--numberOfNewsColumns': 3});
 
-    const [news, setNews] = useState<Array<INews> | null>(null);
+    const [news, setNews] = useState<Array<INews>>([]);
     const language = useContext(LanguageContext);
 
     useEffect(() => {
@@ -41,7 +41,7 @@ const ActualNews = (props: IProps) => {
             news.length % 2 === 0 && (number = 2);
         }
         setNumberOfNewsColumns({'--numberOfNewsColumns': number});
-    }, [news?.length]);
+    }, [news.length]);
 
     return (
         <div className="actualNews padding">

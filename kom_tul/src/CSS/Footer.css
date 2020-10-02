@@ -33,16 +33,12 @@ hr:first-child {
     grid-template-columns: repeat(var(--numberOfTabHeadersMap), 1fr);
 }
 
-.mapContent :first-child {
-    margin-left: 0;
-}
-
 .mapContent :last-child {
     margin-right: 0;
 }
 
 .tabColumn {
-    margin: 0 20px 0 20px;
+    margin-left: 30%;
 
     display: grid;
     grid-template-rows: 1fr auto;

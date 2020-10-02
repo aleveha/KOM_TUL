@@ -17,11 +17,15 @@ const HeaderButtons = (props: IProps) => {
     const path = useContext(PathContext);
     const appContent = useContext(AppContentContext);
 
+    const ChangeValue = () => {
+        path.changeValue();
+    }
+
     return(
         <div className="headerTabs-content">
             {appContent.value.map((elem) =>
                 appContent.value.indexOf(elem) !== 0 && (<div className="headerTab" key={appContent.value.indexOf(elem)}>
-                    <Link to={elem.link} className="tabName" onClick={() => path.changeValue()}>{elem.name}</Link>
+                    <Link to={elem.link} className="tabName" onClick={() => ChangeValue()}>{elem.name}</Link>
                 </div>)
             )}
         </div>
