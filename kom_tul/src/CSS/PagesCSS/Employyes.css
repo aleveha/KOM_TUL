@@ -1,0 +1,63 @@
+.employeesContent {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.employeesContent p {
+    margin: 5px;
+    color: dimgrey;
+}
+
+.employeeInfo {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin: 30px 0;
+    padding: 15px;
+    border: 2px solid darkgrey;
+    border-radius: 30px;
+}
+
+.employeePosition p {
+    font-weight: 700;
+    font-size: 25px;
+    color: darkslateblue;
+}
+
+.positionInfo {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    margin-top: 10px;
+}
+
+.contactBlocks {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.employeeName p {
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.contactBlock {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.contactBlock p {
+    font-size: 18px;
+}
+
+.contactLabel {
+}
+
+.contactInfo a {
+    text-decoration: none;
+    color: #2B8CB6;
+}
+
+.contactInfo a :hover {
+    text-decoration: none;
+    color: #483d8b;
+}
+
