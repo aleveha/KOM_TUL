@@ -237,18 +237,33 @@ const Employees = (props: IProps) => {
                         <p><span>{labelValue}</span></p>
                     </div>
                     <div className="contactInfo">
-                        {contactInfoValue && (classNameKey === 'phoneNumber' ?
-                            <p><a href={"tel:" + contactInfoValue.replace(/" "/g, "")}>{contactInfoValue}</a>
-                            </p> :
-                            (classNameKey === 'email' ?
-                                <p><a href={"mailto:" + contactInfoValue}>{contactInfoValue}</a></p> :
-                                <p><span>{contactInfoValue}</span></p>))}
+                        {contactInfoValue && CreateLinkToInfo(classNameKey, contactInfoValue)}
                     </div>
                 </div>
             );
         } else blockStruct = null;
 
         return blockStruct;
+    }
+
+    const CreateLinkToInfo = (classNameKey: string, contactInfoValue: string ) => {
+        let link: string = '';
+        let target: string = '';
+        switch (classNameKey) {
+            case 'phoneNumber':
+                link = "tel:" + contactInfoValue.replace(/" "/g, "");
+                break;
+            case 'email':
+                link = "mailto:" + contactInfoValue;
+                break;
+            case 'place':
+                link = "https://en.mapy.cz/s/jemasahuso";
+                target = "_blank";
+                break;
+
+        }
+
+        return (link ? <p><a className="employeeInfoLink" href={link} target={target}>{contactInfoValue}</a></p> : <p><span>{contactInfoValue}</span></p>)
     }
 
     return (

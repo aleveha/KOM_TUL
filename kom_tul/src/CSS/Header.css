@@ -22,14 +22,13 @@
     height: 100%;
 
     text-decoration: none;
-    color: black;
+    color: dimgrey;
     font-weight:500;
     font-size: 21px;
 }
 
 .langButton {
-    background-color: black;
-    color: white;
+    background-color: darkslateblue;
 }
 
 .cng-lang {
@@ -38,7 +37,7 @@
 }
 
 .langButton :hover {
-    color: #2B8CB6;
+    background-color: #2B8CB6;
     font-weight: 700;
     cursor: pointer;
 }

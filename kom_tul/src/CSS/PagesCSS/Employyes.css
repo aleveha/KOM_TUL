@@ -31,7 +31,6 @@
 
 .contactBlocks {
     display: grid;
-    grid-template-rows: repeat(5, 1fr);
 }
 
 .employeeName p {
@@ -51,13 +50,12 @@
 .contactLabel {
 }
 
-.contactInfo a {
+.employeeInfoLink {
     text-decoration: none;
     color: #2B8CB6;
 }
 
-.contactInfo a :hover {
-    text-decoration: none;
-    color: #483d8b;
+.contactInfo > p :hover {
+    color: darkslateblue;
 }
 
