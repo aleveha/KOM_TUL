@@ -28,9 +28,9 @@ const WebSiteMap = (props: IProps) => {
                     <div className="tabHeader">
                         <h3>{elem.name}</h3>
                     </div>
-                    <div className="tabContent">
+                    <div className="tabContent linkPar">
                         {elem.children.length !== 0 && elem.children.map(item => (
-                            <Link to={elem.link + item.link} key={elem.children.indexOf(item)} onClick={() => ChangePath()}>{item.name}</Link>
+                            <Link className="link" to={elem.link + item.link} key={elem.children.indexOf(item)} onClick={() => ChangePath()}>{item.name}</Link>
                         ))}
                     </div>
                 </div>)

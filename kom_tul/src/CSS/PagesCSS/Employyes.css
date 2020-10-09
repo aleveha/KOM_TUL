@@ -11,10 +11,6 @@
 .employeeInfo {
     display: grid;
     grid-template-rows: 1fr auto;
-    margin: 30px 0;
-    padding: 15px;
-    border: 2px solid darkgrey;
-    border-radius: 30px;
 }
 
 .employeePosition p {
@@ -45,17 +41,5 @@
 
 .contactBlock p {
     font-size: 18px;
-}
-
-.contactLabel {
-}
-
-.employeeInfoLink {
-    text-decoration: none;
-    color: #2B8CB6;
-}
-
-.contactInfo > p :hover {
-    color: darkslateblue;
 }
 

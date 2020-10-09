@@ -1,0 +1,23 @@
+p, li {
+    color: dimgrey;
+    font-size: 25px;
+}
+
+.department > div , .department > div > p {
+    margin: 30px 0;
+}
+
+.titleMain {
+    font-weight: bold;
+    color: #2B8CB6;
+}
+
+.titleSecond {
+    font-weight: 500;
+    color: darkslateblue;
+}
+
+.mainInfo {
+    width: 45vw;
+    display: flex;
+}

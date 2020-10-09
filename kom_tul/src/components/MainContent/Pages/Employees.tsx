@@ -246,7 +246,7 @@ const Employees = (props: IProps) => {
         return blockStruct;
     }
 
-    const CreateLinkToInfo = (classNameKey: string, contactInfoValue: string ) => {
+    const CreateLinkToInfo = (classNameKey: string, contactInfoValue: string) => {
         let link: string = '';
         let target: string = '';
         switch (classNameKey) {
@@ -257,34 +257,69 @@ const Employees = (props: IProps) => {
                 link = "mailto:" + contactInfoValue;
                 break;
             case 'place':
-                link = "https://en.mapy.cz/s/jemasahuso";
+                contactInfoValue.includes('L') ? link = "https://en.mapy.cz/s/posaparapu" : link = "https://en.mapy.cz/s/jemasahuso";
                 target = "_blank";
                 break;
 
         }
 
-        return (link ? <p><a className="employeeInfoLink" href={link} target={target}>{contactInfoValue}</a></p> : <p><span>{contactInfoValue}</span></p>)
+        return (link ?
+            <p className="linkPar"><a className="link" href={link} target={target}>{contactInfoValue}</a></p> :
+            <p><span>{contactInfoValue}</span></p>)
+    }
+
+    const GetMainInfo = (person: IEmployee, border?: boolean) => {
+        return (
+            <div className={border ? "employeeInfo border" : "employeeInfo"} key={person.name}>
+                {person.position && <div className="employeePosition">
+                    <p>{person.position}</p>
+                </div>}
+                <div className="positionInfo">
+                    <div className="employeeName">
+                        <p>{`${person.status} ${person.name}${person.degree && ', ' + person.degree}`}</p>
+                    </div>
+                    <div className="contactBlocks">
+                        {Object.keys(person).map(key => GetContactsBlock(person, key))}
+                    </div>
+                </div>
+            </div>
+        )
     }
 
     return (
         <div className="employeesContent">
-            {EmployeesObject.mainWorkers.map(person => {
-                return (
-                    <div className="employeeInfo" key={person.name}>
-                        <div className="employeePosition">
-                            <p>{person.position}</p>
-                        </div>
-                        <div className="positionInfo">
-                            <div className="employeeName">
-                                <p>{`${person.status} ${person.name}${person.degree && ', ' + person.degree}`}</p>
-                            </div>
-                            <div className="contactBlocks">
-                                {Object.keys(person).map(key => GetContactsBlock(person, key))}
-                            </div>
-                        </div>
+            <div className="mainWorkers">
+                {EmployeesObject.mainWorkers.map(person => GetMainInfo(person, true))}
+            </div>
+            <div className="teachingStaff border">
+                <div className="employeePosition">
+                    <p><span>{EmployeesObject.teachingStaff.label}</span></p>
+                </div>
+                {EmployeesObject.teachingStaff.staff.map(person => GetMainInfo(person))}
+            </div>
+            <div className="researchers border">
+                <div className="employeePosition">
+                    <p><span>{EmployeesObject.researchers.label}</span></p>
+                </div>
+                {EmployeesObject.researchers.staff.map(person => GetMainInfo(person))}
+            </div>
+            <div className="PhD border">
+                <div className="employeePosition">
+                    <p><span>{EmployeesObject.PhD.label}</span></p>
+                </div>
+                <div className="fullTimeStudy">
+                    <div className="employeePosition">
+                        <p><span>{EmployeesObject.PhD.fullTimeStudy.label}</span></p>
                     </div>
-                )
-            })}
+                    {EmployeesObject.PhD.fullTimeStudy.staff.map(person => GetMainInfo(person))}
+                </div>
+                <div className="combinedStudy">
+                    <div className="employeePosition">
+                        <p><span>{EmployeesObject.PhD.combinedStudy.label}</span></p>
+                    </div>
+                    {EmployeesObject.PhD.combinedStudy.staff.map(person => GetMainInfo(person))}
+                </div>
+            </div>
         </div>
     );
 };

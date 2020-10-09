@@ -28,9 +28,9 @@ const ContactsLine = (props: IProps) => {
                         </div>
                     </div>
                     <div className="contacts">
-                        <p><a href="tel:+420485353361">+420 48 535 3361</a></p>
-                        <p><a href="mailto:tereza.vrbova@tul.cz">tereza.vrbova@tul.cz</a></p>
-                        <p><Link to="/home">www.kom.tul.cz</Link></p>
+                        <p className="linkPar"><a className="link" href="tel:+420485353361">+420 48 535 3361</a></p>
+                        <p className="linkPar"><a className="link" href="mailto:tereza.vrbova@tul.cz">tereza.vrbova@tul.cz</a></p>
+                        <p className="linkPar"><Link className="link" to="/home">www.kom.tul.cz</Link></p>
                     </div>
                 </div>
             </div>
