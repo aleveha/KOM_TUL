@@ -74,7 +74,6 @@ const EmployeesObject: IEmployees = {
             position: "Asistentka vedoucího katedry, sekretariát",
             name: "Tereza VRBOVÁ",
             status: "Mgr.",
-            degree: "",
             email: "tereza.vrbova@tul.cz",
             phoneNumber: "+420 48 535 3361",
             place: "bud. E1/3.p"
@@ -82,8 +81,6 @@ const EmployeesObject: IEmployees = {
         {
             position: "Vedoucí laboratoře třískových technologií a procesů",
             name: "Martin VÁŇA",
-            status: "",
-            degree: "",
             email: "martin.vana@tul.cz",
             phoneNumber: "+420 48 535 3393",
             place: "bud. L/1 NP - laboratoř",
@@ -276,7 +273,7 @@ const Employees = (props: IProps) => {
                 </div>}
                 <div className="positionInfo">
                     <div className="employeeName">
-                        <p>{`${person.status} ${person.name}${person.degree && ', ' + person.degree}`}</p>
+                        <p>{`${person.status == undefined ? '' : person.status} ${person.name}${person.degree == undefined ? '' : ', ' + person.degree}`}</p>
                     </div>
                     <div className="contactBlocks">
                         {Object.keys(person).map(key => GetContactsBlock(person, key))}

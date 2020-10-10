@@ -34,6 +34,23 @@ p {
   margin: 0;
 }
 
+.mainLabel {
+  color: darkslateblue;
+  font-size: 40px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.titleMain {
+  font-weight: bold;
+  color: #2B8CB6;
+}
+
+.titleSecond {
+  font-weight: 500;
+  color: darkslateblue;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

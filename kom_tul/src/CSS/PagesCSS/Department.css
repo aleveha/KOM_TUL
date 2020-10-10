@@ -3,21 +3,26 @@ p, li {
     font-size: 25px;
 }
 
-.department > div , .department > div > p {
-    margin: 30px 0;
-}
-
-.titleMain {
-    font-weight: bold;
-    color: #2B8CB6;
-}
-
-.titleSecond {
-    font-weight: 500;
-    color: darkslateblue;
+.department > div {
+    margin: 60px 0;
 }
 
 .mainInfo {
-    width: 45vw;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainInfo img {
+    width: 30vw;
+    object-fit: fill;
+}
+
+.mainInfo p {
+    width: 53vw;
+    text-align: justify;
+}
+
+.professionalFocusList, .programsList {
+    margin-top: 20px;
 }

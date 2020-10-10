@@ -1,0 +1,21 @@
+.infoContent {
+    margin: 60px 0;
+}
+
+.infoContent p {
+    text-align: justify;
+}
+
+.coopInfo {
+}
+
+.coopInfo img {
+    width: 30vw;
+    object-fit: fill;
+    float: right;
+    margin-left: 50px;
+}
+
+.infoContent {
+    /*width: 50vw;*/
+}
