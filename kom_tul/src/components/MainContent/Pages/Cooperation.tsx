@@ -55,7 +55,7 @@ const CooperationContent = () => {
                     <ul>
                         {coopAbility.wayPoints.map(wayPoint => {
                             return (
-                                <li>{wayPoint.name} - {wayPoint.description}</li>
+                                <li key={wayPoint.name}>{wayPoint.name} - {wayPoint.description}</li>
                             );
                         })}
                     </ul>
@@ -68,11 +68,9 @@ const CooperationContent = () => {
 const Cooperation = (props: IProps) => {
     let match = useRouteMatch();
     return (
-        <div>
-            <Switch>
-                <Route path={match.path} exact component={CooperationContent}/>
-            </Switch>
-        </div>
+        <Switch>
+            <Route path={match.path} exact component={CooperationContent}/>
+        </Switch>
     );
 };
 

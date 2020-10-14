@@ -13,14 +13,20 @@ p, li {
     align-items: center;
 }
 
-.mainInfo img {
-    width: 30vw;
-    object-fit: fill;
+.departmentInfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    text-align: justify;
 }
 
-.mainInfo p {
-    width: 53vw;
-    text-align: justify;
+.departmentInfo img {
+    width: 30vw;
+    object-fit: fill;
+    float: right;
+    margin-left: 30px;
 }
 
 .professionalFocusList, .programsList {

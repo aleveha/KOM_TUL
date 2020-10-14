@@ -94,8 +94,10 @@ const DepartmentContent = () => {
         <div className="department padding">
             <h1 className="mainLabel">Informace o katedře</h1>
             <div className="mainInfo">
-                <p>{mainInfo}</p>
-                <img src={mainPhotoDeprtment}/>
+                <p className="departmentInfo">
+                    <img src={mainPhotoDeprtment}/>
+                    <span>{mainInfo}</span>
+                </p>
             </div>
             <div className="professionalFocus">
                 <p className="titleMain">{professionalFocusLabel}</p>
@@ -140,11 +142,9 @@ const DepartmentContent = () => {
 const Department = (props: IProps) => {
     let match = useRouteMatch();
     return (
-        <div>
-            <Switch>
-                <Route path={match.path} exact component={DepartmentContent}/>
-            </Switch>
-        </div>
+        <Switch>
+            <Route path={match.path} exact component={DepartmentContent}/>
+        </Switch>
     );
 };
 

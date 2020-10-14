@@ -1,0 +1,48 @@
+.projectInfoBlock {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 15px 0;
+}
+
+.projectsBlock p {
+    font-size: 21px;
+}
+
+.projectInfoContent {
+    justify-self: flex-start;
+}
+
+.projectTitle {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.projectLink {
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: bold;
+    color: #2B8CB6;
+}
+
+.linkBlock {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.projectsGroup {
+    margin-bottom: 70px;
+}
+
+
+/*template for animation*/
+
+.projectsInfo {
+    /*display: flex;*/
+    max-width: 80vw;
+    margin: 0 auto;
+}
+.solvedProjects {
+    /*margin-right: 30px;*/
+}

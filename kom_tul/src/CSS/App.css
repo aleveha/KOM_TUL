@@ -10,6 +10,10 @@
   min-height: 88vh;
 }
 
+.mainContent {
+  max-width: 1440px;
+}
+
 .padding {
   padding: 0 40px;
 }

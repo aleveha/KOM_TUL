@@ -284,7 +284,7 @@ const Employees = (props: IProps) => {
     }
 
     return (
-        <div className="employeesContent">
+        <div className="employeesContent padding">
             <div className="mainWorkers">
                 {EmployeesObject.mainWorkers.map(person => GetMainInfo(person, true))}
             </div>
