@@ -5,7 +5,7 @@
 
 .WebContent {
   display: grid;
-  grid-template-rows: 1fr auto auto; /*заменить второе значение на auto*/
+  grid-template-rows: 45px auto; /*заменить второе значение на auto*/
 
   min-height: 88vh;
 }
@@ -46,13 +46,20 @@ p {
 }
 
 .titleMain {
+  font-size: 25px;
   font-weight: bold;
   color: #2B8CB6;
 }
 
 .titleSecond {
+  font-size: 23px;
   font-weight: 500;
   color: darkslateblue;
+}
+
+.subTitle {
+  font-weight: 400;
+  margin-top: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

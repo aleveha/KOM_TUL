@@ -9,6 +9,8 @@ import LanguageContext from "./Context/LanguageContext";
 import PathContext from "./Context/PathContext";
 import AppContentContext from "./Context/AppContentContext";
 import {useLocation} from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 interface IAppContent {
@@ -65,11 +67,7 @@ const appContent: Array<IAppContent> = [
         children: []
     }
 ];
-interface LocationState {
-    from: {
-        pathname: string;
-    };
-}
+
 const App = () => {
     let location = useLocation();
 
@@ -128,9 +126,10 @@ const App = () => {
                         <div className="WebContent">
                             <HistoryWay/>
                             <MainContent/>
-                            <Footer/>
                         </div>
+                        <Footer/>
                     </div>
+                    <ToastContainer />
                 </AppContentContext.Provider>
             </PathContext.Provider>
         </LanguageContext.Provider>

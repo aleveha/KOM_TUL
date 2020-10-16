@@ -10,6 +10,7 @@
 }
 
 .cooperationInfo img {
+    max-width: 690px;
     width: 30vw;
     object-fit: fill;
     float: right;
