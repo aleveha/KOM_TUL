@@ -510,10 +510,10 @@ const EducationContent = () => {
                                             </div>
                                         );
                                     })}
-                                    {program.links.map(link => {
+                                    {program.links && program.links.map(link => {
                                         return (
                                             <div className="additionalInfo">
-                                                <a href={link}>{program.additionalInfo[program.links.indexOf(link)]}</a>
+                                                <a href={link}>{program.additionalInfo && program.links && program.additionalInfo[program.links.indexOf(link)]}</a>
                                             </div>
                                         );
                                     })}
