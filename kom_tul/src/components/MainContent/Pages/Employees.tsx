@@ -5,7 +5,7 @@ interface IProps {
 
 };
 
-interface IEmployee {
+export interface IEmployee {
     position?: string,
     name: string,
     status?: string,

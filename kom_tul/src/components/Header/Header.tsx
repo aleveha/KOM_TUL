@@ -23,7 +23,7 @@ const Header = (props: IProps) => {
                     <a className="cng-lang"
                        onClick={() => {
                            language.changeValue(language.value === 'CZ' ? 'EN' : 'CZ');
-                           toast.info("Zmena jazyka jeste nei k dispozici.")
+                           toast.warn("Zmena jazyka jeste neni k dispozici.", { autoClose: 3000, position: "bottom-center" });
                        }} >{language.value !== 'CZ' ? 'CZ' : 'EN'}</a>
                 </div>
             </div>
