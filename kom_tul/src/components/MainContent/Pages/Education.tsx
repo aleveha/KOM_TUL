@@ -18,8 +18,8 @@ interface IProgram {
     name: string,
     educationYears?: Array<IEducationYear>,
     trainers?: Array<ITrainer>,
-    additionalInfo: string,
-    links: Array<string>
+    additionalInfo?: Array<string>,
+    links?: Array<string>
 }
 
 interface IEducationYear {
@@ -101,104 +101,124 @@ const EducationContent = () => {
                                         ]
                                     },
                                     {
-                                        name: "",
-                                        shortName: "",
-                                        semester: "",
-                                        range: "",
-                                        exam: "",
-                                        credits: 5,
-                                        professor: []
+                                        name: "Bakalářská práce I.",
+                                        shortName: "BCP1",
+                                        semester: "Letní",
+                                        range: "50 h",
+                                        exam: "zápočet",
+                                        credits: 6,
+                                        professor: [
+                                            "vedoucí BP"
+                                        ]
                                     },
                                     {
-                                        name: "",
-                                        shortName: "",
-                                        semester: "",
-                                        range: "",
-                                        exam: "",
-                                        credits: 5,
-                                        professor: []
+                                        name: "Bakalářská práce II.",
+                                        shortName: "BCP2",
+                                        semester: "Letní",
+                                        range: "70 h",
+                                        exam: "zápočet",
+                                        credits: 10,
+                                        professor: [
+                                            "vedoucí BP"
+                                        ]
                                     }
                                 ]
                             }
                         }
                     ],
-                    additionalInfo: "",
-                    links: []
+                    additionalInfo: [
+                        "Směrnice rektora TUL č. 5/2018 - Jednotná úprava a zveřejňování bakalářských, diplomových, rigorózních, disertačních a habilitačních prací"
+                    ],
+                    links: [
+                        "https://www.tul.cz/document/8580"
+                    ]
+
                 }
             ]
         },
         {
             //magistr
             shortDescription: {
-                form: "",
-                basicTerm: "",
-                endDegree: ""
+                form: "prezenční – kombinovaná",
+                basicTerm: "2 roky",
+                endDegree: "Inženýr (Ing.)"
             },
             programs: [
                 {
-                    number: "",
-                    name: "",
+                    number: "N0715A270015MT",
+                    name: "Materiály a technologie - předměty vyučované katedrou",
                     educationYears: [
                         {
                             year: 1,
                             required: {
-                                name: "",
+                                name: "Povinné předměty",
                                 courseTable: [
                                     {
-                                        name: "",
-                                        shortName: "",
-                                        semester: "",
-                                        range: "",
-                                        exam: "",
-                                        credits: 0,
-                                        professor: []
+                                        name: "Teorie obrábění",
+                                        shortName: "TO",
+                                        semester: "Letní",
+                                        range: "2+2",
+                                        exam: "zk",
+                                        credits: 5,
+                                        professor: [
+                                            "Jersák",
+                                            "Popov"
+                                        ]
                                     },
                                     {
-                                        name: "",
-                                        shortName: "",
-                                        semester: "",
-                                        range: "",
-                                        exam: "",
-                                        credits: 0,
-                                        professor: []
+                                        name: "Exkurze",
+                                        shortName: "EX",
+                                        semester: "Letní",
+                                        range: "0+1T",
+                                        exam: "z",
+                                        credits: 3,
+                                        professor: [
+                                            "Nováková (KSP)"
+                                        ]
                                     },
                                     {
-                                        name: "",
-                                        shortName: "",
-                                        semester: "",
-                                        range: "",
-                                        exam: "",
-                                        credits: 0,
-                                        professor: []
+                                        name: "Odborná praxe",
+                                        shortName: "OP",
+                                        semester: "Letní",
+                                        range: "0+3T",
+                                        exam: "z",
+                                        credits: 3,
+                                        professor: [
+                                            "Sobotka (KSP)"
+                                        ]
                                     }
                                 ]
                             },
                             requiredOptional: [
                                 {
-                                    name: "",
+                                    name: "Povinně volitelný předmět – skupina 1",
                                     courseTable: [
                                         {
-                                            name: "",
-                                            shortName: "",
-                                            semester: "",
-                                            range: "",
-                                            exam: "",
-                                            credits: 0,
-                                            professor: []
+                                            name: "Přípravky a montážní prostředky",
+                                            shortName: "PMOP",
+                                            semester: "Zimní",
+                                            range: "2+2",
+                                            exam: "zk",
+                                            credits: 5,
+                                            professor: [
+                                                "Dvořáčková"
+                                            ]
                                         }
                                     ]
                                 },
                                 {
-                                    name: "",
+                                    name: "Povinně volitelný předmět – skupina 2",
                                     courseTable: [
                                         {
-                                            name: "",
-                                            shortName: "",
-                                            semester: "",
-                                            range: "",
-                                            exam: "",
-                                            credits: 0,
-                                            professor: []
+                                            name: "Abrazivní a nekonvenční metody",
+                                            shortName: "ANM",
+                                            semester: "Letní",
+                                            range: "2+2",
+                                            exam: "zk",
+                                            credits: 5,
+                                            professor: [
+                                                "Jersák"
+                                            ]
                                         }
                                     ]
                                 }
@@ -207,180 +227,217 @@ const EducationContent = () => {
                         {
                             year: 2,
                             required: {
-                                name: "",
+                                name: "Povinné předměty",
                                 courseTable: [
                                     {
-                                        name: "",
-                                        shortName: "",
-                                        semester: "",
-                                        range: "",
-                                        exam: "",
-                                        credits: 0,
-                                        professor: []
+                                        name: "Diplomová práce 1",
+                                        shortName: "DP1",
+                                        semester: "Zimní",
+                                        range: "0+2",
+                                        exam: "kl. z.",
+                                        credits: 2,
+                                        professor: [
+                                            "vedoucí D"
+                                        ]
                                     },
                                     {
-                                        name: "",
-                                        shortName: "",
-                                        semester: "",
-                                        range: "",
-                                        exam: "",
-                                        credits: 0,
-                                        professor: []
+                                        name: "Metrologie",
+                                        shortName: "MET",
+                                        semester: "Zimní",
+                                        range: "2+2",
+                                        exam: "zk",
+                                        credits: 5,
+                                        professor: [
+                                            "Dvořáčková"
+                                        ]
                                     },
                                     {
-                                        name: "",
-                                        shortName: "",
-                                        semester: "",
-                                        range: "",
-                                        exam: "",
-                                        credits: 0,
-                                        professor: []
+                                        name: "Diplomová práce 2",
+                                        shortName: "DP2",
+                                        semester: "Letní",
+                                        range: "0+8",
+                                        exam: "z",
+                                        credits: 7,
+                                        professor: [
+                                            "vedoucí DP"
+                                        ]
                                     },
                                     {
-                                        name: "",
-                                        shortName: "",
-                                        semester: "",
-                                        range: "",
-                                        exam: "",
-                                        credits: 0,
-                                        professor: []
+                                        name: "Diplomová práce 3",
+                                        shortName: "DP3",
+                                        semester: "Letní",
+                                        range: "0+16",
+                                        exam: "z",
+                                        credits: 15,
+                                        professor: [
+                                            "vedoucí DP"
+                                        ]
+                                    },
+                                    {
+                                        name: "Projekt. tech. procesů a automat. výroby",
+                                        shortName: "PTPA",
+                                        semester: "Letní",
+                                        range: "2+2",
+                                        exam: "zk",
+                                        credits: 4,
+                                        professor: [
+                                            "Dvořáčková",
+                                            "Jersák"
+                                        ]
                                     }
                                 ]
                             },
                             requiredOptional: [
                                 {
-                                    name: "",
+                                    name: "Povinně volitelný předmět – skupina 3",
                                     courseTable: [
                                         {
-                                            name: "",
-                                            shortName: "",
-                                            semester: "",
-                                            range: "",
-                                            exam: "",
-                                            credits: 0,
-                                            professor: []
+                                            name: "Cutting Tools",
+                                            shortName: "RENAJ",
+                                            semester: "Zimní",
+                                            range: "2+2",
+                                            exam: "zk",
+                                            credits: 5,
+                                            professor: [
+                                                "Popov"
+                                            ]
+                                        },
+                                        {
+                                            name: "Speciální metody obrábění",
+                                            shortName: "SMO",
+                                            semester: "Zimní",
+                                            range: "2+2",
+                                            exam: "zk",
+                                            credits: 5,
+                                            professor: [
+                                                "Popov"
+                                            ]
                                         }
                                     ]
                                 },
                                 {
-                                    name: "",
+                                    name: "Povinně volitelný předmět – skupina 4",
                                     courseTable: [
                                         {
-                                            name: "",
-                                            shortName: "",
-                                            semester: "",
-                                            range: "",
-                                            exam: "",
-                                            credits: 0,
-                                            professor: []
+                                            name: "Výrobní procesy a systémy",
+                                            shortName: "VPS",
+                                            semester: "Letní",
+                                            range: "2+2",
+                                            exam: "zk",
+                                            credits: 4,
+                                            professor: [
+                                                "Jersák"
+                                            ]
                                         }
                                     ]
                                 }
                             ]
                         }
                     ],
-                    additionalInfo: "",
-                    links: []
+                    additionalInfo: [
+                        "Směrnice rektora TUL č. 5/2018 - Jednotná úprava a zveřejňování bakalářských, diplomových, rigorózních, disertačních a habilitačních prací"
+                    ],
+                    links: [
+                        "https://www.tul.cz/document/8580"
+                    ]
                 },
                 {
-                    number: "",
-                    name: "",
+                    number: "N0722A270001",
+                    name: "Technologie plastů a kompozitů - předměty vyučované katedrou",
                     educationYears: [
                         {
                             year: 2,
                             required: {
-                                name: "",
+                                name: "Povinné předměty",
                                 courseTable: [
                                     {
-                                        name: "",
-                                        shortName: "",
-                                        semester: "",
-                                        range: "",
-                                        exam: "",
-                                        credits: 0,
-                                        professor: []
+                                        name: "Metrologie",
+                                        shortName: "MET",
+                                        semester: "Zimní",
+                                        range: "2+2",
+                                        exam: "zk",
+                                        credits: 5,
+                                        professor: [
+                                            "Dvořáčková"
+                                        ]
                                     }
                                 ]
                             }
                         }
-                    ],
-                    additionalInfo: "",
-                    links: []
+                    ]
                 },
                 {
-                    number: "",
-                    name: "",
+                    number: "N0788A270004",
+                    name: "Inovační a průmyslové inženýrství - předměty vyučované katedrou",
                     educationYears: [
                         {
                             year: 2,
                             required: {
-                                name: "",
+                                name: "Povinně volitelný předmět – skupina 3",
                                 courseTable: [
                                     {
-                                        name: "",
-                                        shortName: "",
-                                        semester: "",
-                                        range: "",
-                                        exam: "",
-                                        credits: 0,
-                                        professor: []
+                                        name: "Metrologie",
+                                        shortName: "MET",
+                                        semester: "Zimní",
+                                        range: "2+2",
+                                        exam: "zk",
+                                        credits: 5,
+                                        professor: [
+                                            "Dvořáčková"
+                                        ]
                                     }
                                 ]
                             }
                         }
-                    ],
-                    additionalInfo: "",
-                    links: []
+                    ]
                 }
             ]
         },
         {
             //doktor
             shortDescription: {
-                form: "",
-                basicTerm: "",
-                endDegree: ""
+                form: "prezenční – kombinovaná",
+                basicTerm: "4 roky",
+                endDegree: "doktor (Ph.D.)"
             },
             programs: [
                 {
-                    number: "",
-                    name: "",
+                    number: "P0788D270002",
+                    name: "Technologie a materiály",
                     trainers: [
                         {
-                            specification: "",
+                            specification: "Obrábění kovových materiálů: ",
                             person: {
-                                name: "",
-                                degree: "",
-                                status: ""
+                                name: "Alexey Popov",
+                                degree: "DrSc.",
+                                status: "prof. Ing."
                             }
                         },
                         {
-                            specification: "",
+                            specification: "Obrábění kovových a nekovových materiálů: ",
                             person: {
-                                name: "",
-                                degree: "",
-                                status: ""
+                                name: "Jan Jersák",
+                                degree: "CSc.",
+                                status: "doc. Ing."
                             }
                         },
                         {
-                            specification: "",
+                            specification: "Metrologie: ",
                             person: {
-                                name: "",
-                                degree: "",
-                                status: ""
-                            }
-                        },
-                        {
-                            specification: "",
-                            person: {
-                                name: "",
-                                degree: "",
-                                status: ""
+                                name: "Štěpánka Dvořáčková",
+                                degree: "Ph.D.",
+                                status: "doc. Ing."
                             }
                         }
                     ],
-                    additionalInfo: "",
-                    links: []
+                    additionalInfo: [
+                        "Informace a formuláře k doktorskému studijnímu programu",
+                        "Směrnice rektora TUL č. 5/2018 - Jednotná úprava a zveřejňování bakalářských, diplomových, rigorózních, disertačních a habilitačních prací"
+                    ],
+                    links: [
+                        "http://www.fs.tul.cz/cz/pro-studenty/doktorske-studium/",
+                        "https://www.tul.cz/document/8580"
+                    ]
                 }
             ]
         }
