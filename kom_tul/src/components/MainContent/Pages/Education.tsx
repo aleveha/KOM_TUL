@@ -3,6 +3,7 @@ import {Switch, Route, useRouteMatch} from 'react-router-dom';
 import {IEmployee} from './Employees';
 
 interface IEducationalProgram {
+    name: string,
     shortDescription: IShortDescription,
     programs: Array<IProgram>,
 }
@@ -52,6 +53,7 @@ const EducationContent = () => {
     const EducationalPrograms: Array<IEducationalProgram> = [
         {
             //bakalar
+            name: "Bakalářský studijní program",
             shortDescription: {
                 form: "prezenční – kombinovaná",
                 basicTerm: "3 roky",
@@ -138,6 +140,7 @@ const EducationContent = () => {
         },
         {
             //magistr
+            name: "Navazující magisterský studijní program",
             shortDescription: {
                 form: "prezenční – kombinovaná",
                 basicTerm: "2 roky",
@@ -395,6 +398,7 @@ const EducationContent = () => {
         },
         {
             //doktor
+            name: "Doktorský studijní program",
             shortDescription: {
                 form: "prezenční – kombinovaná",
                 basicTerm: "4 roky",
@@ -445,7 +449,80 @@ const EducationContent = () => {
 
     return (
         <div className="educatingContent">
-
+            {EducationalPrograms.map(educationProgram => {
+                return (
+                    <div className="educationProgram" key={educationProgram.name}>
+                        <div className="educationProgramTitle">
+                            <h2>{educationProgram.name}</h2>
+                            <div className="educationProgramShortDescription">
+                                <div className="descriptionLine">
+                                    <p>Forma studia: </p>
+                                    <p>{educationProgram.shortDescription.form}</p>
+                                </div>
+                                <div className="descriptionLine">
+                                    <p>Standardní doba studia: </p>
+                                    <p>{educationProgram.shortDescription.basicTerm}</p>
+                                </div>
+                                <div className="descriptionLine">
+                                    <p>Udělovaný akademický titul: </p>
+                                    <p>{educationProgram.shortDescription.endDegree}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {educationProgram.programs.map(program => {
+                            return (
+                                <div className="programContent" key={program.number}>
+                                    <div className="programTitle">
+                                        <h3>{program.name}</h3>
+                                        <p>{program.number}</p>
+                                    </div>
+                                    {program.educationYears && program.educationYears.map(studyingYear => {
+                                        return (
+                                            <div className="educationYearInfo">
+                                                <p>{studyingYear.year}. ročník</p>
+                                                <div className="requiredCourses">
+                                                    <p>{studyingYear.required.name}</p>
+                                                    <table>
+                                                        <tr className="tableHeader">
+                                                            <td>Název</td>
+                                                            <td>Zkratka</td>
+                                                            <td>Semestr</td>
+                                                            <td>Rozsah</td>
+                                                            <td>Zkouška</td>
+                                                            <td>Kredity</td>
+                                                            <td>Vyučující</td>
+                                                        </tr>
+                                                        {studyingYear.required.courseTable.map(tableLine => {
+                                                            return (
+                                                                <tr>
+                                                                    <td>{tableLine.name}</td>
+                                                                    <td>{tableLine.shortName}</td>
+                                                                    <td>{tableLine.semester}</td>
+                                                                    <td>{tableLine.range}</td>
+                                                                    <td>{tableLine.exam}</td>
+                                                                    <td>{tableLine.credits}</td>
+                                                                    <td>{tableLine.professor}</td>
+                                                                </tr>
+                                                            );
+                                                        })}
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
+                                    {program.links.map(link => {
+                                        return (
+                                            <div className="additionalInfo">
+                                                <a href={link}>{program.additionalInfo[program.links.indexOf(link)]}</a>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            );
+                        })}
+                    </div>
+                );
+            })}
         </div>
     );
 }
