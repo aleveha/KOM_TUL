@@ -147,7 +147,7 @@ const LaboratoriesContent = () => {
                 <p className="titleSecond">Specifická zařízení a výstupy:</p>
                 {parts.map(part => {
                     return (
-                        <div className="laboratoryPartBlock padding" key={part.label}>
+                        <div className="laboratoryPartBlock padding" key={parts.indexOf(part)}>
                             {part.label && <p className="titleMain subTitle">{part.label}</p>}
                             <ul className="laboratoryText">
                                 {part.value.map(item => {

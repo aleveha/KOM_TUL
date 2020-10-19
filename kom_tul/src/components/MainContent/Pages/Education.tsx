@@ -1,6 +1,7 @@
 import React from 'react';
 import {Switch, Route, useRouteMatch} from 'react-router-dom';
 import {IEmployee} from './Employees';
+import '../../../CSS/PagesCSS/Education.css';
 
 interface IEducationalProgram {
     name: string,
@@ -451,75 +452,80 @@ const EducationContent = () => {
         <div className="educatingContent">
             {EducationalPrograms.map(educationProgram => {
                 return (
-                    <div className="educationProgram" key={educationProgram.name}>
-                        <div className="educationProgramTitle">
-                            <h2>{educationProgram.name}</h2>
-                            <div className="educationProgramShortDescription">
-                                <div className="descriptionLine">
-                                    <p>Forma studia: </p>
-                                    <p>{educationProgram.shortDescription.form}</p>
-                                </div>
-                                <div className="descriptionLine">
-                                    <p>Standardní doba studia: </p>
-                                    <p>{educationProgram.shortDescription.basicTerm}</p>
-                                </div>
-                                <div className="descriptionLine">
-                                    <p>Udělovaný akademický titul: </p>
-                                    <p>{educationProgram.shortDescription.endDegree}</p>
+                    <div className="educationProgram border" key={educationProgram.name}>
+                        <h2>{educationProgram.name}</h2>
+                        <div className="educationProgramContent">
+                            <div className="educationProgramTitle">
+                                <div className="educationProgramShortDescription">
+                                    <div className="descriptionLine">
+                                        <p>Forma studia: </p>
+                                        <p>{educationProgram.shortDescription.form}</p>
+                                    </div>
+                                    <div className="descriptionLine">
+                                        <p>Standardní doba studia: </p>
+                                        <p>{educationProgram.shortDescription.basicTerm}</p>
+                                    </div>
+                                    <div className="descriptionLine">
+                                        <p>Udělovaný akademický titul: </p>
+                                        <p>{educationProgram.shortDescription.endDegree}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        {educationProgram.programs.map(program => {
-                            return (
-                                <div className="programContent" key={program.number}>
-                                    <div className="programTitle">
-                                        <h3>{program.name}</h3>
-                                        <p>{program.number}</p>
-                                    </div>
-                                    {program.educationYears && program.educationYears.map(studyingYear => {
-                                        return (
-                                            <div className="educationYearInfo">
-                                                <p>{studyingYear.year}. ročník</p>
-                                                <div className="requiredCourses">
-                                                    <p>{studyingYear.required.name}</p>
-                                                    <table>
-                                                        <tr className="tableHeader">
-                                                            <td>Název</td>
-                                                            <td>Zkratka</td>
-                                                            <td>Semestr</td>
-                                                            <td>Rozsah</td>
-                                                            <td>Zkouška</td>
-                                                            <td>Kredity</td>
-                                                            <td>Vyučující</td>
-                                                        </tr>
-                                                        {studyingYear.required.courseTable.map(tableLine => {
-                                                            return (
-                                                                <tr>
-                                                                    <td>{tableLine.name}</td>
-                                                                    <td>{tableLine.shortName}</td>
-                                                                    <td>{tableLine.semester}</td>
-                                                                    <td>{tableLine.range}</td>
-                                                                    <td>{tableLine.exam}</td>
-                                                                    <td>{tableLine.credits}</td>
-                                                                    <td>{tableLine.professor}</td>
-                                                                </tr>
-                                                            );
-                                                        })}
-                                                    </table>
+                            {educationProgram.programs.map(program => {
+                                return (
+                                    <div className="programContent" key={program.number}>
+                                        <div className="programTitle">
+                                            <p>{program.name}</p>
+                                            <p>{program.number}</p>
+                                        </div>
+                                        {program.educationYears && program.educationYears.map(studyingYear => {
+                                            return (
+                                                <div className="educationYearInfo" key={studyingYear.year}>
+                                                    <p>{studyingYear.year}. ročník</p>
+                                                    <div className="requiredCourses">
+                                                        <p>{studyingYear.required.name}</p>
+                                                        <table>
+                                                            <tbody>
+                                                            <tr className="tableHeader">
+                                                                <th>Název</th>
+                                                                <th>Zkratka</th>
+                                                                <th>Semestr</th>
+                                                                <th>Rozsah</th>
+                                                                <th>Zkouška</th>
+                                                                <th>Kredity</th>
+                                                                <th>Vyučující</th>
+                                                            </tr>
+                                                            {studyingYear.required.courseTable.map(tableLine => {
+                                                                return (
+                                                                    <tr key={tableLine.name}>
+                                                                        <td>{tableLine.name}</td>
+                                                                        <td>{tableLine.shortName}</td>
+                                                                        <td>{tableLine.semester}</td>
+                                                                        <td>{tableLine.range}</td>
+                                                                        <td>{tableLine.exam}</td>
+                                                                        <td>{tableLine.credits}</td>
+                                                                        <td>{tableLine.professor}</td>
+                                                                    </tr>
+                                                                );
+                                                            })}
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        );
-                                    })}
-                                    {program.links && program.links.map(link => {
-                                        return (
-                                            <div className="additionalInfo">
-                                                <a href={link}>{program.additionalInfo && program.links && program.additionalInfo[program.links.indexOf(link)]}</a>
-                                            </div>
-                                        );
-                                    })}
-                                </div>
-                            );
-                        })}
+                                            );
+                                        })}
+                                        {program.links && program.links.map(link => {
+                                            return (
+                                                <div className="additionalInfo"
+                                                     key={program.links && program.links.indexOf(link)}>
+                                                    <a href={link}>{program.additionalInfo && program.links && program.additionalInfo[program.links.indexOf(link)]}</a>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                );
+                            })}
+                        </div>
                     </div>
                 );
             })}

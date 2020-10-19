@@ -1,0 +1,21 @@
+.educationProgramContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.educationProgramTitle {
+    justify-self: center;
+    align-self: center;
+}
+
+.descriptionLine {
+    margin: 30px 0;
+}
+
+.descriptionLine p:first-child {
+    font-weight: 500;
+    color: #2B8CB6;
+}
+
+.descriptionLine p:last-child {
+}

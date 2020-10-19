@@ -4,9 +4,6 @@
 }
 
 .WebContent {
-  display: grid;
-  grid-template-rows: 45px auto; /*заменить второе значение на auto*/
-
   min-height: 88vh;
 }
 

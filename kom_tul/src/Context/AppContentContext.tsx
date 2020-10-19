@@ -3,7 +3,7 @@ import React from 'react';
 interface IAppContent {
     name: string,
     link: string,
-    children: Array<IAppContent>
+    children?: Array<IAppContent>
 }
 
 interface IAppContentContext {

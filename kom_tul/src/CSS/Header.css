@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 4fr 17fr 1fr;
     grid-template-rows: 1fr;
-    min-height: 75px;
+    min-height: 80px;
 }
 
 .headerTabs-content {
@@ -47,9 +47,23 @@
     justify-content: center;
     align-items: center;
 
-    background-color: #2B8CB6;
+    background-color: white;
     font-size: 60px;
-    color: white;
+    color: #2B8CB6;
+}
+
+.kom-logo img {
+    max-height: 80px;
+}
+
+.kom-logo img:first-child {
+    margin-right: 2px;
+}
+
+.logoLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .headerTab {

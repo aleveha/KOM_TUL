@@ -24,7 +24,8 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    min-height: 522px;
+    max-height: 800px;
+    height: calc(100vh - 122px);
 }
 
 .main-text {
@@ -109,8 +110,12 @@
 }
 
 .newsBlocks {
-    display: grid;
-    grid-template-columns: repeat(var(--numberOfNewsColumns), 1fr);
+    /*display: grid;*/
+    /*grid-template-columns: repeat(var(--numberOfNewsColumns), 1fr);*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .newsBlock {

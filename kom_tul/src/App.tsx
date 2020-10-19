@@ -2,7 +2,6 @@ import * as React from 'react';
 import {useEffect, useState} from 'react';
 import './CSS/App.css';
 import Header from "./components/Header/Header";
-import HistoryWay from "./components/MainContent/HistoryWay";
 import MainContent from "./components/MainContent/MainContent";
 import Footer from "./components/Footer/Footer";
 import LanguageContext from "./Context/LanguageContext";
@@ -16,7 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 interface IAppContent {
     name: string,
     link: string,
-    children: Array<IAppContent>
+    children?: Array<IAppContent>
 }
 
 interface IPath {
@@ -27,44 +26,31 @@ interface IPath {
 const appContent: Array<IAppContent> = [
     {
         name: 'KOM',
-        link: '/home',
-        children: []
+        link: '/home'
     },
     {
         name: 'Katedra',
-        link: '/department',
-        children: [
-            {
-                name: 'Novinky',
-                link: '/news',
-                children: []
-            }
-        ]
+        link: '/department'
     },
     {
         name: 'Pracovníci',
-        link: '/employees',
-        children: []
+        link: '/employees'
     },
     {
         name: 'Projekty',
-        link: '/projects',
-        children: []
+        link: '/projects'
     },
     {
         name: 'Výuka',
-        link: '/education',
-        children: []
+        link: '/education'
     },
     {
         name: 'Laboratoře',
-        link: '/laboratories',
-        children: []
+        link: '/laboratories'
     },
     {
         name: 'Spolupráce',
-        link: '/cooperation',
-        children: []
+        link: '/cooperation'
     }
 ];
 
@@ -91,7 +77,7 @@ const App = () => {
                             !location.pathname.includes("home") && tempArr.push({name: "KOM", path: "/home"});
                         }
                         tempArr.push({name: element.name, path: element.link});
-                        tempObj = [...element.children];
+                        element.children && (tempObj = [...element.children]);
                         break;
                     }
                 }
@@ -124,7 +110,6 @@ const App = () => {
                     <div className="App">
                         <Header/>
                         <div className="WebContent">
-                            <HistoryWay/>
                             <MainContent/>
                         </div>
                         <Footer/>
