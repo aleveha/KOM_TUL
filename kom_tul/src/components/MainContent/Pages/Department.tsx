@@ -24,7 +24,7 @@ interface IProgram {
 
 const DepartmentContent = () => {
     const mainInfo: string = "Katedra obrábění a montáže (KOM) se zabývá teoretickými i praktickými aspekty obrábění kovových i nekovových materiálů. Dále se soustředí na optimalizaci řezného procesu z hlediska řezného nástroje, obráběného materiálu a řezných podmínek při soustružení, frézování, vrtání a broušení. Výzkum je orientován na obráběcí nástroje a procesy, které analyzuje z hlediska obrobitelnosti, optimalizace a využívání procesních kapalin.";
-    const professionalFocusLabel: string = "Hlavní odborné zaměření KOM „Obrábění kovových a nekovových materiálů“ je rozděleno do následujících základních směrů:";
+    const professionalFocusLabel: Array<string> = ["Hlavní odborné zaměření KOM", "Obrábění kovových a nekovových materiálů", "je rozděleno do následujících základních směrů:"];
     const professionalFocus: Array<IProfFocus> = [
         {
             label: "Obrábění klasických kovových materiálů",
@@ -100,7 +100,9 @@ const DepartmentContent = () => {
                 </p>
             </div>
             <div className="professionalFocus">
-                <p className="titleMain">{professionalFocusLabel}</p>
+                <p className="titleMain">{professionalFocusLabel.map(str => (
+                    <span> {str} </span>
+                ))}</p>
                 {professionalFocus.map(item => {
                     return (
                         <div className="professionalFocusList padding" key={item.label}>

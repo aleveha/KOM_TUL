@@ -6,7 +6,14 @@
     text-align: justify;
 }
 
-.coopInfo {
+.howToCoop ul > li > span:first-child {
+    color: #2B8CB6;
+    font-weight: 500;
+}
+
+.howToCoop ul > li {
+    margin: 20px 0;
+    font-size: 23px;
 }
 
 .cooperationInfo img {

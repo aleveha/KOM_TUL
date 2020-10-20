@@ -498,7 +498,7 @@ const EducationContent = () => {
                                     <div className="programContent" key={program.number}>
                                         <div className="programTitle">
                                             <p>{program.number}</p>
-                                            <p>&nbsp;&nbsp;&mdash;&nbsp;&nbsp;</p>
+                                            <p>&nbsp;&nbsp;&mdash;&mdash;&mdash;&nbsp;&nbsp;</p>
                                             <p>{program.name}</p>
                                         </div>
                                         {program.educationYears && program.educationYears.map(studyingYear => {

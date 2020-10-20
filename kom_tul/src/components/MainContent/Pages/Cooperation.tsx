@@ -55,7 +55,7 @@ const CooperationContent = () => {
                     <ul>
                         {coopAbility.wayPoints.map(wayPoint => {
                             return (
-                                <li key={wayPoint.name}>{wayPoint.name} - {wayPoint.description}</li>
+                                <li key={wayPoint.name}><span>{wayPoint.name}</span> - <span>{wayPoint.description}</span></li>
                             );
                         })}
                     </ul>

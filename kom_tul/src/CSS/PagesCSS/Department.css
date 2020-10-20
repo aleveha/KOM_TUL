@@ -34,3 +34,7 @@ p, li {
 .professionalFocusList, .programsList {
     margin-top: 20px;
 }
+
+.professionalFocus span:nth-child(2) {
+    color: darkslateblue;
+}

@@ -28,7 +28,7 @@ const ProjectsContent = () => {
             provider: "Technologická agentura České republiky (TA ČR)",
             program: "Program na podporu aplikovaného výzkumu ZÉTA",
             solver: "Český metrologický institut, Ing. Eva Tyralíková",
-            coSolver: "TUL / FS / Katedra obrábění a montáže, Ing. Miloslav Ledvina, Ph.D.",
+            coSolver: "Technická univerzita v Liberci / Fakulta strojní / Katedra obrábění a montáže, Ing. Miloslav Ledvina, Ph.D.",
             link: "https://www.rvvi.cz/cep?s=jednoduche-vyhledavani&ss=detail&n=0&h=TJ02000175"
         },
         {
@@ -45,28 +45,31 @@ const ProjectsContent = () => {
         {
             name: "Nové systémy pro kontrolu délky koncových měrek a vyhodnocení kvality jejich povrchů",
             number: "TA03010663",
-            solvingTerm: "2013-2016",
-            provider: "TA0 - Technologická agentura České republiky",
-            solver: "Ing. Štěpánka Dvořáčková, Ph.D.",
-            mainRecipient: "Technická univerzita v Liberci / Fakulta strojní",
+            solvingTerm: "2013 - 2016",
+            program: "Program na podporu aplikovaného výzkumu a experimentálního vývoje ALFA  (2011 - 2019)",
+            provider: "Technologická agentura České republiky",
+            solver: "Ústav přístrojové techniky AV ČR, v.v.i., Ing. Ondřej Číp, Ph.D.",
+            coSolver: "Technická univerzita v Liberci / Fakulta strojní, doc. Ing. Štěpánka Dvořáčková, Ph.D., Český metrologický institut, Ing. František Dvořáček, MESING, spol. s r.o., Ing. Jan Kůr",
             link: "https://www.rvvi.cz/cep?s=jednoduche-vyhledavani&ss=detail&n=0&h=TA03010663"
         },
         {
-            number: "TA03010492",
             name: "Aplikovaný multioborový výzkum a vývoj progresivních způsobů chlazení u technologických procesů",
+            number: "TA03010492",
             solvingTerm: "2013-2015",
-            provider: "TA0 - Technologická agentura České republiky",
-            recipient: "GDK spol. s.r.o.",
+            program: "Program na podporu aplikovaného výzkumu a experimentálního vývoje ALFA  (2011 - 2019)",
+            provider: "Technologická agentura České republiky",
+            solver: "Technická univerzita v Liberci / Fakulta strojní",
+            coSolver: "GDK spol. s.r.o., KOH-I-NOOR PONAS s.r.o., KSM Castings CZ a.s.",
             link: "https://www.rvvi.cz/cep?s=rozsirene-vyhledavani&ss=detail&n=0&h=TA03010492"
         },
         {
             name: "Ekologické obráběcí kapaliny nové generace",
             number: "TA02021332",
             solvingTerm: "2012-2014",
-            provider: "TA0 - Technologická agentura České republiky",
-            program: "ALFA",
-            solver: "PARAMO, a.s.",
-            coSolver: "Fakulta strojní TUL, Ing. Jan Jehlička, doc. Ing. Jan Jersák, CSc.",
+            provider: "Technologická agentura České republiky",
+            program: "Program na podporu aplikovaného výzkumu a experimentálního vývoje ALFA  (2011 - 2019)",
+            solver: "PARAMO, a.s., Ing. Jan Jehlička",
+            coSolver: "Technická univerzita v Liberci / Fakulta strojní, doc. Ing. Jan Jersák, CSc.",
             link: "https://www.rvvi.cz/cep?s=jednoduche-vyhledavani&ss=detail&n=0&h=TA02021332"
         }
     ];
@@ -166,7 +169,7 @@ const ProjectsContent = () => {
                     })}
                 </div>
                 <div className="archivedProjects projectsGroup">
-                    <p className="titleSecond projectTitle">Archív VaV projektů</p>
+                    <p className="titleSecond projectTitle">Archiv VaV projektů</p>
                     {projectsArchive.map(project => {
                         return (
                             <div className="projectsBlock border" key={project.name}>

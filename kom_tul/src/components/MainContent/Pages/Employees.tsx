@@ -44,7 +44,7 @@ const EmployeesObject: IEmployees = {
             degree: "Ph.D.",
             email: "stepanka.dvorackova@tul.cz",
             phoneNumber: "+420 48 535 3369",
-            place: "bud. E1/3.p",
+            place: "bud. E1/4.p",
             consultation: "po dohodě",
             specialization: "metrologie"
         },
@@ -55,7 +55,7 @@ const EmployeesObject: IEmployees = {
             degree: "Ph.D.",
             email: "petr.kusa@tul.cz",
             phoneNumber: "+420 48 535 3369",
-            place: "bud. E1/3.p",
+            place: "bud. E1/4.p",
             consultation: "po dohodě",
             specialization: "obrábění plastových a kompozitních materiálů"
         },
@@ -66,7 +66,7 @@ const EmployeesObject: IEmployees = {
             degree: "CSc.",
             email: "jan.jersak@tul.cz",
             phoneNumber: "+420 48 535 3373",
-            place: "bud. E1/3.p",
+            place: "bud. E1/4.p",
             consultation: "po dohodě",
             specialization: "obrábění kovových materiálů"
         },
@@ -76,7 +76,7 @@ const EmployeesObject: IEmployees = {
             status: "Mgr.",
             email: "tereza.vrbova@tul.cz",
             phoneNumber: "+420 48 535 3361",
-            place: "bud. E1/3.p"
+            place: "bud. E1/4.p"
         },
         {
             position: "Vedoucí laboratoře třískových technologií a procesů",
@@ -94,7 +94,7 @@ const EmployeesObject: IEmployees = {
             degree: "Ph.D.",
             email: "miloslav.ledvina@tul.cz",
             phoneNumber: "+420 48 535 3371",
-            place: "bud. E1/3.p",
+            place: "bud. E1/4.p",
             consultation: "po dohodě",
             specialization: "metrologie, obrábění kovových, plastových a kompozitních materiálů"
         }
@@ -126,7 +126,7 @@ const EmployeesObject: IEmployees = {
                 degree: "DrSc.",
                 email: "alexey.popov@tul.cz",
                 phoneNumber: "+420 48 535 3370",
-                place: "bud. E1/3.p",
+                place: "bud. E1/4.p",
                 consultation: "po dohodě",
                 specialization: "obrábění kovových materiálů",
             }
@@ -149,31 +149,31 @@ const EmployeesObject: IEmployees = {
             label: "Prezenční studium",
             staff: [
                 {
-                    name: "Iuliia KRASNIKOVA",
-                    status: "Ing.",
-                    email: "iuliia.krasnikova@tul.cz",
-                    phoneNumber: "+420 48 535 3368",
-                    place: "bud. E1/3.p"
-                },
-                {
-                    name: "Sergei BABAK",
-                    status: "Ing.",
-                    email: "sergei.babak@tul.cz",
-                    phoneNumber: "+420 48 535 3368",
-                    place: "bud. E1/3.p"
-                },
-                {
                     name: "Mikhail KHRAMENKOV",
                     status: "Ing.",
                     email: "mikhail.khramenkov@tul.cz",
                     phoneNumber: "+420 48 535 3368",
-                    place: "bud. E1/3.p"
+                    place: "bud. E1/4.p"
                 }
             ]
         },
         combinedStudy: {
             label: "Kombinované studium",
             staff: [
+                {
+                    name: "Iuliia KRASNIKOVA",
+                    status: "Ing.",
+                    email: "iuliia.krasnikova@tul.cz",
+                    phoneNumber: "+420 48 535 3368",
+                    place: "bud. E1/4.p"
+                },
+                {
+                    name: "Sergei BABAK",
+                    status: "Ing.",
+                    email: "sergei.babak@tul.cz",
+                    phoneNumber: "+420 48 535 3368",
+                    place: "bud. E1/4.p"
+                },
                 {
                     name: "Tomáš KOZLOK",
                     status: "Ing.",

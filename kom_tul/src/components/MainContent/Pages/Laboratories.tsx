@@ -141,10 +141,10 @@ const LaboratoriesContent = () => {
         }
     ];
 
-    const CreatePartBlock = (parts: Array<ILaboratoryPartDesc>) => {
+    const CreatePartBlock = (parts: Array<ILaboratoryPartDesc>, label: string) => {
         return (
             <div className="laboratoryPart">
-                <p className="titleSecond">Specifická zařízení a výstupy:</p>
+                <p className="titleSecond">{label}</p>
                 {parts.map(part => {
                     return (
                         <div className="laboratoryPartBlock padding" key={parts.indexOf(part)}>
@@ -183,8 +183,8 @@ const LaboratoriesContent = () => {
                                 })}
                             </ul>
                         </div>
-                        {laboratory.equipment && CreatePartBlock(laboratory.equipment)}
-                        {laboratory.technologies && CreatePartBlock(laboratory.technologies)}
+                        {laboratory.equipment && CreatePartBlock(laboratory.equipment, "Zařízení a měřicí systémy:")}
+                        {laboratory.technologies && CreatePartBlock(laboratory.technologies, "Nabízené technologie a expertní činnost:")}
                     </div>
                 );
             })}
