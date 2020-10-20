@@ -26,7 +26,7 @@ interface IProgram {
 
 interface IEducationYear {
     year: number,
-    required: ICourseType,
+    required?: ICourseType,
     requiredOptional?: Array<ICourseType>
 }
 
@@ -50,6 +50,26 @@ interface ICourseTable {
     professor: Array<string>
 }
 
+const CreateTable = (tableLine: ICourseTable) => {
+    return (
+        <tr key={tableLine.name}>
+            <td>{tableLine.name}</td>
+            <td>{tableLine.shortName}</td>
+            <td>{tableLine.semester}</td>
+            <td>{tableLine.range}</td>
+            <td>{tableLine.exam}</td>
+            <td>{tableLine.credits}</td>
+            <td>{tableLine.professor.map(professor => {
+                return (
+                    tableLine.professor.indexOf(professor) === tableLine.professor.length - 1 ?
+                        <span key={tableLine.professor.indexOf(professor)}>{professor}</span> :
+                        <span key={tableLine.professor.indexOf(professor)}>{professor + ', '}</span>
+                );
+            })}</td>
+        </tr>
+    );
+}
+
 const EducationContent = () => {
     const EducationalPrograms: Array<IEducationalProgram> = [
         {
@@ -63,7 +83,7 @@ const EducationContent = () => {
             programs: [
                 {
                     number: "B0715A270008",
-                    name: "Strojírenství - předměty vyučované katedrou",
+                    name: "Strojírenství",
                     educationYears: [
                         {
                             year: 3,
@@ -150,7 +170,7 @@ const EducationContent = () => {
             programs: [
                 {
                     number: "N0715A270015MT",
-                    name: "Materiály a technologie - předměty vyučované katedrou",
+                    name: "Materiály a technologie",
                     educationYears: [
                         {
                             year: 1,
@@ -241,7 +261,7 @@ const EducationContent = () => {
                                         exam: "kl. z.",
                                         credits: 2,
                                         professor: [
-                                            "vedoucí D"
+                                            "vedoucí DP"
                                         ]
                                     },
                                     {
@@ -347,7 +367,7 @@ const EducationContent = () => {
                 },
                 {
                     number: "N0722A270001",
-                    name: "Technologie plastů a kompozitů - předměty vyučované katedrou",
+                    name: "Technologie plastů a kompozitů",
                     educationYears: [
                         {
                             year: 2,
@@ -372,26 +392,28 @@ const EducationContent = () => {
                 },
                 {
                     number: "N0788A270004",
-                    name: "Inovační a průmyslové inženýrství - předměty vyučované katedrou",
+                    name: "Inovační a průmyslové inženýrství",
                     educationYears: [
                         {
                             year: 2,
-                            required: {
-                                name: "Povinně volitelný předmět – skupina 3",
-                                courseTable: [
-                                    {
-                                        name: "Metrologie",
-                                        shortName: "MET",
-                                        semester: "Zimní",
-                                        range: "2+2",
-                                        exam: "zk",
-                                        credits: 5,
-                                        professor: [
-                                            "Dvořáčková"
-                                        ]
-                                    }
-                                ]
-                            }
+                            requiredOptional: [
+                                {
+                                    name: "Povinně volitelný předmět – skupina 3",
+                                    courseTable: [
+                                        {
+                                            name: "Metrologie",
+                                            shortName: "MET",
+                                            semester: "Zimní",
+                                            range: "2+2",
+                                            exam: "zk",
+                                            credits: 5,
+                                            professor: [
+                                                "Dvořáčková"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 }
@@ -453,36 +475,38 @@ const EducationContent = () => {
             {EducationalPrograms.map(educationProgram => {
                 return (
                     <div className="educationProgram border" key={educationProgram.name}>
-                        <h2>{educationProgram.name}</h2>
-                        <div className="educationProgramContent">
-                            <div className="educationProgramTitle">
-                                <div className="educationProgramShortDescription">
-                                    <div className="descriptionLine">
-                                        <p>Forma studia: </p>
-                                        <p>{educationProgram.shortDescription.form}</p>
-                                    </div>
-                                    <div className="descriptionLine">
-                                        <p>Standardní doba studia: </p>
-                                        <p>{educationProgram.shortDescription.basicTerm}</p>
-                                    </div>
-                                    <div className="descriptionLine">
-                                        <p>Udělovaný akademický titul: </p>
-                                        <p>{educationProgram.shortDescription.endDegree}</p>
-                                    </div>
-                                </div>
+                        <div className="programName">
+                            <h2>{educationProgram.name}</h2>
+                        </div>
+                        <div className="programShortDesc">
+                            <div className="descriptionLine">
+                                <p>Forma studia: </p>
+                                <p>{educationProgram.shortDescription.form}</p>
                             </div>
+                            <div className="descriptionLine">
+                                <p>Standardní doba studia: </p>
+                                <p>{educationProgram.shortDescription.basicTerm}</p>
+                            </div>
+                            <div className="descriptionLine">
+                                <p>Udělovaný akademický titul: </p>
+                                <p>{educationProgram.shortDescription.endDegree}</p>
+                            </div>
+                        </div>
+                        <div className="educationProgramContent">
                             {educationProgram.programs.map(program => {
                                 return (
                                     <div className="programContent" key={program.number}>
                                         <div className="programTitle">
-                                            <p>{program.name}</p>
                                             <p>{program.number}</p>
+                                            <p>&nbsp;&nbsp;&mdash;&nbsp;&nbsp;</p>
+                                            <p>{program.name}</p>
                                         </div>
                                         {program.educationYears && program.educationYears.map(studyingYear => {
                                             return (
                                                 <div className="educationYearInfo" key={studyingYear.year}>
                                                     <p>{studyingYear.year}. ročník</p>
-                                                    <div className="requiredCourses">
+                                                    {studyingYear.required &&
+                                                    <div className="courses padding">
                                                         <p>{studyingYear.required.name}</p>
                                                         <table>
                                                             <tbody>
@@ -495,30 +519,39 @@ const EducationContent = () => {
                                                                 <th>Kredity</th>
                                                                 <th>Vyučující</th>
                                                             </tr>
-                                                            {studyingYear.required.courseTable.map(tableLine => {
-                                                                return (
-                                                                    <tr key={tableLine.name}>
-                                                                        <td>{tableLine.name}</td>
-                                                                        <td>{tableLine.shortName}</td>
-                                                                        <td>{tableLine.semester}</td>
-                                                                        <td>{tableLine.range}</td>
-                                                                        <td>{tableLine.exam}</td>
-                                                                        <td>{tableLine.credits}</td>
-                                                                        <td>{tableLine.professor}</td>
-                                                                    </tr>
-                                                                );
-                                                            })}
+                                                            {studyingYear.required.courseTable.map(tableLine => CreateTable(tableLine))}
                                                             </tbody>
                                                         </table>
-                                                    </div>
+                                                    </div>}
+                                                    {studyingYear.requiredOptional && studyingYear.requiredOptional.map(course => {
+                                                        return (
+                                                            <div className="courses padding" key={course.name}>
+                                                                <p>{course.name}</p>
+                                                                <table>
+                                                                    <tbody>
+                                                                    <tr className="tableHeader">
+                                                                        <th>Název</th>
+                                                                        <th>Zkratka</th>
+                                                                        <th>Semestr</th>
+                                                                        <th>Rozsah</th>
+                                                                        <th>Zkouška</th>
+                                                                        <th>Kredity</th>
+                                                                        <th>Vyučující</th>
+                                                                    </tr>
+                                                                    {course.courseTable.map(tableLine => CreateTable(tableLine))}
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        );
+                                                    })}
                                                 </div>
                                             );
                                         })}
                                         {program.links && program.links.map(link => {
                                             return (
-                                                <div className="additionalInfo"
+                                                <div className="additionalInfo linkPar"
                                                      key={program.links && program.links.indexOf(link)}>
-                                                    <a href={link}>{program.additionalInfo && program.links && program.additionalInfo[program.links.indexOf(link)]}</a>
+                                                    <a className="link" href={link}>{program.additionalInfo && program.links && program.additionalInfo[program.links.indexOf(link)]}</a>
                                                 </div>
                                             );
                                         })}

@@ -1,21 +1,116 @@
-.educationProgramContent {
+.educatingContent {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.educationProgram {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr auto;
 }
 
-.educationProgramTitle {
-    justify-self: center;
-    align-self: center;
+.programName {
+    text-align: center;
 }
 
+.programShortDesc,
 .descriptionLine {
-    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.programShortDesc {
+    border-bottom: 2px solid lightgray;
+}
+
+.programTitle {
+    display: flex;
+    justify-content: start;
+    padding: 20px 0;
+}
+
+.programTitle p, .descriptionLine p:first-child {
+    font-weight: 500;
 }
 
 .descriptionLine p:first-child {
-    font-weight: 500;
+    margin-right: 8px;
+}
+
+.programTitle p:first-child {
+    color: darkslateblue;
+}
+
+.programTitle p:last-child, .descriptionLine p:first-child {
     color: #2B8CB6;
 }
 
-.descriptionLine p:last-child {
+table {
+    width: 100%;
+    margin: 0 auto;
+
+    border-collapse: collapse;
+    border: 2px solid white;
+}
+
+td, th {
+    text-align: justify;
+    border: 1px solid lightgray;
+    padding: 10px 0;
+
+}
+
+td:not(:first-child), th:not(:first-child) {
+    padding-left: 10px;
+}
+
+td {
+    font-size: 18px;
+    color: dimgrey;
+}
+
+th {
+    color: #2B8CB6;
+    font-size: 18px;
+}
+
+h2 {
+    margin: 15px 0;
+    font-size: 25px;
+    font-weight: 700;
+    color: darkslateblue;
+}
+
+.programContent {
+    width: 88%;
+    margin: 0 auto 40px auto;
+    padding-top: 20px;
+}
+
+.programContent:not(:first-child) {
+    border-top: 1px solid lightgray;
+}
+
+.educationYearInfo > p {
+    font-weight: 500;
+    color: #2B8CB6;
+    margin: 15px 0;
+}
+
+.courses {
+    margin-bottom: 30px;
+}
+
+.courses > p {
+    font-weight: 500;
+    color: darkslateblue;
+}
+
+.additionalInfo a {
+    font-size: 18px;
+}
+
+.additionalInfo {
+    margin: 10px 0;
+    text-align: justify;
 }
