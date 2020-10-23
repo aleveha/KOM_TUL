@@ -3,18 +3,14 @@ import {Link} from 'react-router-dom';
 import Logo1 from "../../img/logotul1_01.png";
 import Logo2 from "../../img/logotul_02.png";
 
-interface IProps {
-
-};
-
-const ContactsLine = (props: IProps) => {
+const ContactsLine = () => {
     return (
         <div className="contactInfoContent padding">
             <div className="kom-logo-footer">
                 <div className="kom-logo">
                     <Link to="/home" className="logoLink">
-                        <img src={Logo1} />
-                        <img src={Logo2} />
+                        <img src={Logo1} alt="KatedraLogo"/>
+                        <img src={Logo2} alt="KatedraLogo"/>
                     </Link>
                 </div>
             </div>
@@ -27,21 +23,21 @@ const ContactsLine = (props: IProps) => {
                 <div className="addressAndContacts">
                     <div className="address">
                         <div>
-                            <p>Budova E - 3 patro</p>
-                            <p>Studentská 2</p>
-                            <p>461 17 Liberec 1</p>
+                            <p className="secondText">Budova E - 4 patro</p>
+                            <p className="secondText">Studentská 2</p>
+                            <p className="secondText">461 17 Liberec 1</p>
                         </div>
                     </div>
                     <div className="contacts">
-                        <p className="linkPar"><a className="link" href="tel:+420485353361">+420 48 535 3361</a></p>
-                        <p className="linkPar"><a className="link" href="mailto:tereza.vrbova@tul.cz">tereza.vrbova@tul.cz</a></p>
-                        <p className="linkPar"><Link className="link" to="/home">www.kom.tul.cz</Link></p>
+                        <p className="linkPar secondText"><a className="link" href="tel:+420485353361">+420 48 535 3361</a></p>
+                        <p className="linkPar secondText"><a className="link" href="mailto:tereza.vrbova@tul.cz">tereza.vrbova@tul.cz</a></p>
+                        <p className="linkPar secondText"><Link className="link" to="/home">www.kom.tul.cz</Link></p>
                     </div>
                 </div>
             </div>
             <div className="socialNetworks">
                 <div className="TULLink TULMain">
-                    <a href="http://www.tul.cz" target="_blank"></a>
+                    <a href="http://www.tul.cz" target="_blank" rel="noreferrer noopener"></a>
                     <div className="logoComponent">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
                              viewBox="0 0 141.74 141.73" width="61px" height="61px" style={{'float': 'left'}}>
@@ -65,7 +61,7 @@ const ContactsLine = (props: IProps) => {
                     </div>
                 </div>
                 <div className="TULLink TULStrijni">
-                    <a href="http://www.fs.tul.cz" target="_blank"></a>
+                    <a href="http://www.fs.tul.cz" target="_blank" rel="noopener noreferrer"></a>
                     <div className="logoComponent">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
                              viewBox="0 0 141.74 141.73" width="61px" height="61px" style={{'float': 'left'}}>

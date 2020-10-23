@@ -63,7 +63,6 @@ hr:first-child {
 
 /*Styles for contact information*/
 .address p, .contacts p {
-    font-size: 16px;
     margin: 6px 0;
 }
 
@@ -95,7 +94,6 @@ hr:first-child {
 }
 
 .facultyName > p {
-    font-size: 20px;
     margin: 7px 0;
     font-weight: 550;
 

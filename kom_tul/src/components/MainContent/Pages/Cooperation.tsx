@@ -3,10 +3,6 @@ import * as React from "react";
 import '../../../CSS/PagesCSS/Cooperation.css';
 import CoopPhoto from '../../../img/photoMainPage/3.jpg';
 
-interface IProps {
-
-}
-
 interface IHowToCooperate {
     label: string,
     wayPoints: Array<IWayPoint>
@@ -45,27 +41,27 @@ const CooperationContent = () => {
             <div className="coopInfo">
                 <div className="infoContent">
                     <p className="cooperationInfo">
-                        <img src={CoopPhoto}/>
+                        <img src={CoopPhoto} alt="KatedraPhoto"/>
                         {cooperationInformation}<br/><br/><br/>
                         {cooperationOffer}
                     </p>
                 </div>
                 <div className="howToCoop">
                     <p className="titleSecond">{coopAbility.label}</p>
-                    <ul>
+                    <ol>
                         {coopAbility.wayPoints.map(wayPoint => {
                             return (
-                                <li key={wayPoint.name}><span>{wayPoint.name}</span> - <span>{wayPoint.description}</span></li>
+                                <li className="border" key={wayPoint.name}><span>{wayPoint.name}</span> - <span>{wayPoint.description}</span></li>
                             );
                         })}
-                    </ul>
+                    </ol>
                 </div>
             </div>
         </div>
     );
 }
 
-const Cooperation = (props: IProps) => {
+const Cooperation = () => {
     let match = useRouteMatch();
     return (
         <Switch>

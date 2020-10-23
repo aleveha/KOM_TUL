@@ -1,10 +1,6 @@
 import * as React from 'react';
 import '../../../CSS/PagesCSS/Employyes.css';
 
-interface IProps {
-
-};
-
 export interface IEmployee {
     position?: string,
     name: string,
@@ -171,8 +167,8 @@ const EmployeesObject: IEmployees = {
                     name: "Sergei BABAK",
                     status: "Ing.",
                     email: "sergei.babak@tul.cz",
-                    phoneNumber: "+420 48 535 3368",
-                    place: "bud. E1/4.p"
+                    // phoneNumber: "+420 48 535 3368",
+                    // place: "bud. E1/4.p"
                 },
                 {
                     name: "Tomáš KOZLOK",
@@ -184,8 +180,7 @@ const EmployeesObject: IEmployees = {
     }
 }
 
-
-const Employees = (props: IProps) => {
+const Employees = () => {
 
     const GetContactsBlock = (person: IEmployee, key: string) => {
         let classNameKey: string = 'key';
@@ -273,7 +268,7 @@ const Employees = (props: IProps) => {
                 </div>}
                 <div className="positionInfo">
                     <div className="employeeName">
-                        <p>{`${person.status == undefined ? '' : person.status} ${person.name}${person.degree == undefined ? '' : ', ' + person.degree}`}</p>
+                        <p>{`${person.status === undefined ? '' : person.status} ${person.name}${person.degree === undefined ? '' : ', ' + person.degree}`}</p>
                     </div>
                     <div className="contactBlocks">
                         {Object.keys(person).map(key => GetContactsBlock(person, key))}

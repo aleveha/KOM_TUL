@@ -56,12 +56,9 @@ p {
 }
 
 .subTitle {
-  font-weight: 400;
-  margin-top: 20px;
+  color: #2B8CB6;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.secondText {
+  font-size: 18px;
 }

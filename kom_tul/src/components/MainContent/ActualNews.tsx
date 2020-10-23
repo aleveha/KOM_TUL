@@ -33,7 +33,7 @@ const ActualNews = (props: IProps) => {
                 <div className="newsBlocks" style={numberOfNewsColumns}>
                     {news.map(elem =>
                         <div className="newsBlock" key={news.indexOf(elem)}>
-                            <a className="newsBlockContentLink" href="#">
+                            <div className="newsBlockContentLink">
                                 <div className="newsBlockContent">
                                     <div className="dateOfPublication">
                                         <p>{elem.date.replace(/-/g, '.')}</p>
@@ -42,15 +42,15 @@ const ActualNews = (props: IProps) => {
                                         <h3>{elem.name}</h3>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                     )}
                 </div>
                 <div className="allNews">
                     <div className="allNewsButton">
-                        <a href="#">
+                        <div>
                             <span>{language.value === 'CZ' ? "Všechny novinky" : "All news"}</span>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>

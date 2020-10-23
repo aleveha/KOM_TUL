@@ -2,10 +2,6 @@ import {Route, Switch, useRouteMatch} from "react-router-dom";
 import * as React from "react";
 import '../../../CSS/PagesCSS/Projects.css';
 
-interface IProps {
-
-}
-
 interface IProject {
     provider?: string,
     program?: string,
@@ -146,7 +142,7 @@ const ProjectsContent = () => {
             )} else {
                 blockStruct = (
                     <div className="linkBlock" key={key}>
-                        <a href={projectInfoValue} target="_blank" className="titleSecond linkPar projectLink"><span>{labelValue}</span></a>
+                        <a href={projectInfoValue} target="_blank" rel="noopener noreferrer" className="titleSecond linkPar projectLink"><span>{labelValue}</span></a>
                     </div>
                 )
             }
@@ -183,7 +179,7 @@ const ProjectsContent = () => {
     );
 }
 
-const Projects = (props: IProps) => {
+const Projects = () => {
     let match = useRouteMatch();
     return (
         <Switch>
