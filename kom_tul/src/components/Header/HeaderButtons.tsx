@@ -4,16 +4,12 @@ import {useContext} from "react";
 import PathContext from "../../Context/PathContext";
 import AppContentContext from "../../Context/AppContentContext";
 
-interface IProps {
-
-}
-
 interface IPath {
     name: string,
     path: string
 }
 
-const HeaderButtons = (props: IProps) => {
+const HeaderButtons = () => {
     const path = useContext(PathContext);
     const appContent = useContext(AppContentContext);
 

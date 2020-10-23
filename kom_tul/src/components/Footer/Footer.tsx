@@ -5,11 +5,7 @@ import ContactsLine from "./ContactsLine";
 import CopyRight from "./CopyRight";
 import {useState} from "react";
 
-interface IProps {
-
-}
-
-const Footer = (props: IProps) => {
+const Footer = () => {
     const [showMap, setShowMap] = useState<boolean>(false);
 
     return (

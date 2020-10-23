@@ -5,12 +5,7 @@ import PathContext from "../../Context/PathContext";
 import { Link } from 'react-router-dom';
 import { IPath } from '../../Context/PathContext';
 
-
-interface IProps {
-
-}
-
-const HistoryWay = (props: IProps) => {
+const HistoryWay = () => {
     const path = useContext(PathContext);
 
     const ChangePath = () => {

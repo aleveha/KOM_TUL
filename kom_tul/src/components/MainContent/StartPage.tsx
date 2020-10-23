@@ -4,11 +4,7 @@ import ActualNews from "./ActualNews";
 import LanguageContext from "../../Context/LanguageContext";
 import {useContext} from "react";
 
-interface IProps {
-
-};
-
-const StartPage = (props: IProps) => {
+const StartPage = () => {
     const language = useContext(LanguageContext);
 
     return (

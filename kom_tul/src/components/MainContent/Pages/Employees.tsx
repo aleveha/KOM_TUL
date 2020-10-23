@@ -256,7 +256,7 @@ const Employees = () => {
         }
 
         return (link ?
-            <p className="linkPar"><a className="link" href={link} target={target}>{contactInfoValue}</a></p> :
+            <p className="linkPar"><a className="link" href={link} target={target} rel="noreferrer noopener">{contactInfoValue}</a></p> :
             <p><span>{contactInfoValue}</span></p>)
     }
 

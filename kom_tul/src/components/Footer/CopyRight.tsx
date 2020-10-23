@@ -1,10 +1,6 @@
 import * as React from 'react';
 
-interface IProps {
-
-};
-
-const CopyRight = (props: IProps) => {
+const CopyRight = () => {
     return (
         <div className="copyrightContent padding">
             <p>

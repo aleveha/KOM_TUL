@@ -2,35 +2,20 @@ import * as React from 'react';
 import {useContext, useEffect, useState} from "react";
 import LanguageContext from "../../Context/LanguageContext";
 
-interface IProps {
-
-};
-
 interface INews {
     date: string;
     name: string;
 }
 
-const ActualNews = (props: IProps) => {
-    //styles hooks
-    const [numberOfNewsColumns, setNumberOfNewsColumns] = useState<object>({'--numberOfNewsColumns': 3});
-
-    const [news, setNews] = useState<Array<INews> | null>(null);
+const ActualNews = () => {
     const language = useContext(LanguageContext);
-
-    useEffect(() => {
-        let number = 3;
-        if (news !== null) {
-            news.length % 2 === 0 && (number = 2);
-        }
-        setNumberOfNewsColumns({'--numberOfNewsColumns': number});
-    }, [news]);
+    const [news, setNews] = useState<Array<INews> | null>(null);
 
     return (
         news !== null ? (
             <div className="actualNews padding">
                 <h1 className="newsHeader">{language.value === 'CZ' ? "Novinky" : "Actual news"}</h1>
-                <div className="newsBlocks" style={numberOfNewsColumns}>
+                <div className="newsBlocks">
                     {news.map(elem =>
                         <div className="newsBlock" key={news.indexOf(elem)}>
                             <div className="newsBlockContentLink">
