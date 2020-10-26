@@ -42,8 +42,8 @@ const CooperationContent = () => {
                 <div className="infoContent">
                     <p className="cooperationInfo">
                         <img src={CoopPhoto} alt="KatedraPhoto"/>
-                        {cooperationInformation}<br/><br/><br/>
-                        {cooperationOffer}
+                        <span>{cooperationInformation}</span><br/><br/><br/>
+                        <span>{cooperationOffer}</span>
                     </p>
                 </div>
                 <div className="howToCoop">
