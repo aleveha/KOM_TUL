@@ -71,6 +71,10 @@ hr:first-child {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.contactInfoContent > div {
+    margin: 0 20px;
+}
+
 .contactInformation {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
