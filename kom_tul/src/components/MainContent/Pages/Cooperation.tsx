@@ -37,7 +37,7 @@ const CooperationContent = () => {
 
     return (
         <div className="cooperation padding">
-            <h1 className="mainLabel">Spolupráce s KOM</h1>
+            <h1 className="mainLabel">Spolupráce s KOM change me</h1>
             <div className="coopInfo">
                 <div className="infoContent">
                     <p className="cooperationInfo">
