@@ -8,11 +8,7 @@ import Projects from "./Pages/Projects";
 import Laboratories from "./Pages/Laboratories";
 import Education from "./Pages/Education";
 
-interface IProps {
-
-}
-
-const MainContent = (props: IProps) => {
+const MainContent = () => {
     return (
         <div className="mainContent">
             <Switch>

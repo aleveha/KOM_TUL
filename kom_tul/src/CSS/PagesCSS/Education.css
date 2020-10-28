@@ -12,7 +12,6 @@
     text-align: center;
 }
 
-.programShortDesc,
 .descriptionLine {
     display: flex;
     justify-content: space-between;
@@ -21,6 +20,15 @@
 
 .programShortDesc {
     border-bottom: 2px solid lightgray;
+}
+
+.programShortDesc {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.programShortDesc > div {
+    margin: 0 10px;
 }
 
 .programTitle {
@@ -54,10 +62,10 @@ table {
 }
 
 td, th {
-    text-align: justify;
+    text-align: start;
     border: 1px solid lightgray;
-    padding: 10px 0;
-
+    padding: 10px 10px;
+    font-size: 18px;
 }
 
 td:not(:first-child), th:not(:first-child) {
@@ -65,13 +73,11 @@ td:not(:first-child), th:not(:first-child) {
 }
 
 td {
-    font-size: 18px;
     color: dimgrey;
 }
 
 th {
     color: #2B8CB6;
-    font-size: 18px;
 }
 
 h2 {

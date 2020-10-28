@@ -16,9 +16,11 @@ const ContactsLine = () => {
             </div>
             <div className="contactInformation">
                 <div className="facultyName">
-                    <p>Katedra obrábění a montáže</p>
-                    <p>Fakulta strojní</p>
-                    <p>Technická univerzita v Liberci</p>
+                    <div>
+                        <p>Katedra obrábění a montáže</p>
+                        <p>Fakulta strojní</p>
+                        <p>Technická univerzita v Liberci</p>
+                    </div>
                 </div>
                 <div className="addressAndContacts">
                     <div className="address">
@@ -29,9 +31,15 @@ const ContactsLine = () => {
                         </div>
                     </div>
                     <div className="contacts">
-                        <p className="linkPar secondText"><a className="link" href="tel:+420485353361">+420 48 535 3361</a></p>
-                        <p className="linkPar secondText"><a className="link" href="mailto:tereza.vrbova@tul.cz">tereza.vrbova@tul.cz</a></p>
-                        <p className="linkPar secondText"><Link className="link" to="/home">www.kom.tul.cz</Link></p>
+                        <div>
+                            <p className="linkPar secondText"><a className="link" href="tel:+420485353361">+420 48 535
+                                3361</a></p>
+                            <p className="linkPar secondText"><a className="link"
+                                                                 href="mailto:tereza.vrbova@tul.cz">tereza.vrbova@tul.cz</a>
+                            </p>
+                            <p className="linkPar secondText"><Link className="link" to="/home">www.kom.tul.cz</Link>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

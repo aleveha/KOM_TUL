@@ -1,7 +1,4 @@
 .laboratoriesContent {
-    /*display: grid;*/
-    /*grid-template-columns: 1fr 1fr;*/
-    /*grid-column-gap: 50px;*/
     max-width: 80vw;
     margin: 0 auto;
 }
