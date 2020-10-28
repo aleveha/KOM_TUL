@@ -1,5 +1,4 @@
 import * as React from 'react';
-import '../../../CSS/PagesCSS/Employyes.css';
 
 export interface IEmployee {
     position?: string,

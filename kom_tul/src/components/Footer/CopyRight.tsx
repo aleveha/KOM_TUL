@@ -1,15 +1,13 @@
 import * as React from 'react';
+import Divider from '@material-ui/core/Divider';
 
-interface IProps {
-
-};
-
-const CopyRight = (props: IProps) => {
+const CopyRight = () => {
     return (
-        <div className="copyrightContent padding">
-            <p>
-                Copyright © 2020 Katedra obrábění a montáže FS TUL
-            </p>
+        <div>
+            <Divider/>
+            <div className="copyrightContent padding">
+                <p>Copyright © 2020 Katedra obrábění a montáže FS TUL</p>
+            </div>
         </div>
     );
 };

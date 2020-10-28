@@ -1,64 +1,58 @@
 .App {
-  display: grid;
-  grid-template-rows: 1fr auto;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
 }
 
 .WebContent {
-  min-height: 88vh;
+    margin-bottom: 1rem;
 }
 
-.mainContent {
-  max-width: 1440px;
+.footer {
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 
-.padding {
-  padding: 0 40px;
+/*Start Page*/
+.startPage {
+    min-height: 88vh;
 }
 
-.linkPar :hover {
-  color: darkslateblue;
+.photoContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.link {
-  text-decoration: none;
-  color: #2B8CB6;
+.insidePhotoInfo {
+    position: absolute;
 }
 
-.border {
-  padding: 15px;
-  border: 2px solid darkgrey;
-  border-radius: 20px;
-
-  margin: 30px auto;
+.mainPhoto {
+    object-fit: cover;
+    height: 60vh;
+    width: 100%;
 }
 
-p {
-  margin: 0;
+.video-link {
+    display: none;
 }
 
-.mainLabel {
-  color: darkslateblue;
-  font-size: 40px;
-  text-align: center;
-  margin: 10px 0;
+.main-text {
+    padding: 0.3rem;
+
+    text-align: center;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 400;
 }
 
-.titleMain {
-  font-size: 25px;
-  font-weight: bold;
-  color: #2B8CB6;
+.main-text:first-child {
+    background-color: var(--blue);
 }
 
-.titleSecond {
-  font-size: 23px;
-  font-weight: 500;
-  color: darkslateblue;
-}
-
-.subTitle {
-  color: #2B8CB6;
-}
-
-.secondText {
-  font-size: 18px;
+.main-text:last-child {
+    background-color: var(--fiolet);
+    font-weight: 500;
 }

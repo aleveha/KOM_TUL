@@ -1,6 +1,5 @@
 import {Route, Switch, useRouteMatch} from "react-router-dom";
 import * as React from "react";
-import '../../../CSS/PagesCSS/Projects.css';
 
 interface IProject {
     provider?: string,

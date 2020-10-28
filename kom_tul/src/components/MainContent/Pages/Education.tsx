@@ -1,7 +1,6 @@
 import React from 'react';
 import {Switch, Route, useRouteMatch} from 'react-router-dom';
 import {IEmployee} from './Employees';
-import '../../../CSS/PagesCSS/Education.css';
 
 interface IEducationalProgram {
     name: string,

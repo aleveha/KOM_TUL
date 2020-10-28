@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {Route, Switch, useRouteMatch} from 'react-router-dom';
-import '../../../CSS/PagesCSS/Department.css';
 import mainPhotoDeprtment from '../../../img/photoMainPage/2.jpg';
 
 interface IProfFocus {
@@ -91,7 +90,7 @@ const DepartmentContent = () => {
             <h1 className="mainLabel">Informace o katedře</h1>
             <div className="mainInfo">
                 <p className="departmentInfo">
-                    <img src={mainPhotoDeprtment} alt="KatedraPhoto"/>
+                    {/*<img src={mainPhotoDeprtment} alt="KatedraPhoto"/>*/}
                     <span>{mainInfo}</span>
                 </p>
             </div>

@@ -1,85 +1,58 @@
+.header {
+    height: 5rem;
+}
+
 .header-content {
-    display: grid;
-    grid-template-columns: 4fr 17fr 1fr;
-    grid-template-rows: 1fr;
-    min-height: 80px;
-}
-
-.headerTabs-content {
-    display: grid;
-    grid-template-columns: repeat(6, auto);
-    grid-template-rows: 1fr;
-}
-
-.headerTabs-content :first-child {
-    border-left: none;
-}
-
-.tabName, .cng-lang {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+}
+
+.menuList {
     height: 100%;
-
-    text-decoration: none;
-    color: dimgrey;
-    font-weight:500;
-    font-size: 21px;
+    max-height: 50vh;
 }
 
-.langButton {
-    background-color: darkslateblue;
-}
-
-.cng-lang {
-    color: white;
-    font-weight: bold;
-}
-
-.langButton :hover {
-    background-color: #2B8CB6;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.kom-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: white;
-    font-size: 60px;
-    color: #2B8CB6;
-}
-
-.kom-logo img {
-    max-height: 80px;
-}
-
-.kom-logo img:first-child {
-    margin-right: 2px;
+.komLogoContainer {
+    height: 100%;
 }
 
 .logoLink {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
-.headerTab {
-    display: grid;
-
-    border: 1px solid lightgrey;
-    border-right: none;
-    border-top: none;
+.komLogo {
+    height: 3rem;
 }
 
-.headerTab :hover {
-    background-color: #F5F7F3;
-    color: #2B8CB6;
+.tabName, .cng-lang {
+    text-align: center;
+    width: 100%;
+
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
+.langButton {
+    background-color: var(--fiolet);
+    color: white;
+}
 
+.pathName {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
+.pathLink {
+    font-size: 0.9rem;
+    font-family: var(--fonts) !important;
+}
 
+.historyWayContent {
+    margin: 5px 0;
+}
 

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {useEffect, useState} from 'react';
-import './CSS/App.css';
 import Header from "./components/Header/Header";
 import MainContent from "./components/MainContent/MainContent";
 import Footer from "./components/Footer/Footer";
@@ -10,6 +9,7 @@ import AppContentContext from "./Context/AppContentContext";
 import {useLocation} from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './CSS/App.css';
 
 interface IAppContent {
     name: string,
@@ -107,8 +107,8 @@ const App = () => {
             <PathContext.Provider value={{value: pathWay, changeValue: ChangePathWay}}>
                 <AppContentContext.Provider value={{value: appContent}}>
                     <div className="App">
-                        <Header/>
                         <div className="WebContent">
+                            <Header/>
                             <MainContent/>
                         </div>
                         <Footer/>

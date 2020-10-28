@@ -1,6 +1,5 @@
 import React from 'react';
 import {Route, Switch, useRouteMatch} from "react-router-dom";
-import '../../../CSS/PagesCSS/Laboratories.css';
 
 interface ILaboratory {
     name: string;
