@@ -154,7 +154,7 @@ const ProjectsContent = () => {
         <div className="projects padding">
             <div className="projectsInfo">
                 <div className="solvedProjects projectsGroup">
-                    <p className="titleSecond projectTitle">Aktuálně řešené projekty</p>
+                    <p className="titleSecond projectsTitle">Aktuálně řešené projekty</p>
                     {solvedProjects.map(project => {
                         return (
                             <div className="projectsBlock border" key={project.name}>
@@ -164,7 +164,7 @@ const ProjectsContent = () => {
                     })}
                 </div>
                 <div className="archivedProjects projectsGroup">
-                    <p className="titleSecond projectTitle">Archiv VaV projektů</p>
+                    <p className="titleSecond projectsTitle">Archiv VaV projektů</p>
                     {projectsArchive.map(project => {
                         return (
                             <div className="projectsBlock border" key={project.name}>

@@ -7,6 +7,8 @@ import Cooperation from "./Pages/Cooperation";
 import Projects from "./Pages/Projects";
 import Laboratories from "./Pages/Laboratories";
 import Education from "./Pages/Education";
+import '../../CSS/Pages.css';
+import LabNew from "./Pages/LabNew";
 
 const MainContent = () => {
     return (
@@ -17,7 +19,7 @@ const MainContent = () => {
                 <Route path='/employees' render={() => (<Employees />)}/>
                 <Route path='/projects' render={() => (<Projects />)}/>
                 <Route path='/education' render={() => (<Education />)}/>
-                <Route path='/laboratories' render={() => (<Laboratories />)}/>
+                <Route path='/laboratories' render={() => (<LabNew />)}/>
                 <Route path='/cooperation' render={() => (<Cooperation />)}/>
                 <Redirect from='/' to='/home' />
             </Switch>

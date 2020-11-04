@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Link} from 'react-router-dom';
-import {useContext, useState} from "react";
+import {useContext} from "react";
 import PathContext from "../../Context/PathContext";
 import AppContentContext from "../../Context/AppContentContext";
 import LanguageContext from "../../Context/LanguageContext";
@@ -11,10 +11,23 @@ import List from '@material-ui/core/List';
 import MenuIcon from '@material-ui/icons/Menu';
 import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
-
+import {makeStyles, createStyles} from '@material-ui/core';
 type Anchor = 'bottom' | 'right';
 
+const useStyles = makeStyles(() =>
+    createStyles({
+        list: {
+            padding: 0,
+            margin: 0
+        },
+        divider: {
+            backgroundColor: "lightgrey"
+        }
+    })
+)
+
 const MobileHeader = () => {
+    const classes = useStyles();
     const appContent = useContext(AppContentContext);
     const path = useContext(PathContext);
     const language = useContext(LanguageContext);
@@ -48,14 +61,14 @@ const MobileHeader = () => {
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
         >
-            <List className="list">
+            <List className={classes.list}>
                 {appContent.value.map((elem) =>
                     appContent.value.indexOf(elem) !== 0 && (
-                        <div>
+                        <div key={elem.name}>
                             <ListItem className="headerTab" key={appContent.value.indexOf(elem)}>
                                 <Link to={elem.link} className="tabName" onClick={() => ChangeValue()}>{elem.name}</Link>
                             </ListItem>
-                            <Divider/>
+                            <Divider className={classes.divider}/>
                         </div>
                     )
                 )}

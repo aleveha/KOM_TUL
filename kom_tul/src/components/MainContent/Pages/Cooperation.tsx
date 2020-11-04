@@ -36,16 +36,16 @@ const CooperationContent = () => {
 
     return (
         <div className="cooperation padding">
-            <h1 className="mainLabel">Spolupráce s KOM change me</h1>
-            <div className="coopInfo">
+            <h1 className="mainLabel">Spolupráce s KOM</h1>
+            <div className="coopInfo mainInfo">
                 <div className="infoContent">
                     <p className="cooperationInfo">
-                        <img src={CoopPhoto} alt="KatedraPhoto"/>
-                        {cooperationInformation}<br/><br/><br/>
+                        <img src={CoopPhoto} alt="KatedraPhoto" className="pagePhoto"/>
+                        {cooperationInformation}<br/><br/>
                         {cooperationOffer}
                     </p>
                 </div>
-                <div className="howToCoop">
+                <div className="howToCoop infoBlock">
                     <p className="titleSecond">{coopAbility.label}</p>
                     <ol>
                         {coopAbility.wayPoints.map(wayPoint => {

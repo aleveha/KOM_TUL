@@ -88,9 +88,9 @@ const DepartmentContent = () => {
     return (
         <div className="department padding">
             <h1 className="mainLabel">Informace o katedře</h1>
-            <div className="mainInfo">
+            <div className="katedraInfo mainInfo">
                 <p className="departmentInfo">
-                    {/*<img src={mainPhotoDeprtment} alt="KatedraPhoto"/>*/}
+                    <img src={mainPhotoDeprtment} alt="KatedraPhoto" className="pagePhoto"/>
                     <span>{mainInfo}</span>
                 </p>
             </div>
@@ -100,7 +100,7 @@ const DepartmentContent = () => {
                 ))}</p>
                 {professionalFocus.map(item => {
                     return (
-                        <div className="professionalFocusList padding" key={item.label}>
+                        <div className="professionalFocusList padding infoBlock" key={item.label}>
                             <p className="titleSecond">{item.label}</p>
                             <ul>
                                 {item.information.map(elem => {
@@ -117,7 +117,7 @@ const DepartmentContent = () => {
                 <p className="titleMain">{programsLabel}</p>
                 {programs.map(item => {
                     return (
-                        <div className="programsList padding" key={item.label}>
+                        <div className="programsList infoBlock padding" key={item.label}>
                             <p className="titleSecond">{item.label}</p>
                             <ul>
                                 {item.content.map(elem => {

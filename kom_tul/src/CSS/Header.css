@@ -47,11 +47,6 @@
     align-items: center;
 }
 
-.pathLink {
-    font-size: 0.9rem;
-    font-family: var(--fonts) !important;
-}
-
 .historyWayContent {
     margin: 5px 0;
 }
