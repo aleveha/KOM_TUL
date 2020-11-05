@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
-import {Route, Switch, useRouteMatch} from "react-router-dom";
-import {Paper, makeStyles, createStyles} from '@material-ui/core';
+import {Link, Route, Switch, useRouteMatch} from "react-router-dom";
+import {Paper, Button, ButtonGroup, makeStyles, createStyles} from '@material-ui/core';
+import LabDialog from "./LabDialog";
 
-interface ILaboratory {
+export interface ILaboratory {
     name: string;
     description: string;
     specialization: Array<string>;
@@ -10,12 +11,12 @@ interface ILaboratory {
     technologies?: Array<ILaboratoryPartDesc>;
 }
 
-interface ILaboratoryPartDesc {
+export interface ILaboratoryPartDesc {
     label?: string;
     value: Array<string>;
 }
 
-const laboratories: Array<ILaboratory> = [
+export const laboratories: Array<ILaboratory> = [
     {
         name: "Laboratoř třískových technologií a procesů",
         description: "Laboratoř třískových technologií a procesů vytváří technické zázemí pro řešení výzkumných a vývojových úkolů z oblasti obrábění kovů, plastů i kompozitních materiálů. Zabývá se teoretickými i praktickými aspekty obrábění se zaměřením na řezné nástroje, technologickou analýzu i využití procesních kapalin. Jedním z hlavních cílů je nabídka služeb spojená s optimalizací řezného procesu z hlediska nástroje, obráběného materiálu i řezných podmínek. Laboratoř je zaměřena zejména na technologii soustružení, frézování, vrtání a broušení.",
@@ -140,7 +141,7 @@ const laboratories: Array<ILaboratory> = [
     }
 ];
 
-const LaboratoriesContent = () => {
+const LabQueue = () => {
     const [openFirst, setFirstOpen] = useState<boolean>(false);
     const [openSecond, setSecondOpen] = useState<boolean>(false);
 
@@ -218,12 +219,36 @@ const LaboratoriesContent = () => {
     );
 }
 
-const Laboratories = () => {
-    let match = useRouteMatch();
+const Buttons = (props: { value: string, parentPath: string }) => {
+    const [pressed, setPressed] = useState<boolean>(false);
+    const path = props.value.toString().toLowerCase();
+
+    const handleClick = () => {
+        setPressed(!pressed);
+    }
+
     return (
-        <Switch>
-            <Route path={match.path} exact component={LaboratoriesContent}/>
-        </Switch>
+        <Button
+            variant={pressed ? "outlined" : "contained"} onClick={handleClick}
+            style={{margin: "0 0.5rem"}}>
+            <Link to={props.parentPath + "/" + path}>{props.value}</Link>
+        </Button>
+    );
+}
+
+const Laboratories = () => {
+    const match = useRouteMatch();
+
+    return (
+        <div>
+            <div style={{margin: "1rem auto", display: "flex", justifyContent: "center"}}>
+                {["Queue", "Dialog"].map(button => <Buttons value={button} parentPath={match.path}/>)}
+            </div>
+            <Switch>
+                <Route path={match.path + "/queue"} component={LabQueue}/>
+                <Route path={match.path + "/dialog"} component={LabDialog}/>
+            </Switch>
+        </div>
     );
 };
 
