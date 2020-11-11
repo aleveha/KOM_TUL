@@ -5,10 +5,16 @@ import Logo2 from '../../img/logotul_02.png';
 import HistoryWay from "../MainContent/HistoryWay";
 import MobileHeader from "./MobileHeader";
 import '../../CSS/Header.css';
+import {useState} from "react";
 
 const Header = () => {
+    const [hideShadow, setHideShadow] = useState<boolean>(true);
+    window.addEventListener('scroll', () => {
+        window.pageYOffset > 0 ? setHideShadow(false) : setHideShadow(true);
+    })
+
     return (
-        <header className="header">
+        <header className="header" style={hideShadow ? {} : {boxShadow: "0 0 10px rgba(0,0,0,0.5)"}}>
             <div className="header-content">
                 <div className="komLogoContainer">
                     <Link to="/home" className="logoLink" >

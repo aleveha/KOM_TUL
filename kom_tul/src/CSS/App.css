@@ -13,6 +13,10 @@
     grid-row-end: 3;
 }
 
+.mainContent {
+    margin-top: 6rem;
+}
+
 /*Start Page*/
 .startPage {
     min-height: 88vh;
