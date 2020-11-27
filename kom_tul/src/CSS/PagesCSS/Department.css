@@ -27,8 +27,8 @@ p, li {
     max-width: 690px;
     width: 30vw;
     object-fit: fill;
-    float: right;
     margin-left: 30px;
+    float: right;
 }
 
 .professionalFocusList, .programsList {
