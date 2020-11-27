@@ -114,3 +114,25 @@ h2 {
     margin: 10px 0;
     text-align: justify;
 }
+
+.downloadFile:hover {
+    color: darkslateblue;
+}
+
+.linkToDownload {
+    margin: 0.5rem 0;
+}
+
+.filesToDownload {
+    padding-top: 1rem;
+}
+
+.downloadOpen {
+    cursor: pointer;
+    width: 100%;
+}
+
+.downloadOpen:hover {
+    color: #2B8CB6;
+    text-decoration: underline #2B8CB6;
+}

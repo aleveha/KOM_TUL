@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Switch, Route, useRouteMatch} from 'react-router-dom';
 import {IEmployee} from './Employees';
 import '../../../CSS/PagesCSS/Education.css';
+import DownloadBD from '../../../Downloads/DataBase';
 
 interface IEducationalProgram {
     name: string,
@@ -47,7 +48,8 @@ interface ICourseTable {
     range: string,
     exam: string,
     credits: number,
-    professor: Array<string>
+    professor: Array<string>,
+    downloadFiles?: boolean
 }
 
 const CreateTable = (tableLine: ICourseTable) => {
@@ -99,7 +101,8 @@ const EducationContent = () => {
                                         credits: 4,
                                         professor: [
                                             "Jersák"
-                                        ]
+                                        ],
+                                        downloadFiles: true
                                     },
                                     {
                                         name: "Bakalářský seminář",
@@ -469,6 +472,7 @@ const EducationContent = () => {
             ]
         }
     ];
+    const [downloadOpen, setDownloadOpen] = useState<boolean>(false);
 
     return (
         <div className="educatingContent">
@@ -555,6 +559,27 @@ const EducationContent = () => {
                                                 </div>
                                             );
                                         })}
+                                        {DownloadBD.length > 0 &&
+                                        <div className="filesToDownload">
+                                            <h3
+                                                className="titleSecond downloadOpen"
+                                                onClick={() => setDownloadOpen(!downloadOpen)}
+                                            >
+                                                Technologie&nbsp;III &mdash; Soubory&nbsp;ke&nbsp;stažení
+                                            </h3>
+                                            {downloadOpen && <div>
+                                                {DownloadBD.map(file => <div key={file.id} className="linkToDownload">
+                                                    <a
+                                                        href={require(`../../../Files/${file.shortName}.${file.format}`)}
+                                                        target="_blank"
+                                                        download={file.name}
+                                                        className="link downloadFile"
+                                                    >
+                                                        {file.name}
+                                                    </a>
+                                                </div>)}
+                                            </div>}
+                                        </div>}
                                     </div>
                                 );
                             })}
