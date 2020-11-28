@@ -559,7 +559,7 @@ const EducationContent = () => {
                                                 </div>
                                             );
                                         })}
-                                        {DownloadBD.length > 0 &&
+                                        {DownloadBD.length > 0 && educationProgram.programs[0].number === "B0715A270008" &&
                                         <div className="filesToDownload">
                                             <h3
                                                 className="titleSecond downloadOpen"

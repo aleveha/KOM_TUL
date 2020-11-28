@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83c3b780-7e4c-42bc-9358-a1ff228611f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Education.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Education.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Education.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Education.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +106,8 @@
       <workItem from="1606205748932" duration="52000" />
       <workItem from="1606219732932" duration="731000" />
       <workItem from="1606244406287" duration="14000" />
-      <workItem from="1606474076267" duration="6953000" />
+      <workItem from="1606474076267" duration="7871000" />
+      <workItem from="1606484399620" duration="1152000" />
     </task>
     <task id="LOCAL-00001" summary="some work with router">
       <created>1601464139765</created>
@@ -129,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602949316731</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add downloading files">
+      <created>1606482300490</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606482300490</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +158,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="some work with router" />
     <MESSAGE value="add EducationPrograms object" />
-    <option name="LAST_COMMIT_MESSAGE" value="add EducationPrograms object" />
+    <MESSAGE value="add downloading files" />
+    <option name="LAST_COMMIT_MESSAGE" value="add downloading files" />
   </component>
   <component name="WindowStateProjectService">
     <state x="813" y="480" width="283" height="241" key="#Port_bindings" timestamp="1601309305984">
@@ -185,24 +194,34 @@
     </state>
     <state width="1345" height="237" key="GridCell.Tab.0.right/0.28.1366.740@0.28.1366.740" timestamp="1603011296427" />
     <state width="1899" height="327" key="GridCell.Tab.0.right/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1601310290765" />
+    <state x="2047" y="366" width="1092" height="646" key="MergeDialog" timestamp="1606482715401">
+      <screen x="1920" y="289" width="1366" height="768" />
+    </state>
+    <state x="2047" y="366" width="1092" height="646" key="MergeDialog/1920.289.1366.768/0.317.1920.883@1920.289.1366.768" timestamp="1606482715401" />
+    <state x="2240" y="450" width="715" height="475" key="MultipleFileMergeDialog" timestamp="1606482715406">
+      <screen x="1920" y="289" width="1366" height="768" />
+    </state>
+    <state x="2240" y="450" width="715" height="475" key="MultipleFileMergeDialog/1920.289.1366.768/0.317.1920.883@1920.289.1366.768" timestamp="1606482715406" />
     <state x="187" y="33" width="992" height="732" key="SettingsEditor" timestamp="1606205709623">
       <screen x="0" y="28" width="1366" height="740" />
     </state>
     <state x="187" y="33" width="992" height="732" key="SettingsEditor/0.28.1366.740@0.28.1366.740" timestamp="1606205709623" />
-    <state x="278" y="134" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1602949326232">
-      <screen x="0" y="28" width="1366" height="740" />
+    <state x="2198" y="399" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1606482723815">
+      <screen x="1920" y="289" width="1366" height="768" />
     </state>
     <state x="278" y="134" width="800" height="530" key="Vcs.Push.Dialog.v2/0.28.1366.740@0.28.1366.740" timestamp="1602949326232" />
     <state x="278" y="134" width="800" height="530" key="Vcs.Push.Dialog.v2/1920.289.1366.768/0.28.1366.740@0.28.1366.740" timestamp="1601464145685" />
+    <state x="2198" y="399" width="800" height="530" key="Vcs.Push.Dialog.v2/1920.289.1366.768/0.317.1920.883@1920.289.1366.768" timestamp="1606482723815" />
     <state x="856" y="528" width="447" height="218" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize" timestamp="1601310758374">
       <screen x="0" y="317" width="1920" height="883" />
     </state>
     <state x="856" y="528" width="447" height="218" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1601310758374" />
-    <state x="544" y="195" width="392" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603443203931">
-      <screen x="0" y="28" width="1366" height="740" />
+    <state x="2464" y="462" width="392" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606482756067">
+      <screen x="1920" y="289" width="1366" height="768" />
     </state>
     <state x="544" y="195" width="392" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1366.740@0.28.1366.740" timestamp="1603443203931" />
     <state x="764" y="516" width="382" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1601306082031" />
+    <state x="2464" y="462" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.289.1366.768/0.317.1920.883@1920.289.1366.768" timestamp="1606482756067" />
     <state x="442" y="103" width="471" height="591" key="git4idea.branch.GitSmartOperationDialog" timestamp="1603443157703">
       <screen x="0" y="28" width="1366" height="740" />
     </state>
