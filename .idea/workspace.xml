@@ -16,12 +16,18 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83c3b780-7e4c-42bc-9358-a1ff228611f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Education.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Education.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +38,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -52,6 +59,8 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.19.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="10.17.47" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -83,6 +92,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Docker.Docker Image" />
+        <item itemvalue="Docker.Docker Image" />
       </list>
     </recent_temporary>
   </component>
@@ -107,7 +117,7 @@
       <workItem from="1606219732932" duration="731000" />
       <workItem from="1606244406287" duration="14000" />
       <workItem from="1606474076267" duration="7871000" />
-      <workItem from="1606484399620" duration="1152000" />
+      <workItem from="1606484399620" duration="4506000" />
     </task>
     <task id="LOCAL-00001" summary="some work with router">
       <created>1601464139765</created>
@@ -137,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606482300490</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add download only technologie 3">
+      <created>1606555606986</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1606555606986</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,7 +165,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -159,7 +188,8 @@
     <MESSAGE value="some work with router" />
     <MESSAGE value="add EducationPrograms object" />
     <MESSAGE value="add downloading files" />
-    <option name="LAST_COMMIT_MESSAGE" value="add downloading files" />
+    <MESSAGE value="add download only technologie 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="add download only technologie 3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="813" y="480" width="283" height="241" key="#Port_bindings" timestamp="1601309305984">
@@ -206,11 +236,12 @@
       <screen x="0" y="28" width="1366" height="740" />
     </state>
     <state x="187" y="33" width="992" height="732" key="SettingsEditor/0.28.1366.740@0.28.1366.740" timestamp="1606205709623" />
-    <state x="2198" y="399" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1606482723815">
-      <screen x="1920" y="289" width="1366" height="768" />
+    <state x="391" y="443" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1606555613201">
+      <screen x="0" y="317" width="1920" height="883" />
     </state>
     <state x="278" y="134" width="800" height="530" key="Vcs.Push.Dialog.v2/0.28.1366.740@0.28.1366.740" timestamp="1602949326232" />
     <state x="278" y="134" width="800" height="530" key="Vcs.Push.Dialog.v2/1920.289.1366.768/0.28.1366.740@0.28.1366.740" timestamp="1601464145685" />
+    <state x="391" y="443" width="800" height="530" key="Vcs.Push.Dialog.v2/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1606555613201" />
     <state x="2198" y="399" width="800" height="530" key="Vcs.Push.Dialog.v2/1920.289.1366.768/0.317.1920.883@1920.289.1366.768" timestamp="1606482723815" />
     <state x="856" y="528" width="447" height="218" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize" timestamp="1601310758374">
       <screen x="0" y="317" width="1920" height="883" />
