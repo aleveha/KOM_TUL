@@ -260,7 +260,7 @@ const Employees = () => {
 
     const GetMainInfo = (person: IEmployee, border?: boolean) => {
         return (
-            <div className={"employeeInfo" + (border && " border")} key={person.name} >
+            <div className={"employeeInfo" + (border ? " border" : "")} key={person.name} >
                 {person.position &&
                     <div className="employeePosition titleSecond">
                         <p>{person.position}</p>

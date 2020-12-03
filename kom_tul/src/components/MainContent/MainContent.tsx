@@ -7,7 +7,7 @@ import Cooperation from "./Pages/Cooperation";
 import Projects from "./Pages/Projects";
 import Laboratories from "./Pages/Laboratories";
 import Education from "./Pages/Education";
-import '../../CSS/Pages.css';
+// import '../../CSS/Pages.css';
 
 const MainContent = () => {
     return (

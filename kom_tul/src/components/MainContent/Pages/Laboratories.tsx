@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Link, Route, Switch, useRouteMatch} from "react-router-dom";
 import {Paper, Button, ButtonGroup, makeStyles, createStyles} from '@material-ui/core';
-import LabDialog from "./LabDialog";
+// import LabDialog from "./LabDialog";
 
 export interface ILaboratory {
     name: string;
@@ -246,7 +246,7 @@ const Laboratories = () => {
             </div>
             <Switch>
                 <Route path={match.path + "/queue"} component={LabQueue}/>
-                <Route path={match.path + "/dialog"} component={LabDialog}/>
+                {/*<Route path={match.path + "/dialog"} component={LabDialog}/>*/}
             </Switch>
         </div>
     );

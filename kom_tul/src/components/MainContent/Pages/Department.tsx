@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {Route, Switch, useRouteMatch} from 'react-router-dom';
 import mainPhotoDeprtment from '../../../img/photoMainPage/2.jpg';
+import '../../../CSS/PagesCSS/Pages.css';
 
 interface IProfFocus {
     label: string;
@@ -84,53 +85,52 @@ const DepartmentContent = () => {
         }
     ];
 
-
     return (
-        <div className="department padding">
-            <h1 className="mainLabel">Informace o katedře</h1>
-            <div className="katedraInfo mainInfo">
-                <p className="departmentInfo">
-                    <img src={mainPhotoDeprtment} alt="KatedraPhoto" className="pagePhoto"/>
-                    <span>{mainInfo}</span>
-                </p>
-            </div>
-            <div className="professionalFocus">
-                <p className="titleMain">{professionalFocusLabel.map(str => (
-                    <span key={str}> {str} </span>
-                ))}</p>
-                {professionalFocus.map(item => {
-                    return (
-                        <div className="professionalFocusList padding infoBlock" key={item.label}>
-                            <p className="titleSecond">{item.label}</p>
-                            <ul>
-                                {item.information.map(elem => {
-                                    return (
-                                        <li key={elem}>{elem}</li>
-                                    );
-                                })}
-                            </ul>
-                        </div>
-                    );
-                })}
-            </div>
-            <div className="programs">
-                <p className="titleMain">{programsLabel}</p>
-                {programs.map(item => {
-                    return (
-                        <div className="programsList infoBlock padding" key={item.label}>
-                            <p className="titleSecond">{item.label}</p>
-                            <ul>
-                                {item.content.map(elem => {
-                                    return (
-                                        <li key={elem.number}>
-                                            {`${elem.number} - ${elem.name}`}
-                                        </li>
-                                    );
-                                })}
-                            </ul>
-                        </div>
-                    );
-                })}
+        <div className="department">
+            <h1 className="mainLabel padding">Informace o katedře</h1>
+            <img src={mainPhotoDeprtment} alt="KatedraPhoto" className="pagePhoto"/>
+            <div className="departmentContent padding">
+                <div className="katedraInfo mainInfo">
+                    <p className="departmentInfo">{mainInfo}</p>
+                </div>
+                <div className="professionalFocus">
+                    <p className="titleMain">{professionalFocusLabel.map(str => (
+                        <span key={str}> {str} </span>
+                    ))}</p>
+                    {professionalFocus.map(item => {
+                        return (
+                            <div className="professionalFocusList padding infoBlock" key={item.label}>
+                                <p className="titleSecond">{item.label}</p>
+                                <ul>
+                                    {item.information.map(elem => {
+                                        return (
+                                            <li key={elem}>{elem}</li>
+                                        );
+                                    })}
+                                </ul>
+                            </div>
+                        );
+                    })}
+                </div>
+                <div className="programs">
+                    <p className="titleMain">{programsLabel}</p>
+                    {programs.map(item => {
+                        return (
+                            <div className="programsList infoBlock padding" key={item.label}>
+                                <p className="titleSecond">{item.label}</p>
+                                <ul>
+                                    {item.content.map(elem => {
+                                        return (
+                                            <li key={elem.number}>
+                                                {`${elem.number} - ${elem.name}`}
+                                            </li>
+                                        );
+                                    })}
+                                </ul>
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
         </div>
     )

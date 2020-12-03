@@ -35,7 +35,7 @@
 
 .mainPhoto {
     object-fit: cover;
-    height: 60vh;
+    height: 80vh;
     width: 100%;
 }
 
@@ -59,4 +59,8 @@
 .main-text:last-child {
     background-color: var(--fiolet);
     font-weight: 500;
+}
+
+.pagePhoto {
+    max-width: 100%;
 }
