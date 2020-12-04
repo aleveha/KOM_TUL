@@ -28,12 +28,8 @@
     <list default="true" id="83c3b780-7e4c-42bc-9358-a1ff228611f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/Header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/MainContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/MainContent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Department.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Department.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Employees.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Employees.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Laboratories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Laboratories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +55,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1i6Q4hy4RPfBH4EduPNpDqN5iAY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -66,17 +63,24 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.19.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="10.17.47" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/kom_tul/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Attach to Node.js/Chrome.Run React">
+    <configuration name="Run React" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="3000">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="3000">
+      <method v="2" />
+    </configuration>
     <configuration name="Docker Image" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
       <deployment type="docker-image">
         <settings>
@@ -98,6 +102,10 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Attach to Node.js/Chrome.Run React" />
+      <item itemvalue="Docker.Docker Image" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Docker.Docker Image" />
@@ -129,6 +137,12 @@
       <workItem from="1606474076267" duration="7871000" />
       <workItem from="1606484399620" duration="4506000" />
       <workItem from="1607019946760" duration="625000" />
+      <workItem from="1607089098876" duration="25000" />
+      <workItem from="1607089595677" duration="1249000" />
+      <workItem from="1607093543504" duration="146000" />
+      <workItem from="1607093706750" duration="7000" />
+      <workItem from="1607093734066" duration="366000" />
+      <workItem from="1607094223125" duration="3278000" />
     </task>
     <task id="LOCAL-00001" summary="some work with router">
       <created>1601464139765</created>
@@ -172,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607020086486</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add adaptive design">
+      <created>1607025219606</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607025219606</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,73 +229,7 @@
     <MESSAGE value="add downloading files" />
     <MESSAGE value="add download only technologie 3" />
     <MESSAGE value="add server and remove docker" />
-    <option name="LAST_COMMIT_MESSAGE" value="add server and remove docker" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="813" y="480" width="283" height="241" key="#Port_bindings" timestamp="1601309305984">
-      <screen x="0" y="317" width="1920" height="883" />
-    </state>
-    <state x="813" y="480" width="283" height="241" key="#Port_bindings/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1601309305984" />
-    <state x="812" y="502" width="285" height="198" key="#Volume_binding" timestamp="1601308786181">
-      <screen x="0" y="317" width="1920" height="883" />
-    </state>
-    <state x="812" y="502" width="285" height="198" key="#Volume_binding/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1601308786181" />
-    <state x="738" y="345" width="424" height="514" key="FileChooserDialogImpl" timestamp="1606244418040">
-      <screen x="0" y="317" width="1920" height="883" />
-    </state>
-    <state x="738" y="345" width="424" height="514" key="FileChooserDialogImpl/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1606244418040" />
-    <state width="1899" height="434" key="GridCell.Tab.0.bottom" timestamp="1607020295257">
-      <screen x="0" y="317" width="1920" height="883" />
-    </state>
-    <state width="1345" height="237" key="GridCell.Tab.0.bottom/0.28.1366.740@0.28.1366.740" timestamp="1603011296428" />
-    <state width="1899" height="434" key="GridCell.Tab.0.bottom/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1607020295257" />
-    <state width="1899" height="434" key="GridCell.Tab.0.center" timestamp="1607020295257">
-      <screen x="0" y="317" width="1920" height="883" />
-    </state>
-    <state width="1345" height="237" key="GridCell.Tab.0.center/0.28.1366.740@0.28.1366.740" timestamp="1603011296427" />
-    <state width="1899" height="434" key="GridCell.Tab.0.center/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1607020295257" />
-    <state width="1899" height="434" key="GridCell.Tab.0.left" timestamp="1607020295257">
-      <screen x="0" y="317" width="1920" height="883" />
-    </state>
-    <state width="1345" height="237" key="GridCell.Tab.0.left/0.28.1366.740@0.28.1366.740" timestamp="1603011296427" />
-    <state width="1899" height="434" key="GridCell.Tab.0.left/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1607020295257" />
-    <state width="1899" height="434" key="GridCell.Tab.0.right" timestamp="1607020295257">
-      <screen x="0" y="317" width="1920" height="883" />
-    </state>
-    <state width="1345" height="237" key="GridCell.Tab.0.right/0.28.1366.740@0.28.1366.740" timestamp="1603011296427" />
-    <state width="1899" height="434" key="GridCell.Tab.0.right/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1607020295257" />
-    <state x="2047" y="366" width="1092" height="646" key="MergeDialog" timestamp="1606482715401">
-      <screen x="1920" y="289" width="1366" height="768" />
-    </state>
-    <state x="2047" y="366" width="1092" height="646" key="MergeDialog/1920.289.1366.768/0.317.1920.883@1920.289.1366.768" timestamp="1606482715401" />
-    <state x="2240" y="450" width="715" height="475" key="MultipleFileMergeDialog" timestamp="1606482715406">
-      <screen x="1920" y="289" width="1366" height="768" />
-    </state>
-    <state x="2240" y="450" width="715" height="475" key="MultipleFileMergeDialog/1920.289.1366.768/0.317.1920.883@1920.289.1366.768" timestamp="1606482715406" />
-    <state x="187" y="33" width="992" height="732" key="SettingsEditor" timestamp="1606205709623">
-      <screen x="0" y="28" width="1366" height="740" />
-    </state>
-    <state x="187" y="33" width="992" height="732" key="SettingsEditor/0.28.1366.740@0.28.1366.740" timestamp="1606205709623" />
-    <state x="391" y="443" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1607020090542">
-      <screen x="0" y="317" width="1920" height="883" />
-    </state>
-    <state x="278" y="134" width="800" height="530" key="Vcs.Push.Dialog.v2/0.28.1366.740@0.28.1366.740" timestamp="1602949326232" />
-    <state x="278" y="134" width="800" height="530" key="Vcs.Push.Dialog.v2/1920.289.1366.768/0.28.1366.740@0.28.1366.740" timestamp="1601464145685" />
-    <state x="391" y="443" width="800" height="530" key="Vcs.Push.Dialog.v2/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1607020090542" />
-    <state x="2198" y="399" width="800" height="530" key="Vcs.Push.Dialog.v2/1920.289.1366.768/0.317.1920.883@1920.289.1366.768" timestamp="1606482723815" />
-    <state x="856" y="528" width="447" height="218" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize" timestamp="1601310758374">
-      <screen x="0" y="317" width="1920" height="883" />
-    </state>
-    <state x="856" y="528" width="447" height="218" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1601310758374" />
-    <state x="764" y="516" width="382" height="172" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607020218460">
-      <screen x="0" y="317" width="1920" height="883" />
-    </state>
-    <state x="544" y="195" width="392" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1366.740@0.28.1366.740" timestamp="1603443203931" />
-    <state x="764" y="516" width="382" height="172" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1607020218460" />
-    <state x="2464" y="462" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.289.1366.768/0.317.1920.883@1920.289.1366.768" timestamp="1606482756067" />
-    <state x="442" y="103" width="471" height="591" key="git4idea.branch.GitSmartOperationDialog" timestamp="1603443157703">
-      <screen x="0" y="28" width="1366" height="740" />
-    </state>
-    <state x="442" y="103" width="471" height="591" key="git4idea.branch.GitSmartOperationDialog/0.28.1366.740@0.28.1366.740" timestamp="1603443157703" />
+    <MESSAGE value="add adaptive design" />
+    <option name="LAST_COMMIT_MESSAGE" value="add adaptive design" />
   </component>
 </project>

@@ -88,10 +88,12 @@ const DepartmentContent = () => {
     return (
         <div className="department">
             <h1 className="mainLabel padding">Informace o katedře</h1>
-            <img src={mainPhotoDeprtment} alt="KatedraPhoto" className="pagePhoto"/>
             <div className="departmentContent padding">
                 <div className="katedraInfo mainInfo">
-                    <p className="departmentInfo">{mainInfo}</p>
+                    <p className="departmentInfo">
+                        <img src={mainPhotoDeprtment} alt="KatedraPhoto" className="pagePhoto"/>
+                        <span>{mainInfo}</span>
+                    </p>
                 </div>
                 <div className="professionalFocus">
                     <p className="titleMain">{professionalFocusLabel.map(str => (

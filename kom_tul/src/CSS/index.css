@@ -11,6 +11,8 @@ body {
     max-width: 100vw;
     min-height: 100%;
 
+    line-height: 1.5rem;
+
     padding: 0;
     margin: 0;
 
@@ -29,16 +31,17 @@ a:hover, a:focus {
 
 html {
     height: 100%;
-    font-size: 2.5vh;
+    font-size: 25px;
 }
 
 #root {
     height: 100vh;
 }
 
-ul, ol, p, li {
+ul, ol, p, li, a {
     padding: 0;
     margin: 0;
+    font-size: 1rem;
 }
 
 .padding {
