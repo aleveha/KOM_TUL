@@ -1,0 +1,74 @@
+/*Department*/
+.departmentContent div {
+    margin: 1rem 0;
+}
+
+.departmentInfo, .cooperationInfo {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    text-align: justify;
+}
+
+/*Employees*/
+.employeeInfo div {
+    margin-top: 0.5rem;
+}
+
+.contactBlock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contactBlock > div:first-child {
+    margin-right: 1rem;
+    font-weight: 500;
+}
+
+.positionInfo {
+    margin: 1rem!important;
+}
+
+/*Projects*/
+.projectsBlock div {
+    margin-top: 0.5rem;
+}
+
+.projectInfoBlock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.projectInfoBlock > div:first-child {
+    margin-right: 1rem;
+    font-weight: 500;
+}
+
+.linkBlock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin-top: 1rem!important;
+}
+
+.projectsTitle {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+/*Cooperation*/
+.coopInfo div {
+    margin: 1.5rem 0;
+}
+
+.howToCoop ol {
+    margin-left: 1rem;
+}

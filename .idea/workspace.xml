@@ -27,10 +27,8 @@
   <component name="ChangeListManager">
     <list default="true" id="83c3b780-7e4c-42bc-9358-a1ff228611f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Department.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Department.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/server/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,13 +64,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.19.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="10.17.47" />
+    <property name="javascript.nodejs.core.library.typings.version" value="10.17.49" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/kom_tul/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/kom_tul" />
+      <recent name="$PROJECT_DIR$/kom_tul/src" />
+    </key>
   </component>
   <component name="RunManager" selected="Attach to Node.js/Chrome.Run React">
     <configuration name="Run React" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="3000">
@@ -142,7 +146,10 @@
       <workItem from="1607093543504" duration="146000" />
       <workItem from="1607093706750" duration="7000" />
       <workItem from="1607093734066" duration="366000" />
-      <workItem from="1607094223125" duration="3278000" />
+      <workItem from="1607094223125" duration="3455000" />
+      <workItem from="1607155169559" duration="645000" />
+      <workItem from="1607621409343" duration="24000" />
+      <workItem from="1608562897588" duration="1813000" />
     </task>
     <task id="LOCAL-00001" summary="some work with router">
       <created>1601464139765</created>
@@ -193,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607025219606</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="continue adaptive design">
+      <created>1607101969592</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607101969592</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +244,7 @@
     <MESSAGE value="add download only technologie 3" />
     <MESSAGE value="add server and remove docker" />
     <MESSAGE value="add adaptive design" />
-    <option name="LAST_COMMIT_MESSAGE" value="add adaptive design" />
+    <MESSAGE value="continue adaptive design" />
+    <option name="LAST_COMMIT_MESSAGE" value="continue adaptive design" />
   </component>
 </project>
