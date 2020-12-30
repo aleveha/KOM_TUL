@@ -1,8 +1,7 @@
 import * as React from 'react';
 import {Link} from 'react-router-dom';
-import Logo1 from "../../img/logotul1_01.png";
-import Logo2 from "../../img/logotul_02.png";
 import Divider from '@material-ui/core/Divider';
+import Logo from "../Common/Logo";
 
 const ContactsLine = () => {
     return (
@@ -10,12 +9,7 @@ const ContactsLine = () => {
             <Divider/>
             <div className="contactInfoContent padding">
                 <div className="komLogoFooter">
-                    <div className="komLogoContainer">
-                        <Link to="/home" className="logoLink">
-                            <img src={Logo1} alt="KatedraLogo" className="komLogo"/>
-                            <img src={Logo2} alt="KatedraLogo" className="komLogo"/>
-                        </Link>
-                    </div>
+                    <Logo />
                 </div>
                 <div className="contactInformation">
                     <div className="facultyName">

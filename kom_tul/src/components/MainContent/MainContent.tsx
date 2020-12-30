@@ -7,11 +7,12 @@ import Cooperation from "./Pages/Cooperation";
 import Projects from "./Pages/Projects";
 import Laboratories from "./Pages/Laboratories";
 import Education from "./Pages/Education";
+import mobileCheck from "../Common/mobileCheck";
 // import '../../CSS/Pages.css';
 
 const MainContent = () => {
     return (
-        <div className="mainContent">
+        <div className="mainContent" style={mobileCheck() ? {marginTop: "calc(var(--vh) * 10)"} : {}}>
             <Switch>
                 <Route path='/home' component={StartPage}/>
                 <Route path='/department' render={() => (<Department />)}/>

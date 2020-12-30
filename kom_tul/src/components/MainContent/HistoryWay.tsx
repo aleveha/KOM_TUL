@@ -4,19 +4,9 @@ import PathContext from "../../Context/PathContext";
 import {Link} from 'react-router-dom';
 import {IPath} from '../../Context/PathContext';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
-import {makeStyles, createStyles} from '@material-ui/core';
-
-const useStyles = makeStyles(() =>
-    createStyles({
-        pathLink: {
-            fontFamily: "var(--fonts)"
-        }
-    })
-)
 
 const HistoryWay = () => {
     const path = useContext(PathContext);
-    const classes = useStyles();
 
     const ChangePath = () => {
         path.changeValue();
@@ -38,7 +28,7 @@ const HistoryWay = () => {
         <Link
             to={MakePathLink(elem)}
             key={path.value.indexOf(elem)}
-            className={classes.pathLink}
+            className="pathLink"
             onClick={() => ChangePath()}>{elem.name}
         </Link>
     ))

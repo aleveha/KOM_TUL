@@ -1,5 +1,6 @@
 .header {
-    height: 5rem;
+    height: calc(var(--vh) * 10);
+    min-height: 65px;
     width: 100%;
     position: fixed;
     z-index: 3;
@@ -10,25 +11,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 }
 
 .menuList {
     height: 100%;
-    max-height: 50vh;
-}
-
-.komLogoContainer {
-    height: 100%;
+    max-height: calc(var(--vh) * 50);
 }
 
 .logoLink {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    height: 100%;
+}
+
+.komLogoContainer {
+    height: 100%;
 }
 
 .komLogo {
-    height: 3rem;
+    height: 100%;
 }
 
 .tabName, .cng-lang {
@@ -52,6 +55,16 @@
 }
 
 .historyWayContent {
-    margin: 5px 0;
+    height: 1.5rem;
+    margin-top: calc(var(--vh) * 10);
+}
+
+.historyWayContent > nav {
+    height: 100%;
+}
+
+.pathLink {
+    font-family: var(--fonts);
+    font-size: 1rem;
 }
 

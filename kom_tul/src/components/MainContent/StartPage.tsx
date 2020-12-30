@@ -3,6 +3,7 @@ import ActualNews from "./ActualNews";
 import LanguageContext from "../../Context/LanguageContext";
 import {useContext} from "react";
 import MainPhoto from '../../img/photoMainPage/1.jpg';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const StartPage = () => {
     const language = useContext(LanguageContext);
@@ -19,7 +20,11 @@ const StartPage = () => {
                         <span>{language.value === 'CZ' ? 'Přehrat' : 'Play'} video</span>
                     </div>
                 </div>
-                <img src={MainPhoto} className="mainPhoto"/>
+                <LazyLoadImage
+                    src={MainPhoto}
+                    effect="black-and-white"
+                    className="mainPhoto"
+                />
             </div>
             <ActualNews/>
         </div>

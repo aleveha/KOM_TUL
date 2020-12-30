@@ -2,6 +2,11 @@
     margin: 1rem 0;
 }
 
+.komLogoFooter {
+    min-height: 60px;
+    height: calc(var(--vh) * 10);
+}
+
 .contactInfoContent > div,
 .contactInformation > div,
 .socialNetworks > div {

@@ -91,7 +91,7 @@ const MobileHeader = () => {
             {
                 <React.Fragment>
                     <Button onClick={toggleDrawer(anchor, true)}>
-                        <MenuIcon fontSize="large"/>
+                        <MenuIcon fontSize="large" />
                     </Button>
                     <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
                         {MenuList(anchor)}

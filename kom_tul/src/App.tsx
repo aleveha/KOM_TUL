@@ -10,6 +10,8 @@ import {useLocation} from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './CSS/App.css';
+import mobileCheck from "./components/Common/mobileCheck";
+import HistoryWay from "./components/MainContent/HistoryWay";
 
 interface IAppContent {
     name: string,
@@ -52,6 +54,14 @@ const appContent: Array<IAppContent> = [
         link: '/cooperation'
     }
 ];
+
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+window.addEventListener('resize', () => {
+    vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+})
 
 const App = () => {
     let location = useLocation();
@@ -109,7 +119,8 @@ const App = () => {
                     <div className="App">
                         <div className="WebContent">
                             <Header/>
-                            <MainContent/>
+                            {!mobileCheck() && <HistoryWay/>}
+                            <MainContent />
                         </div>
                         <Footer/>
                     </div>
