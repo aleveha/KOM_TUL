@@ -12,7 +12,7 @@ import mobileCheck from "../Common/mobileCheck";
 
 const MainContent = () => {
     return (
-        <div className="mainContent" style={mobileCheck() ? {marginTop: "calc(var(--vh) * 10)"} : {}}>
+        <div className="mainContent">
             <Switch>
                 <Route path='/home' component={StartPage}/>
                 <Route path='/department' render={() => (<Department />)}/>

@@ -26,79 +26,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83c3b780-7e4c-42bc-9358-a1ff228611f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/kom_tul/src/components/Common/Logo.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/src/components/Common/mobileCheck.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/prop-types/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/prop-types/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/prop-types/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/prop-types/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react-lazy-load-image-component/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react-lazy-load-image-component/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react-lazy-load-image-component/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react-lazy-load-image-component/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/experimental.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/global.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/jsx-dev-runtime.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/jsx-runtime.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/csstype/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/csstype/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/csstype/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/csstype/index.js.flow" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/csstype/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/lodash.debounce/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/lodash.debounce/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/lodash.debounce/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/lodash.debounce/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/lodash.throttle/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/lodash.throttle/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/lodash.throttle/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/lodash.throttle/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.eslintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.github/ISSUE_TEMPLATE/bug_report.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.github/ISSUE_TEMPLATE/feature_request.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.github/PULL_REQUEST_TEMPLATE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.github/workflows/codeql-analysis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/build/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/components/LazyLoadComponent.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/components/LazyLoadComponent.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/components/LazyLoadImage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/components/LazyLoadImage.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/components/PlaceholderWithTracking.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/components/PlaceholderWithoutTracking.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/components/PlaceholderWithoutTracking.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/effects/black-and-white.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/effects/blur.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/effects/opacity.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/hoc/trackWindowScroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/utils/get-scroll-element.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/utils/intersection-observer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/utils/intersection-observer.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/webpack.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/Footer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/Header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Footer/ContactsLine.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Footer/ContactsLine.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Header/MobileHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Header/MobileHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/HistoryWay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/HistoryWay.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/MainContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/MainContent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/StartPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/StartPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,8 +45,8 @@
       <list>
         <option value="JavaScript File" />
         <option value="CSS File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -134,8 +69,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="10.19.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="10.17.49" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.15.4" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.22" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -223,6 +158,7 @@
       <workItem from="1608562897588" duration="1843000" />
       <workItem from="1608660513307" duration="897000" />
       <workItem from="1608727140789" duration="7786000" />
+      <workItem from="1611577463330" duration="8493000" />
     </task>
     <task id="LOCAL-00001" summary="some work with router">
       <created>1601464139765</created>

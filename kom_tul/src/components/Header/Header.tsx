@@ -5,18 +5,25 @@ import '../../CSS/Header.css';
 import {useState} from "react";
 import Logo from "../Common/Logo";
 import mobileCheck from "../Common/mobileCheck";
+import BigHeader from "./BigHeader";
 
 const Header = () => {
     const [hideShadow, setHideShadow] = useState<boolean>(true);
+    const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+
     window.addEventListener('scroll', () => {
         window.pageYOffset > 0 ? setHideShadow(false) : setHideShadow(true);
-    })
+    });
+
+    window.addEventListener('resize', () => {
+        setWindowWidth(window.innerWidth);
+    });
 
     return (
         <header className="header" style={hideShadow ? {} : {boxShadow: "0 0 10px rgba(0,0,0,0.5)"}}>
             <div className="header-content">
                 <Logo />
-                <MobileHeader />
+                {windowWidth >= 1000 ? <BigHeader /> : <MobileHeader />}
             </div>
         </header>
     );

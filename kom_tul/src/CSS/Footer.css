@@ -1,10 +1,15 @@
 .footer > div > div {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 
 .komLogoFooter {
     min-height: 60px;
     height: calc(var(--vh) * 10);
+}
+
+.contactInfoContent {
+    max-width: 550px;
+    margin: 0 auto !important;
 }
 
 .contactInfoContent > div,
@@ -17,6 +22,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.copyrightContent p {
     font-size: 0.7rem;
 }
 
@@ -92,4 +100,56 @@
 
 .logoText {
     margin-top: -0.5rem;
+}
+
+@media (max-width: 500px) {
+    /*.addressAndContacts {*/
+    /*    flex-direction: column;*/
+    /*}*/
+    .addressAndContacts > div {
+        margin: 0.1rem;
+    }
+
+    .addressAndContacts p,
+    .addressAndContacts a {
+        font-size: 0.7rem;
+    }
+
+    /*.logoText {*/
+    /*    width: 100%;*/
+    /*}*/
+    .logoText > p {
+        font-size: 0.75rem
+    }
+
+    /*.secondLine {*/
+    /*    display: flex;*/
+    /*    justify-content: space-around;*/
+    /*    align-items: center;*/
+    /*}*/
+    .secondLine p {
+        font-size: 0.9rem;
+    }
+    /*.facultyName p {*/
+    /*    font-size: 0.8rem;*/
+    /*}*/
+    .copyrightContent p {
+        font-size: 0.6rem;
+    }
+}
+
+@media (min-width: 1300px) {
+    .contactInfoContent {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        min-width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .addressAndContacts > div {
+        margin: 0 0.3rem;
+    }
 }

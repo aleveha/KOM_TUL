@@ -119,7 +119,7 @@ const App = () => {
                     <div className="App">
                         <div className="WebContent">
                             <Header/>
-                            {!mobileCheck() && <HistoryWay/>}
+                            {/*{!mobileCheck() && <HistoryWay/>}*/}
                             <MainContent />
                         </div>
                         <Footer/>
