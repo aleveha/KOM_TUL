@@ -64,6 +64,49 @@
     font-size: 1.5rem;
 }
 
+/*Education*/
+.descriptionLine {
+    margin-right: 2rem;
+}
+
+.programShortDesc {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.table {
+    min-width: 800px;
+}
+
+.programTitle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin: 1rem 0;
+
+    font-weight: bold;
+}
+
+.courses {
+    margin-bottom: 1rem;
+}
+
+.educationYearInfo > p {
+    font-weight: bold;
+}
+
+@media (max-width: 999px) {
+    .programShortDesc {
+        display: unset;
+    }
+
+    .descriptionLine {
+        margin: 1rem 0 1rem 0;
+    }
+}
+
 /*Cooperation*/
 .coopInfo div {
     margin: 1.5rem 0;
@@ -71,4 +114,10 @@
 
 .howToCoop ol {
     margin-left: 1rem;
+}
+
+@media (max-width: 1055px) {
+    .departmentInfo, .cooperationInfo {
+        flex-wrap: wrap;
+    }
 }

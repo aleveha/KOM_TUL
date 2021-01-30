@@ -7,8 +7,8 @@ import Logo2 from "../../img/logotul_02.png";
 const Logo = () => {
     return (
         <Link to="/home" className="logoLink">
-            <LazyLoadImage src={Logo1} alt="KatedraLogo" className="komLogo"/>
-            <LazyLoadImage src={Logo2} alt="KatedraLogo" className="komLogo"/>
+            <img src={Logo1} alt="KatedraLogo" className="komLogo"/>
+            <img src={Logo2} alt="KatedraLogo" className="komLogo"/>
         </Link>
     );
 };

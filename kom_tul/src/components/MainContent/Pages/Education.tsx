@@ -10,7 +10,7 @@ import {
     TableHead,
     makeStyles,
     createStyles,
-    Card
+    Card, Paper
 } from '@material-ui/core';
 
 interface IEducationalProgram {
@@ -64,10 +64,18 @@ interface TableProps {
     courseTable: ICourseTable[]
 }
 
+const useStyles = makeStyles({
+    table: {
+        minWidth: 800,
+    },
+});
+
 const EducationTable = ({courseTable}: TableProps) => {
+    const classes = useStyles();
+
     return (
         <TableContainer component={Card} variant="outlined" className="tableContainer">
-            <Table size="small">
+            <Table size="small" className={classes.table}>
                 <TableHead className="tableHeader">
                     <TableRow>
                         <TableCell>Název</TableCell>
@@ -559,23 +567,23 @@ const EducationContent = () => {
                                         })}
                                         {program.links && program.links.map(link => {
                                             return (
-                                                <div className="additionalInfo linkPar"
-                                                     key={program.links && program.links.indexOf(link)}>
-                                                    <a className="link"
-                                                       href={link}>{program.additionalInfo && program.links && program.additionalInfo[program.links.indexOf(link)]}</a>
-                                                </div>
+                                            <div className="additionalInfo linkPar"
+                                            key={program.links && program.links.indexOf(link)}>
+                                            <a className="link"
+                                            href={link}>{program.additionalInfo && program.links && program.additionalInfo[program.links.indexOf(link)]}</a>
+                                            </div>
                                             );
                                         })}
-                                    </div>
+                                            </div>
+                                            );
+                                        })}
+                                </div>
+                                </div>
                                 );
                             })}
-                        </div>
-                    </div>
+                </div>
                 );
-            })}
-        </div>
-    );
-}
+            }
 
 const Education = () => {
     const match = useRouteMatch();

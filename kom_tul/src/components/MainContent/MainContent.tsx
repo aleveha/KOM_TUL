@@ -7,14 +7,12 @@ import Cooperation from "./Pages/Cooperation";
 import Projects from "./Pages/Projects";
 import Laboratories from "./Pages/Laboratories";
 import Education from "./Pages/Education";
-import mobileCheck from "../Common/mobileCheck";
-// import '../../CSS/Pages.css';
 
 const MainContent = () => {
     return (
         <div className="mainContent">
             <Switch>
-                <Route path='/home' component={StartPage}/>
+                <Route path='/home' render={() => (<StartPage />)}/>
                 <Route path='/department' render={() => (<Department />)}/>
                 <Route path='/employees' render={() => (<Employees />)}/>
                 <Route path='/projects' render={() => (<Projects />)}/>

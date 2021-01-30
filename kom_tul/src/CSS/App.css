@@ -19,7 +19,7 @@
 
 /*Start Page*/
 .startPage {
-    min-height: 88vh;
+    min-height: 80vh;
 }
 
 .photoContainer {
@@ -31,12 +31,23 @@
 
 .insidePhotoInfo {
     position: absolute;
+    z-index: 1;
 }
 
 .mainPhoto {
     object-fit: cover;
     height: 80vh;
     width: 100%;
+}
+
+.photos {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+}
+
+.photos img {
+    position: absolute;
 }
 
 .video-link {
@@ -64,7 +75,7 @@
 .pagePhoto {
     max-width: 700px;
     width: 100%;
-    margin-left: 1rem;
+    margin: 0 1rem 1rem 1rem;
 }
 
 @media (max-width: 500px) {

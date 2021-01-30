@@ -35,7 +35,6 @@ const ProjectsContent = () => {
             link: "http://www.fs.tul.cz/fsadmin/soubory/fs/Files/SGS/2019_Studentska_grantova_soutez.pdf"
         }
     ];
-
     const projectsArchive: Array<IProject> = [
         {
             name: "Nové systémy pro kontrolu délky koncových měrek a vyhodnocení kvality jejich povrchů",
@@ -154,7 +153,7 @@ const ProjectsContent = () => {
         <div className="projects padding">
             <div className="projectsInfo">
                 <div className="solvedProjects projectsGroup">
-                    <p className="titleSecond projectsTitle">Aktuálně řešené projekty</p>
+                    <p className="titleSecond projectsTitle mainLabel">Aktuálně řešené projekty</p>
                     {solvedProjects.map(project => {
                         return (
                             <div className="projectsBlock border" key={project.name}>
@@ -164,7 +163,7 @@ const ProjectsContent = () => {
                     })}
                 </div>
                 <div className="archivedProjects projectsGroup">
-                    <p className="titleSecond projectsTitle">Archiv VaV projektů</p>
+                    <p className="titleSecond projectsTitle mainLabel">Archiv VaV projektů</p>
                     {projectsArchive.map(project => {
                         return (
                             <div className="projectsBlock border" key={project.name}>
