@@ -38,7 +38,7 @@ html {
 ul, ol, p, li, a {
     padding: 0;
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .padding {
@@ -68,7 +68,7 @@ ul, ol, p, li, a {
     padding: 0.5rem 1rem !important;
     border: 0.1rem solid #a9a9a9 !important;
     border-radius: 1rem !important;
-    margin: 1rem auto !important;
+    margin: 1rem !important;
 }
 
 .violetPar {

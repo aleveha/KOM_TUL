@@ -1,6 +1,8 @@
 import {Route, Switch, useRouteMatch} from "react-router-dom";
 import * as React from "react";
-import CoopPhoto from '../../../img/photoMainPage/3.jpg';
+import mainPhotoCooperationCompressed from "../../../img/photoMainPage/compressed/3.jpg";
+import mainPhotoCooperation from "../../../img/photoMainPage/3.jpg";
+import {useState} from "react";
 
 interface IHowToCooperate {
     label: string,
@@ -33,17 +35,33 @@ const CooperationContent = () => {
             }
         ]
     }
+    const [imageLoaded, setImageLoaded] = useState<boolean>(false);
+
+    const handleMainPhotoLoaded = () => {
+        setImageLoaded(true);
+    }
 
     return (
         <div className="cooperation padding">
             <h1 className="mainLabel">Spolupráce s KOM</h1>
             <div className="coopInfo mainInfo">
                 <div className="infoContent">
-                    <p className="cooperationInfo">
-                        <img src={CoopPhoto} alt="KatedraPhoto" className="pagePhoto"/>
-                        {cooperationInformation}<br/><br/>
-                        {cooperationOffer}
-                    </p>
+                    <div className="departmentPhotos">
+                        <img
+                            src={mainPhotoCooperationCompressed}
+                            alt="CooperationPhoto"
+                            className="CooperationPhoto"
+                            style={imageLoaded ? {display: "none"} : {display: "unset"}}
+                        />
+                        <img
+                            src={mainPhotoCooperation}
+                            alt="CooperationPhoto"
+                            className="CooperationtPhoto"
+                            onLoad={handleMainPhotoLoaded}
+                        />
+                    </div>
+                    <p className="cooperationInfo">{cooperationInformation}</p>
+                    <p className="cooperationInfo">{cooperationOffer}</p>
                 </div>
                 <div className="howToCoop infoBlock">
                     <p className="titleSecond">{coopAbility.label}</p>

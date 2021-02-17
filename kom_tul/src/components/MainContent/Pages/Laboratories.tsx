@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {Link, Route, Switch, useRouteMatch} from "react-router-dom";
-import {Paper, Button, ButtonGroup, makeStyles, createStyles} from '@material-ui/core';
-// import LabDialog from "./LabDialog";
+import {Paper, Button, ButtonGroup, makeStyles, createStyles, Dialog, DialogActions, Divider} from '@material-ui/core';
 
 export interface ILaboratory {
     name: string;
@@ -141,113 +140,42 @@ export const laboratories: Array<ILaboratory> = [
     }
 ];
 
-const LabQueue = () => {
-    const [openFirst, setFirstOpen] = useState<boolean>(false);
-    const [openSecond, setSecondOpen] = useState<boolean>(false);
+const LaboratoryInfo = (props: { laboratory: ILaboratory }) => {
+    const [laboratoryOpen ,setLaboratoryOpen] = useState<boolean>(false);
 
-    const onOpenHandle = (number: number) => {
-        switch (number) {
-            case 1:
-                setFirstOpen(!openFirst);
-                break;
-            case 2:
-                setSecondOpen(!openSecond);
-                break;
-        }
-    }
-
-    const CreatePartBlock = (parts: Array<ILaboratoryPartDesc>, label: string) => {
-        return (
-            <div className="laboratoryPart">
-                <p className="titleSecond">{label}</p>
-                {parts.map(part => {
-                    return (
-                        <div className="laboratoryPartBlock padding" key={parts.indexOf(part)}>
-                            {part.label && <p className="titleMain subTitle">{part.label}</p>}
-                            <ul className="laboratoryText">
-                                {part.value.map(item => {
-                                    return (
-                                        <li key={item}>{item}</li>
-                                    );
-                                })}
-                            </ul>
-                        </div>
-                    );
-                })}
-            </div>
-        );
+    const handleDialogOpen = () => {
+        setLaboratoryOpen(!laboratoryOpen);
     }
 
     return (
-        <div className="laboratoriesContent padding">
-            {laboratories.map(laboratory => {
-                const index = laboratories.indexOf(laboratory) + 1;
-                return (
-                    <Paper
-                        className="laboratoryReview border"
-                        key={laboratory.name}
-                        onClick={() => onOpenHandle(index)}
-                        style={{
-                            overflow: "hidden"
-                        }}
-                    >
-                        <h2 className="labName titleMain">{laboratory.name}</h2>
-                        {(index === 1 ? openFirst : openSecond) && (
-                            <div className="onOpenPart">
-                                <div className="laboratoryPart">
-                                    <p className="titleSecond">Hlavní cíle a aktivity laboratoře:</p>
-                                    <p className="laboratoryText">{laboratory.description}</p>
-                                </div>
-                                <div className="laboratoryPart">
-                                    <p className="titleSecond">Odborné zaměření laboratoře:</p>
-                                    <ul className="laboratoryText padding">
-                                        {laboratory.specialization.map(spec => {
-                                            return (
-                                                <li key={spec}>{spec}</li>
-                                            );
-                                        })}
-                                    </ul>
-                                </div>
-                                {laboratory.equipment && CreatePartBlock(laboratory.equipment, "Zařízení a měřicí systémy:")}
-                                {laboratory.technologies && CreatePartBlock(laboratory.technologies, "Nabízené technologie a expertní činnost:")}
-                            </div>
-                        )}
-                    </Paper>
-                );
-            })}
+        <div className="border" onClick={handleDialogOpen}>
+            <div className="laboratoryButton">
+                <h2>{props.laboratory.name}</h2>
+                <p>{props.laboratory.description.split(".", 3).map(word =>
+                    <span> {word}</span>
+                )}<span>...</span></p>
+                <Button
+                    onClick={handleDialogOpen}
+                    variant="contained"
+                    style={{margin: "0.6rem auto"}}
+                    color="default"
+                >Vice info</Button>
+            </div>
+            <Dialog open={laboratoryOpen}>
+                <DialogActions>
+                    <Button onClick={handleDialogOpen}>Zavřít</Button>
+                </DialogActions>
+            </Dialog>
         </div>
     );
 }
 
-const Buttons = (props: { value: string, parentPath: string }) => {
-    const [pressed, setPressed] = useState<boolean>(false);
-    const path = props.value.toString().toLowerCase();
-
-    const handleClick = () => {
-        setPressed(!pressed);
-    }
-
-    return (
-        <Button
-            variant={pressed ? "outlined" : "contained"} onClick={handleClick}
-            style={{margin: "0 0.5rem"}}>
-            <Link to={props.parentPath + "/" + path}>{props.value}</Link>
-        </Button>
-    );
-}
-
 const Laboratories = () => {
-    const match = useRouteMatch();
-
     return (
-        <div>
-            <div style={{margin: "1rem auto", display: "flex", justifyContent: "center"}}>
-                {["Queue", "Dialog"].map(button => <Buttons value={button} parentPath={match.path}/>)}
-            </div>
-            <Switch>
-                <Route path={match.path + "/queue"} component={LabQueue}/>
-                {/*<Route path={match.path + "/dialog"} component={LabDialog}/>*/}
-            </Switch>
+        <div className="laboratories">
+            {laboratories.map(laboratory =>
+                <LaboratoryInfo key={laboratory.name} laboratory={laboratory}/>
+            )}
         </div>
     );
 };

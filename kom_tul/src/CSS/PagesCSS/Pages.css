@@ -3,17 +3,17 @@
     margin: 1rem 0;
 }
 
-.departmentInfo, .cooperationInfo {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    align-items: center;
-    text-align: justify;
+.departmentPhotos img {
+    width: 100%;
 }
 
 /*Employees*/
 .employeeInfo div {
     margin-top: 0.5rem;
+}
+
+.employeePosition {
+    font-weight: bold;
 }
 
 .contactBlock {
@@ -29,7 +29,7 @@
 }
 
 .positionInfo {
-    margin: 1rem!important;
+    margin: 1rem !important;
 }
 
 /*Projects*/
@@ -55,7 +55,7 @@
     justify-content: flex-end;
     align-items: center;
 
-    margin-top: 1rem!important;
+    margin-top: 1rem !important;
 }
 
 .projectsTitle {
@@ -120,4 +120,38 @@
     .departmentInfo, .cooperationInfo {
         flex-wrap: wrap;
     }
+}
+
+/*Laboratories*/
+.laboratories {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.laboratories > div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+
+    min-height: 100px;
+    /*max-height: 300px;*/
+    max-width: 500px;
+
+    cursor: pointer;
+}
+
+.laboratories > div:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
+}
+
+.laboratoryButton {
+    text-align: center;
+}
+
+.laboratoryButton h2 {
+    font-size: 1.3rem;
+    color: var(--blue);
 }

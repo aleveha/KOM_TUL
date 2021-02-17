@@ -1,7 +1,9 @@
 import * as React from 'react';
 import {Route, Switch, useRouteMatch} from 'react-router-dom';
-import mainPhotoDeprtment from '../../../img/photoMainPage/2.jpg';
+import mainPhotoDepartment from '../../../img/photoMainPage/2.jpg';
+import mainPhotoDepartmentCompressed from '../../../img/photoMainPage/compressed/2.jpg';
 import '../../../CSS/PagesCSS/Pages.css';
+import {useState} from "react";
 
 interface IProfFocus {
     label: string;
@@ -84,16 +86,32 @@ const DepartmentContent = () => {
             ]
         }
     ];
+    const [imageLoaded, setImageLoaded] = useState<boolean>(false);
+
+    const handleMainPhotoLoaded = () => {
+        setImageLoaded(true);
+    }
 
     return (
         <div className="department">
             <h1 className="mainLabel padding">Informace o katedře</h1>
             <div className="departmentContent padding">
-                <div className="katedraInfo mainInfo">
-                    <p className="departmentInfo">
-                        <img src={mainPhotoDeprtment} alt="KatedraPhoto" className="pagePhoto"/>
-                        <span>{mainInfo}</span>
-                    </p>
+                <div className="departmentInfo">
+                    <div className="departmentPhotos">
+                        <img
+                            src={mainPhotoDepartmentCompressed}
+                            alt="KatedraPhoto"
+                            className="departmentPhoto"
+                            style={imageLoaded ? {display: "none"} : {display: "unset"}}
+                        />
+                        <img
+                            src={mainPhotoDepartment}
+                            alt="KatedraPhoto"
+                            className="departmentPhoto"
+                            onLoad={handleMainPhotoLoaded}
+                        />
+                    </div>
+                    <p>{mainInfo}</p>
                 </div>
                 <div className="professionalFocus">
                     <p className="titleMain">{professionalFocusLabel.map(str => (

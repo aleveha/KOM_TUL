@@ -13,10 +13,6 @@ const StartPage = () => {
         setImageLoaded(true);
     }
 
-    useEffect(() => {
-        console.log(imageLoaded);
-    }, [imageLoaded]);
-
     return (
         <div className="startPage">
             <div className="photoContainer">
@@ -31,7 +27,7 @@ const StartPage = () => {
                     </div>
                 </div>
                 <div
-                    className="photos"
+                    className="mainPhotos"
                 >
                     <img
                         src={MainPhotoMin}
