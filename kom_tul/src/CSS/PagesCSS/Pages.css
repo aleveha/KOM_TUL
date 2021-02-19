@@ -65,6 +65,10 @@
 }
 
 /*Education*/
+.educationProgram {
+    max-width: calc(100vw - 6rem);
+}
+
 .descriptionLine {
     margin-right: 2rem;
 }
@@ -83,10 +87,15 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
 
     margin: 1rem 0;
 
     font-weight: bold;
+}
+
+.programTitle p {
+    font-size: 0.8rem!important;
 }
 
 .courses {
@@ -137,10 +146,7 @@
     overflow: hidden;
 
     min-height: 100px;
-    /*max-height: 300px;*/
     max-width: 500px;
-
-    cursor: pointer;
 }
 
 .laboratories > div:hover {
@@ -154,4 +160,28 @@
 .laboratoryButton h2 {
     font-size: 1.3rem;
     color: var(--blue);
+}
+
+.labDialog h2, h3, h4{
+    font-weight: bold;
+}
+
+.labDialog h4 {
+    margin: 1rem 0 0 0 !important;
+}
+
+.labDialog h3 {
+    color: var(--fiolet);
+}
+
+.labDialog h2, h4 {
+    color: var(--blue);
+}
+
+.labDialogContent div div {
+    margin-left: 1rem;
+}
+
+.labDialogButtons button {
+    margin: 0.6rem 1rem 0.6rem 0!important;
 }

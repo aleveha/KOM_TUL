@@ -27,13 +27,19 @@
   <component name="ChangeListManager">
     <list default="true" id="83c3b780-7e4c-42bc-9358-a1ff228611f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Pages.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Pages.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Cooperation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Cooperation.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Department.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Department.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Education.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Education.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Laboratories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Laboratories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/StartPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/StartPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +169,7 @@
       <workItem from="1612783788826" duration="3967000" />
       <workItem from="1613031054017" duration="323000" />
       <workItem from="1613233341207" duration="3656000" />
-      <workItem from="1613408001902" duration="3140000" />
+      <workItem from="1613408001902" duration="12047000" />
     </task>
     <task id="LOCAL-00001" summary="some work with router">
       <created>1601464139765</created>
@@ -263,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612035287774</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add compressed photos to pages &quot;department and cooperation&quot;, add laboratory logic (like a dialog), working on dialog styles">
+      <created>1613565331139</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1613565331139</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,6 +319,8 @@
     <MESSAGE value="new files" />
     <MESSAGE value="edit header and footer styles, add big header" />
     <MESSAGE value="add compressed photo to main page, edit css and some ts" />
-    <option name="LAST_COMMIT_MESSAGE" value="add compressed photo to main page, edit css and some ts" />
+    <MESSAGE value="add compressed photos to pages &quot;department and cooperation&quot;, add laboratory logic (like a dialog), working on dialog styles" />
+    <MESSAGE value="finish interim adaptive design" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish interim adaptive design" />
   </component>
 </project>

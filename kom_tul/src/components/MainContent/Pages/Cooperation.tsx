@@ -58,6 +58,7 @@ const CooperationContent = () => {
                             alt="CooperationPhoto"
                             className="CooperationtPhoto"
                             onLoad={handleMainPhotoLoaded}
+                            style={!imageLoaded ? {display: "none"} : {display: "unset"}}
                         />
                     </div>
                     <p className="cooperationInfo">{cooperationInformation}</p>

@@ -55,13 +55,14 @@ ul, ol, p, li, a {
 
 .titleMain, .titleSecond {
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .mainLabel {
     color: var(--fiolet);
     margin: 1.5rem 0;
     line-height: 2rem;
+    font-size: 1.3rem;
 }
 
 .border  {
@@ -81,4 +82,16 @@ ul, ol, p, li, a {
 
 .MuiButton-text {
     padding: 0!important;
+}
+
+.MuiDialog-paperWidthSm {
+    max-width: 1000px !important;
+}
+
+.MuiDialogTitle-root h2 {
+    margin: 0!important;
+}
+
+div > ul {
+    margin: 0.5rem 0 0 2rem;
 }

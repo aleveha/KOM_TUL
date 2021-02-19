@@ -10,8 +10,6 @@ import {useLocation} from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './CSS/App.css';
-import mobileCheck from "./components/Common/mobileCheck";
-import HistoryWay from "./components/MainContent/HistoryWay";
 
 interface IAppContent {
     name: string,
@@ -119,7 +117,6 @@ const App = () => {
                     <div className="App">
                         <div className="WebContent">
                             <Header/>
-                            {/*{!mobileCheck() && <HistoryWay/>}*/}
                             <MainContent />
                         </div>
                         <Footer/>

@@ -32,11 +32,13 @@ const StartPage = () => {
                     <img
                         src={MainPhotoMin}
                         className="mainPhoto"
+                        alt="mainPhoto"
                         style={imageLoaded ? {display: "none"} : {display: "unset"}}
                     />
                     <img
                         src={MainPhoto}
                         className="mainPhoto"
+                        alt="mainPhoto"
                         onLoad={handleMainPhotoLoaded}
                     />
                 </div>

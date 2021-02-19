@@ -1,6 +1,11 @@
 import React, {useState} from 'react';
-import {Link, Route, Switch, useRouteMatch} from "react-router-dom";
-import {Paper, Button, ButtonGroup, makeStyles, createStyles, Dialog, DialogActions, Divider} from '@material-ui/core';
+import {
+    Button,
+    Dialog,
+    DialogActions,
+    Divider,
+    DialogTitle, DialogContent
+} from '@material-ui/core';
 
 export interface ILaboratory {
     name: string;
@@ -148,11 +153,11 @@ const LaboratoryInfo = (props: { laboratory: ILaboratory }) => {
     }
 
     return (
-        <div className="border" onClick={handleDialogOpen}>
+        <div className="border">
             <div className="laboratoryButton">
                 <h2>{props.laboratory.name}</h2>
                 <p>{props.laboratory.description.split(".", 3).map(word =>
-                    <span> {word}</span>
+                    <span key={props.laboratory.description.indexOf(word)}> {word}</span>
                 )}<span>...</span></p>
                 <Button
                     onClick={handleDialogOpen}
@@ -161,9 +166,55 @@ const LaboratoryInfo = (props: { laboratory: ILaboratory }) => {
                     color="default"
                 >Vice info</Button>
             </div>
-            <Dialog open={laboratoryOpen}>
-                <DialogActions>
-                    <Button onClick={handleDialogOpen}>Zavřít</Button>
+            <Dialog open={laboratoryOpen} className="labDialog">
+                <DialogTitle>{props.laboratory.name}</DialogTitle>
+                <Divider />
+                <DialogContent className="labDialogContent">
+                    <div>
+                        <h3>Hlavní cíle a aktivity laboratoře:</h3>
+                        <p>{props.laboratory.description}</p>
+                    </div>
+                    <div>
+                        <h3>Odborné zaměření laboratoře:</h3>
+                        <ul>{props.laboratory.specialization.map(spec =>
+                            <li key={spec}>{spec}</li>
+                        )}</ul>
+                    </div>
+                    <div>
+                        <h3>Zařízení a měřicí systémy:</h3>
+                        <div>
+                            {props.laboratory.equipment && props.laboratory.equipment.map(equip =>
+                                <div key={equip.label ? equip.label : Math.random()}>
+                                    <h4>{equip.label}</h4>
+                                    <ul>{equip.value.map(item =>
+                                        <li key={item}>{item}</li>
+                                    )}</ul>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Nabízené technologie a expertní činnost:</h3>
+                        <div>
+                            {props.laboratory.technologies && props.laboratory.technologies.map(tech =>
+                                <div key={tech.label}>
+                                    <h4>{tech.label}</h4>
+                                    <ul>{tech.value.map(item =>
+                                        <li key={item}>{item}</li>
+                                    )}</ul>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                </DialogContent>
+                <Divider />
+                <DialogActions className="labDialogButtons">
+                    <Button
+                        onClick={handleDialogOpen}
+                        variant="contained"
+                        style={{margin: "0.6rem auto"}}
+                        color="default"
+                    >Zavřít</Button>
                 </DialogActions>
             </Dialog>
         </div>

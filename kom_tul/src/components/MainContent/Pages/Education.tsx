@@ -66,7 +66,7 @@ interface TableProps {
 
 const useStyles = makeStyles({
     table: {
-        minWidth: 800,
+        // minWidth: 800,
     },
 });
 
@@ -558,7 +558,7 @@ const EducationContent = () => {
                                                         return (
                                                             <div className="courses padding" key={course.name}>
                                                                 <p className="violetPar">{course.name}</p>
-                                                                <EducationTable courseTable={course.courseTable}/>
+                                                                {/*<EducationTable courseTable={course.courseTable}/>*/}
                                                             </div>
                                                         );
                                                     })}

@@ -109,6 +109,7 @@ const DepartmentContent = () => {
                             alt="KatedraPhoto"
                             className="departmentPhoto"
                             onLoad={handleMainPhotoLoaded}
+                            style={!imageLoaded ? {display: "none"} : {display: "unset"}}
                         />
                     </div>
                     <p>{mainInfo}</p>
