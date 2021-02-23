@@ -12,7 +12,7 @@ const MainContent = () => {
     return (
         <div className="mainContent">
             <Switch>
-                <Route path='/home' component={StartPage}/>
+                <Route path='/home' render={() => (<StartPage />)}/>
                 <Route path='/department' render={() => (<Department />)}/>
                 <Route path='/employees' render={() => (<Employees />)}/>
                 <Route path='/projects' render={() => (<Projects />)}/>

@@ -1,8 +1,16 @@
 import React, {useState} from 'react';
 import {Switch, Route, useRouteMatch} from 'react-router-dom';
 import {IEmployee} from './Employees';
-import '../../../CSS/PagesCSS/Education.css';
-import DownloadBD from '../../../Downloads/DataBase';
+import {
+    Table,
+    TableRow,
+    TableCell,
+    TableContainer,
+    TableBody,
+    TableHead,
+    Card, Dialog, DialogTitle, DialogContent, Button, Divider, DialogActions
+} from '@material-ui/core';
+import DownloadBD from "../../../Downloads/DataBase";
 
 interface IEducationalProgram {
     name: string,
@@ -48,27 +56,51 @@ interface ICourseTable {
     range: string,
     exam: string,
     credits: number,
-    professor: Array<string>,
-    downloadFiles?: boolean
+    professor: Array<string>
 }
 
-const CreateTable = (tableLine: ICourseTable) => {
+interface TableProps {
+    courseTable: ICourseTable[]
+}
+
+const EducationTable = ({courseTable}: TableProps) => {
     return (
-        <tr key={tableLine.name}>
-            <td>{tableLine.name}</td>
-            <td>{tableLine.shortName}</td>
-            <td>{tableLine.semester}</td>
-            <td>{tableLine.range}</td>
-            <td>{tableLine.exam}</td>
-            <td>{tableLine.credits}</td>
-            <td>{tableLine.professor.map(professor => {
-                return (
-                    tableLine.professor.indexOf(professor) === tableLine.professor.length - 1 ?
-                        <span key={tableLine.professor.indexOf(professor)}>{professor}</span> :
-                        <span key={tableLine.professor.indexOf(professor)}>{professor + ', '}</span>
-                );
-            })}</td>
-        </tr>
+        <TableContainer component={Card} variant="outlined" className="tableContainer">
+            <Table size="small">
+                <TableHead className="tableHeader">
+                    <TableRow>
+                        <TableCell>Název</TableCell>
+                        <TableCell>Zkratka</TableCell>
+                        <TableCell>Semestr</TableCell>
+                        <TableCell>Rozsah</TableCell>
+                        <TableCell>Zkouška</TableCell>
+                        <TableCell>Kredity</TableCell>
+                        <TableCell>Vyučující</TableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
+                    {courseTable.map(tableLine => {
+                        return (
+                            <TableRow key={tableLine.name}>
+                                <TableCell>{tableLine.name}</TableCell>
+                                <TableCell>{tableLine.shortName}</TableCell>
+                                <TableCell>{tableLine.semester}</TableCell>
+                                <TableCell>{tableLine.range}</TableCell>
+                                <TableCell>{tableLine.exam}</TableCell>
+                                <TableCell>{tableLine.credits}</TableCell>
+                                <TableCell>{tableLine.professor.map(professor => {
+                                    return (
+                                        tableLine.professor.indexOf(professor) === tableLine.professor.length - 1 ?
+                                            <span key={tableLine.professor.indexOf(professor)}>{professor}</span> :
+                                            <span key={tableLine.professor.indexOf(professor)}>{professor + ', '}</span>
+                                    );
+                                })}</TableCell>
+                            </TableRow>
+                        )
+                    })}
+                </TableBody>
+            </Table>
+        </TableContainer>
     );
 }
 
@@ -78,9 +110,9 @@ const EducationContent = () => {
             //bakalar
             name: "Bakalářský studijní program",
             shortDescription: {
-                form: "prezenční – kombinovaná",
-                basicTerm: "3 roky",
-                endDegree: "Bakalář (Bc.)"
+                form: "prezenční\xa0–\xa0kombinovaná",
+                basicTerm: "3\xa0roky",
+                endDegree: "Bakalář\xa0(Bc.)"
             },
             programs: [
                 {
@@ -93,7 +125,7 @@ const EducationContent = () => {
                                 name: "Povinné předměty",
                                 courseTable: [
                                     {
-                                        name: "Technologie III",
+                                        name: "Technologie\xa0III",
                                         shortName: "TOB-B",
                                         semester: "Zimní",
                                         range: "2+2",
@@ -101,8 +133,7 @@ const EducationContent = () => {
                                         credits: 4,
                                         professor: [
                                             "Jersák"
-                                        ],
-                                        downloadFiles: true
+                                        ]
                                     },
                                     {
                                         name: "Bakalářský seminář",
@@ -116,7 +147,7 @@ const EducationContent = () => {
                                         ]
                                     },
                                     {
-                                        name: "Montáž a metrologie",
+                                        name: "Montáž\xa0a metrologie",
                                         shortName: "MOM-B",
                                         semester: "Letní",
                                         range: "2+1",
@@ -127,25 +158,25 @@ const EducationContent = () => {
                                         ]
                                     },
                                     {
-                                        name: "Bakalářská práce I.",
+                                        name: "Bakalářská práce\xa0I.",
                                         shortName: "BCP1",
                                         semester: "Letní",
-                                        range: "50 h",
+                                        range: "50\xa0h",
                                         exam: "zápočet",
                                         credits: 6,
                                         professor: [
-                                            "vedoucí BP"
+                                            "vedoucí\xa0BP"
                                         ]
                                     },
                                     {
-                                        name: "Bakalářská práce II.",
+                                        name: "Bakalářská práce\xa0II.",
                                         shortName: "BCP2",
                                         semester: "Letní",
                                         range: "70 h",
                                         exam: "zápočet",
                                         credits: 10,
                                         professor: [
-                                            "vedoucí BP"
+                                            "vedoucí\xa0BP"
                                         ]
                                     }
                                 ]
@@ -153,7 +184,7 @@ const EducationContent = () => {
                         }
                     ],
                     additionalInfo: [
-                        "Směrnice rektora TUL č. 5/2018 - Jednotná úprava a zveřejňování bakalářských, diplomových, rigorózních, disertačních a habilitačních prací"
+                        "Směrnice rektora TUL č.\xa05/2018 - Jednotná úprava\xa0a zveřejňování bakalářských, diplomových, rigorózních, disertačních a habilitačních prací"
                     ],
                     links: [
                         "https://www.tul.cz/document/8580"
@@ -166,14 +197,14 @@ const EducationContent = () => {
             //magistr
             name: "Navazující magisterský studijní program",
             shortDescription: {
-                form: "prezenční – kombinovaná",
-                basicTerm: "2 roky",
-                endDegree: "Inženýr (Ing.)"
+                form: "prezenční\xa0–\xa0kombinovaná",
+                basicTerm: "2\xa0roky",
+                endDegree: "Inženýr\xa0(Ing.)"
             },
             programs: [
                 {
                     number: "N0715A270015MT",
-                    name: "Materiály a technologie",
+                    name: "Materiály\xa0a technologie",
                     educationYears: [
                         {
                             year: 1,
@@ -200,7 +231,7 @@ const EducationContent = () => {
                                         exam: "z",
                                         credits: 3,
                                         professor: [
-                                            "Nováková (KSP)"
+                                            "Nováková\xa0(KSP)"
                                         ]
                                     },
                                     {
@@ -211,17 +242,17 @@ const EducationContent = () => {
                                         exam: "z",
                                         credits: 3,
                                         professor: [
-                                            "Sobotka (KSP)"
+                                            "Sobotka\xa0(KSP)"
                                         ]
                                     }
                                 ]
                             },
                             requiredOptional: [
                                 {
-                                    name: "Povinně volitelný předmět – skupina 1",
+                                    name: "Povinně volitelný předmět – skupina\xa01",
                                     courseTable: [
                                         {
-                                            name: "Přípravky a montážní prostředky",
+                                            name: "Přípravky\xa0a montážní prostředky",
                                             shortName: "PMOP",
                                             semester: "Zimní",
                                             range: "2+2",
@@ -234,10 +265,10 @@ const EducationContent = () => {
                                     ]
                                 },
                                 {
-                                    name: "Povinně volitelný předmět – skupina 2",
+                                    name: "Povinně volitelný předmět – skupina\xa02",
                                     courseTable: [
                                         {
-                                            name: "Abrazivní a nekonvenční metody",
+                                            name: "Abrazivní\xa0a nekonvenční metody",
                                             shortName: "ANM",
                                             semester: "Letní",
                                             range: "2+2",
@@ -257,14 +288,14 @@ const EducationContent = () => {
                                 name: "Povinné předměty",
                                 courseTable: [
                                     {
-                                        name: "Diplomová práce 1",
+                                        name: "Diplomová práce\xa01",
                                         shortName: "DP1",
                                         semester: "Zimní",
                                         range: "0+2",
-                                        exam: "kl. z.",
+                                        exam: "kl.\xa0z.",
                                         credits: 2,
                                         professor: [
-                                            "vedoucí DP"
+                                            "vedoucí\xa0DP"
                                         ]
                                     },
                                     {
@@ -279,29 +310,29 @@ const EducationContent = () => {
                                         ]
                                     },
                                     {
-                                        name: "Diplomová práce 2",
+                                        name: "Diplomová práce\xa02",
                                         shortName: "DP2",
                                         semester: "Letní",
                                         range: "0+8",
                                         exam: "z",
                                         credits: 7,
                                         professor: [
-                                            "vedoucí DP"
+                                            "vedoucí\xa0DP"
                                         ]
                                     },
                                     {
-                                        name: "Diplomová práce 3",
+                                        name: "Diplomová práce\xa03",
                                         shortName: "DP3",
                                         semester: "Letní",
                                         range: "0+16",
                                         exam: "z",
                                         credits: 15,
                                         professor: [
-                                            "vedoucí DP"
+                                            "vedoucí\xa0DP"
                                         ]
                                     },
                                     {
-                                        name: "Projekt. tech. procesů a automat. výroby",
+                                        name: "Projekt. tech. procesů\xa0a automat. výroby",
                                         shortName: "PTPA",
                                         semester: "Letní",
                                         range: "2+2",
@@ -316,7 +347,7 @@ const EducationContent = () => {
                             },
                             requiredOptional: [
                                 {
-                                    name: "Povinně volitelný předmět – skupina 3",
+                                    name: "Povinně volitelný předmět – skupina\xa03",
                                     courseTable: [
                                         {
                                             name: "Cutting Tools",
@@ -343,10 +374,10 @@ const EducationContent = () => {
                                     ]
                                 },
                                 {
-                                    name: "Povinně volitelný předmět – skupina 4",
+                                    name: "Povinně volitelný předmět – skupina\xa04",
                                     courseTable: [
                                         {
-                                            name: "Výrobní procesy a systémy",
+                                            name: "Výrobní procesy\xa0a systémy",
                                             shortName: "VPS",
                                             semester: "Letní",
                                             range: "2+2",
@@ -362,7 +393,7 @@ const EducationContent = () => {
                         }
                     ],
                     additionalInfo: [
-                        "Směrnice rektora TUL č. 5/2018 - Jednotná úprava a zveřejňování bakalářských, diplomových, rigorózních, disertačních a habilitačních prací"
+                        "Směrnice rektora TUL č.\xa05/2018 - Jednotná úprava\xa0a zveřejňování bakalářských, diplomových, rigorózních, disertačních\xa0a habilitačních prací"
                     ],
                     links: [
                         "https://www.tul.cz/document/8580"
@@ -370,7 +401,7 @@ const EducationContent = () => {
                 },
                 {
                     number: "N0722A270001",
-                    name: "Technologie plastů a kompozitů",
+                    name: "Technologie plastů\xa0a kompozitů",
                     educationYears: [
                         {
                             year: 2,
@@ -395,13 +426,13 @@ const EducationContent = () => {
                 },
                 {
                     number: "N0788A270004",
-                    name: "Inovační a průmyslové inženýrství",
+                    name: "Inovační\xa0a průmyslové inženýrství",
                     educationYears: [
                         {
                             year: 2,
                             requiredOptional: [
                                 {
-                                    name: "Povinně volitelný předmět – skupina 3",
+                                    name: "Povinně volitelný předmět – skupina\xa03",
                                     courseTable: [
                                         {
                                             name: "Metrologie",
@@ -426,21 +457,21 @@ const EducationContent = () => {
             //doktor
             name: "Doktorský studijní program",
             shortDescription: {
-                form: "prezenční – kombinovaná",
-                basicTerm: "4 roky",
-                endDegree: "doktor (Ph.D.)"
+                form: "prezenční\xa0–\xa0kombinovaná",
+                basicTerm: "4\xa0roky",
+                endDegree: "doktor\xa0(Ph.D.)"
             },
             programs: [
                 {
                     number: "P0788D270002",
-                    name: "Technologie a materiály",
+                    name: "Technologie\xa0a materiály",
                     trainers: [
                         {
                             specification: "Obrábění kovových materiálů: ",
                             person: {
                                 name: "Alexey Popov",
                                 degree: "DrSc.",
-                                status: "prof. Ing."
+                                status: "prof.\xa0Ing."
                             }
                         },
                         {
@@ -448,7 +479,7 @@ const EducationContent = () => {
                             person: {
                                 name: "Jan Jersák",
                                 degree: "CSc.",
-                                status: "doc. Ing."
+                                status: "doc.\xa0Ing."
                             }
                         },
                         {
@@ -456,13 +487,13 @@ const EducationContent = () => {
                             person: {
                                 name: "Štěpánka Dvořáčková",
                                 degree: "Ph.D.",
-                                status: "doc. Ing."
+                                status: "doc.\xa0Ing."
                             }
                         }
                     ],
                     additionalInfo: [
-                        "Informace a formuláře k doktorskému studijnímu programu",
-                        "Směrnice rektora TUL č. 5/2018 - Jednotná úprava a zveřejňování bakalářských, diplomových, rigorózních, disertačních a habilitačních prací"
+                        "Informace\xa0a formuláře\xa0k doktorskému studijnímu programu",
+                        "Směrnice rektora TUL č.\xa05/2018 - Jednotná úprava\xa0a zveřejňování bakalářských, diplomových, rigorózních, disertačních\xa0a habilitačních prací"
                     ],
                     links: [
                         "http://www.fs.tul.cz/cz/pro-studenty/doktorske-studium/",
@@ -474,25 +505,29 @@ const EducationContent = () => {
     ];
     const [downloadOpen, setDownloadOpen] = useState<boolean>(false);
 
+    const handleDialogOpen = () => {
+        setDownloadOpen(!downloadOpen);
+    }
+
     return (
-        <div className="educatingContent">
+        <div className="educatingContent padding">
             {EducationalPrograms.map(educationProgram => {
                 return (
                     <div className="educationProgram border" key={educationProgram.name}>
                         <div className="programName">
-                            <h2>{educationProgram.name}</h2>
+                            <h2 className="mainLabel">{educationProgram.name}</h2>
                         </div>
                         <div className="programShortDesc">
                             <div className="descriptionLine">
-                                <p>Forma studia: </p>
+                                <p className="titleMain">Forma studia: </p>
                                 <p>{educationProgram.shortDescription.form}</p>
                             </div>
                             <div className="descriptionLine">
-                                <p>Standardní doba studia: </p>
+                                <p className="titleMain">Standardní doba studia: </p>
                                 <p>{educationProgram.shortDescription.basicTerm}</p>
                             </div>
                             <div className="descriptionLine">
-                                <p>Udělovaný akademický titul: </p>
+                                <p className="titleMain">Udělovaný akademický titul: </p>
                                 <p>{educationProgram.shortDescription.endDegree}</p>
                             </div>
                         </div>
@@ -501,50 +536,26 @@ const EducationContent = () => {
                                 return (
                                     <div className="programContent" key={program.number}>
                                         <div className="programTitle">
-                                            <p>{program.number}</p>
-                                            <p>&nbsp;&nbsp;&mdash;&mdash;&mdash;&nbsp;&nbsp;</p>
-                                            <p>{program.name}</p>
+                                            <p className="violetPar">{program.number}</p>
+                                            <p className="longSeparator">&nbsp;&nbsp;&mdash;&mdash;&mdash;&nbsp;&nbsp;</p>
+                                            <p className="bluePar">{program.name}</p>
                                         </div>
                                         {program.educationYears && program.educationYears.map(studyingYear => {
                                             return (
                                                 <div className="educationYearInfo" key={studyingYear.year}>
-                                                    <p>{studyingYear.year}. ročník</p>
+                                                    <p className="bluePar">{studyingYear.year}.&nbsp;ročník</p>
                                                     {studyingYear.required &&
                                                     <div className="courses padding">
-                                                        <p>{studyingYear.required.name}</p>
-                                                        <table>
-                                                            <tbody>
-                                                            <tr className="tableHeader">
-                                                                <th>Název</th>
-                                                                <th>Zkratka</th>
-                                                                <th>Semestr</th>
-                                                                <th>Rozsah</th>
-                                                                <th>Zkouška</th>
-                                                                <th>Kredity</th>
-                                                                <th>Vyučující</th>
-                                                            </tr>
-                                                            {studyingYear.required.courseTable.map(tableLine => CreateTable(tableLine))}
-                                                            </tbody>
-                                                        </table>
-                                                    </div>}
+                                                        <p className="violetPar">{studyingYear.required.name}</p>
+                                                        <EducationTable
+                                                            courseTable={studyingYear.required.courseTable}/>
+                                                    </div>
+                                                    }
                                                     {studyingYear.requiredOptional && studyingYear.requiredOptional.map(course => {
                                                         return (
                                                             <div className="courses padding" key={course.name}>
-                                                                <p>{course.name}</p>
-                                                                <table>
-                                                                    <tbody>
-                                                                    <tr className="tableHeader">
-                                                                        <th>Název</th>
-                                                                        <th>Zkratka</th>
-                                                                        <th>Semestr</th>
-                                                                        <th>Rozsah</th>
-                                                                        <th>Zkouška</th>
-                                                                        <th>Kredity</th>
-                                                                        <th>Vyučující</th>
-                                                                    </tr>
-                                                                    {course.courseTable.map(tableLine => CreateTable(tableLine))}
-                                                                    </tbody>
-                                                                </table>
+                                                                <p className="violetPar">{course.name}</p>
+                                                                <EducationTable courseTable={course.courseTable}/>
                                                             </div>
                                                         );
                                                     })}
@@ -555,30 +566,52 @@ const EducationContent = () => {
                                             return (
                                                 <div className="additionalInfo linkPar"
                                                      key={program.links && program.links.indexOf(link)}>
-                                                    <a className="link" href={link}>{program.additionalInfo && program.links && program.additionalInfo[program.links.indexOf(link)]}</a>
+                                                    <a className="link"
+                                                       href={link}>{program.additionalInfo && program.links && program.additionalInfo[program.links.indexOf(link)]}</a>
                                                 </div>
                                             );
                                         })}
                                         {DownloadBD.length > 0 && educationProgram.programs[0].number === "B0715A270008" &&
                                         <div className="filesToDownload">
-                                            <h3
-                                                className="titleSecond downloadOpen"
-                                                onClick={() => setDownloadOpen(!downloadOpen)}
+                                            <Button
+                                                onClick={handleDialogOpen}
+                                                variant="contained"
+                                                style={{margin: "1rem auto", color: "var(--blue)"}}
+                                                color="default"
                                             >
-                                                Technologie&nbsp;III &mdash; Soubory&nbsp;ke&nbsp;stažení
-                                            </h3>
-                                            {downloadOpen && <div>
-                                                {DownloadBD.map(file => <div key={file.id} className="linkToDownload">
-                                                    <a
-                                                        href={require(`../../../Files/${file.shortName}.${file.format}`)}
-                                                        target="_blank"
-                                                        download={file.name}
-                                                        className="link downloadFile"
+                                                Soubory ke stažení
+                                            </Button>
+                                            <Dialog open={downloadOpen}>
+                                                <DialogTitle style={{color: "var(--blue)", fontWeight: "bold"}}>Soubory ke stažení</DialogTitle>
+                                                <Divider/>
+                                                <DialogContent>
+                                                    <h3 className="titleSecond" style={{fontWeight: "bold"}}>Technologie III</h3>
+                                                    {DownloadBD.map(file => <div key={file.id}
+                                                                                 className="linkToDownload">
+                                                        <a
+                                                            href={require(`../../../Files/${file.shortName}.${file.format}`)}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            download={file.name}
+                                                            className="link downloadFile"
+                                                        >
+                                                            {file.name}
+                                                        </a>
+                                                    </div>)}
+                                                </DialogContent>
+                                                <Divider/>
+                                                <DialogActions style={{float: "left"}}>
+                                                    <Button
+                                                        onClick={handleDialogOpen}
+                                                        variant="contained"
+                                                        style={{margin: "0.6rem 0 0.6rem 0", color: "var(--blue)"}}
+                                                        color="default"
                                                     >
-                                                        {file.name}
-                                                    </a>
-                                                </div>)}
-                                            </div>}
+                                                        Zavřít
+                                                    </Button>
+                                                </DialogActions>
+                                            </Dialog>
+
                                         </div>}
                                     </div>
                                 );

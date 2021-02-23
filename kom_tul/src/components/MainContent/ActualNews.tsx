@@ -8,8 +8,15 @@ interface INews {
 }
 
 const ActualNews = () => {
-    const language = useContext(LanguageContext);
     const [news, setNews] = useState<Array<INews> | null>(null);
+    const language = useContext(LanguageContext);
+
+    useEffect(() => {
+        let number = 3;
+        if (news !== null) {
+            news.length % 2 === 0 && (number = 2);
+        }
+    }, [news]);
 
     return (
         news !== null ? (

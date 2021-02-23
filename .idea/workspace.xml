@@ -26,8 +26,113 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83c3b780-7e4c-42bc-9358-a1ff228611f9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/kom_tul/cert.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/key.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/keytmp.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Pages.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/src/components/Common/Logo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/src/components/Common/mobileCheck.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/src/components/Header/BigHeader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/src/components/Header/MobileHeader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/compressed/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/compressed/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/compressed/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/prop-types/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/prop-types/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/prop-types/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/prop-types/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/react-lazy-load-image-component/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/react-lazy-load-image-component/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/react-lazy-load-image-component/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/react-lazy-load-image-component/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/experimental.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/global.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/jsx-dev-runtime.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/jsx-runtime.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/csstype/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/csstype/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/csstype/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/csstype/index.js.flow" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/csstype/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/lodash.debounce/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/lodash.debounce/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/lodash.debounce/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/lodash.debounce/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/lodash.throttle/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/lodash.throttle/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/lodash.throttle/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/lodash.throttle/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.eslintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.github/ISSUE_TEMPLATE/bug_report.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.github/ISSUE_TEMPLATE/feature_request.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.github/PULL_REQUEST_TEMPLATE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.github/workflows/codeql-analysis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/build/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/components/LazyLoadComponent.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/components/LazyLoadComponent.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/components/LazyLoadImage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/components/LazyLoadImage.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/components/PlaceholderWithTracking.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/components/PlaceholderWithoutTracking.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/components/PlaceholderWithoutTracking.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/effects/black-and-white.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/effects/blur.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/effects/opacity.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/hoc/trackWindowScroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/utils/get-scroll-element.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/utils/intersection-observer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/utils/intersection-observer.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kom_app_dev.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kom_app_dev.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/server/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/Footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/Header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/HisrotyWay.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Cooperation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Department.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Education.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Employyes.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Laboratories.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Projects.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/StartPage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Footer/ContactsLine.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Footer/ContactsLine.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Footer/CopyRight.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Footer/CopyRight.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Footer/WebSiteMap.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Footer/WebSiteMap.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Header/HeaderButtons.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/ActualNews.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/ActualNews.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/HistoryWay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/HistoryWay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/MainContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/MainContent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Cooperation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Cooperation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Department.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Department.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Education.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Education.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Employees.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Employees.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Laboratories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Laboratories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Projects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/StartPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/StartPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,20 +142,23 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1i6Q4hy4RPfBH4EduPNpDqN5iAY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -58,16 +166,35 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="10.19.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="10.17.47" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.15.4" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.22" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/kom_tul/src/Files" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/kom_tul/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/kom_tul/src/Files" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/kom_tul/src/Files" />
+      <recent name="$PROJECT_DIR$/kom_tul/src/Downloads" />
+      <recent name="$PROJECT_DIR$/kom_tul" />
+      <recent name="$PROJECT_DIR$/kom_tul/src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Attach to Node.js/Chrome.Run React">
+    <configuration name="Run React" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="3000">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="3000">
+      <method v="2" />
+    </configuration>
     <configuration name="Docker Image" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
       <deployment type="docker-image">
         <settings>
@@ -89,9 +216,12 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Attach to Node.js/Chrome.Run React" />
+      <item itemvalue="Docker.Docker Image" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.Docker Image" />
         <item itemvalue="Docker.Docker Image" />
       </list>
     </recent_temporary>
@@ -118,6 +248,28 @@
       <workItem from="1606244406287" duration="14000" />
       <workItem from="1606474076267" duration="7871000" />
       <workItem from="1606484399620" duration="4506000" />
+      <workItem from="1607019946760" duration="625000" />
+      <workItem from="1607089098876" duration="25000" />
+      <workItem from="1607089595677" duration="1249000" />
+      <workItem from="1607093543504" duration="146000" />
+      <workItem from="1607093706750" duration="7000" />
+      <workItem from="1607093734066" duration="366000" />
+      <workItem from="1607094223125" duration="3455000" />
+      <workItem from="1607155169559" duration="645000" />
+      <workItem from="1607621409343" duration="24000" />
+      <workItem from="1608562897588" duration="1843000" />
+      <workItem from="1608660513307" duration="897000" />
+      <workItem from="1608727140789" duration="7786000" />
+      <workItem from="1611577463330" duration="9783000" />
+      <workItem from="1611919428076" duration="63000" />
+      <workItem from="1611919527378" duration="9889000" />
+      <workItem from="1612109994989" duration="1163000" />
+      <workItem from="1612783788826" duration="3967000" />
+      <workItem from="1613031054017" duration="323000" />
+      <workItem from="1613233341207" duration="3656000" />
+      <workItem from="1613408001902" duration="12186000" />
+      <workItem from="1613919872084" duration="44000" />
+      <workItem from="1613992584954" duration="4989000" />
     </task>
     <task id="LOCAL-00001" summary="some work with router">
       <created>1601464139765</created>
@@ -154,7 +306,98 @@
       <option name="project" value="LOCAL" />
       <updated>1606555606986</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add server and remove docker">
+      <created>1607020086486</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607020086486</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add adaptive design">
+      <created>1607025219606</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607025219606</updated>
+    </task>
+    <task id="LOCAL-00008" summary="continue adaptive design">
+      <created>1607101969592</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607101969592</updated>
+    </task>
+    <task id="LOCAL-00009" summary="https">
+      <created>1608579841797</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1608579841798</updated>
+    </task>
+    <task id="LOCAL-00010" summary="change port to 80">
+      <created>1608660732272</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1608660732272</updated>
+    </task>
+    <task id="LOCAL-00011" summary="change port to 80">
+      <created>1608661307738</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1608661307738</updated>
+    </task>
+    <task id="LOCAL-00012" summary="edit header and footer styles, add big header">
+      <created>1611858440198</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1611858440198</updated>
+    </task>
+    <task id="LOCAL-00013" summary="edit header and footer styles, add big header">
+      <created>1611858467639</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1611858467639</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add compressed photo to main page, edit css and some ts">
+      <created>1612035287774</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1612035287774</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add compressed photos to pages &quot;department and cooperation&quot;, add laboratory logic (like a dialog), working on dialog styles">
+      <created>1613565331139</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1613565331139</updated>
+    </task>
+    <task id="LOCAL-00016" summary="finish interim adaptive design">
+      <created>1613760791780</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1613760791780</updated>
+    </task>
+    <task id="LOCAL-00017" summary="end with adaptive design">
+      <created>1614081863479</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1614081863479</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add all tables to education page and downloading files button">
+      <created>1614087251582</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1614087251582</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,73 +432,18 @@
     <MESSAGE value="add EducationPrograms object" />
     <MESSAGE value="add downloading files" />
     <MESSAGE value="add download only technologie 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="add download only technologie 3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="813" y="480" width="283" height="241" key="#Port_bindings" timestamp="1601309305984">
-      <screen x="0" y="317" width="1920" height="883" />
-    </state>
-    <state x="813" y="480" width="283" height="241" key="#Port_bindings/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1601309305984" />
-    <state x="812" y="502" width="285" height="198" key="#Volume_binding" timestamp="1601308786181">
-      <screen x="0" y="317" width="1920" height="883" />
-    </state>
-    <state x="812" y="502" width="285" height="198" key="#Volume_binding/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1601308786181" />
-    <state x="738" y="345" width="424" height="514" key="FileChooserDialogImpl" timestamp="1606244418040">
-      <screen x="0" y="317" width="1920" height="883" />
-    </state>
-    <state x="738" y="345" width="424" height="514" key="FileChooserDialogImpl/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1606244418040" />
-    <state width="1345" height="237" key="GridCell.Tab.0.bottom" timestamp="1603011296428">
-      <screen x="0" y="28" width="1366" height="740" />
-    </state>
-    <state width="1345" height="237" key="GridCell.Tab.0.bottom/0.28.1366.740@0.28.1366.740" timestamp="1603011296428" />
-    <state width="1899" height="327" key="GridCell.Tab.0.bottom/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1601310290765" />
-    <state width="1345" height="237" key="GridCell.Tab.0.center" timestamp="1603011296427">
-      <screen x="0" y="28" width="1366" height="740" />
-    </state>
-    <state width="1345" height="237" key="GridCell.Tab.0.center/0.28.1366.740@0.28.1366.740" timestamp="1603011296427" />
-    <state width="1899" height="327" key="GridCell.Tab.0.center/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1601310290765" />
-    <state width="1345" height="237" key="GridCell.Tab.0.left" timestamp="1603011296427">
-      <screen x="0" y="28" width="1366" height="740" />
-    </state>
-    <state width="1345" height="237" key="GridCell.Tab.0.left/0.28.1366.740@0.28.1366.740" timestamp="1603011296427" />
-    <state width="1899" height="327" key="GridCell.Tab.0.left/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1601310290765" />
-    <state width="1345" height="237" key="GridCell.Tab.0.right" timestamp="1603011296427">
-      <screen x="0" y="28" width="1366" height="740" />
-    </state>
-    <state width="1345" height="237" key="GridCell.Tab.0.right/0.28.1366.740@0.28.1366.740" timestamp="1603011296427" />
-    <state width="1899" height="327" key="GridCell.Tab.0.right/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1601310290765" />
-    <state x="2047" y="366" width="1092" height="646" key="MergeDialog" timestamp="1606482715401">
-      <screen x="1920" y="289" width="1366" height="768" />
-    </state>
-    <state x="2047" y="366" width="1092" height="646" key="MergeDialog/1920.289.1366.768/0.317.1920.883@1920.289.1366.768" timestamp="1606482715401" />
-    <state x="2240" y="450" width="715" height="475" key="MultipleFileMergeDialog" timestamp="1606482715406">
-      <screen x="1920" y="289" width="1366" height="768" />
-    </state>
-    <state x="2240" y="450" width="715" height="475" key="MultipleFileMergeDialog/1920.289.1366.768/0.317.1920.883@1920.289.1366.768" timestamp="1606482715406" />
-    <state x="187" y="33" width="992" height="732" key="SettingsEditor" timestamp="1606205709623">
-      <screen x="0" y="28" width="1366" height="740" />
-    </state>
-    <state x="187" y="33" width="992" height="732" key="SettingsEditor/0.28.1366.740@0.28.1366.740" timestamp="1606205709623" />
-    <state x="391" y="443" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1606555613201">
-      <screen x="0" y="317" width="1920" height="883" />
-    </state>
-    <state x="278" y="134" width="800" height="530" key="Vcs.Push.Dialog.v2/0.28.1366.740@0.28.1366.740" timestamp="1602949326232" />
-    <state x="278" y="134" width="800" height="530" key="Vcs.Push.Dialog.v2/1920.289.1366.768/0.28.1366.740@0.28.1366.740" timestamp="1601464145685" />
-    <state x="391" y="443" width="800" height="530" key="Vcs.Push.Dialog.v2/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1606555613201" />
-    <state x="2198" y="399" width="800" height="530" key="Vcs.Push.Dialog.v2/1920.289.1366.768/0.317.1920.883@1920.289.1366.768" timestamp="1606482723815" />
-    <state x="856" y="528" width="447" height="218" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize" timestamp="1601310758374">
-      <screen x="0" y="317" width="1920" height="883" />
-    </state>
-    <state x="856" y="528" width="447" height="218" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1601310758374" />
-    <state x="2464" y="462" width="392" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606482756067">
-      <screen x="1920" y="289" width="1366" height="768" />
-    </state>
-    <state x="544" y="195" width="392" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1366.740@0.28.1366.740" timestamp="1603443203931" />
-    <state x="764" y="516" width="382" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.289.1366.768/0.317.1920.883@0.317.1920.883" timestamp="1601306082031" />
-    <state x="2464" y="462" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.289.1366.768/0.317.1920.883@1920.289.1366.768" timestamp="1606482756067" />
-    <state x="442" y="103" width="471" height="591" key="git4idea.branch.GitSmartOperationDialog" timestamp="1603443157703">
-      <screen x="0" y="28" width="1366" height="740" />
-    </state>
-    <state x="442" y="103" width="471" height="591" key="git4idea.branch.GitSmartOperationDialog/0.28.1366.740@0.28.1366.740" timestamp="1603443157703" />
+    <MESSAGE value="add server and remove docker" />
+    <MESSAGE value="add adaptive design" />
+    <MESSAGE value="continue adaptive design" />
+    <MESSAGE value="https" />
+    <MESSAGE value="change port to 80" />
+    <MESSAGE value="new files" />
+    <MESSAGE value="edit header and footer styles, add big header" />
+    <MESSAGE value="add compressed photo to main page, edit css and some ts" />
+    <MESSAGE value="add compressed photos to pages &quot;department and cooperation&quot;, add laboratory logic (like a dialog), working on dialog styles" />
+    <MESSAGE value="finish interim adaptive design" />
+    <MESSAGE value="end with adaptive design" />
+    <MESSAGE value="add all tables to education page and downloading files button" />
+    <option name="LAST_COMMIT_MESSAGE" value="add all tables to education page and downloading files button" />
   </component>
 </project>

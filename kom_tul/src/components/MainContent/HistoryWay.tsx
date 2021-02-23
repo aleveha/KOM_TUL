@@ -1,9 +1,9 @@
 import * as React from 'react';
-import '../../CSS/HisrotyWay.css'
 import {useContext} from "react";
 import PathContext from "../../Context/PathContext";
-import { Link } from 'react-router-dom';
-import { IPath } from '../../Context/PathContext';
+import {Link} from 'react-router-dom';
+import {IPath} from '../../Context/PathContext';
+import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 
 const HistoryWay = () => {
     const path = useContext(PathContext);
@@ -24,18 +24,20 @@ const HistoryWay = () => {
         return link;
     }
 
-    const pathContent = path.value.map((elem) =>
-        <div className="pathName-content" key={path.value.indexOf(elem)}>
-            {elem.name !== 'KOM' && <span className="arrow">{">"}</span>}
-            <Link to={MakePathLink(elem)} className="path-link" onClick={() => ChangePath()}>{elem.name}</Link>
-        </div>
-    )
+    const pathContent = path.value.map((elem) => (
+        <Link
+            to={MakePathLink(elem)}
+            key={path.value.indexOf(elem)}
+            className="pathLink"
+            onClick={() => ChangePath()}>{elem.name}
+        </Link>
+    ))
 
     return (
         <div className="historyWayContent padding">
-            <div className="pathName">
+            <Breadcrumbs separator=">" className="pathNameContent">
                 {pathContent}
-            </div>
+            </Breadcrumbs>
         </div>
     );
 }
