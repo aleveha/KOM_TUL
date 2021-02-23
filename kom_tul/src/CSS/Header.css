@@ -1,85 +1,87 @@
+.header {
+    height: calc(var(--vh) * 10);
+    min-height: 65px;
+    max-height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    background-color: white;
+}
+
 .header-content {
-    display: grid;
-    grid-template-columns: 4fr 17fr 1fr;
-    grid-template-rows: 1fr;
-    min-height: 80px;
-}
-
-.headerTabs-content {
-    display: grid;
-    grid-template-columns: repeat(6, auto);
-    grid-template-rows: 1fr;
-}
-
-.headerTabs-content :first-child {
-    border-left: none;
-}
-
-.tabName, .cng-lang {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
-
-    text-decoration: none;
-    color: dimgrey;
-    font-weight:500;
-    font-size: 21px;
 }
 
-.langButton {
-    background-color: darkslateblue;
-}
-
-.cng-lang {
-    color: white;
-    font-weight: bold;
-}
-
-.langButton :hover {
-    background-color: #2B8CB6;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.kom-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: white;
-    font-size: 60px;
-    color: #2B8CB6;
-}
-
-.kom-logo img {
-    max-height: 80px;
-}
-
-.kom-logo img:first-child {
-    margin-right: 2px;
+.menuList {
+    height: 100%;
+    max-height: calc(var(--vh) * 50);
 }
 
 .logoLink {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+
+.komLogoContainer {
+    height: 100%;
+}
+
+.komLogo {
+    height: 100%;
+}
+
+.tabName, .cng-lang {
+    text-align: center;
+    width: 100%;
+
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.langButton {
+    background-color: var(--fiolet);
+    color: white;
+}
+
+.pathName {
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
 }
 
-.headerTab {
-    display: grid;
-
-    border: 1px solid lightgrey;
-    border-right: none;
-    border-top: none;
+.historyWayContent {
+    height: 1.5rem;
+    margin-top: calc(var(--vh) * 10);
 }
 
-.headerTab :hover {
-    background-color: #F5F7F3;
-    color: #2B8CB6;
+.historyWayContent > nav {
+    height: 100%;
 }
 
+.pathLink {
+    font-family: var(--fonts);
+    font-size: 1rem;
+}
 
+.bigHeader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
-
-
+.bigHeader a {
+    height: 100%;
+    text-align: center;
+    line-height: 80px;
+    padding: 0 1%;
+    font-size: 1.2rem;
+    font-weight: 500;
+}

@@ -1,190 +1,71 @@
-/*General for Footer*/
-:root {
-    --numberOfTabHeadersMap: 6;
+.footer > div > div {
+    margin: 0.5rem 0;
 }
 
-hr {
-    width: 100%;
-    height: 2px;
-    color: grey;
-    background-color: lightgrey;
-    border-style: none;
-    margin: 0;
-}
-
-hr:first-child {
-    margin-top: 30px;
-}
-
-.footer {
-    display: grid;
-    grid-template-rows: auto auto 1fr;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-
-.footer > div {
-    margin: 30px 0 30px 0;
-}
-
-/*Styles for map*/
-.mapContent {
-    display: grid;
-    grid-template-columns: repeat(var(--numberOfTabHeadersMap), 1fr);
-}
-
-.mapContent :last-child {
-    margin-right: 0;
-}
-
-.tabColumn {
-    margin-left: 30%;
-
-    display: grid;
-    grid-template-rows: 1fr auto;
-}
-
-.tabHeader h3 {
-    margin: 0;
-    font-weight: 370;
-}
-
-.tabContent {
-    display: grid;
-    grid-template-rows: auto;
-}
-
-.tabContent a {
-    margin-top: 7px;
-
-    text-decoration: none;
-    color: #2B8CB6;
-}
-
-/*Styles for contact information*/
-.address p, .contacts p {
-    margin: 6px 0;
+.komLogoFooter {
+    min-height: 60px;
+    max-height: 80px;
+    height: calc(var(--vh) * 10);
 }
 
 .contactInfoContent {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    max-width: 550px;
+    margin: 0 auto !important;
 }
 
-.contactInfoContent > div {
-    margin: 0 20px;
+.contactInfoContent > div,
+.contactInformation > div,
+.socialNetworks > div {
+    margin: 1rem 0;
 }
 
-.contactInformation {
-    display: grid;
-    grid-template-rows: 1fr auto;
-}
-
-.addressAndContacts {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-self: center;
-}
-
-.address {
-    display: flex;
-    justify-content: flex-end;
-
-    margin-right: 10px;
-}
-
-.contacts {
-    margin-left: 10px;
-}
-
-.facultyName p {
-    margin: 7px 0;
-    font-weight: 550;
-    text-align: center;
-}
-
-.facultyName {
+.copyrightContent, .komLogoFooter {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.contactInformation > div {
-    margin: 10px 0;
+.copyrightContent p {
+    font-size: 0.7rem;
 }
 
-.socialNetworks {
+.addressAndContacts {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
+
+    font-size: 0.9rem;
 }
 
-.socialNetworks > div {
-    margin: 10px 0;
+.facultyName {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
 }
 
 .TULLink {
     position: relative;
 }
 
-.TULLink > a {
-    height: 61px;
-    width: 100%;
+.TULLink a {
     position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
-.copyrightContent p {
-    color: grey;
-    font-size: 14px;
-    margin: 0;
-}
-
-.kom-logo-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.kom-logo-footer > .kom-logo {
-    width: 245px;
-    min-height: 75px;
-}
-
-.logoComponent {
-    display: flex;
-}
-
-.logoText {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    margin: -3px 0 0 10px;
-}
-
-.firstLine {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-
-    font-size: 25px;
-    font-weight: 500;
-    line-height: 100%;
+.svg {
+    float: left;
+    width: 2.5rem;
+    margin-right: 1rem;
 }
 
 .square {
-    height: 20px;
-    width: 20px;
+    width: 0.8rem;
+    height: 0.8rem;
 }
 
-.TULStrijni .square {
+.TULStrojni .square {
     background-color: #747476;
-}
-
-.TULStrijni .secondLine p {
-    color: #747476;
 }
 
 .TULMain .square {
@@ -195,14 +76,81 @@ hr:first-child {
     color: #7b1f4f;
 }
 
-.secondLine {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+.secondLine p {
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
-.secondLine p {
-    line-height: 100%;
-    font-size: 21px;
-    font-weight: 500;
+.logoComponent, .secondLine {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.logoComponent {
+    justify-content: center;
+}
+
+.secondLine {
+    justify-content: space-between;
+}
+
+.logoText p {
+    font-size: 1.1rem;
+}
+
+.logoText {
+    margin-top: -0.5rem;
+}
+
+@media (max-width: 500px) {
+    /*.addressAndContacts {*/
+    /*    flex-direction: column;*/
+    /*}*/
+    .addressAndContacts > div {
+        margin: 0.1rem;
+    }
+
+    .addressAndContacts p,
+    .addressAndContacts a {
+        font-size: 0.7rem;
+    }
+
+    /*.logoText {*/
+    /*    width: 100%;*/
+    /*}*/
+    .logoText > p {
+        font-size: 0.75rem
+    }
+
+    /*.secondLine {*/
+    /*    display: flex;*/
+    /*    justify-content: space-around;*/
+    /*    align-items: center;*/
+    /*}*/
+    .secondLine p {
+        font-size: 0.9rem;
+    }
+    /*.facultyName p {*/
+    /*    font-size: 0.8rem;*/
+    /*}*/
+    .copyrightContent p {
+        font-size: 0.6rem;
+    }
+}
+
+@media (min-width: 1300px) {
+    .contactInfoContent {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        min-width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .addressAndContacts > div {
+        margin: 0 0.3rem;
+    }
 }

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import '../../../CSS/PagesCSS/Employyes.css';
 
 export interface IEmployee {
     position?: string,
@@ -166,9 +165,7 @@ const EmployeesObject: IEmployees = {
                 {
                     name: "Sergei BABAK",
                     status: "Ing.",
-                    email: "sergei.babak@tul.cz",
-                    // phoneNumber: "+420 48 535 3368",
-                    // place: "bud. E1/4.p"
+                    email: "sergei.babak@tul.cz"
                 },
                 {
                     name: "Tomáš KOZLOK",
@@ -226,7 +223,7 @@ const Employees = () => {
             blockStruct = (
                 <div className="contactBlock" key={key}>
                     <div className="contactLabel">
-                        <p><span>{labelValue}</span></p>
+                        <p>{labelValue}</p>
                     </div>
                     <div className="contactInfo">
                         {contactInfoValue && CreateLinkToInfo(classNameKey, contactInfoValue)}
@@ -256,18 +253,21 @@ const Employees = () => {
         }
 
         return (link ?
-            <p className="linkPar"><a className="link" href={link} target={target}>{contactInfoValue}</a></p> :
-            <p><span>{contactInfoValue}</span></p>)
+            <p className="linkPar"><a className="link" href={link}
+                                               target={target}>{contactInfoValue}</a></p> :
+            <p>{contactInfoValue}</p>)
     }
 
     const GetMainInfo = (person: IEmployee, border?: boolean) => {
         return (
-            <div className={border ? "employeeInfo border" : "employeeInfo"} key={person.name}>
-                {person.position && <div className="employeePosition">
-                    <p>{person.position}</p>
-                </div>}
+            <div className={"employeeInfo" + (border ? " border" : "")} key={person.name} >
+                {person.position &&
+                    <div className="employeePosition titleSecond">
+                        <p>{person.position}</p>
+                    </div>
+                }
                 <div className="positionInfo">
-                    <div className="employeeName">
+                    <div className="employeeName titleMain">
                         <p>{`${person.status === undefined ? '' : person.status} ${person.name}${person.degree === undefined ? '' : ', ' + person.degree}`}</p>
                     </div>
                     <div className="contactBlocks">
@@ -284,29 +284,29 @@ const Employees = () => {
                 {EmployeesObject.mainWorkers.map(person => GetMainInfo(person, true))}
             </div>
             <div className="teachingStaff border">
-                <div className="employeePosition">
+                <div className="employeePosition titleSecond">
                     <p><span>{EmployeesObject.teachingStaff.label}</span></p>
                 </div>
                 {EmployeesObject.teachingStaff.staff.map(person => GetMainInfo(person))}
             </div>
             <div className="researchers border">
-                <div className="employeePosition">
+                <div className="employeePosition titleSecond">
                     <p><span>{EmployeesObject.researchers.label}</span></p>
                 </div>
                 {EmployeesObject.researchers.staff.map(person => GetMainInfo(person))}
             </div>
             <div className="PhD border">
-                <div className="employeePosition">
+                <div className="employeePosition titleSecond">
                     <p><span>{EmployeesObject.PhD.label}</span></p>
                 </div>
                 <div className="fullTimeStudy">
-                    <div className="employeePosition">
+                    <div className="employeePosition titleSecond">
                         <p><span>{EmployeesObject.PhD.fullTimeStudy.label}</span></p>
                     </div>
                     {EmployeesObject.PhD.fullTimeStudy.staff.map(person => GetMainInfo(person))}
                 </div>
                 <div className="combinedStudy">
-                    <div className="employeePosition">
+                    <div className="employeePosition titleSecond">
                         <p><span>{EmployeesObject.PhD.combinedStudy.label}</span></p>
                     </div>
                     {EmployeesObject.PhD.combinedStudy.staff.map(person => GetMainInfo(person))}

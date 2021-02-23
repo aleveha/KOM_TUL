@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="83c3b780-7e4c-42bc-9358-a1ff228611f9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/Footer.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1i6Q4hy4RPfBH4EduPNpDqN5iAY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.15.4" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.22" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/kom_tul/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/kom_tul" />
+      <recent name="$PROJECT_DIR$/kom_tul/src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Attach to Node.js/Chrome.Run React">
+    <configuration name="Run React" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="3000">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="Docker Image" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="kom_app:dev" />
+          <option name="command" value="" />
+          <option name="containerName" value="kom_app_dev" />
+          <option name="entrypoint" value="" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="3001" />
+                <option name="hostIp" value="localhost" />
+                <option name="hostPort" value="3000" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="commandLineOptions" value="-it -v /kom_tul/node_modules -v $PROJECT_DIR$/kom_tul:/kom_tul -e CHOKIDAR_USEPOLLING=true" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Attach to Node.js/Chrome.Run React" />
+      <item itemvalue="Docker.Docker Image" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.Docker Image" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="83c3b780-7e4c-42bc-9358-a1ff228611f9" name="Default Changelist" comment="" />
+      <created>1601225372225</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601225372225</updated>
+      <workItem from="1601225373342" duration="219000" />
+      <workItem from="1601225606946" duration="13000" />
+      <workItem from="1601306049822" duration="1142000" />
+      <workItem from="1601307211452" duration="2966000" />
+      <workItem from="1601310318864" duration="5163000" />
+      <workItem from="1601796636166" duration="1264000" />
+      <workItem from="1602944398807" duration="5527000" />
+      <workItem from="1603443133303" duration="1575000" />
+      <workItem from="1606205686622" duration="32000" />
+      <workItem from="1606205748932" duration="52000" />
+      <workItem from="1606219732932" duration="731000" />
+      <workItem from="1606244406287" duration="14000" />
+      <workItem from="1606474076267" duration="7871000" />
+      <workItem from="1606484399620" duration="4506000" />
+      <workItem from="1607019946760" duration="625000" />
+      <workItem from="1607089098876" duration="25000" />
+      <workItem from="1607089595677" duration="1249000" />
+      <workItem from="1607093543504" duration="146000" />
+      <workItem from="1607093706750" duration="7000" />
+      <workItem from="1607093734066" duration="366000" />
+      <workItem from="1607094223125" duration="3455000" />
+      <workItem from="1607155169559" duration="645000" />
+      <workItem from="1607621409343" duration="24000" />
+      <workItem from="1608562897588" duration="1843000" />
+      <workItem from="1608660513307" duration="897000" />
+      <workItem from="1608727140789" duration="7786000" />
+      <workItem from="1611577463330" duration="9783000" />
+      <workItem from="1611919428076" duration="63000" />
+      <workItem from="1611919527378" duration="9889000" />
+      <workItem from="1612109994989" duration="1163000" />
+      <workItem from="1612783788826" duration="3967000" />
+      <workItem from="1613031054017" duration="323000" />
+      <workItem from="1613233341207" duration="3656000" />
+      <workItem from="1613408001902" duration="12186000" />
+      <workItem from="1613919872084" duration="44000" />
+      <workItem from="1613992584954" duration="1154000" />
+    </task>
+    <task id="LOCAL-00001" summary="some work with router">
+      <created>1601464139765</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601464139765</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add EducationPrograms object">
+      <created>1602949046201</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602949046201</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add EducationPrograms object">
+      <created>1602949316731</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602949316731</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add downloading files">
+      <created>1606482300490</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606482300490</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add download only technologie 3">
+      <created>1606555606986</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1606555606986</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add server and remove docker">
+      <created>1607020086486</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607020086486</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add adaptive design">
+      <created>1607025219606</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607025219606</updated>
+    </task>
+    <task id="LOCAL-00008" summary="continue adaptive design">
+      <created>1607101969592</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607101969592</updated>
+    </task>
+    <task id="LOCAL-00009" summary="https">
+      <created>1608579841797</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1608579841798</updated>
+    </task>
+    <task id="LOCAL-00010" summary="change port to 80">
+      <created>1608660732272</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1608660732272</updated>
+    </task>
+    <task id="LOCAL-00011" summary="change port to 80">
+      <created>1608661307738</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1608661307738</updated>
+    </task>
+    <task id="LOCAL-00012" summary="edit header and footer styles, add big header">
+      <created>1611858440198</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1611858440198</updated>
+    </task>
+    <task id="LOCAL-00013" summary="edit header and footer styles, add big header">
+      <created>1611858467639</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1611858467639</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add compressed photo to main page, edit css and some ts">
+      <created>1612035287774</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1612035287774</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add compressed photos to pages &quot;department and cooperation&quot;, add laboratory logic (like a dialog), working on dialog styles">
+      <created>1613565331139</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1613565331139</updated>
+    </task>
+    <task id="LOCAL-00016" summary="finish interim adaptive design">
+      <created>1613760791780</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1613760791780</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="some work with router" />
+    <MESSAGE value="add EducationPrograms object" />
+    <MESSAGE value="add downloading files" />
+    <MESSAGE value="add download only technologie 3" />
+    <MESSAGE value="add server and remove docker" />
+    <MESSAGE value="add adaptive design" />
+    <MESSAGE value="continue adaptive design" />
+    <MESSAGE value="https" />
+    <MESSAGE value="change port to 80" />
+    <MESSAGE value="new files" />
+    <MESSAGE value="edit header and footer styles, add big header" />
+    <MESSAGE value="add compressed photo to main page, edit css and some ts" />
+    <MESSAGE value="add compressed photos to pages &quot;department and cooperation&quot;, add laboratory logic (like a dialog), working on dialog styles" />
+    <MESSAGE value="finish interim adaptive design" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish interim adaptive design" />
+  </component>
+</project>
