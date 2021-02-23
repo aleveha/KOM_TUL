@@ -84,6 +84,10 @@ ul, ol, p, li, a {
     padding: 0!important;
 }
 
+.MuiCard-root {
+    overflow: auto!important;
+}
+
 .MuiDialog-paperWidthSm {
     max-width: 1000px !important;
 }
