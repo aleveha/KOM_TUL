@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import {LazyLoadImage} from "react-lazy-load-image-component";
 import Logo1 from "../../img/logotul1_01.png";
 import Logo2 from "../../img/logotul_02.png";
 

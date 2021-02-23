@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Switch, Route, useRouteMatch} from 'react-router-dom';
 import {IEmployee} from './Employees';
 import {
@@ -8,10 +8,9 @@ import {
     TableContainer,
     TableBody,
     TableHead,
-    makeStyles,
-    createStyles,
-    Card, Paper
+    Card, Dialog, DialogTitle, DialogContent, Button, Divider, DialogActions
 } from '@material-ui/core';
+import DownloadBD from "../../../Downloads/DataBase";
 
 interface IEducationalProgram {
     name: string,
@@ -64,18 +63,10 @@ interface TableProps {
     courseTable: ICourseTable[]
 }
 
-const useStyles = makeStyles({
-    table: {
-        // minWidth: 800,
-    },
-});
-
 const EducationTable = ({courseTable}: TableProps) => {
-    const classes = useStyles();
-
     return (
         <TableContainer component={Card} variant="outlined" className="tableContainer">
-            <Table size="small" className={classes.table}>
+            <Table size="small">
                 <TableHead className="tableHeader">
                     <TableRow>
                         <TableCell>Název</TableCell>
@@ -512,6 +503,11 @@ const EducationContent = () => {
             ]
         }
     ];
+    const [downloadOpen, setDownloadOpen] = useState<boolean>(false);
+
+    const handleDialogOpen = () => {
+        setDownloadOpen(!downloadOpen);
+    }
 
     return (
         <div className="educatingContent padding">
@@ -551,14 +547,15 @@ const EducationContent = () => {
                                                     {studyingYear.required &&
                                                     <div className="courses padding">
                                                         <p className="violetPar">{studyingYear.required.name}</p>
-                                                        <EducationTable courseTable={studyingYear.required.courseTable}/>
+                                                        <EducationTable
+                                                            courseTable={studyingYear.required.courseTable}/>
                                                     </div>
                                                     }
                                                     {studyingYear.requiredOptional && studyingYear.requiredOptional.map(course => {
                                                         return (
                                                             <div className="courses padding" key={course.name}>
                                                                 <p className="violetPar">{course.name}</p>
-                                                                {/*<EducationTable courseTable={course.courseTable}/>*/}
+                                                                <EducationTable courseTable={course.courseTable}/>
                                                             </div>
                                                         );
                                                     })}
@@ -567,23 +564,65 @@ const EducationContent = () => {
                                         })}
                                         {program.links && program.links.map(link => {
                                             return (
-                                            <div className="additionalInfo linkPar"
-                                            key={program.links && program.links.indexOf(link)}>
-                                            <a className="link"
-                                            href={link}>{program.additionalInfo && program.links && program.additionalInfo[program.links.indexOf(link)]}</a>
-                                            </div>
+                                                <div className="additionalInfo linkPar"
+                                                     key={program.links && program.links.indexOf(link)}>
+                                                    <a className="link"
+                                                       href={link}>{program.additionalInfo && program.links && program.additionalInfo[program.links.indexOf(link)]}</a>
+                                                </div>
                                             );
                                         })}
-                                            </div>
-                                            );
-                                        })}
-                                </div>
-                                </div>
+                                        {DownloadBD.length > 0 && educationProgram.programs[0].number === "B0715A270008" &&
+                                        <div className="filesToDownload">
+                                            <Button
+                                                onClick={handleDialogOpen}
+                                                variant="contained"
+                                                style={{margin: "1rem auto", color: "var(--blue)"}}
+                                                color="default"
+                                            >
+                                                Soubory ke stažení
+                                            </Button>
+                                            <Dialog open={downloadOpen}>
+                                                <DialogTitle style={{color: "var(--blue)", fontWeight: "bold"}}>Soubory ke stažení</DialogTitle>
+                                                <Divider/>
+                                                <DialogContent>
+                                                    <h3 className="titleSecond" style={{fontWeight: "bold"}}>Technologie III</h3>
+                                                    {DownloadBD.map(file => <div key={file.id}
+                                                                                 className="linkToDownload">
+                                                        <a
+                                                            href={require(`../../../Files/${file.shortName}.${file.format}`)}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            download={file.name}
+                                                            className="link downloadFile"
+                                                        >
+                                                            {file.name}
+                                                        </a>
+                                                    </div>)}
+                                                </DialogContent>
+                                                <Divider/>
+                                                <DialogActions style={{float: "left"}}>
+                                                    <Button
+                                                        onClick={handleDialogOpen}
+                                                        variant="contained"
+                                                        style={{margin: "0.6rem 0 0.6rem 0", color: "var(--blue)"}}
+                                                        color="default"
+                                                    >
+                                                        Zavřít
+                                                    </Button>
+                                                </DialogActions>
+                                            </Dialog>
+
+                                        </div>}
+                                    </div>
                                 );
                             })}
-                </div>
+                        </div>
+                    </div>
                 );
-            }
+            })}
+        </div>
+    );
+}
 
 const Education = () => {
     const match = useRouteMatch();
