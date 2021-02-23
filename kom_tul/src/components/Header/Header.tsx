@@ -1,10 +1,8 @@
 import * as React from 'react';
-import HistoryWay from "../MainContent/HistoryWay";
 import MobileHeader from "./MobileHeader";
 import '../../CSS/Header.css';
 import {useState} from "react";
 import Logo from "../Common/Logo";
-import mobileCheck from "../Common/mobileCheck";
 import BigHeader from "./BigHeader";
 
 const Header = () => {

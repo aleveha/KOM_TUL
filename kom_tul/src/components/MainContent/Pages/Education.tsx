@@ -8,7 +8,6 @@ import {
     TableContainer,
     TableBody,
     TableHead,
-    makeStyles,
     Card, Dialog, DialogTitle, DialogContent, Button, Divider, DialogActions
 } from '@material-ui/core';
 import DownloadBD from "../../../Downloads/DataBase";
@@ -592,6 +591,7 @@ const EducationContent = () => {
                                                         <a
                                                             href={require(`../../../Files/${file.shortName}.${file.format}`)}
                                                             target="_blank"
+                                                            rel="noopener noreferrer"
                                                             download={file.name}
                                                             className="link downloadFile"
                                                         >

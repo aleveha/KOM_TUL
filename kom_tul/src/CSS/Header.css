@@ -3,6 +3,7 @@
     min-height: 65px;
     max-height: 80px;
     width: 100%;
+    max-width: 1700px;
     position: fixed;
     z-index: 3;
     background-color: white;
