@@ -14,9 +14,6 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(publicPath, 'index.html'));
 });
 
-https.createServer({
-    key: key,
-    cert: cert
-}, app).listen(port, () => {
+app.listen(port, () => {
     console.log(`Server is up on https://localhost:${port}`);
 });

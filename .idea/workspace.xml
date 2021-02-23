@@ -26,113 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83c3b780-7e4c-42bc-9358-a1ff228611f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/kom_tul/cert.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/key.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/keytmp.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Pages.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/src/components/Common/Logo.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/src/components/Common/mobileCheck.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/src/components/Header/BigHeader.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/src/components/Header/MobileHeader.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/compressed/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/compressed/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/compressed/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/prop-types/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/prop-types/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/prop-types/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/prop-types/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react-lazy-load-image-component/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react-lazy-load-image-component/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react-lazy-load-image-component/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react-lazy-load-image-component/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/experimental.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/global.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/jsx-dev-runtime.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/jsx-runtime.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/react/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/csstype/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/csstype/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/csstype/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/csstype/index.js.flow" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/csstype/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/lodash.debounce/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/lodash.debounce/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/lodash.debounce/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/lodash.debounce/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/lodash.throttle/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/lodash.throttle/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/lodash.throttle/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/lodash.throttle/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.eslintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.github/ISSUE_TEMPLATE/bug_report.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.github/ISSUE_TEMPLATE/feature_request.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.github/PULL_REQUEST_TEMPLATE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.github/workflows/codeql-analysis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/build/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/components/LazyLoadComponent.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/components/LazyLoadComponent.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/components/LazyLoadImage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/components/LazyLoadImage.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/components/PlaceholderWithTracking.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/components/PlaceholderWithoutTracking.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/components/PlaceholderWithoutTracking.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/effects/black-and-white.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/effects/blur.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/effects/opacity.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/hoc/trackWindowScroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/utils/get-scroll-element.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/utils/intersection-observer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/src/utils/intersection-observer.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/react-lazy-load-image-component/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kom_app_dev.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kom_app_dev.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/server/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/Footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/Header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/HisrotyWay.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Cooperation.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Department.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Education.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Employyes.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Laboratories.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Projects.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/StartPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Footer/ContactsLine.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Footer/ContactsLine.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Footer/CopyRight.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Footer/CopyRight.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Footer/WebSiteMap.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Footer/WebSiteMap.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Header/HeaderButtons.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/ActualNews.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/ActualNews.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/HistoryWay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/HistoryWay.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/MainContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/MainContent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Cooperation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Cooperation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Department.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Department.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Education.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Education.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Employees.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Employees.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Laboratories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Laboratories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Projects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/StartPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/StartPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -397,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614087251582</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add code for better performing and set max-width to 1700px">
+      <created>1614089793813</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1614089793813</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,6 +346,7 @@
     <MESSAGE value="finish interim adaptive design" />
     <MESSAGE value="end with adaptive design" />
     <MESSAGE value="add all tables to education page and downloading files button" />
-    <option name="LAST_COMMIT_MESSAGE" value="add all tables to education page and downloading files button" />
+    <MESSAGE value="add code for better performing and set max-width to 1700px" />
+    <option name="LAST_COMMIT_MESSAGE" value="add code for better performing and set max-width to 1700px" />
   </component>
 </project>
