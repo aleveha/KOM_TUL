@@ -76,6 +76,7 @@ const EmployeesObject: IEmployees = {
         {
             position: "Vedoucí laboratoře třískových technologií a procesů",
             name: "Martin VÁŇA",
+            status: "Bc.",
             email: "martin.vana@tul.cz",
             phoneNumber: "+420 48 535 3393",
             place: "bud. L/1 NP - laboratoř",
@@ -104,6 +105,12 @@ const EmployeesObject: IEmployees = {
                 email: "stepanka.dvorackova@tul.cz"
             },
             {
+                name: "Petr KŮSA",
+                status: "Ing.",
+                degree: "Ph.D.",
+                email: "petr.kusa@tul.cz",
+            },
+            {
                 name: "Jan JERSÁK",
                 status: "doc. Ing.",
                 degree: "CSc.",
@@ -129,14 +136,7 @@ const EmployeesObject: IEmployees = {
     },
     researchers: {
         label: "Vědecko-výzkumní pracovníci",
-        staff: [
-            {
-                name: "Petr KŮSA",
-                status: "Ing.",
-                degree: "Ph.D.",
-                email: "petr.kusa@tul.cz"
-            }
-        ]
+        staff: []
     },
     PhD: {
         label: "Doktorandi",
@@ -158,9 +158,7 @@ const EmployeesObject: IEmployees = {
                 {
                     name: "Iuliia KRASNIKOVA",
                     status: "Ing.",
-                    email: "iuliia.krasnikova@tul.cz",
-                    phoneNumber: "+420 48 535 3368",
-                    place: "bud. E1/4.p"
+                    email: "iuliia.krasnikova@tul.cz"
                 },
                 {
                     name: "Sergei BABAK",
@@ -254,17 +252,17 @@ const Employees = () => {
 
         return (link ?
             <p className="linkPar"><a className="link" href={link}
-                                               target={target}>{contactInfoValue}</a></p> :
+                                      target={target}>{contactInfoValue}</a></p> :
             <p>{contactInfoValue}</p>)
     }
 
     const GetMainInfo = (person: IEmployee, border?: boolean) => {
         return (
-            <div className={"employeeInfo" + (border ? " border" : "")} key={person.name} >
+            <div className={"employeeInfo" + (border ? " border" : "")} key={person.name}>
                 {person.position &&
-                    <div className="employeePosition titleSecond">
-                        <p>{person.position}</p>
-                    </div>
+                <div className="employeePosition titleSecond">
+                    <p>{person.position}</p>
+                </div>
                 }
                 <div className="positionInfo">
                     <div className="employeeName titleMain">
@@ -280,21 +278,24 @@ const Employees = () => {
 
     return (
         <div className="employeesContent padding">
+            {EmployeesObject.mainWorkers.length > 0 &&
             <div className="mainWorkers">
                 {EmployeesObject.mainWorkers.map(person => GetMainInfo(person, true))}
-            </div>
+            </div>}
+            {EmployeesObject.teachingStaff.staff.length > 0 &&
             <div className="teachingStaff border">
                 <div className="employeePosition titleSecond">
                     <p><span>{EmployeesObject.teachingStaff.label}</span></p>
                 </div>
                 {EmployeesObject.teachingStaff.staff.map(person => GetMainInfo(person))}
-            </div>
+            </div>}
+            {EmployeesObject.researchers.staff.length > 0 &&
             <div className="researchers border">
                 <div className="employeePosition titleSecond">
                     <p><span>{EmployeesObject.researchers.label}</span></p>
                 </div>
                 {EmployeesObject.researchers.staff.map(person => GetMainInfo(person))}
-            </div>
+            </div>}
             <div className="PhD border">
                 <div className="employeePosition titleSecond">
                     <p><span>{EmployeesObject.PhD.label}</span></p>
