@@ -83,6 +83,17 @@
     min-width: 800px;
 }
 
+.table tr {
+    display: grid;
+    grid-template-columns: 1.5fr repeat(6, 1fr);
+}
+
+.table td,
+.table th {
+    min-width: 120px;
+    padding: 12px;
+}
+
 .programTitle {
     display: flex;
     justify-content: flex-start;

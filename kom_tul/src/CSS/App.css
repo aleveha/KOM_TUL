@@ -19,7 +19,7 @@
 
 /*Start Page*/
 .startPage {
-    min-height: 80vh;
+    min-height: calc(100vh - 80px);
 }
 
 .photoContainer {
@@ -36,7 +36,7 @@
 
 .mainPhoto {
     object-fit: cover;
-    height: 80vh;
+    height: calc(100vh - 80px);
     width: 100%;
 }
 
@@ -74,8 +74,7 @@
 }
 
 .main-text {
-    padding: 0.3rem;
-
+    padding: 0.6rem;
     text-align: center;
     color: white;
     font-size: 1.6rem;
@@ -99,6 +98,6 @@
 
 @media (max-width: 500px) {
     .main-text {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 }

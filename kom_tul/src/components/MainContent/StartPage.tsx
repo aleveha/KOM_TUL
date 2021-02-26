@@ -35,7 +35,9 @@ const StartPage = () => {
                             style={{
                                 backgroundColor: "var(--blue)",
                                 color: "white",
-                                margin: "2rem 0"
+                                margin: "2rem 0",
+                                borderRadius: "1rem",
+                                letterSpacing: "1px"
                             }}
                             onClick={handleVideoOpened}>
                             <span>{language.value === 'CZ' ? 'Přehrat' : 'Play'} video</span>

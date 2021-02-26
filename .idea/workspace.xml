@@ -28,8 +28,10 @@
     <list default="true" id="83c3b780-7e4c-42bc-9358-a1ff228611f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/Header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Pages.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Pages.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Education.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Education.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/StartPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/StartPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,6 +169,8 @@
       <workItem from="1613408001902" duration="12186000" />
       <workItem from="1613919872084" duration="44000" />
       <workItem from="1613992584954" duration="4989000" />
+      <workItem from="1614332597129" duration="3597000" />
+      <workItem from="1614357510795" duration="855000" />
     </task>
     <task id="LOCAL-00001" summary="some work with router">
       <created>1601464139765</created>
@@ -294,7 +298,21 @@
       <option name="project" value="LOCAL" />
       <updated>1614087251582</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add youtube video">
+      <created>1614275036373</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1614275036373</updated>
+    </task>
+    <task id="LOCAL-00020" summary="updated package json">
+      <created>1614275086503</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1614275086503</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,6 +359,8 @@
     <MESSAGE value="finish interim adaptive design" />
     <MESSAGE value="end with adaptive design" />
     <MESSAGE value="add all tables to education page and downloading files button" />
-    <option name="LAST_COMMIT_MESSAGE" value="add all tables to education page and downloading files button" />
+    <MESSAGE value="add youtube video" />
+    <MESSAGE value="updated package json" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated package json" />
   </component>
 </project>
