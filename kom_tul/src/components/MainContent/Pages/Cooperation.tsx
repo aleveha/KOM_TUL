@@ -1,8 +1,11 @@
 import {Route, Switch, useRouteMatch} from "react-router-dom";
 import * as React from "react";
-import mainPhotoCooperationCompressed from "../../../img/photoMainPage/compressed/3.jpg";
-import mainPhotoCooperation from "../../../img/photoMainPage/3.jpg";
-import {useState} from "react";
+import firstPhoto from '../../../img/cooperation/3.jpg';
+import firstPhotoCompressed from '../../../img/cooperation/comressed/3.jpg';
+import secondPhoto from '../../../img/cooperation/2.jpg';
+import secondPhotoCompressed from '../../../img/cooperation/comressed/2.jpg';
+
+import FastLoading from "../../Common/FastLoading";
 
 interface IHowToCooperate {
     label: string,
@@ -35,30 +38,22 @@ const CooperationContent = () => {
             }
         ]
     }
-    const [imageLoaded, setImageLoaded] = useState<boolean>(false);
-
-    const handleMainPhotoLoaded = () => {
-        setImageLoaded(true);
-    }
 
     return (
         <div className="cooperation padding">
             <h1 className="mainLabel">Spolupráce s KOM</h1>
             <div className="coopInfo mainInfo">
-                <div className="infoContent">
-                    <div className="departmentPhotos">
-                        <img
-                            src={mainPhotoCooperationCompressed}
-                            alt="CooperationPhoto"
-                            className="CooperationPhoto"
-                            style={imageLoaded ? {display: "none"} : {display: "unset"}}
+                <div>
+                    <div className="introPhotos">
+                        <FastLoading
+                            photo={firstPhoto}
+                            photoCompressed={firstPhotoCompressed}
+                            imagesClassName="introPhoto"
                         />
-                        <img
-                            src={mainPhotoCooperation}
-                            alt="CooperationPhoto"
-                            className="CooperationtPhoto"
-                            onLoad={handleMainPhotoLoaded}
-                            style={!imageLoaded ? {display: "none"} : {display: "unset"}}
+                        <FastLoading
+                            photo={secondPhoto}
+                            photoCompressed={secondPhotoCompressed}
+                            imagesClassName="introPhoto"
                         />
                     </div>
                     <p className="cooperationInfo">{cooperationInformation}</p>

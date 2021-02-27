@@ -8,7 +8,7 @@ import {
     TableContainer,
     TableBody,
     TableHead,
-    Card, Dialog, DialogTitle, DialogContent, Button, Divider, DialogActions
+    Paper, Dialog, DialogTitle, DialogContent, Button, Divider, DialogActions, createStyles, Theme, withStyles
 } from '@material-ui/core';
 import DownloadBD from "../../../Downloads/DataBase";
 
@@ -63,19 +63,34 @@ interface TableProps {
     courseTable: ICourseTable[]
 }
 
+const HeaderTableCell = withStyles((theme: Theme) =>
+    createStyles({
+        head: {
+            backgroundColor: "var(--blue)",
+            color: theme.palette.common.white,
+        }
+    })
+)(TableCell);
+
 const EducationTable = ({courseTable}: TableProps) => {
     return (
-        <TableContainer component={Card} variant="outlined" className="tableContainer">
-            <Table size="small">
+        <TableContainer
+            component={Paper}
+            style={{
+                borderRadius: "10px"
+            }}
+            className="tableContainer"
+        >
+            <Table size="small" className="table">
                 <TableHead className="tableHeader">
                     <TableRow>
-                        <TableCell>Název</TableCell>
-                        <TableCell>Zkratka</TableCell>
-                        <TableCell>Semestr</TableCell>
-                        <TableCell>Rozsah</TableCell>
-                        <TableCell>Zkouška</TableCell>
-                        <TableCell>Kredity</TableCell>
-                        <TableCell>Vyučující</TableCell>
+                        <HeaderTableCell>Název</HeaderTableCell>
+                        <HeaderTableCell>Zkratka</HeaderTableCell>
+                        <HeaderTableCell>Semestr</HeaderTableCell>
+                        <HeaderTableCell>Rozsah</HeaderTableCell>
+                        <HeaderTableCell>Zkouška</HeaderTableCell>
+                        <HeaderTableCell>Kredity</HeaderTableCell>
+                        <HeaderTableCell>Vyučující</HeaderTableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -611,7 +626,6 @@ const EducationContent = () => {
                                                     </Button>
                                                 </DialogActions>
                                             </Dialog>
-
                                         </div>}
                                     </div>
                                 );

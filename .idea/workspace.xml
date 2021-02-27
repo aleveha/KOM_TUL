@@ -27,7 +27,28 @@
   <component name="ChangeListManager">
     <list default="true" id="83c3b780-7e4c-42bc-9358-a1ff228611f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Pages.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Pages.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Common/mobileCheck.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Cooperation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Cooperation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Department.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Department.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Employees.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Employees.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/StartPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/StartPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/compressed/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/compressed/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/compressed/3.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,6 +186,9 @@
       <workItem from="1613408001902" duration="12186000" />
       <workItem from="1613919872084" duration="44000" />
       <workItem from="1613992584954" duration="4989000" />
+      <workItem from="1614332597129" duration="3597000" />
+      <workItem from="1614357510795" duration="984000" />
+      <workItem from="1614417914847" duration="11618000" />
     </task>
     <task id="LOCAL-00001" summary="some work with router">
       <created>1601464139765</created>
@@ -292,14 +316,28 @@
       <option name="project" value="LOCAL" />
       <updated>1614087251582</updated>
     </task>
-    <task id="LOCAL-00019" summary="add code for better performing and set max-width to 1700px">
-      <created>1614089793813</created>
+    <task id="LOCAL-00019" summary="add youtube video">
+      <created>1614275036373</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1614089793813</updated>
+      <updated>1614275036373</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="updated package json">
+      <created>1614275086503</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1614275086503</updated>
+    </task>
+    <task id="LOCAL-00021" summary="add new photos, edit header height, edit tables view">
+      <created>1614362506190</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1614362506190</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +384,9 @@
     <MESSAGE value="finish interim adaptive design" />
     <MESSAGE value="end with adaptive design" />
     <MESSAGE value="add all tables to education page and downloading files button" />
-    <MESSAGE value="add code for better performing and set max-width to 1700px" />
-    <option name="LAST_COMMIT_MESSAGE" value="add code for better performing and set max-width to 1700px" />
+    <MESSAGE value="add youtube video" />
+    <MESSAGE value="updated package json" />
+    <MESSAGE value="add new photos, edit header height, edit tables view" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new photos, edit header height, edit tables view" />
   </component>
 </project>
