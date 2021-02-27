@@ -1,9 +1,11 @@
 import * as React from 'react';
 import {Route, Switch, useRouteMatch} from 'react-router-dom';
-import mainPhotoDepartment from '../../../img/photoMainPage/2.jpg';
-import mainPhotoDepartmentCompressed from '../../../img/photoMainPage/compressed/2.jpg';
+import firstPhoto from '../../../img/department/9.jpg';
+import firstPhotoCompressed from '../../../img/department/comressed/9.jpg';
+import secondPhoto from '../../../img/department/10.jpg';
+import secondPhotoCompressed from '../../../img/department/comressed/10.jpg';
 import '../../../CSS/PagesCSS/Pages.css';
-import {useState} from "react";
+import FastLoading from "../../Common/FastLoading";
 
 interface IProfFocus {
     label: string;
@@ -86,30 +88,22 @@ const DepartmentContent = () => {
             ]
         }
     ];
-    const [imageLoaded, setImageLoaded] = useState<boolean>(false);
-
-    const handleMainPhotoLoaded = () => {
-        setImageLoaded(true);
-    }
 
     return (
         <div className="department">
             <h1 className="mainLabel padding">Informace o katedře</h1>
             <div className="departmentContent padding">
                 <div className="departmentInfo">
-                    <div className="departmentPhotos">
-                        <img
-                            src={mainPhotoDepartmentCompressed}
-                            alt="KatedraPhoto"
-                            className="departmentPhoto"
-                            style={imageLoaded ? {display: "none"} : {display: "unset"}}
+                    <div className="introPhotos">
+                        <FastLoading
+                            photo={firstPhoto}
+                            photoCompressed={firstPhotoCompressed}
+                            imagesClassName="introPhoto"
                         />
-                        <img
-                            src={mainPhotoDepartment}
-                            alt="KatedraPhoto"
-                            className="departmentPhoto"
-                            onLoad={handleMainPhotoLoaded}
-                            style={!imageLoaded ? {display: "none"} : {display: "unset"}}
+                        <FastLoading
+                            photo={secondPhoto}
+                            photoCompressed={secondPhotoCompressed}
+                            imagesClassName="introPhoto"
                         />
                     </div>
                     <p>{mainInfo}</p>

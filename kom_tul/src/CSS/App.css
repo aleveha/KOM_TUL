@@ -46,7 +46,7 @@
     width: 100%;
 }
 
-.mainPhotos img {
+.mainPhotos > div img {
     position: absolute;
 }
 

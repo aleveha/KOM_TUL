@@ -1,4 +1,6 @@
 import * as React from 'react';
+import {Suspense} from "react";
+import {CircularProgress} from "@material-ui/core";
 
 export interface IEmployee {
     position?: string,
@@ -9,7 +11,8 @@ export interface IEmployee {
     phoneNumber?: string,
     place?: string,
     consultation?: string,
-    specialization?: string
+    specialization?: string,
+    photo?: string
 }
 
 interface IEmployees {
@@ -175,90 +178,98 @@ const EmployeesObject: IEmployees = {
     }
 }
 
-const Employees = () => {
+const GetContactsBlock = (person: IEmployee, key: string) => {
+    let classNameKey: string = 'key';
+    let contactInfoValue: string | undefined = '';
+    let labelValue: string = '';
+    let blockStruct: JSX.Element | null;
+    let hasProperty: boolean = false;
 
-    const GetContactsBlock = (person: IEmployee, key: string) => {
-        let classNameKey: string = 'key';
-        let contactInfoValue: string | undefined = '';
-        let labelValue: string = '';
-        let blockStruct: JSX.Element | null;
-        let hasProperty: boolean = false;
+    switch (key) {
+        case 'email':
+            classNameKey = key;
+            contactInfoValue = person[key];
+            labelValue = "E-mail: ";
+            hasProperty = true;
+            break;
+        case 'phoneNumber':
+            classNameKey = key;
+            contactInfoValue = person[key];
+            labelValue = "Telefon: ";
+            hasProperty = true;
+            break;
+        case 'place':
+            classNameKey = key;
+            contactInfoValue = person[key];
+            labelValue = "Kancelář: ";
+            hasProperty = true;
+            break;
+        case 'consultation':
+            classNameKey = key;
+            contactInfoValue = person[key];
+            labelValue = "Konzultace: ";
+            hasProperty = true;
+            break;
+        case 'specialization':
+            classNameKey = key;
+            contactInfoValue = person[key];
+            labelValue = "Zaměření: ";
+            hasProperty = true;
+            break;
+    }
 
-        switch (key) {
-            case 'email':
-                classNameKey = key;
-                contactInfoValue = person[key];
-                labelValue = "E-mail: ";
-                hasProperty = true;
-                break;
-            case 'phoneNumber':
-                classNameKey = key;
-                contactInfoValue = person[key];
-                labelValue = "Telefon: ";
-                hasProperty = true;
-                break;
-            case 'place':
-                classNameKey = key;
-                contactInfoValue = person[key];
-                labelValue = "Kancelář: ";
-                hasProperty = true;
-                break;
-            case 'consultation':
-                classNameKey = key;
-                contactInfoValue = person[key];
-                labelValue = "Konzultace: ";
-                hasProperty = true;
-                break;
-            case 'specialization':
-                classNameKey = key;
-                contactInfoValue = person[key];
-                labelValue = "Zaměření: ";
-                hasProperty = true;
-                break;
-        }
-
-        if (hasProperty) {
-            blockStruct = (
-                <div className="contactBlock" key={key}>
-                    <div className="contactLabel">
-                        <p>{labelValue}</p>
-                    </div>
-                    <div className="contactInfo">
-                        {contactInfoValue && CreateLinkToInfo(classNameKey, contactInfoValue)}
-                    </div>
+    if (hasProperty) {
+        blockStruct = (
+            <div className="contactBlock" key={key}>
+                <div className="contactLabel">
+                    <p>{labelValue}</p>
                 </div>
-            );
-        } else blockStruct = null;
+                <div className="contactInfo">
+                    {contactInfoValue && CreateLinkToInfo(classNameKey, contactInfoValue)}
+                </div>
+            </div>
+        );
+    } else blockStruct = null;
 
-        return blockStruct;
+    return blockStruct;
+}
+
+const CreateLinkToInfo = (classNameKey: string, contactInfoValue: string) => {
+    let link: string = '';
+    let target: string = '';
+    switch (classNameKey) {
+        case 'phoneNumber':
+            link = "tel:" + contactInfoValue.replace(/" "/g, "");
+            break;
+        case 'email':
+            link = "mailto:" + contactInfoValue;
+            break;
+        case 'place':
+            contactInfoValue.includes('L') ? link = "https://en.mapy.cz/s/posaparapu" : link = "https://en.mapy.cz/s/jemasahuso";
+            target = "_blank";
+            break;
+
     }
 
-    const CreateLinkToInfo = (classNameKey: string, contactInfoValue: string) => {
-        let link: string = '';
-        let target: string = '';
-        switch (classNameKey) {
-            case 'phoneNumber':
-                link = "tel:" + contactInfoValue.replace(/" "/g, "");
-                break;
-            case 'email':
-                link = "mailto:" + contactInfoValue;
-                break;
-            case 'place':
-                contactInfoValue.includes('L') ? link = "https://en.mapy.cz/s/posaparapu" : link = "https://en.mapy.cz/s/jemasahuso";
-                target = "_blank";
-                break;
+    return (link ?
+        <p className="linkPar">
+            <a
+                className="link"
+                href={link}
+                target={target}
+            >
+                {contactInfoValue}
+            </a>
+        </p> :
+        <p>{contactInfoValue}</p>)
+}
 
-        }
+const EmployeePhoto = React.lazy(() => import('../../Common/EmployeePhoto'));
 
-        return (link ?
-            <p className="linkPar"><a className="link" href={link}
-                                      target={target}>{contactInfoValue}</a></p> :
-            <p>{contactInfoValue}</p>)
-    }
-
-    const GetMainInfo = (person: IEmployee, border?: boolean) => {
-        return (
-            <div className={"employeeInfo" + (border ? " border" : "")} key={person.name}>
+const GetMainInfo = (person: IEmployee, border?: boolean) => {
+    return (
+        <div className={"employeeInfo" + (border ? " border" : "")} key={person.name}>
+            <div>
                 {person.position &&
                 <div className="employeePosition titleSecond">
                     <p>{person.position}</p>
@@ -273,9 +284,22 @@ const Employees = () => {
                     </div>
                 </div>
             </div>
-        )
-    }
+            {person.photo && <div className="empPhoto positionInfo">
+                <Suspense fallback={
+                    <CircularProgress
+                        style={{
+                            margin: "0 1rem", color: "var(--blue)"
+                        }}
+                    />
+                }>
+                    <EmployeePhoto src={person.photo}/>
+                </Suspense>
+            </div>}
+        </div>
+    )
+}
 
+const Employees = () => {
     return (
         <div className="employeesContent padding">
             {EmployeesObject.mainWorkers.length > 0 &&

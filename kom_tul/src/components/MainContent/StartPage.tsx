@@ -1,20 +1,16 @@
 import * as React from 'react';
 import ActualNews from "./ActualNews";
 import LanguageContext from "../../Context/LanguageContext";
-import {useContext, useEffect, useRef, useState} from "react";
+import {useContext, useState} from "react";
 import MainPhoto from '../../img/photoMainPage/1.jpg';
 import MainPhotoMin from '../../img/photoMainPage/compressed/1.jpg';
 import {Backdrop, Button} from "@material-ui/core";
 import Youtube from '@u-wave/react-youtube';
+import FastLoading from "../Common/FastLoading";
 
 const StartPage = () => {
     const language = useContext(LanguageContext);
-    const [imageLoaded, setImageLoaded] = useState(false);
     const [openVideo, setOpenVideo] = useState(false);
-
-    const handleMainPhotoLoaded = () => {
-        setImageLoaded(true);
-    }
 
     const handleVideoOpened = () => {
         setOpenVideo(!openVideo);
@@ -44,20 +40,11 @@ const StartPage = () => {
                         </Button>
                     </div>
                 </div>
-                <div
-                    className="mainPhotos"
-                >
-                    <img
-                        src={MainPhotoMin}
-                        className="mainPhoto"
-                        alt="mainPhoto"
-                        style={imageLoaded ? {display: "none"} : {display: "unset"}}
-                    />
-                    <img
-                        src={MainPhoto}
-                        className="mainPhoto"
-                        alt="mainPhoto"
-                        onLoad={handleMainPhotoLoaded}
+                <div className="mainPhotos">
+                    <FastLoading
+                        photo={MainPhoto}
+                        photoCompressed={MainPhotoMin}
+                        imagesClassName="mainPhoto"
                     />
                 </div>
             </div>
@@ -90,7 +77,7 @@ const YoutubePlayer = (props: {
             >
                 <div>
                     <Youtube
-                        video="xLZg67BowOA"
+                        video="drgC6TCARyc"
                         width="100%"
                         height="100%"
                         paused={pauseVideo}
