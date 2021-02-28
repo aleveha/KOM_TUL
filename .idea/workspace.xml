@@ -27,28 +27,12 @@
   <component name="ChangeListManager">
     <list default="true" id="83c3b780-7e4c-42bc-9358-a1ff228611f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Pages.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Pages.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Common/mobileCheck.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Footer/WebSiteMap.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Cooperation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Cooperation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Department.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Department.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Employees.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Employees.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Laboratories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Laboratories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/StartPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/StartPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/compressed/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/compressed/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/img/photoMainPage/compressed/3.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +73,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/kom_tul/src/Files" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/kom_tul/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -189,6 +173,7 @@
       <workItem from="1614332597129" duration="3597000" />
       <workItem from="1614357510795" duration="984000" />
       <workItem from="1614417914847" duration="11618000" />
+      <workItem from="1614513495125" duration="3615000" />
     </task>
     <task id="LOCAL-00001" summary="some work with router">
       <created>1601464139765</created>
@@ -337,7 +322,21 @@
       <option name="project" value="LOCAL" />
       <updated>1614362506190</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="delete unuseful code in server.js">
+      <created>1614443486770</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1614443486770</updated>
+    </task>
+    <task id="LOCAL-00023" summary="edit start page photo path">
+      <created>1614443949743</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1614443949743</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,6 +386,8 @@
     <MESSAGE value="add youtube video" />
     <MESSAGE value="updated package json" />
     <MESSAGE value="add new photos, edit header height, edit tables view" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new photos, edit header height, edit tables view" />
+    <MESSAGE value="delete unuseful code in server.js" />
+    <MESSAGE value="edit start page photo path" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit start page photo path" />
   </component>
 </project>

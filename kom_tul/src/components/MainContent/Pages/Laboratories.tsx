@@ -6,6 +6,11 @@ import {
     Divider,
     DialogTitle, DialogContent
 } from '@material-ui/core';
+import labMetrPhoto from '../../../img/lab_foto/lab_metr.jpg';
+import labMetrPhotoCompressed from '../../../img/lab_foto/compressed/lab_metr.jpg';
+import labTechPhoto from '../../../img/lab_foto/lab_trisk.jpg';
+import labTechPhotoCompressed from '../../../img/lab_foto/compressed/lab_trisk.jpg';
+import FastLoading from "../../Common/FastLoading";
 
 export interface ILaboratory {
     name: string;
@@ -13,6 +18,7 @@ export interface ILaboratory {
     specialization: Array<string>;
     equipment?: Array<ILaboratoryPartDesc>;
     technologies?: Array<ILaboratoryPartDesc>;
+    photos?: string[]
 }
 
 export interface ILaboratoryPartDesc {
@@ -88,6 +94,10 @@ export const laboratories: Array<ILaboratory> = [
                     "výzkum a vývoj v oblasti inteligentního obrábění"
                 ]
             }
+        ],
+        photos: [
+            labTechPhoto,
+            labTechPhotoCompressed
         ]
     },
     {
@@ -141,6 +151,10 @@ export const laboratories: Array<ILaboratory> = [
                     "hodnocení anomálií vyvolaných změnami zbytkového napětí, tvrdosti a mikrostruktury"
                 ]
             },
+        ],
+        photos: [
+            labMetrPhoto,
+            labMetrPhotoCompressed
         ]
     }
 ];
@@ -159,6 +173,9 @@ const LaboratoryInfo = (props: { laboratory: ILaboratory }) => {
                 <p>{props.laboratory.description.split(".", 3).map(word =>
                     <span key={props.laboratory.description.indexOf(word)}> {word}</span>
                 )}<span>...</span></p>
+                {props.laboratory.photos !== undefined && <div className="labPhotos">
+                    <FastLoading photo={props.laboratory.photos[0]} photoCompressed={props.laboratory.photos[1]} imagesClassName="labPhoto"/>
+                </div>}
                 <Button
                     onClick={handleDialogOpen}
                     variant="contained"

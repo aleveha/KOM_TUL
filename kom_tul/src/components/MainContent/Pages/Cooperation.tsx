@@ -1,11 +1,5 @@
 import {Route, Switch, useRouteMatch} from "react-router-dom";
 import * as React from "react";
-import firstPhoto from '../../../img/cooperation/3.jpg';
-import firstPhotoCompressed from '../../../img/cooperation/comressed/3.jpg';
-import secondPhoto from '../../../img/cooperation/2.jpg';
-import secondPhotoCompressed from '../../../img/cooperation/comressed/2.jpg';
-
-import FastLoading from "../../Common/FastLoading";
 
 interface IHowToCooperate {
     label: string,
@@ -44,18 +38,6 @@ const CooperationContent = () => {
             <h1 className="mainLabel">Spolupráce s KOM</h1>
             <div className="coopInfo mainInfo">
                 <div>
-                    <div className="introPhotos">
-                        <FastLoading
-                            photo={firstPhoto}
-                            photoCompressed={firstPhotoCompressed}
-                            imagesClassName="introPhoto"
-                        />
-                        <FastLoading
-                            photo={secondPhoto}
-                            photoCompressed={secondPhotoCompressed}
-                            imagesClassName="introPhoto"
-                        />
-                    </div>
                     <p className="cooperationInfo">{cooperationInformation}</p>
                     <p className="cooperationInfo">{cooperationOffer}</p>
                 </div>
