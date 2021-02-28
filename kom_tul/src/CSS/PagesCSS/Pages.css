@@ -3,7 +3,29 @@
     margin: 1rem 0;
 }
 
+.introPhotos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
+.introPhotos > div {
+    width: 45%;
+    margin: 0 0.5rem;
+}
+
+@media (max-width: 767px) {
+    .introPhotos > div {
+        width: 90vw;
+    }
+}
+
+.introPhoto {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+}
 
 /*Employees*/
 .employeeInfo {
@@ -137,30 +159,6 @@
     margin: 1.5rem 0;
 }
 
-.introPhotos {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.introPhotos > div {
-    width: 45%;
-    margin: 0 0.5rem;
-}
-
-@media (max-width: 767px) {
-    .introPhotos > div {
-        width: 90vw;
-    }
-}
-
-.introPhoto {
-    width: 100%;
-    max-height: 70vh;
-    object-fit: cover;
-}
-
 .howToCoop ol {
     margin-left: 1rem;
 }
@@ -224,4 +222,13 @@
 
 .labDialogButtons button {
     margin: 0.6rem 1rem 0.6rem 0!important;
+}
+
+.labPhotos {
+    width: 100%;
+}
+
+.labPhoto {
+    width: 100%;
+    margin-top: 1rem;
 }
