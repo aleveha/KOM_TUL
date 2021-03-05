@@ -26,12 +26,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83c3b780-7e4c-42bc-9358-a1ff228611f9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/kom_tul/src/components/Common/Carousel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kom_app_dev.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kom_app_dev.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_02_2021_13_37_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_02_2021_13_37__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_02_2021_14_47_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_02_2021_14_47__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Pages.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/PagesCSS/Pages.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/Footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/Footer/WebSiteMap.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Cooperation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Cooperation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Laboratories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/Pages/Laboratories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/keytmp.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/CSS/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kom_tul/src/components/MainContent/StartPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/kom_tul/src/components/MainContent/StartPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,6 +180,8 @@
       <workItem from="1614357510795" duration="984000" />
       <workItem from="1614417914847" duration="11618000" />
       <workItem from="1614513495125" duration="3615000" />
+      <workItem from="1614526641589" duration="332000" />
+      <workItem from="1614943603224" duration="3934000" />
     </task>
     <task id="LOCAL-00001" summary="some work with router">
       <created>1601464139765</created>
