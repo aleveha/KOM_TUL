@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import Logo1 from "../../img/logotul1_01.png";
-import Logo2 from "../../img/logotul_02.png";
+import Logo1 from "../../img/logotul1_01.webp";
+import Logo2 from "../../img/logotul_02.webp";
 
 const Logo = () => {
     return (

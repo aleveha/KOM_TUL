@@ -80,7 +80,8 @@ const MobileHeader = () => {
                                autoClose: 3000,
                                position: "bottom-center"
                            });
-                       }}>EN{/*language.value !== 'CZ' ? 'CZ' : 'EN'*/}</p>
+                       }}>EN{/*language.value !== 'CZ' ? 'CZ' : 'EN'*/}
+                    </p>
                 </ListItem>
             </List>
         </div>

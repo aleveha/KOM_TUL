@@ -1,11 +1,8 @@
 import * as React from 'react';
 import {Route, Switch, useRouteMatch} from 'react-router-dom';
-import firstPhoto from '../../../img/department/9.jpg';
-import firstPhotoCompressed from '../../../img/department/comressed/9.jpg';
-import secondPhoto from '../../../img/department/10.jpg';
-import secondPhotoCompressed from '../../../img/department/comressed/10.jpg';
-import '../../../CSS/PagesCSS/Pages.css';
-import FastLoading from "../../Common/FastLoading";
+import firstPhoto from '../../../img/department/12.webp';
+import secondPhoto from '../../../img/department/10.webp';
+import thirdPhoto from '../../../img/department/9.webp';
 
 interface IProfFocus {
     label: string;
@@ -95,15 +92,23 @@ const DepartmentContent = () => {
             <div className="departmentContent padding">
                 <div className="departmentInfo">
                     <div className="introPhotos">
-                        <FastLoading
-                            photo={firstPhoto}
-                            photoCompressed={firstPhotoCompressed}
-                            imagesClassName="introPhoto"
+                        <img
+                            src={firstPhoto}
+                            alt="introPhoto"
+                            loading="lazy"
+                            className="introPhoto"
                         />
-                        <FastLoading
-                            photo={secondPhoto}
-                            photoCompressed={secondPhotoCompressed}
-                            imagesClassName="introPhoto"
+                        <img
+                            src={secondPhoto}
+                            alt="introPhoto"
+                            loading="lazy"
+                            className="introPhoto"
+                        />
+                        <img
+                            src={thirdPhoto}
+                            alt="introPhoto"
+                            loading="lazy"
+                            className="introPhoto"
                         />
                     </div>
                     <p>{mainInfo}</p>

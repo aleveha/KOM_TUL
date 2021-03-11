@@ -6,11 +6,8 @@ import {
     Divider,
     DialogTitle, DialogContent
 } from '@material-ui/core';
-import labMetrPhoto from '../../../img/lab_foto/lab_metr.jpg';
-import labMetrPhotoCompressed from '../../../img/lab_foto/compressed/lab_metr.jpg';
-import labTechPhoto from '../../../img/lab_foto/lab_trisk.jpg';
-import labTechPhotoCompressed from '../../../img/lab_foto/compressed/lab_trisk.jpg';
-import FastLoading from "../../Common/FastLoading";
+import labMetrPhoto from '../../../img/lab_foto/4.webp';
+import labTechPhoto from '../../../img/lab_foto/11.webp';
 
 export interface ILaboratory {
     name: string;
@@ -18,7 +15,7 @@ export interface ILaboratory {
     specialization: Array<string>;
     equipment?: Array<ILaboratoryPartDesc>;
     technologies?: Array<ILaboratoryPartDesc>;
-    photos?: string[]
+    photo?: string
 }
 
 export interface ILaboratoryPartDesc {
@@ -95,10 +92,8 @@ export const laboratories: Array<ILaboratory> = [
                 ]
             }
         ],
-        photos: [
-            labTechPhoto,
-            labTechPhotoCompressed
-        ]
+        photo: labTechPhoto
+
     },
     {
         name: "Laboratoř strojírenské metrologie",
@@ -152,10 +147,7 @@ export const laboratories: Array<ILaboratory> = [
                 ]
             },
         ],
-        photos: [
-            labMetrPhoto,
-            labMetrPhotoCompressed
-        ]
+        photo: labMetrPhoto
     }
 ];
 
@@ -173,9 +165,15 @@ const LaboratoryInfo = (props: { laboratory: ILaboratory }) => {
                 <p>{props.laboratory.description.split(".", 3).map(word =>
                     <span key={props.laboratory.description.indexOf(word)}> {word}</span>
                 )}<span>...</span></p>
-                {props.laboratory.photos !== undefined && <div className="labPhotos">
-                    <FastLoading photo={props.laboratory.photos[0]} photoCompressed={props.laboratory.photos[1]} imagesClassName="labPhoto"/>
-                </div>}
+                {/*{props.laboratory.photos !== undefined && <div className="labPhotos">*/}
+                {/*    <FastLoading photo={props.laboratory.photos[0]} photoCompressed={props.laboratory.photos[1]} imagesClassName="labPhoto"/>*/}
+                {/*</div>}*/}
+                <img
+                    src={props.laboratory.photo}
+                    alt="labPhoto"
+                    loading="lazy"
+                    className="labPhoto"
+                />
                 <Button
                     onClick={handleDialogOpen}
                     variant="contained"

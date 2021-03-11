@@ -2,30 +2,21 @@ import * as React from 'react';
 import ActualNews from "./ActualNews";
 import LanguageContext from "../../Context/LanguageContext";
 import {useContext, useState} from "react";
-import MainPhoto1 from '../../img/start_page/1.jpg';
-import MainPhoto2 from '../../img/start_page/2.jpg';
-import MainPhoto4 from '../../img/start_page/4.jpg';
-import MainPhoto7 from '../../img/start_page/7.jpg';
-import MainPhoto8 from '../../img/start_page/8.jpg';
-import MainPhoto11 from '../../img/start_page/11.jpg';
-import MainPhoto1Min from '../../img/start_page/compressed/1.jpg';
-import MainPhoto2Min from '../../img/start_page/compressed/2.jpg';
-import MainPhoto4Min from '../../img/start_page/compressed/4.jpg';
-import MainPhoto7Min from '../../img/start_page/compressed/7.jpg';
-import MainPhoto8Min from '../../img/start_page/compressed/8.jpg';
-import MainPhoto11Min from '../../img/start_page/compressed/11.jpg';
+import MainPhoto1 from '../../img/start_page/1.webp';
+import MainPhoto2 from '../../img/start_page/2.webp';
+import MainPhoto4 from '../../img/start_page/4.webp';
+import MainPhoto8 from '../../img/start_page/8.webp';
+import MainPhoto11 from '../../img/start_page/11.webp';
 import {Backdrop, Button} from "@material-ui/core";
 import Youtube from '@u-wave/react-youtube';
-import FastLoading from "../Common/FastLoading";
 import Carousel from "../Common/Carousel";
 
-const Gallery: { photo: string, photoMin: string }[] = [
-    {photo: MainPhoto1, photoMin: MainPhoto1Min},
-    {photo: MainPhoto2, photoMin: MainPhoto2Min},
-    {photo: MainPhoto4, photoMin: MainPhoto4Min},
-    {photo: MainPhoto7, photoMin: MainPhoto7Min},
-    {photo: MainPhoto8, photoMin: MainPhoto8Min},
-    {photo: MainPhoto11, photoMin: MainPhoto11Min}
+const Gallery: string[] = [
+    MainPhoto1,
+    MainPhoto2,
+    MainPhoto4,
+    MainPhoto8,
+    MainPhoto11,
 ]
 
 const StartPage = () => {
@@ -62,10 +53,12 @@ const StartPage = () => {
                 </div>
                 <div className="mainPhotos">
                     <Carousel components={Gallery.map(elem =>
-                        <FastLoading
-                            photo={elem.photo}
-                            photoCompressed={elem.photoMin}
-                            imagesClassName="mainPhoto"
+                        <img
+                            src={elem}
+                            alt="carouselPhoto"
+                            key={Gallery.indexOf(elem)}
+                            loading="lazy"
+                            className="mainPhoto"
                         />
                     )}/>
                 </div>
