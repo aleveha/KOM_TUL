@@ -36,13 +36,13 @@
 
 .mainPhoto {
     object-fit: cover;
-    height: calc(100vh - 80px);
+    height: 100%;
     width: 100%;
 }
 
 .mainPhotos {
     position: relative;
-    height: 80vh;
+    height: calc(100vh - 80px);
     width: 100%;
 }
 
@@ -94,6 +94,11 @@
     max-width: 700px;
     width: 100%;
     margin: 0 1rem 1rem 1rem;
+}
+
+.carouselContainer,
+.carouselContainer div {
+    height: 100%;
 }
 
 @media (max-width: 500px) {

@@ -264,8 +264,6 @@ const CreateLinkToInfo = (classNameKey: string, contactInfoValue: string) => {
         <p>{contactInfoValue}</p>)
 }
 
-const EmployeePhoto = React.lazy(() => import('../../Common/EmployeePhoto'));
-
 const GetMainInfo = (person: IEmployee, border?: boolean) => {
     return (
         <div className={"employeeInfo" + (border ? " border" : "")} key={person.name}>
@@ -292,7 +290,13 @@ const GetMainInfo = (person: IEmployee, border?: boolean) => {
                         }}
                     />
                 }>
-                    <EmployeePhoto src={person.photo}/>
+                    <img
+                        src={person.photo}
+                        alt="Employee"
+                        style={{
+                            maxHeight: "350px"
+                        }}
+                    />
                 </Suspense>
             </div>}
         </div>
