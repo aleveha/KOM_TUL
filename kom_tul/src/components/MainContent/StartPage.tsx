@@ -35,7 +35,7 @@ const StartPage = () => {
                         <div className="main-text"><span>Katedra obrábění a montáže</span></div>
                         <div className="main-text"><span>Fakulta strojní TU v Liberci</span></div>
                     </div>
-                    <div className="video-link-container">
+                    {/*<div className="video-link-container">
                         <Button
                             className="video-link"
                             variant="contained"
@@ -49,7 +49,7 @@ const StartPage = () => {
                             onClick={handleVideoOpened}>
                             <span>{language.value === 'CZ' ? 'Přehrat' : 'Play'} video</span>
                         </Button>
-                    </div>
+                    </div>*/}
                 </div>
                 <div className="mainPhotos">
                     <Carousel components={Gallery.map(elem =>
