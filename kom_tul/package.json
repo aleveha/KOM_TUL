@@ -12,16 +12,17 @@
     "@types/history": "^4.7.8",
     "@types/react-router-dom": "^5.1.5",
     "@u-wave/react-youtube": "^0.7.2",
+    "caniuse-lite": "^1.0.30001199",
     "express": "^4.17.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3",
+    "react-scripts": "^4.0.3",
     "react-toastify": "^6.0.9",
     "typescript": "^4.0.2"
   },
   "scripts": {
-    "start": "node server/server.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
