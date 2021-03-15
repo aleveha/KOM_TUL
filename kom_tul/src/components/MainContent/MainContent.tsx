@@ -7,6 +7,7 @@ import Cooperation from "./Pages/Cooperation";
 import Projects from "./Pages/Projects";
 import Laboratories from "./Pages/Laboratories";
 import Education from "./Pages/Education";
+import AllNews from "./AllNews";
 import '../../CSS/Pages.css';
 
 const MainContent = () => {
@@ -20,6 +21,7 @@ const MainContent = () => {
                 <Route path='/education' render={() => (<Education />)}/>
                 <Route path='/laboratories' render={() => (<Laboratories />)}/>
                 <Route path='/cooperation' render={() => (<Cooperation />)}/>
+                <Route path='/news' render={() => (<AllNews />)}/>
                 <Redirect from='/' to='/home' />
             </Switch>
         </div>

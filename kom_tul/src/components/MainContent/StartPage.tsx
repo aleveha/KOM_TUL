@@ -1,15 +1,15 @@
 import * as React from 'react';
 import ActualNews from "./ActualNews";
 import LanguageContext from "../../Context/LanguageContext";
-import {useContext, useState} from "react";
+import { useContext, useState } from "react";
 import MainPhoto1 from '../../img/start_page/1.webp';
 import MainPhoto2 from '../../img/start_page/2.webp';
 import MainPhoto4 from '../../img/start_page/4.webp';
 import MainPhoto8 from '../../img/start_page/8.webp';
 import MainPhoto11 from '../../img/start_page/11.webp';
-import {Backdrop, Button} from "@material-ui/core";
-import Youtube from '@u-wave/react-youtube';
+import { Button } from "@material-ui/core";
 import Carousel from "../Common/Carousel";
+import YoutubePlayer from "../Common/YoutubePlayer";
 
 const Gallery: string[] = [
     MainPhoto1,
@@ -35,7 +35,7 @@ const StartPage = () => {
                         <div className="main-text"><span>Katedra obrábění a montáže</span></div>
                         <div className="main-text"><span>Fakulta strojní TU v Liberci</span></div>
                     </div>
-                    {/*<div className="video-link-container">
+                    <div className="video-link-container">
                         <Button
                             className="video-link"
                             variant="contained"
@@ -49,7 +49,7 @@ const StartPage = () => {
                             onClick={handleVideoOpened}>
                             <span>{language.value === 'CZ' ? 'Přehrat' : 'Play'} video</span>
                         </Button>
-                    </div>*/}
+                    </div>
                 </div>
                 <div className="mainPhotos">
                     <Carousel components={Gallery.map(elem =>
@@ -63,45 +63,13 @@ const StartPage = () => {
                     )}/>
                 </div>
             </div>
-            <YoutubePlayer
+            {openVideo && <YoutubePlayer
                 handleVideoOpened={handleVideoOpened}
                 openVideo={openVideo}
-            />
+            />}
             <ActualNews/>
         </div>
     );
 };
-
-const YoutubePlayer = (props: {
-    openVideo: boolean,
-    handleVideoOpened: () => void
-}) => {
-    const [pauseVideo, setPauseVideo] = useState<boolean>(false);
-
-    const handleVideoClosed = () => {
-        setPauseVideo(true);
-        props.handleVideoOpened();
-    }
-
-    return (
-        <div className="video-container">
-            <Backdrop
-                style={{zIndex: 3}}
-                open={props.openVideo}
-                onClick={handleVideoClosed}
-            >
-                <div>
-                    <Youtube
-                        video="drgC6TCARyc"
-                        width="100%"
-                        height="100%"
-                        paused={pauseVideo}
-                        onPlaying={() => setPauseVideo(false)}
-                    />
-                </div>
-            </Backdrop>
-        </div>
-    );
-}
 
 export default StartPage;

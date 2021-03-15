@@ -16,7 +16,7 @@ const Carousel = (props: {components: JSX.Element[]}) => {
                 index={index}
                 onChangeIndex={handleChangeIndex}
                 ignoreNativeScroll={true}
-                interval={5000}
+                interval={4000}
                 height="100%"
             >
                 {props.components.map(comp => comp)}

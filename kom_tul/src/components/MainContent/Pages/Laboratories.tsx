@@ -159,15 +159,12 @@ const LaboratoryInfo = (props: { laboratory: ILaboratory }) => {
     }
 
     return (
-        <div className="border">
+        <div className="paper border">
             <div className="laboratoryButton">
                 <h2>{props.laboratory.name}</h2>
-                <p>{props.laboratory.description.split(".", 3).map(word =>
-                    <span key={props.laboratory.description.indexOf(word)}> {word}</span>
-                )}<span>...</span></p>
-                {/*{props.laboratory.photos !== undefined && <div className="labPhotos">*/}
-                {/*    <FastLoading photo={props.laboratory.photos[0]} photoCompressed={props.laboratory.photos[1]} imagesClassName="labPhoto"/>*/}
-                {/*</div>}*/}
+                <p>{props.laboratory.description.split(".", 3).map(sentence =>
+                    <span key={props.laboratory.description.indexOf(sentence)}> {sentence}.</span>
+                )}<span>..</span></p>
                 <img
                     src={props.laboratory.photo}
                     alt="labPhoto"
@@ -181,7 +178,7 @@ const LaboratoryInfo = (props: { laboratory: ILaboratory }) => {
                     color="default"
                 >Vice info</Button>
             </div>
-            <Dialog open={laboratoryOpen} className="labDialog">
+            <Dialog open={laboratoryOpen} className="dialog">
                 <DialogTitle>{props.laboratory.name}</DialogTitle>
                 <Divider />
                 <DialogContent className="labDialogContent">

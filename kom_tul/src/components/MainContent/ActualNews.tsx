@@ -1,50 +1,60 @@
 import * as React from 'react';
 import {useContext, useEffect, useState} from "react";
 import LanguageContext from "../../Context/LanguageContext";
-
-interface INews {
-    date: string;
-    name: string;
-}
+import moment from "moment";
+import {Button, CircularProgress} from "@material-ui/core";
+import {Link} from 'react-router-dom';
+import News from "../Common/News";
+import {INews} from "../Common/News";
 
 const ActualNews = () => {
-    const [news, setNews] = useState<Array<INews> | null>(null);
+    const [news, setNews] = useState<Array<INews>>([]);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
     const language = useContext(LanguageContext);
 
     useEffect(() => {
-        let number = 3;
-        if (news !== null) {
-            news.length % 2 === 0 && (number = 2);
-        }
-    }, [news]);
+        getNews();
+    }, []);
+
+    const getNews = () => {
+        fetch('http://localhost:3000/topNews')
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+                setNews(
+                    data.map((row: INews) => {
+                        return {
+                            id: row.id,
+                            date: moment(row.date).format('DD.MM.YYYY'),
+                            name: row.name,
+                            content: row.content
+                        }
+                    })
+                );
+                setIsLoading(false);
+            })
+    }
 
     return (
-        news !== null ? (
+        news !== [] ? (
             <div className="actualNews padding">
-                <h1 className="newsHeader">{language.value === 'CZ' ? "Novinky" : "Actual news"}</h1>
-                <div className="newsBlocks">
-                    {news.map(elem =>
-                        <div className="newsBlock" key={news.indexOf(elem)}>
-                            <div className="newsBlockContentLink">
-                                <div className="newsBlockContent">
-                                    <div className="dateOfPublication">
-                                        <p>{elem.date.replace(/-/g, '.')}</p>
-                                    </div>
-                                    <div className="newsName">
-                                        <h3>{elem.name}</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                </div>
-                <div className="allNews">
-                    <div className="allNewsButton">
-                        <div>
-                            <span>{language.value === 'CZ' ? "Všechny novinky" : "All news"}</span>
-                        </div>
+                <h1>{language.value === 'CZ' ? "Novinky" : "Actual news"}</h1>
+                <News news={news} isLoading={isLoading} />
+                {news.length > 0 ?
+                    <div className="allNews">
+                        <Button
+                            variant="contained"
+                            style={{margin: "1rem auto 0 auto", color: "var(--blue)"}}
+                            component={Link}
+                            to="/news"
+                        >Všechny novinky</Button>
+                    </div> :
+                    !isLoading &&
+                    <div>
+                        <h3 className="bluePar" style={{textAlign: "center"}}>Zadne novinky nejsou</h3>
                     </div>
-                </div>
+                }
             </div>
         ) : null
     );

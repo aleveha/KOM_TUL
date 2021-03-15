@@ -180,7 +180,7 @@
     flex-wrap: wrap;
 }
 
-.laboratories > div {
+.paper {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -190,7 +190,11 @@
     max-width: 500px;
 }
 
-.laboratories > div:hover {
+.paper > div {
+    width: 100%;
+}
+
+.paper:hover {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
 }
 
@@ -203,19 +207,19 @@
     color: var(--blue);
 }
 
-.labDialog h2, h3, h4{
+.dialog h2, h3, h4{
     font-weight: bold;
 }
 
-.labDialog h4 {
+.dialog h4 {
     margin: 1rem 0 0 0 !important;
 }
 
-.labDialog h3 {
+.dialog h3 {
     color: var(--fiolet);
 }
 
-.labDialog h2, h4 {
+.dialog h2, h4 {
     color: var(--blue);
 }
 
