@@ -2,7 +2,7 @@ import * as React from 'react';
 import {useContext, useEffect, useState} from "react";
 import LanguageContext from "../../Context/LanguageContext";
 import moment from "moment";
-import {Button, CircularProgress} from "@material-ui/core";
+import {Button} from "@material-ui/core";
 import {Link} from 'react-router-dom';
 import News from "../Common/News";
 import {INews} from "../Common/News";
@@ -42,7 +42,7 @@ const ActualNews = () => {
                 <h1>{language.value === 'CZ' ? "Novinky" : "Actual news"}</h1>
                 <News news={news} isLoading={isLoading} />
                 {news.length > 0 ?
-                    <div className="allNews">
+                    <div>
                         <Button
                             variant="contained"
                             style={{margin: "1rem auto 0 auto", color: "var(--blue)"}}

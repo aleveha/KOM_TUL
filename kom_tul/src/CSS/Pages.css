@@ -186,8 +186,8 @@
     align-items: flex-start;
     overflow: hidden;
 
-    min-height: 100px;
-    max-width: 500px;
+    width: 60vw;
+    max-width: 400px;
 }
 
 .paper > div {
@@ -195,7 +195,7 @@
 }
 
 .paper:hover {
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px;
 }
 
 .laboratoryButton {
@@ -239,3 +239,55 @@
     width: 100%;
     margin-top: 1rem;
 }
+
+/* All news */
+.allNews {
+    min-height: 100%;
+}
+
+.addNews {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.deleteButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.newsDialogContent p {
+    margin-top: 1rem;
+}
+
+.addNewsDialog .MuiDialog-paper {
+    width: 90vw!important;
+    max-width: 600px!important;
+}
+
+.loginContainer > div {
+    margin: 1rem 0;
+}
+
+/*login*/
+
+.inputContainer p,
+.loginContainer p {
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.form .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginContainer .error {
+    font-size: 0.7rem;
+    color: red!important;
+    margin: 0;
+    text-align: center;
+}
+

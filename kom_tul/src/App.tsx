@@ -121,7 +121,17 @@ const App = () => {
                         </div>
                         <Footer/>
                     </div>
-                    <ToastContainer />
+                    <ToastContainer
+                        position="bottom-center"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                    />
                 </AppContentContext.Provider>
             </PathContext.Provider>
         </LanguageContext.Provider>

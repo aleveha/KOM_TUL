@@ -2,7 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
-const db = require('./queries');
+const newsTable = require('./queriesNews');
+const accountTable = require('./queriesAccount');
 const cors = require('cors');
 
 app.use(bodyParser.json());
@@ -21,23 +22,41 @@ app.get('/', (req, res) => {
 })
 
 app.get('/topNews', (req, res) => {
-    db.getTopNews()
+    newsTable.getTopNews()
         .then(response => res.status(200).send(response))
         .catch(error => res.status(500).send(error));
 });
 
 app.get('/allNews', (req, res) => {
-    db.getAllNews()
+    newsTable.getAllNews()
         .then(response => res.status(200).send(response))
         .catch(error => res.status(500).send(error));
 });
 
 app.post('/addNews', (req, res) => {
-    db.addNews(req.body)
+    newsTable.addNews(req.body)
         .then(response => res.status(200).send(response))
         .catch(error => res.status(500).send(error));
-})
+});
+
+app.post('/deleteNews', (req, res) => {
+    newsTable.deleteNews(req.body)
+        .then(response => res.status(200).send(response))
+        .catch(error => res.status(500).send(error));
+});
+
+app.post('/checkUser', (req, res) => {
+    accountTable.checkUser(req.body)
+        .then(response => res.status(200).send(response))
+        .catch(error => res.status(500).send(error));
+});
+
+app.post('/addUser', (req, res) => {
+    accountTable.addUser(req.body)
+        .then(response => res.status(200).send(response))
+        .catch(error => res.status(500).send(error));
+});
 
 app.listen(port, () => {
     console.log('Server is up on ' + port);
-})
+});

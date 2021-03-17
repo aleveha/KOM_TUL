@@ -15,6 +15,7 @@
 
 .mainContent {
     padding-top: 80px;
+    min-height: calc(100% - 80px);
 }
 
 /*Start Page*/
@@ -116,6 +117,12 @@
     color: var(--fiolet);
 }
 
+.actualNews > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .newsBlocks {
     padding: 1rem 0;
     display: flex;
@@ -135,12 +142,6 @@
 
 .newsDialog p:last-child {
     margin-top: 1rem;
-}
-
-.allNews {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .newsDialog {

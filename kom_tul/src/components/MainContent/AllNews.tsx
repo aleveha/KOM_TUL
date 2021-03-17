@@ -1,17 +1,19 @@
 import React, {useEffect, useState} from 'react';
 import News, {INews} from "../Common/News";
 import moment from "moment";
-import {VpnKey} from "@material-ui/icons";
+import AddNews from "../Common/AddNews";
 
 const AllNews = () => {
     const [news, setNews] = useState<Array<INews>>([]);
     const [isLoading, setIsLoading] = useState<boolean>(true);
+    const [isLogged, setIsLogged] = useState<boolean>(false);
 
     useEffect(() => {
         getAllNews();
     }, []);
 
     const getAllNews = () => {
+        setIsLoading(true);
         fetch('http://localhost:3000/allNews')
             .then(response => {
                 return response.json();
@@ -32,12 +34,19 @@ const AllNews = () => {
     }
 
     return (
-        <div className="padding">
+        <div className="allNews padding">
             <h1 className="mainLabel">Novinky</h1>
-            <News news={news} isLoading={isLoading}/>
-            <div>
-                <VpnKey />
-            </div>
+            <News
+                news={news}
+                getAllNews={getAllNews}
+                isLoading={isLoading}
+                isLogged={isLogged}
+            />
+            <AddNews
+                getAllNews={getAllNews}
+                isLogged={isLogged}
+                setIsLogged={setIsLogged}
+            />
         </div>
     );
 };

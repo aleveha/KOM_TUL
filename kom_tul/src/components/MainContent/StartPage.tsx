@@ -67,7 +67,7 @@ const StartPage = () => {
                 handleVideoOpened={handleVideoOpened}
                 openVideo={openVideo}
             />}
-            <ActualNews/>
+            <ActualNews />
         </div>
     );
 };
