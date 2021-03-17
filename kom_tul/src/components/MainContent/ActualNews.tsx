@@ -22,17 +22,19 @@ const ActualNews = () => {
                 return response.json();
             })
             .then(data => {
-                setNews(
-                    data.map((row: INews) => {
-                        return {
-                            id: row.id,
-                            date: moment(row.date).format('DD.MM.YYYY'),
-                            name: row.name,
-                            content: row.content
-                        }
-                    })
-                );
-                setIsLoading(false);
+                if (!data.name) {
+                    setNews(
+                        data.map((row: INews) => {
+                            return {
+                                id: row.id,
+                                date: moment(row.date).format('DD.MM.YYYY'),
+                                name: row.name,
+                                content: row.content
+                            }
+                        })
+                    );
+                    setIsLoading(false);
+                }
             })
     }
 

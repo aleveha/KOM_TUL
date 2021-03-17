@@ -1,6 +1,10 @@
 import * as React from 'react';
-import {Suspense} from "react";
+import {Suspense, useState} from "react";
 import {CircularProgress} from "@material-ui/core";
+import Dvorackova from '../../../img/profile_photo/Dvorackova.webp';
+import Ledvina from '../../../img/profile_photo/Ledvina.webp';
+import Knap from '../../../img/profile_photo/Knap.webp';
+import Vana from '../../../img/profile_photo/Vana.webp';
 
 export interface IEmployee {
     position?: string,
@@ -44,7 +48,8 @@ const EmployeesObject: IEmployees = {
             phoneNumber: "+420 48 535 3369",
             place: "bud. E1/4.p",
             consultation: "po dohodě",
-            specialization: "metrologie"
+            specialization: "metrologie",
+            photo: Dvorackova
         },
         {
             position: "Zástupce vedoucího katedry pro vědeckou činnost a spolupráci s průmyslem",
@@ -56,17 +61,6 @@ const EmployeesObject: IEmployees = {
             place: "bud. E1/4.p",
             consultation: "po dohodě",
             specialization: "obrábění plastových a kompozitních materiálů"
-        },
-        {
-            position: "Zástupce vedoucího katedry pro vzdělávací a pedagogickou činnost",
-            name: "Jan JERSÁK",
-            status: "doc. Ing.",
-            degree: "CSc.",
-            email: "jan.jersak@tul.cz",
-            phoneNumber: "+420 48 535 3373",
-            place: "bud. E1/4.p",
-            consultation: "po dohodě",
-            specialization: "obrábění kovových materiálů"
         },
         {
             position: "Asistentka vedoucího katedry, sekretariát",
@@ -84,7 +78,8 @@ const EmployeesObject: IEmployees = {
             phoneNumber: "+420 48 535 3393",
             place: "bud. L/1 NP - laboratoř",
             consultation: "po dohodě",
-            specialization: "obrábění kovových, plastových a kompozitních materiálů"
+            specialization: "obrábění kovových, plastových a kompozitních materiálů",
+            photo: Vana
         },
         {
             position: "Vedoucí laboratoře strojírenské metrologie",
@@ -95,7 +90,8 @@ const EmployeesObject: IEmployees = {
             phoneNumber: "+420 48 535 3371",
             place: "bud. E1/4.p",
             consultation: "po dohodě",
-            specialization: "metrologie, obrábění kovových, plastových a kompozitních materiálů"
+            specialization: "metrologie, obrábění kovových, plastových a kompozitních materiálů",
+            photo: Ledvina
         }
     ],
     teachingStaff: {
@@ -117,7 +113,11 @@ const EmployeesObject: IEmployees = {
                 name: "Jan JERSÁK",
                 status: "doc. Ing.",
                 degree: "CSc.",
-                email: "jan.jersak@tul.cz"
+                email: "jan.jersak@tul.cz",
+                phoneNumber: "+420 48 535 3373",
+                place: "bud. E1/4.p",
+                consultation: "po dohodě",
+                specialization: "obrábění kovových materiálů"
             },
             {
                 name: "Miloslav LEDVINA",
@@ -139,7 +139,16 @@ const EmployeesObject: IEmployees = {
     },
     researchers: {
         label: "Vědecko-výzkumní pracovníci",
-        staff: []
+        staff: [
+            {
+                name: "Artur Knap",
+                status: "Bc.",
+                email: "artur.knap@tul.cz",
+                phoneNumber: "+420 48 535 3368",
+                place: "bud. E1/4.p",
+                photo: Knap
+            }
+        ]
     },
     PhD: {
         label: "Doktorandi",
@@ -265,6 +274,7 @@ const CreateLinkToInfo = (classNameKey: string, contactInfoValue: string) => {
 }
 
 const GetMainInfo = (person: IEmployee, border?: boolean) => {
+
     return (
         <div className={"employeeInfo" + (border ? " border" : "")} key={person.name}>
             <div>
@@ -282,67 +292,61 @@ const GetMainInfo = (person: IEmployee, border?: boolean) => {
                     </div>
                 </div>
             </div>
-            {person.photo && <div className="empPhoto positionInfo">
-                <Suspense fallback={
-                    <CircularProgress
-                        style={{
-                            margin: "0 1rem", color: "var(--blue)"
-                        }}
-                    />
-                }>
+            {person.photo ?
+                <div className="empPhoto positionInfo">
                     <img
                         src={person.photo}
                         alt="Employee"
                         style={{
-                            maxHeight: "350px"
+                            maxHeight: "300px"
                         }}
                     />
-                </Suspense>
-            </div>}
+                </div> : null}
         </div>
     )
 }
 
 const Employees = () => {
-    return (
-        <div className="employeesContent padding">
-            {EmployeesObject.mainWorkers.length > 0 &&
-            <div className="mainWorkers">
-                {EmployeesObject.mainWorkers.map(person => GetMainInfo(person, true))}
-            </div>}
-            {EmployeesObject.teachingStaff.staff.length > 0 &&
-            <div className="teachingStaff border">
-                <div className="employeePosition titleSecond">
-                    <p><span>{EmployeesObject.teachingStaff.label}</span></p>
-                </div>
-                {EmployeesObject.teachingStaff.staff.map(person => GetMainInfo(person))}
-            </div>}
-            {EmployeesObject.researchers.staff.length > 0 &&
-            <div className="researchers border">
-                <div className="employeePosition titleSecond">
-                    <p><span>{EmployeesObject.researchers.label}</span></p>
-                </div>
-                {EmployeesObject.researchers.staff.map(person => GetMainInfo(person))}
-            </div>}
-            <div className="PhD border">
-                <div className="employeePosition titleSecond">
-                    <p><span>{EmployeesObject.PhD.label}</span></p>
-                </div>
-                <div className="fullTimeStudy">
+        return (
+            <div className="employeesContent padding">
+                {EmployeesObject.mainWorkers.length > 0 &&
+                <div className="mainWorkers">
+                    {EmployeesObject.mainWorkers.map(person => GetMainInfo(person, true))}
+                </div>}
+                {EmployeesObject.researchers.staff.length > 0 &&
+                <div className="researchers border">
                     <div className="employeePosition titleSecond">
-                        <p><span>{EmployeesObject.PhD.fullTimeStudy.label}</span></p>
+                        <p><span>{EmployeesObject.researchers.label}</span></p>
                     </div>
-                    {EmployeesObject.PhD.fullTimeStudy.staff.map(person => GetMainInfo(person))}
-                </div>
-                <div className="combinedStudy">
+                    {EmployeesObject.researchers.staff.map(person => GetMainInfo(person))}
+                </div>}
+                {EmployeesObject.teachingStaff.staff.length > 0 &&
+                <div className="teachingStaff border">
                     <div className="employeePosition titleSecond">
-                        <p><span>{EmployeesObject.PhD.combinedStudy.label}</span></p>
+                        <p><span>{EmployeesObject.teachingStaff.label}</span></p>
                     </div>
-                    {EmployeesObject.PhD.combinedStudy.staff.map(person => GetMainInfo(person))}
+                    {EmployeesObject.teachingStaff.staff.map(person => GetMainInfo(person))}
+                </div>}
+                <div className="PhD border">
+                    <div className="employeePosition titleSecond">
+                        <p><span>{EmployeesObject.PhD.label}</span></p>
+                    </div>
+                    <div className="fullTimeStudy">
+                        <div className="employeePosition titleSecond">
+                            <p><span>{EmployeesObject.PhD.fullTimeStudy.label}</span></p>
+                        </div>
+                        {EmployeesObject.PhD.fullTimeStudy.staff.map(person => GetMainInfo(person))}
+                    </div>
+                    <div className="combinedStudy">
+                        <div className="employeePosition titleSecond">
+                            <p><span>{EmployeesObject.PhD.combinedStudy.label}</span></p>
+                        </div>
+                        {EmployeesObject.PhD.combinedStudy.staff.map(person => GetMainInfo(person))}
+                    </div>
                 </div>
             </div>
-        </div>
-    );
-};
+        );
+    }
+;
 
 export default Employees;

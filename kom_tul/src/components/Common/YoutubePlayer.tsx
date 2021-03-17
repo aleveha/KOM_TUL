@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {Suspense, useState} from "react";
 import {Backdrop, CircularProgress} from "@material-ui/core";
 import Youtube from "@u-wave/react-youtube";
 import * as React from "react";
@@ -22,24 +22,23 @@ const YoutubePlayer = (props: {
                 open={props.openVideo}
                 onClick={handleVideoClosed}
             >
-                {isLoading &&
                 <div style={{
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
                     margin: "2rem 0"
                 }}>
-                    <CircularProgress style={{color: "white"}} size={70}/>
-                </div>}
-                <div style={isLoading ? {display: "none"} : {display: "unset"}}>
-                    <Youtube
-                        video="drgC6TCARyc"
-                        width="100%"
-                        height="100%"
-                        paused={pauseVideo}
-                        onPlaying={() => setPauseVideo(false)}
-                        onReady={() => setIsLoading(false)}
-                    />
+                    <Suspense fallback={
+                        <CircularProgress style={{color: "white"}} size={70}/>
+                    }>
+                        <Youtube
+                            video="drgC6TCARyc"
+                            width="100%"
+                            height="100%"
+                            paused={pauseVideo}
+                            onPlaying={() => setPauseVideo(false)}
+                        />
+                    </Suspense>
                 </div>
             </Backdrop>
         </div>
