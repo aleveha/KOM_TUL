@@ -30,7 +30,7 @@ interface ILoginForm {
 const AddNewUser = (props: ILoginForm) => {
     const addUser = (value: IUser) => {
         return new Promise(((resolve) => {
-            fetch('http://localhost:3000/addUser', {
+            fetch('http://www.kom.tul.cz/addUser', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

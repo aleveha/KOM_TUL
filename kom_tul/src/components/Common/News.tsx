@@ -61,7 +61,7 @@ const SeparateNews = (props: {
 
     const handleDeleteNews = (value: INews) => {
         return new Promise(resolve => {
-            fetch('http://localhost:3000/deleteNews', {
+            fetch('http://www.kom.tul.cz:3000/deleteNews', {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',

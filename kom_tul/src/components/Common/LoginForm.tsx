@@ -31,7 +31,7 @@ const LoginForm = (props: ILoginForm) => {
 
     const getLoggedIn = (value: IUser) => {
         return new Promise(((resolve) => {
-            fetch('http://localhost:3000/checkUser', {
+            fetch('http://www.kom.tul.cz:3000/checkUser', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
