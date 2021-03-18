@@ -14,7 +14,7 @@ const AllNews = () => {
 
     const getAllNews = () => {
         setIsLoading(true);
-        fetch('http://localhost:3000/allNews')
+        fetch('http://www.kom.tul.cz:3000/allNews')
             .then(response => {
                 return response.json();
             })
