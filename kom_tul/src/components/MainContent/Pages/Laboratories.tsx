@@ -174,9 +174,9 @@ const LaboratoryInfo = (props: { laboratory: ILaboratory }) => {
                 <Button
                     onClick={handleDialogOpen}
                     variant="contained"
-                    style={{margin: "0.6rem auto"}}
+                    style={{margin: "0.6rem auto", backgroundColor: "var(--fiolet)", color: "white"}}
                     color="default"
-                >Vice info</Button>
+                >Více info</Button>
             </div>
             <Dialog open={laboratoryOpen} className="dialog">
                 <DialogTitle>{props.laboratory.name}</DialogTitle>

@@ -1,4 +1,10 @@
 import * as React from 'react';
+import Dvorackova from '../../../img/profile_photo/Dvorackova.webp';
+import Kusa from '../../../img/profile_photo/Kusa.webp';
+import Vrbova from '../../../img/profile_photo/Vrbova.webp';
+import Ledvina from '../../../img/profile_photo/Ledvina.webp';
+import Vana from '../../../img/profile_photo/Vana.webp';
+import Knap from '../../../img/profile_photo/Knap.webp';
 
 export interface IEmployee {
     position?: string,
@@ -43,7 +49,7 @@ const EmployeesObject: IEmployees = {
             place: "bud. E1/4.p",
             consultation: "po dohodě",
             specialization: "metrologie",
-            // photo: Dvorackova
+            photo: Dvorackova
         },
         {
             position: "Zástupce vedoucího katedry pro vědeckou činnost a spolupráci s průmyslem",
@@ -54,7 +60,8 @@ const EmployeesObject: IEmployees = {
             phoneNumber: "+420 48 535 3369",
             place: "bud. E1/4.p",
             consultation: "po dohodě",
-            specialization: "obrábění plastových a kompozitních materiálů"
+            specialization: "obrábění plastových a kompozitních materiálů",
+            photo: Kusa
         },
         {
             position: "Asistentka vedoucího katedry, sekretariát",
@@ -62,7 +69,8 @@ const EmployeesObject: IEmployees = {
             status: "Mgr.",
             email: "tereza.vrbova@tul.cz",
             phoneNumber: "+420 48 535 3361",
-            place: "bud. E1/4.p"
+            place: "bud. E1/4.p",
+            photo: Vrbova
         },
         {
             position: "Vedoucí laboratoře třískových technologií a procesů",
@@ -73,7 +81,7 @@ const EmployeesObject: IEmployees = {
             place: "bud. L/1 NP - laboratoř",
             consultation: "po dohodě",
             specialization: "obrábění kovových, plastových a kompozitních materiálů",
-            // photo: Vana
+            photo: Vana
         },
         {
             position: "Vedoucí laboratoře strojírenské metrologie",
@@ -85,7 +93,7 @@ const EmployeesObject: IEmployees = {
             place: "bud. E1/4.p",
             consultation: "po dohodě",
             specialization: "metrologie, obrábění kovových, plastových a kompozitních materiálů",
-            // photo: Ledvina
+            photo: Ledvina
         }
     ],
     teachingStaff: {
@@ -135,12 +143,12 @@ const EmployeesObject: IEmployees = {
         label: "Vědecko-výzkumní pracovníci",
         staff: [
             {
-                name: "Artur Knap",
+                name: "Artur KNAP",
                 status: "Bc.",
                 email: "artur.knap@tul.cz",
                 phoneNumber: "+420 48 535 3368",
                 place: "bud. E1/4.p",
-                // photo: Knap
+                photo: Knap
             }
         ]
     },
@@ -292,7 +300,7 @@ const GetMainInfo = (person: IEmployee, border?: boolean) => {
                         src={person.photo}
                         alt="Employee"
                         style={{
-                            maxHeight: "300px"
+                            maxHeight: "270px"
                         }}
                     />
                 </div> : null}

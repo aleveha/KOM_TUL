@@ -17,7 +17,7 @@
 
 @media (max-width: 767px) {
     .introPhotos > img {
-        width: 90vw;
+        width: 100%;
         margin: 0.5rem 0;
     }
 
@@ -64,7 +64,7 @@
 
 .empPhoto {
     width: 100%;
-    max-width: 250px;
+    max-width: 270px;
 
     display: flex;
     justify-content: center;
@@ -185,7 +185,7 @@
 .laboratories {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 

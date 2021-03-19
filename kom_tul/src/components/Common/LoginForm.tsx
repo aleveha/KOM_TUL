@@ -119,7 +119,7 @@ const LoginForm = (props: ILoginForm) => {
                                         variant="contained"
                                         style={{margin: "0.5rem", color: "var(--blue)"}}
                                         color="default"
-                                    >Vstopit</Button>
+                                    >Vstoupit</Button>
                                 </div>}
                         </Form>
                     );
