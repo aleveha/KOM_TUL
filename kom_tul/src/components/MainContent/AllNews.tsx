@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import News, {INews} from "../Common/News";
 import moment from "moment";
 import AddNews from "../Common/AddNews";
+import {toast} from "react-toastify";
 
 const AllNews = () => {
     const [news, setNews] = useState<Array<INews>>([]);
@@ -29,6 +30,10 @@ const AllNews = () => {
                         }
                     })
                 );
+                setIsLoading(false);
+            })
+            .catch(() => {
+                toast.error("Chyba serveru");
                 setIsLoading(false);
             })
     }

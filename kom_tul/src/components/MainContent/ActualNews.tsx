@@ -6,6 +6,7 @@ import {Button} from "@material-ui/core";
 import {Link} from 'react-router-dom';
 import News from "../Common/News";
 import {INews} from "../Common/News";
+import {toast} from "react-toastify";
 
 const ActualNews = () => {
     const [news, setNews] = useState<Array<INews>>([]);
@@ -35,6 +36,10 @@ const ActualNews = () => {
                     );
                     setIsLoading(false);
                 }
+            })
+            .catch(() => {
+                toast.error("Chyba serveru")
+                setIsLoading(false);
             })
     }
 

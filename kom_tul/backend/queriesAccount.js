@@ -1,5 +1,7 @@
-const { Pool } = require('pg');
-require('dotenv').config({path: '../.env'});
+const {Pool} = require('pg');
+require('dotenv').config();
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 
 const pool = new Pool({
     user: process.env.DB_USER,
@@ -16,8 +18,11 @@ const checkUser = (body) => {
             `select * from accounts where login='${login}';`,
             (error, result) => {
                 if (error) reject(error);
-                if (result && result.rows && result.rows.length > 0) {
-                    resolve(result.rows[0].password === password);
+                if (result !== undefined && result.rows !== undefined && result.rows.length > 0) {
+                    bcrypt.compare(password, result.rows[0].password, function(err, result) {
+                        console.log(result);
+                        resolve(result);
+                    });
                 } else {
                     resolve(false);
                 }
@@ -29,15 +34,18 @@ const checkUser = (body) => {
 const addUser = (body) => {
     const {login, password} = body;
     return new Promise(((resolve, reject) => {
-        pool.query(
-            `insert into accounts(login, password) values('${login}', '${password}');`,
-            (error, result) => {
-                if (error) reject(error);
-                resolve(true);
-            }
-        );
-    }
-))
+        bcrypt.genSalt(saltRounds, function (err, salt) {
+            bcrypt.hash(password, salt, function (err, hash) {
+                pool.query(
+                    `insert into accounts(login, password) values('${login}', '${hash}');`,
+                    (error, result) => {
+                        if (error) reject(error);
+                        resolve(true);
+                    }
+                );
+            });
+        });
+    }));
 }
 
 module.exports = {

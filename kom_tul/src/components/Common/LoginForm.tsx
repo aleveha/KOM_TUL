@@ -53,13 +53,13 @@ const LoginForm = (props: ILoginForm) => {
                     actions
                 ) => {
                     getLoggedIn(values).then(res => {
-                        if (res) {
+                        if (typeof res === "boolean") {
                             props.setUser(values);
-                            props.setIsLogged(true);
-                            setWrongLogin(false);
-                            toast.success("Povedlo se");
+                            props.setIsLogged(res);
+                            setWrongLogin(!res);
+                            res ? toast.success("Povedlo se") : toast.error("Nepovedlo se");
                         } else {
-                            setWrongLogin(true);
+                            toast.error("Nepovedlo se");
                         }
                         actions.setSubmitting(false);
                     });
@@ -92,7 +92,7 @@ const LoginForm = (props: ILoginForm) => {
 
                             <p className="titleSecond">Heslo</p>
                             <TextField
-                                type="text"
+                                type="password"
                                 name="password"
                                 fullWidth={true}
                                 variant="outlined"

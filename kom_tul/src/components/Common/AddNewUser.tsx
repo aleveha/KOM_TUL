@@ -38,7 +38,7 @@ const AddNewUser = (props: ILoginForm) => {
                 body: JSON.stringify(value),
             })
                 .then(response => response.json())
-                .then(data => resolve(data));
+                .then(data => resolve(data))
         }))
     }
 
