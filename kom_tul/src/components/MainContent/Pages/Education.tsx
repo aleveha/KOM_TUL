@@ -525,7 +525,7 @@ const EducationContent = () => {
     }
 
     return (
-        <div className="educatingContent padding">
+        <div className="educationContent">
             {EducationalPrograms.map(educationProgram => {
                 return (
                     <div className="educationProgram border" key={educationProgram.name}>

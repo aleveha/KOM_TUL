@@ -12,6 +12,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
 import {makeStyles, createStyles} from '@material-ui/core';
+
 type Anchor = 'bottom' | 'right';
 
 const useStyles = makeStyles(() =>
@@ -29,11 +30,7 @@ const useStyles = makeStyles(() =>
 const MobileHeader = () => {
     const classes = useStyles();
     const appContent = useContext(AppContentContext);
-    const path = useContext(PathContext);
     const language = useContext(LanguageContext);
-    const ChangeValue = () => {
-        path.changeValue();
-    }
 
     const anchor = 'bottom';
     const [state, setState] = React.useState({
@@ -66,7 +63,7 @@ const MobileHeader = () => {
                     appContent.value.indexOf(elem) !== 0 && (
                         <div key={elem.name}>
                             <ListItem className="headerTab" key={appContent.value.indexOf(elem)}>
-                                <Link to={elem.link} className="tabName" onClick={() => ChangeValue()}>{elem.name}</Link>
+                                <Link to={elem.link} className="tabName">{elem.name}</Link>
                             </ListItem>
                             <Divider className={classes.divider}/>
                         </div>
@@ -80,7 +77,8 @@ const MobileHeader = () => {
                                autoClose: 3000,
                                position: "bottom-center"
                            });
-                       }}>EN{/*language.value !== 'CZ' ? 'CZ' : 'EN'*/}
+                       }}>
+                        EN{/*{language.value !== 'CZ' ? 'CZ' : 'EN'}*/}
                     </p>
                 </ListItem>
             </List>
@@ -92,7 +90,7 @@ const MobileHeader = () => {
             {
                 <React.Fragment>
                     <Button onClick={toggleDrawer(anchor, true)}>
-                        <MenuIcon fontSize="large" />
+                        <MenuIcon fontSize="large"/>
                     </Button>
                     <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
                         {MenuList(anchor)}

@@ -276,13 +276,12 @@ const CreateLinkToInfo = (classNameKey: string, contactInfoValue: string) => {
 }
 
 const GetMainInfo = (person: IEmployee, border?: boolean) => {
-
     return (
         <div className={"employeeInfo" + (border ? " border" : "")} key={person.name}>
             <div>
                 {person.position &&
                 <div className="employeePosition titleSecond">
-                    <p>{person.position}</p>
+                    <h3>{person.position}</h3>
                 </div>
                 }
                 <div className="positionInfo">
@@ -315,14 +314,14 @@ const Employees = () => {
             {EmployeesObject.researchers.staff.length > 0 &&
             <div className="researchers border">
                 <div className="employeePosition titleSecond">
-                    <p><span>{EmployeesObject.researchers.label}</span></p>
+                    <h3>{EmployeesObject.researchers.label}</h3>
                 </div>
                 {EmployeesObject.researchers.staff.map(person => GetMainInfo(person))}
             </div>}
             {EmployeesObject.teachingStaff.staff.length > 0 &&
             <div className="teachingStaff border">
                 <div className="employeePosition titleSecond">
-                    <p><span>{EmployeesObject.teachingStaff.label}</span></p>
+                    <h3>{EmployeesObject.teachingStaff.label}</h3>
                 </div>
                 {EmployeesObject.teachingStaff.staff.sort((emp1, emp2) =>
                         (emp1.name.split(" ")[1] > emp2.name.split(" ")[1]) ? 1 : -1
@@ -330,17 +329,17 @@ const Employees = () => {
             </div>}
             <div className="PhD border">
                 <div className="employeePosition titleSecond">
-                    <p><span>{EmployeesObject.PhD.label}</span></p>
+                    <h3>{EmployeesObject.PhD.label}</h3>
                 </div>
                 <div className="fullTimeStudy">
                     <div className="employeePosition titleSecond">
-                        <p><span>{EmployeesObject.PhD.fullTimeStudy.label}</span></p>
+                        <h5>{EmployeesObject.PhD.fullTimeStudy.label}</h5>
                     </div>
                     {EmployeesObject.PhD.fullTimeStudy.staff.map(person => GetMainInfo(person))}
                 </div>
                 <div className="combinedStudy">
                     <div className="employeePosition titleSecond">
-                        <p><span>{EmployeesObject.PhD.combinedStudy.label}</span></p>
+                        <h5>{EmployeesObject.PhD.combinedStudy.label}</h5>
                     </div>
                     {EmployeesObject.PhD.combinedStudy.staff.map(person => GetMainInfo(person))}
                 </div>

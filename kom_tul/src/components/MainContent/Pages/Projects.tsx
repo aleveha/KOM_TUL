@@ -150,7 +150,7 @@ const ProjectsContent = () => {
     }
 
     return (
-        <div className="projects padding">
+        <div className="projects">
             <div className="projectsInfo">
                 <div className="solvedProjects projectsGroup">
                     <p className="titleSecond projectsTitle mainLabel">Aktuálně řešené projekty</p>

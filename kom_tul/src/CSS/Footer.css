@@ -4,9 +4,6 @@
 
 .komLogoFooter {
     height: 80px;
-    /*min-height: 60px;*/
-    /*max-height: 80px;*/
-    /*height: calc(var(--vh) * 10);*/
 }
 
 .contactInfoContent {

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import StartPage from "./StartPage";
-import {Route, Switch, Redirect} from "react-router-dom";
+import {Route, Switch, Redirect, useLocation} from "react-router-dom";
 import Department from "./Pages/Department";
 import Employees from "./Pages/Employees";
 import Cooperation from "./Pages/Cooperation";
@@ -9,8 +9,15 @@ import Laboratories from "./Pages/Laboratories";
 import Education from "./Pages/Education";
 import AllNews from "./AllNews";
 import '../../CSS/Pages.css';
+import {useEffect} from "react";
 
 const MainContent = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
     return (
         <div className="mainContent">
             <Switch>
