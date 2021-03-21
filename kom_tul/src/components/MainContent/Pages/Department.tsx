@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {Route, Switch, useRouteMatch} from 'react-router-dom';
-import firstPhoto from '../../../img/department/12.webp';
-import secondPhoto from '../../../img/department/10.webp';
-import thirdPhoto from '../../../img/department/9.webp';
+import firstPhoto from '../../../img/department/1.webp';
+import secondPhoto from '../../../img/department/2.webp';
+import thirdPhoto from '../../../img/department/3.webp';
 
 interface IProfFocus {
     label: string;

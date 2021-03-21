@@ -6,8 +6,8 @@ import {
     Divider,
     DialogTitle, DialogContent
 } from '@material-ui/core';
-import labMetrPhoto from '../../../img/lab_foto/4.webp';
-import labTechPhoto from '../../../img/lab_foto/11.webp';
+import labMetrPhoto from '../../../img/lab_foto/2.webp';
+import labTechPhoto from '../../../img/lab_foto/1.webp';
 
 export interface ILaboratory {
     name: string;

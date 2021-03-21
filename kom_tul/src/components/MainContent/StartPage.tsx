@@ -7,8 +7,6 @@ import MainPhoto2 from '../../img/start_page/2.webp';
 import MainPhoto3 from '../../img/start_page/3.webp';
 import MainPhoto4 from '../../img/start_page/4.webp';
 import MainPhoto5 from '../../img/start_page/5.webp';
-import MainPhoto8 from '../../img/start_page/8.webp';
-import MainPhoto11 from '../../img/start_page/11.webp';
 import { Button } from "@material-ui/core";
 import Carousel from "../Common/Carousel";
 import YoutubePlayer from "../Common/YoutubePlayer";
@@ -18,9 +16,7 @@ const Gallery: string[] = [
     MainPhoto2,
     MainPhoto3,
     MainPhoto4,
-    MainPhoto5,
-    MainPhoto8,
-    MainPhoto11,
+    MainPhoto5
 ]
 
 const StartPage = () => {

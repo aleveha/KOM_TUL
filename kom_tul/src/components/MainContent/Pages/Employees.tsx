@@ -295,13 +295,10 @@ const GetMainInfo = (person: IEmployee, border?: boolean) => {
                 </div>
             </div>
             {person.photo ?
-                <div className="empPhoto positionInfo">
+                <div className="empPhoto">
                     <img
                         src={person.photo}
                         alt="Employee"
-                        style={{
-                            maxHeight: "270px"
-                        }}
                     />
                 </div> : null}
         </div>
@@ -310,7 +307,7 @@ const GetMainInfo = (person: IEmployee, border?: boolean) => {
 
 const Employees = () => {
     return (
-        <div className="employeesContent padding">
+        <div className="employeesContent">
             {EmployeesObject.mainWorkers.length > 0 &&
             <div className="mainWorkers">
                 {EmployeesObject.mainWorkers.map(person => GetMainInfo(person, true))}
