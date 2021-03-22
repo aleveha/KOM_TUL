@@ -1,0 +1,46 @@
+{
+  "header": {
+    "tabs": {
+      "Department": "Katedra",
+      "Employees": "Pracovníci",
+      "Projects": "Projekty",
+      "Education": "Výuka",
+      "Laboratories": "Laboratoře",
+      "Cooperation": "Spolupráce"
+    }
+  },
+  "main": {
+    "startPage": {
+      "depName": "Katedra obrábění a montáže",
+      "facName": "Fakulta strojní TU v Liberci"
+    },
+    "news": {
+      "actualNews": {
+        "title": "Aktuální novinky"
+      },
+      "allNews": {
+
+      },
+      "noNews": "Žádné novinky nejsou"
+    }
+  },
+  "footer": {
+    "contactsLine": {
+      "depName": "Katedra obrábění a montáže",
+      "facName": "Fakulta strojní",
+      "uniName": "Technická univerzita v Liberci"
+    },
+    "address": {
+      "building": "Budova E - 4 patro"
+    },
+    "uniLink": {
+      "name": "Technická univerzita v Liberci"
+    },
+    "facLink": {
+      "name": "Technická univerzita v Liberci",
+      "facName": "Fakulta strojní"
+    },
+    "copyRight": "Copyright © 2020 Katedra obrábění a montáže FS TUL"
+  },
+  "welcome": "Vitame vas"
+}

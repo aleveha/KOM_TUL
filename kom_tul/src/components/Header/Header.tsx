@@ -21,7 +21,7 @@ const Header = () => {
         <header className="header" style={hideShadow ? {} : {boxShadow: "0 0 10px rgba(0,0,0,0.5)"}}>
             <div className="header-content">
                 <Logo />
-                {windowWidth >= 1000 ? <BigHeader /> : <MobileHeader />}
+                {windowWidth >= 1100 ? <BigHeader /> : <MobileHeader />}
             </div>
         </header>
     );

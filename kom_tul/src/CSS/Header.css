@@ -77,14 +77,10 @@
     padding: 0 1%;
     font-size: 1.2rem;
     font-weight: 500;
+    min-width: 55px;
 }
 
-.langButton {
-    background-color: var(--fiolet);
-    color: white;
-}
-
-.langButton:hover {
+.bigHeader .langButton:hover {
     background-color: var(--blue);
     color: white;
     cursor: pointer;

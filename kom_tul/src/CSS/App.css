@@ -115,6 +115,7 @@
 .actualNews h1 {
     text-align: center;
     color: var(--fiolet);
+    line-height: 1;
 }
 
 .actualNews > div {

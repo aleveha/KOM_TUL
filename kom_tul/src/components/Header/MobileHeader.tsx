@@ -1,10 +1,8 @@
 import * as React from 'react';
 import {Link} from 'react-router-dom';
 import {useContext} from "react";
-import PathContext from "../../Context/PathContext";
 import AppContentContext from "../../Context/AppContentContext";
 import LanguageContext from "../../Context/LanguageContext";
-import {toast} from "react-toastify";
 import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
@@ -12,6 +10,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
 import {makeStyles, createStyles} from '@material-ui/core';
+import {useTranslation} from "react-i18next";
 
 type Anchor = 'bottom' | 'right';
 
@@ -31,6 +30,7 @@ const MobileHeader = () => {
     const classes = useStyles();
     const appContent = useContext(AppContentContext);
     const language = useContext(LanguageContext);
+    const { t } = useTranslation();
 
     const anchor = 'bottom';
     const [state, setState] = React.useState({
@@ -55,7 +55,6 @@ const MobileHeader = () => {
         <div
             className="menuList"
             role="presentation"
-            onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <List className={classes.list}>
@@ -63,7 +62,13 @@ const MobileHeader = () => {
                     appContent.value.indexOf(elem) !== 0 && (
                         <div key={elem.name}>
                             <ListItem className="headerTab" key={appContent.value.indexOf(elem)}>
-                                <Link to={elem.link} className="tabName">{elem.name}</Link>
+                                <Link
+                                    to={elem.link}
+                                    className="tabName"
+                                    onClick={toggleDrawer(anchor, false)}
+                                >
+                                    {t(`header.tabs.${elem.name}`)}
+                                </Link>
                             </ListItem>
                             <Divider className={classes.divider}/>
                         </div>
@@ -72,13 +77,9 @@ const MobileHeader = () => {
                 <ListItem className="langButton">
                     <p className="cng-lang"
                        onClick={() => {
-                           language.changeValue(language.value === 'CZ' ? 'EN' : 'CZ');
-                           toast.warn("Změna jazyka ještě není k dispozici.", {
-                               autoClose: 3000,
-                               position: "bottom-center"
-                           });
+                           language.changeValue(language.value === 'cz' ? 'en' : 'cz');
                        }}>
-                        EN{/*{language.value !== 'CZ' ? 'CZ' : 'EN'}*/}
+                        {language.value !== 'cz' ? 'CZ' : 'EN'}
                     </p>
                 </ListItem>
             </List>

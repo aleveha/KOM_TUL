@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import Header from "./components/Header/Header";
 import MainContent from "./components/MainContent/MainContent";
 import Footer from "./components/Footer/Footer";
@@ -8,6 +8,8 @@ import AppContentContext from "./Context/AppContentContext";
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './CSS/App.css';
+import i18n from "./locale/translations/i18n";
+import {useTranslation} from "react-i18next";
 
 interface IAppContent {
     name: string,
@@ -21,37 +23,42 @@ const appContent: Array<IAppContent> = [
         link: '/home'
     },
     {
-        name: 'Katedra',
+        name: 'Department',
         link: '/department'
     },
     {
-        name: 'Pracovníci',
+        name: 'Employees',
         link: '/employees'
     },
     {
-        name: 'Projekty',
+        name: 'Projects',
         link: '/projects'
     },
     {
-        name: 'Výuka',
+        name: 'Education',
         link: '/education'
     },
     {
-        name: 'Laboratoře',
+        name: 'Laboratories',
         link: '/laboratories'
     },
     {
-        name: 'Spolupráce',
+        name: 'Cooperation',
         link: '/cooperation'
     }
 ];
 
 const App = () => {
-    const [appLanguage, setWebLanguage] = useState<string>('CZ');
+    const [appLanguage, setWebLanguage] = useState<string>('cz');
+    const {t} = useTranslation();
 
     const ChangeLanguage = (value: string) => {
         setWebLanguage(value);
     }
+
+    useEffect(() => {
+        i18n.changeLanguage(appLanguage);
+    }, [appLanguage]);
 
     return (
         <LanguageContext.Provider value={{value: appLanguage, changeValue: ChangeLanguage}}>
@@ -73,6 +80,7 @@ const App = () => {
                     pauseOnFocusLoss
                     draggable
                     pauseOnHover
+                    limit={3}
                 />
             </AppContentContext.Provider>
         </LanguageContext.Provider>

@@ -1,0 +1,46 @@
+{
+  "header": {
+    "tabs": {
+      "Department": "Department",
+      "Employees": "Employees",
+      "Projects": "Projects",
+      "Education": "Education",
+      "Laboratories": "Laboratories",
+      "Cooperation": "Cooperation"
+    }
+  },
+  "main": {
+    "startPage": {
+      "depName": "Department of Machining and Assembly",
+      "facName": "Faculty of Mechanical Engineering"
+    },
+    "news": {
+      "actualNews": {
+        "title": "Actual news"
+      },
+      "allNews": {
+
+      },
+      "noNews": "There is no news yet"
+    }
+  },
+  "footer": {
+    "contactsLine": {
+      "depName": "Department of Machining and Assembly",
+      "facName": "Faculty of Mechanical Engineering",
+      "uniName": "Technical University of Liberec"
+    },
+    "address": {
+      "building": "Building E - 4 floor"
+    },
+    "uniLink": {
+      "name": "Technical University in Liberec"
+    },
+    "facLink": {
+      "name": "Technical University of Liberec",
+      "facName": "Faculty of Engineering"
+    },
+    "copyRight": "Copyright © 2020 Department of Machining and Assembly Faculty of Mechanical Engineering Technical University of Liberec"
+  },
+  "welcome": "Welcome"
+}

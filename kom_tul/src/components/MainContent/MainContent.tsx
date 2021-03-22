@@ -1,6 +1,6 @@
 import * as React from 'react';
-import StartPage from "./StartPage";
 import {Route, Switch, Redirect, useLocation} from "react-router-dom";
+import StartPage from "./Pages/StartPage";
 import Department from "./Pages/Department";
 import Employees from "./Pages/Employees";
 import Cooperation from "./Pages/Cooperation";

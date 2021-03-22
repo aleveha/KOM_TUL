@@ -1,17 +1,17 @@
 import * as React from 'react';
-import {useContext, useEffect, useState} from "react";
-import LanguageContext from "../../Context/LanguageContext";
+import {useEffect, useState} from "react";
 import moment from "moment";
 import {Button} from "@material-ui/core";
 import {Link} from 'react-router-dom';
 import News from "../Common/News";
 import {INews} from "../Common/News";
 import {toast} from "react-toastify";
+import {useTranslation} from "react-i18next";
 
 const ActualNews = () => {
     const [news, setNews] = useState<Array<INews>>([]);
     const [isLoading, setIsLoading] = useState<boolean>(true);
-    const language = useContext(LanguageContext);
+    const { t } = useTranslation();
 
     useEffect(() => {
         getNews();
@@ -46,7 +46,7 @@ const ActualNews = () => {
     return (
         news !== [] ? (
             <div className="actualNews padding">
-                <h1>{language.value === 'CZ' ? "Novinky" : "Actual news"}</h1>
+                <h1>{t('main.news.actualNews.title')}</h1>
                 <News news={news} isLoading={isLoading} />
                 {news.length > 0 ?
                     <div>
@@ -59,7 +59,9 @@ const ActualNews = () => {
                     </div> :
                     !isLoading &&
                     <div>
-                        <h3 className="bluePar" style={{textAlign: "center"}}>Zadne novinky nejsou</h3>
+                        <h3 className="bluePar" style={{textAlign: "center"}}>
+                            {t('main.news.noNews')}
+                        </h3>
                     </div>
                 }
             </div>
