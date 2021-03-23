@@ -14,12 +14,440 @@
       "depName": "Katedra obrábění a montáže",
       "facName": "Fakulta strojní TU v Liberci"
     },
+    "department": {
+      "label": "Informace o katedře",
+      "mainInfo": "Katedra obrábění a montáže (KOM) se zabývá teoretickými i praktickými aspekty obrábění kovových i nekovových materiálů. Dále se soustředí na optimalizaci řezného procesu z hlediska řezného nástroje, obráběného materiálu a řezných podmínek při soustružení, frézování, vrtání a broušení. Výzkum je orientován na obráběcí nástroje a procesy, které analyzuje z hlediska obrobitelnosti, optimalizace a využívání procesních kapalin.",
+      "profFocusLabel": [
+        "Hlavní odborné zaměření KOM",
+        "Obrábění kovových a nekovových materiálů",
+        "je rozděleno do následujících základních směrů:"
+      ],
+      "profFocus": [
+        {
+          "label": "Obrábění klasických kovových materiálů",
+          "information": [
+            "Hodnocení technologických charakteristik a spolehlivosti řezných nástrojů",
+            "Řezné podmínky a jejich optimalizace z hlediska řezného nástroje a obráběného materiálu",
+            "Technologické charakteristiky procesních kapalin",
+            "Utváření třísky při obrábění nástroji s definovanou geometrií břitu",
+            "Kvalita povrchu a rozměrová stabilita po obrábění"
+          ]
+        },
+        {
+          "label": "Obrábění nekovových a kompozitních materiálů",
+          "information": [
+            "Řezné podmínky spolu s optimalizací procesu obrábění nekovových a kompozitních materiálů",
+            "Procesní kapaliny pro obrábění nekovových a kompozitních materiálů",
+            "Optimalizace nástrojů s definovanou i nedefinovanou geometrií břitu",
+            "Kvalita povrchu a rozměrová stabilita po obrábění nekovových a kompozitních materiálů"
+          ]
+        },
+        {
+          "label": "Související procesy",
+          "information": [
+            "Analýza a projektování výrobních procesů, jejich optimalizace a modernizace",
+            "Montážní postupy, jejich analýza, návrh a optimalizace",
+            "Strojírenská metrologie - rozměrové charakteristiky, kvalita a jakost povrchu"
+          ]
+        }
+      ],
+      "programLabel": "Pro studenty KOM zajišťuje výuku odborných předmětů v prezenční i kombinované formě studia. Dále nabízí témata závěrečných prací v bakalářském, navazujícím magisterském i doktorském studijním programu:",
+      "programs": [
+        {
+          "label": "Bakalářský studijní program",
+          "content": [
+            {
+              "number": "B0715A270008",
+              "name": "Strojírenství"
+            }
+          ]
+        },
+        {
+          "label": "Navazující magisterský studijní program",
+          "content": [
+            {
+              "number": "N2301",
+              "name": "Strojní inženýrství – Strojírenská technologie a materiály"
+            },
+            {
+              "number": "N0722A270001",
+              "name": "Technologie plastů a kompozitů"
+            }
+          ]
+        },
+        {
+          "label": "Doktorský studijní program",
+          "content": [
+            {
+              "number": "P0788D270002",
+              "name": "Technologie a materiály"
+            }
+          ]
+        }
+      ]
+    },
+    "employees": {
+      "mainWorkers": [
+        {
+          "position": "Vedoucí katedry",
+          "name": "Štěpánka DVOŘÁČKOVÁ",
+          "status": "doc. Ing.",
+          "degree": "Ph.D.",
+          "email": "stepanka.dvorackova@tul.cz",
+          "phoneNumber": "+420 48 535 3369",
+          "place": "bud. E1/4.p",
+          "consultation": "po dohodě",
+          "specialization": "metrologie",
+          "photo": "Dvorackova"
+        },
+        {
+          "position": "Zástupce vedoucího katedry pro vědeckou činnost a spolupráci s průmyslem",
+          "name": "Petr KŮSA",
+          "status": "Ing.",
+          "degree": "Ph.D.",
+          "email": "petr.kusa@tul.cz",
+          "phoneNumber": "+420 48 535 3369",
+          "place": "bud. E1/4.p",
+          "consultation": "po dohodě",
+          "specialization": "obrábění plastových a kompozitních materiálů",
+          "photo": "Kusa"
+        },
+        {
+          "position": "Asistentka vedoucího katedry, sekretariát",
+          "name": "Tereza VRBOVÁ",
+          "status": "Mgr.",
+          "email": "tereza.vrbova@tul.cz",
+          "phoneNumber": "+420 48 535 3361",
+          "place": "bud. E1/4.p",
+          "photo": "Vrbova"
+        },
+        {
+          "position": "Vedoucí laboratoře třískových technologií a procesů",
+          "name": "Martin VÁŇA",
+          "status": "Bc.",
+          "email": "martin.vana@tul.cz",
+          "phoneNumber": "+420 48 535 3393",
+          "place": "bud. L/1 NP - laboratoř",
+          "consultation": "po dohodě",
+          "specialization": "obrábění kovových, plastových a kompozitních materiálů",
+          "photo": "Vana"
+        },
+        {
+          "position": "Vedoucí laboratoře strojírenské metrologie",
+          "name": "Miloslav LEDVINA",
+          "status": "Ing.",
+          "degree": "Ph.D.",
+          "email": "miloslav.ledvina@tul.cz",
+          "phoneNumber": "+420 48 535 3371",
+          "place": "bud. E1/4.p",
+          "consultation": "po dohodě",
+          "specialization": "metrologie, obrábění kovových, plastových a kompozitních materiálů",
+          "photo": "Ledvina"
+        }
+      ],
+      "researchers": {
+        "label": "Vědecko-výzkumní pracovníci",
+        "staff": [
+          {
+            "name": "Artur KNAP",
+            "status": "Bc.",
+            "email": "artur.knap@tul.cz",
+            "phoneNumber": "+420 48 535 3368",
+            "place": "bud. E1/4.p",
+            "photo": "Knap"
+          }
+        ]
+      },
+      "teachingStaff": {
+        "label": "Pedagogičtí pracovníci",
+        "staff": [
+          {
+            "name": "Štěpánka DVOŘÁČKOVÁ",
+            "status": "doc. Ing.",
+            "degree": "Ph.D.",
+            "email": "stepanka.dvorackova@tul.cz"
+          },
+          {
+            "name": "Petr KŮSA",
+            "status": "Ing.",
+            "degree": "Ph.D.",
+            "email": "petr.kusa@tul.cz"
+          },
+          {
+            "name": "Jan JERSÁK",
+            "status": "doc. Ing.",
+            "degree": "CSc.",
+            "email": "jan.jersak@tul.cz",
+            "phoneNumber": "+420 48 535 3373",
+            "place": "bud. E1/4.p",
+            "consultation": "po dohodě",
+            "specialization": "obrábění kovových materiálů"
+          },
+          {
+            "name": "Miloslav LEDVINA",
+            "status": "Ing.",
+            "degree": "Ph.D.",
+            "email": "miloslav.ledvina@tul.cz"
+          },
+          {
+            "name": "Alexey POPOV",
+            "status": "prof. Ing.",
+            "degree": "DrSc.",
+            "email": "alexey.popov@tul.cz",
+            "phoneNumber": "+420 48 535 3370",
+            "place": "bud. E1/4.p",
+            "consultation": "po dohodě",
+            "specialization": "obrábění kovových materiálů"
+          }
+        ]
+      },
+      "PhD": {
+        "label": "Doktorandi",
+        "fullTimeStudy": {
+          "label": "Prezenční studium",
+          "staff": [
+            {
+              "name": "Mikhail KHRAMENKOV",
+              "status": "Ing.",
+              "email": "mikhail.khramenkov@tul.cz",
+              "phoneNumber": "+420 48 535 3368",
+              "place": "bud. E1/4.p"
+            }
+          ]
+        },
+        "combinedStudy": {
+          "label": "Kombinované studium",
+          "staff": [
+            {
+              "name": "Iuliia KRASNIKOVA",
+              "status": "Ing.",
+              "email": "iuliia.krasnikova@tul.cz"
+            },
+            {
+              "name": "Sergei BABAK",
+              "status": "Ing.",
+              "email": "sergei.babak@tul.cz"
+            },
+            {
+              "name": "Tomáš KOZLOK",
+              "status": "Ing.",
+              "email": "tkozlok@tosvarnsdorf.cz"
+            }
+          ]
+        }
+      },
+      "labels": {
+        "email": "E-mail:",
+        "phoneNumber": "Telefon:",
+        "place": "Kancelář:",
+        "consultation": "Konzultace:",
+        "specialization": "Zaměření:"
+      }
+    },
+    "projects": {
+      "solvedProjects": [
+        {
+          "name": "Výzkum koncových měrek z hlediska teplotní roztažnosti a nestandardního složení materiálu",
+          "number": "TJ02000175",
+          "solvingTerm": "2019-2021",
+          "provider": "Technologická agentura České republiky (TA ČR)",
+          "program": "Program na podporu aplikovaného výzkumu ZÉTA",
+          "solver": "Český metrologický institut, Ing. Eva Tyralíková",
+          "coSolver": "Technická univerzita v Liberci / Fakulta strojní / Katedra obrábění a montáže, Ing. Miloslav Ledvina, Ph.D.",
+          "link": "https://www.rvvi.cz/cep?s=jednoduche-vyhledavani&ss=detail&n=0&h=TJ02000175"
+        },
+        {
+          "name": "Studium a hodnocení procesů obrábění se zaměřením na nástroj a řezné podmínky",
+          "number": "21282",
+          "solvingTerm": "2019-2021",
+          "provider": "Ministerstvo školství mládeže a tělovýchovy (Studentská grantová soutěž FS TUL)",
+          "solver": "Ing. Iuliia Krasnikova",
+          "link": "http://www.fs.tul.cz/fsadmin/soubory/fs/Files/SGS/2019_Studentska_grantova_soutez.pdf"
+        }
+      ],
+      "projectsArchive": [
+        {
+          "name": "Nové systémy pro kontrolu délky koncových měrek a vyhodnocení kvality jejich povrchů",
+          "number": "TA03010663",
+          "solvingTerm": "2013 - 2016",
+          "program": "Program na podporu aplikovaného výzkumu a experimentálního vývoje ALFA  (2011 - 2019)",
+          "provider": "Technologická agentura České republiky",
+          "solver": "Ústav přístrojové techniky AV ČR, v.v.i., Ing. Ondřej Číp, Ph.D.",
+          "coSolver": "Technická univerzita v Liberci / Fakulta strojní, doc. Ing. Štěpánka Dvořáčková, Ph.D., Český metrologický institut, Ing. František Dvořáček, MESING, spol. s r.o., Ing. Jan Kůr",
+          "link": "https://www.rvvi.cz/cep?s=jednoduche-vyhledavani&ss=detail&n=0&h=TA03010663"
+        },
+        {
+          "name": "Aplikovaný multioborový výzkum a vývoj progresivních způsobů chlazení u technologických procesů",
+          "number": "TA03010492",
+          "solvingTerm": "2013-2015",
+          "program": "Program na podporu aplikovaného výzkumu a experimentálního vývoje ALFA  (2011 - 2019)",
+          "provider": "Technologická agentura České republiky",
+          "solver": "Technická univerzita v Liberci / Fakulta strojní",
+          "coSolver": "GDK spol. s.r.o., KOH-I-NOOR PONAS s.r.o., KSM Castings CZ a.s.",
+          "link": "https://www.rvvi.cz/cep?s=rozsirene-vyhledavani&ss=detail&n=0&h=TA03010492"
+        },
+        {
+          "name": "Ekologické obráběcí kapaliny nové generace",
+          "number": "TA02021332",
+          "solvingTerm": "2012-2014",
+          "provider": "Technologická agentura České republiky",
+          "program": "Program na podporu aplikovaného výzkumu a experimentálního vývoje ALFA  (2011 - 2019)",
+          "solver": "PARAMO, a.s., Ing. Jan Jehlička",
+          "coSolver": "Technická univerzita v Liberci / Fakulta strojní, doc. Ing. Jan Jersák, CSc.",
+          "link": "https://www.rvvi.cz/cep?s=jednoduche-vyhledavani&ss=detail&n=0&h=TA02021332"
+        }
+      ],
+      "labels": {
+        "projectBlock": {
+          "name": "Název projektu:",
+          "number": "Označení projektu:",
+          "solvingTerm": "Období řešení projektu:",
+          "provider": "Poskytovatel:",
+          "program": "Program:",
+          "solver": "Řešitel projektu:",
+          "coSolver": "Spoluřešitel:",
+          "recipient": "Příjemce:",
+          "mainRecipient": "Hlavní příjemce:",
+          "link": "Odkaz na projekt"
+        },
+        "labels": [
+          "Aktuálně řešené projekty",
+          "Archiv VaV projektů"
+        ]
+      }
+    },
+    "laboratories": [
+      {
+        "name": "Laboratoř třískových technologií a procesů",
+        "description": "Laboratoř třískových technologií a procesů vytváří technické zázemí pro řešení výzkumných a vývojových úkolů z oblasti obrábění kovů, plastů i kompozitních materiálů. Zabývá se teoretickými i praktickými aspekty obrábění se zaměřením na řezné nástroje, technologickou analýzu i využití procesních kapalin. Jedním z hlavních cílů je nabídka služeb spojená s optimalizací řezného procesu z hlediska nástroje, obráběného materiálu i řezných podmínek. Laboratoř je zaměřena zejména na technologii soustružení, frézování, vrtání a broušení.",
+        "specialization": [
+          "specifikace a hodnocení technologických charakteristik a spolehlivosti řezných nástrojů",
+          "definice řezných podmínek a jejich optimalizace z hlediska řezného nástroje a obráběného materiálu",
+          "hodnocení technologických charakteristik procesních kapalin",
+          "analýza utváření třísky při obrábění nástroji s definovanou geometrií břitu",
+          "hodnocení kvality povrchu a rozměrové stability strojní součásti po obrábění"
+        ],
+        "equipment": [
+          {
+            "label": "Strojní vybavení",
+            "value": [
+              "soustruhy - CNC soustruhy DMG MORI CLX 350 a CHEVALIER FLC 400, SU 50/1500. Velikost obrobku až Ø 320 - 530 mm",
+              "frézky - CNC frézka DMG MORI CMX 600, FNG 32. Velikost obrobku až 600 x 560 x 510 mm",
+              "vrtačka VS40 sprint",
+              "brusky - hrotová bruska USR 500 N, BPH 320A, BPH 20, EBN 2-C, BN 102",
+              "pila - PILOUS AGR 300+H.F."
+            ]
+          },
+          {
+            "label": "Zařízení a měřicí systémy",
+            "value": [
+              "piezoelektrický dynamometr KISTLER 9265 B",
+              "tenzometrický dvousložkový dynamometr pro vrtání",
+              "mikromazací systém Accu-Lube",
+              "dynamický vyvažovací systém SBS",
+              "systém pro monitorizaci procesu rovinného broušení",
+              "třífázový analyzátor výkonu DW – 6092",
+              "systém pro měření teploty při obrábění"
+            ]
+          }
+        ],
+        "technologies": [
+          {
+            "label": "Řezné nástroje",
+            "value": [
+              "Návrh a optimalizace geometrie řezných nástrojů",
+              "hodnocení trvanlivosti a spolehlivosti řezných nástrojů",
+              "hodnocení materiálů pro nástroje a analýza jejich aplikací"
+            ]
+          },
+          {
+            "label": "Obráběné materiály (Kovy, plasty, kompozity)",
+            "value": [
+              "zkoušky obrobitelnosti",
+              "analýza a hodnocení těžkoobrobitelných materiálů",
+              "hodnocení objemového součinitele třísek",
+              "hodnocení integrity povrchu obrobku"
+            ]
+          },
+          {
+            "label": "Řezné podmínky",
+            "value": [
+              "definice, návrh, hodnocení a optimalizace řezných podmínek při obrábění",
+              "analýza a hodnocení vlivu řezného prostředí",
+              "hodnocení procesních kapalin – antiadhezní schopnost, ulpívání, aj"
+            ]
+          },
+          {
+            "label": "Monitorizace technologických parametrů",
+            "value": [
+              "hodnocení technologických parametrů – řezná síla, teplota, deformace, vibrace, aj",
+              "výzkum a vývoj v oblasti inteligentního obrábění"
+            ]
+          }
+        ],
+        "photo": "labTechPhoto"
+
+      },
+      {
+        "name": "Laboratoř strojírenské metrologie",
+        "description": "Laboratoř strojírenské metrologie disponuje moderním vybavením pro měření geometrických vlastností strojních součástí. Cílem laboratoře je vytvoření nabídky komplexních služeb zejména v oblasti měření délek a úhlů (1D, 2D, 3D). Dále je vybavena pro přesné měření parametrů drsnosti povrchu dotykovou metodou dle ČSN EN ISO 4287 a dalších norem. Pro bezdotykové měření parametrů drsnosti povrchu je laboratoř vybavena konfokálním mikroskopem a 3D laserovým bezkontaktním profiloměrem. Součástí nabídky je analýza vlastností povrchové vrstvy digitálním analyzátorem Barkhausenova šumu. Pro měření fyzikálních veličin pevných látek je laboratoř vybavena termomechanickým analyzátorem.",
+        "specialization": [
+          "hodnocení parametrů drsnosti povrchu a křivek materiálového podílu",
+          "nedestruktivní a rychlá kontrola jakosti a kvality povrchu",
+          "nedestruktivní a rychlá kontrola podpovrchových vad u feromagnetických strojních součástí",
+          "měření délkových rozměrů dotykovým i bezdotykovým způsobem",
+          "měření rovinných a prostorových úhlů dotykovým i bezdotykovým způsobem",
+          "měření teplotní roztažnosti"
+        ],
+        "equipment": [
+          {
+            "value": [
+              "profilometr Mitutoyo Surftest SV-2000N2",
+              "konfokální mikroskop a 3D laserový bezkontaktní profiloměr KEYENCE VK-X1100",
+              "digitální analyzátor Barkhausenova šumu MicroScan 600-1",
+              "souřadnicový měřicí stroj Zeiss Prismo 5",
+              "termomechanický analyzátor TMA PT-1000LT",
+              "systém pro měření teploty při obrábění",
+              "univerzální mikroskop Zeiss",
+              "profilprojektor"
+            ]
+          }
+        ],
+        "technologies": [
+          {
+            "label": "Měření délek a úhlů",
+            "value": [
+              "dotykové měření délkových a úhlových rozměrů součástí do rozměru max. 800 × 1200 × 500 mm",
+              "bezdotykové měření délkových a úhlových rozměrů součástí do rozměru max. 100 × 200 × 300 mm"
+            ]
+          },
+          {
+            "label": "Topografie povrchu strojních součástí (Kontaktní i bezkontaktní měření jakosti povrchu)",
+            "value": [
+              "hodnocení parametrů a křivek drsnosti povrchu",
+              "analýza hloubky vrypů event. dalších povrchových vad",
+              "přesné analýzy komplikovaných tvarových ploch",
+              "3D měření parametrů drsnosti povrchu (drážky, závity, ozubená kola aj.) pro kovové, nekovové i elastické součásti",
+              "analýza tloušťky nanesených povlaků"
+            ]
+          },
+          {
+            "label": "Analýza vlastností povrchové vrstvy strojních součástí",
+            "value": [
+              "detekce poruch a trhlinek",
+              "hodnocení vlivu materiálu, technologie obrábění a řezných podmínek na vlastnosti povrchové vrstvy",
+              "hodnocení anomálií vyvolaných změnami zbytkového napětí, tvrdosti a mikrostruktury"
+            ]
+          }
+        ],
+        "photo": "labMetrPhoto"
+      }
+    ],
     "news": {
       "actualNews": {
         "title": "Aktuální novinky"
       },
       "allNews": {
-
       },
       "noNews": "Žádné novinky nejsou"
     }
@@ -41,6 +469,5 @@
       "facName": "Fakulta strojní"
     },
     "copyRight": "Copyright © 2020 Katedra obrábění a montáže FS TUL"
-  },
-  "welcome": "Vitame vas"
+  }
 }

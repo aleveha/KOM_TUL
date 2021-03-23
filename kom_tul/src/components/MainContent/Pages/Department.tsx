@@ -3,6 +3,7 @@ import {Route, Switch, useRouteMatch} from 'react-router-dom';
 import firstPhoto from '../../../img/department/1.webp';
 import secondPhoto from '../../../img/department/2.webp';
 import thirdPhoto from '../../../img/department/3.webp';
+import {useTranslation} from "react-i18next";
 
 interface IProfFocus {
     label: string;
@@ -20,75 +21,17 @@ interface IProgram {
 }
 
 const DepartmentContent = () => {
-    const mainInfo: string = "Katedra obrábění a montáže (KOM) se zabývá teoretickými i praktickými aspekty obrábění kovových i nekovových materiálů. Dále se soustředí na optimalizaci řezného procesu z hlediska řezného nástroje, obráběného materiálu a řezných podmínek při soustružení, frézování, vrtání a broušení. Výzkum je orientován na obráběcí nástroje a procesy, které analyzuje z hlediska obrobitelnosti, optimalizace a využívání procesních kapalin.";
-    const professionalFocusLabel: Array<string> = ["Hlavní odborné zaměření KOM", "Obrábění kovových a nekovových materiálů", "je rozděleno do následujících základních směrů:"];
-    const professionalFocus: Array<IProfFocus> = [
-        {
-            label: "Obrábění klasických kovových materiálů",
-            information: [
-                "Hodnocení technologických charakteristik a spolehlivosti řezných nástrojů",
-                "Řezné podmínky a jejich optimalizace z hlediska řezného nástroje a obráběného materiálu",
-                "Technologické charakteristiky procesních kapalin",
-                "Utváření třísky při obrábění nástroji s definovanou geometrií břitu",
-                "Kvalita povrchu a rozměrová stabilita po obrábění"
-            ]
-        },
-        {
-            label: "Obrábění nekovových a kompozitních materiálů",
-            information: [
-                "Řezné podmínky spolu s optimalizací procesu obrábění nekovových a kompozitních materiálů",
-                "Procesní kapaliny pro obrábění nekovových a kompozitních materiálů",
-                "Optimalizace nástrojů s definovanou i nedefinovanou geometrií břitu",
-                "Kvalita povrchu a rozměrová stabilita po obrábění nekovových a kompozitních materiálů"
-            ]
-        },
-        {
-            label: "Související procesy",
-            information: [
-                "Analýza a projektování výrobních procesů, jejich optimalizace a modernizace",
-                "Montážní postupy, jejich analýza, návrh a optimalizace",
-                "Strojírenská metrologie - rozměrové charakteristiky, kvalita a jakost povrchu"
-            ]
-        }
-    ];
-    const programsLabel: string = "Pro studenty KOM zajišťuje výuku odborných předmětů v prezenční i kombinované formě studia. Dále nabízí témata závěrečných prací v bakalářském, navazujícím magisterském i doktorském studijním programu:";
-    const programs: Array<IPrograms> = [
-        {
-            label: "Bakalářský studijní program",
-            content: [
-                {
-                    number: "B0715A270008",
-                    name: "Strojírenství"
-                }
-            ]
-        },
-        {
-            label: "Navazující magisterský studijní program",
-            content: [
-                {
-                    number: "N2301",
-                    name: "Strojní inženýrství – Strojírenská technologie a materiály"
-                },
-                {
-                    number: "N0722A270001",
-                    name: "Technologie plastů a kompozitů"
-                }
-            ]
-        },
-        {
-            label: "Doktorský studijní program",
-            content: [
-                {
-                    number: "P0788D270002",
-                    name: "Technologie a materiály"
-                }
-            ]
-        }
-    ];
+    const {t} = useTranslation();
+
+    const mainInfo: string = t("main.department.mainInfo");
+    const professionalFocusLabel: Array<string> = t("main.department.profFocusLabel", {returnObjects: true});
+    const professionalFocus: Array<IProfFocus> = t('main.department.profFocus', {returnObjects: true});
+    const programsLabel: string = t("main.department.programLabel");
+    const programs: Array<IPrograms> = t("main.department.programs", {returnObjects: true});
 
     return (
         <div className="department">
-            <h1 className="mainLabel padding">Informace o katedře</h1>
+            <h1 className="mainLabel padding">{t("main.department.label")}</h1>
             <div className="departmentContent padding">
                 <div className="departmentInfo">
                     <div className="introPhotos">

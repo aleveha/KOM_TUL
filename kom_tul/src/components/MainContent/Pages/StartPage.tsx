@@ -1,7 +1,6 @@
 import * as React from 'react';
 import ActualNews from "../ActualNews";
-import LanguageContext from "../../../Context/LanguageContext";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import MainPhoto1 from '../../../img/start_page/1.webp';
 import MainPhoto2 from '../../../img/start_page/2.webp';
 import MainPhoto3 from '../../../img/start_page/3.webp';
