@@ -9,15 +9,15 @@ import * as yup from 'yup';
 import {INews} from "./News";
 import moment from "moment";
 import {toast} from "react-toastify";
+import {useTranslation} from "react-i18next";
 
 const InputNewsSchema = yup.object().shape({
     name: yup.string().min(3, "Too short").max(250, "Too long").required("Required"),
     content: yup.string().min(3, "Too short").max(3000, "Too long").required("Required")
 });
 
-const InputNewsForm = (props: {
-    getAllNews: () => void
-}) => {
+const InputNewsForm = (props: { getAllNews: () => void }) => {
+    const {t} = useTranslation();
     const [news, setNews] = useState<INews>({date: "", name: "", content: ""});
 
     const addNews = (values: INews) => {
@@ -43,9 +43,9 @@ const InputNewsForm = (props: {
                     addNews({...values, date: moment().format('YYYY.MM.DD')})
                         .then(res => {
                             if (typeof res === "boolean") {
-                                toast.success("Ulozeno");
+                                toast.success(t("main.news.addNews.toast.success"));
                             } else {
-                                toast.error("Neco se nepovedlo!");
+                                toast.error(t("main.news.addNews.toast.error"));
                             }
                             setNews({date: "", name: "", content: ""});
                             actions.resetForm();
@@ -65,7 +65,7 @@ const InputNewsForm = (props: {
                     } = props;
                     return (
                         <Form className="form">
-                            <p className="titleSecond">Nazev novinky</p>
+                            <p className="titleSecond">{t("main.news.addNews.newsName")}</p>
                             <TextField
                                 type="text"
                                 name="name"
@@ -80,7 +80,7 @@ const InputNewsForm = (props: {
                                 error={!!(errors.name && touched.name)}
                             />
 
-                            <p className="titleSecond">Obsah novinky</p>
+                            <p className="titleSecond">{t("main.news.addNews.newsContent")}</p>
                             <TextField
                                 type="text"
                                 name="content"
@@ -110,7 +110,7 @@ const InputNewsForm = (props: {
                                         variant="contained"
                                         style={{margin: "0.5rem", color: "var(--blue)"}}
                                         color="default"
-                                    >Nahrat</Button>
+                                    >{t("main.news.addNews.upload")}</Button>
                                 </div>}
                         </Form>
                     );

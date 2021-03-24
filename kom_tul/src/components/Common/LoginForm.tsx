@@ -7,6 +7,7 @@ import * as yup from 'yup';
 import {Button, CircularProgress, TextField} from "@material-ui/core";
 import React, {useState} from "react";
 import {toast} from "react-toastify";
+import {useTranslation} from "react-i18next";
 
 export interface IUser {
     login: string,
@@ -26,6 +27,7 @@ interface ILoginForm {
 }
 
 const LoginForm = (props: ILoginForm) => {
+    const {t} = useTranslation();
     const {login, password} = props.user;
     const [wrongLogin, setWrongLogin] = useState<boolean>(false);
 
@@ -57,9 +59,11 @@ const LoginForm = (props: ILoginForm) => {
                             props.setUser(values);
                             props.setIsLogged(res);
                             setWrongLogin(!res);
-                            res ? toast.success("Povedlo se") : toast.error("Nepovedlo se");
+                            res ?
+                                toast.success(t("main.news.addNews.toast.success")) :
+                                toast.error(t("main.news.addNews.toast.error"));
                         } else {
-                            toast.error("Nepovedlo se");
+                            toast.error(t("main.news.addNews.toast.error"));
                         }
                         actions.setSubmitting(false);
                     });
@@ -76,7 +80,7 @@ const LoginForm = (props: ILoginForm) => {
                     } = props;
                     return (
                         <Form className="form">
-                            <p className="titleSecond">Uzivatelske jmeno</p>
+                            <p className="titleSecond">{t("main.news.addNews.login")}</p>
                             <TextField
                                 type="text"
                                 name="login"
@@ -90,7 +94,7 @@ const LoginForm = (props: ILoginForm) => {
                                 error={!!(errors.login && touched.login)}
                             />
 
-                            <p className="titleSecond">Heslo</p>
+                            <p className="titleSecond">{t("main.news.addNews.password")}</p>
                             <TextField
                                 type="password"
                                 name="password"
@@ -119,7 +123,7 @@ const LoginForm = (props: ILoginForm) => {
                                         variant="contained"
                                         style={{margin: "0.5rem", color: "var(--blue)"}}
                                         color="default"
-                                    >Vstoupit</Button>
+                                    >{t("dialog.logIn")}</Button>
                                 </div>}
                         </Form>
                     );

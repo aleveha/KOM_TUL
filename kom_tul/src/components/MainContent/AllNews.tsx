@@ -3,8 +3,10 @@ import News, {INews} from "../Common/News";
 import moment from "moment";
 import AddNews from "../Common/AddNews";
 import {toast} from "react-toastify";
+import {useTranslation} from "react-i18next";
 
 const AllNews = () => {
+    const {t} = useTranslation();
     const [news, setNews] = useState<Array<INews>>([]);
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [isLogged, setIsLogged] = useState<boolean>(false);
@@ -40,7 +42,7 @@ const AllNews = () => {
 
     return (
         <div className="allNews padding">
-            <h1 className="mainLabel">Novinky</h1>
+            <h1 className="mainLabel">{t("main.news.allNews.title")}</h1>
             <News
                 news={news}
                 getAllNews={getAllNews}

@@ -316,12 +316,184 @@
         ]
       }
     },
+    "laboratories": {
+      "labs": [
+        {
+          "name": "Laboratory of chip technologies and processes",
+          "description": "The laboratory of chip technologies and processes creates a technical background for solving research and development tasks in machining metals, plastics, and composite materials. It deals with machining theoretical and practical aspects with a focus on cutting tools, technical analysis, and the use of process fluids. One of the main goals is the offer of services associated with optimizing the cutting process in terms of tools, machined material, and cutting conditions. The laboratory is mainly focused on the technology of turning, milling, drilling, and grinding.",
+          "specialization": [
+            "specification and evaluation of technical characteristics and reliability of cutting tools",
+            "definition of cutting conditions and their optimization in terms of a cutting tool and machined material",
+            "technological aspects assessment of process fluids",
+            "chip formation analysis when machining an instrument with a defined cutting edge geometry",
+            "evaluation of the surface quality and dimensional stability of the machine part after machining"
+          ],
+          "equipment": [
+            {
+              "label": "Machinery equipment",
+              "value": [
+                "lathes - CNC lathes DMG MORI CLX 350 a CHEVALIER FLC 400, SU 50/1500. Workpiece size až Ø 320 - 530 mm",
+                "milling machines - CNC milling machines DMG MORI CMX 600, FNG 32. Workpiece size až 600 x 560 x 510 mm",
+                "drill VS40 sprint",
+                "grinding machines - center grinding machine USR 500 N, BPH 320A, BPH 20, EBN 2-C, BN 102",
+                "saw  - PILOUS AGR 300+H.F."
+              ]
+            },
+            {
+              "label": "Equipment and measuring systems",
+              "value": [
+                "piezoelectric dynamometer KISTLER 9265 B",
+                "strain gauge two-component dynamometer for drilling",
+                "Accu-Lube micro lubrication system",
+                "SBS dynamic balancing system",
+                "system for monitoring the surface grinding process",
+                "three-phase power analyzer  DW – 6092",
+                "method for measuring the temperature during machining"
+              ]
+            }
+          ],
+          "technologies": [
+            {
+              "label": "Cutting tools",
+              "value": [
+                "design and optimization of cutting tool geometry",
+                "evaluation of durability and reliability of cutting tools",
+                "evaluation of materials for tools and analysis of their applications"
+              ]
+            },
+            {
+              "label": "Machined materials (Metals, plastics, composites)",
+              "value": [
+                "machinability tests",
+                "analysis and evaluation of difficult-to-machine materials",
+                "assessment of the volume coefficient of chips",
+                "evaluation of workpiece surface integrity"
+              ]
+            },
+            {
+              "label": "Cutting conditions",
+              "value": [
+                "definition, design, evaluation, and optimization of cutting conditions during machining",
+                "analysis and assessment of the influence of the cutting environment",
+                "evaluation of process fluids - anti-adhesion ability, adhesion, etc."
+              ]
+            },
+            {
+              "label": "Monitoring of technological parameters",
+              "value": [
+                "evaluation of technical parameters - cutting force, temperature, deformation, vibration, etc.",
+                "research and development in the field of intelligent machining"
+              ]
+            }
+          ],
+          "photo": "labTechPhoto"
+        },
+        {
+          "name": "Laboratory of Engineering Metrology",
+          "description": "The Laboratory of Engineering Metrology has modern equipment for measuring the geometric properties of machine parts. The laboratory aims to create a range of comprehensive services, especially in measuring lengths and angles (1D, 2D, 3D). It is also equipped for accurate measurement of surface roughness parameters by touch method according to ČSN EN ISO 4287 and other standards. For non-contact measurement of surface roughness parameters, the laboratory is equipped with a confocal microscope and a 3D laser non-contact profilometer. Part of the offer is the analysis of the surface layer's properties by a digital Barkhausen noise analyzer. The laboratory is equipped with a thermomechanical analyzer for measuring the physical quantities of solids.",
+          "specialization": [
+            "evaluation of surface roughness parameters and material fraction curves",
+            "non-destructive and rapid quality control and surface quality",
+            "non-destructive and immediate inspection of subsurface defects in ferromagnetic machine parts",
+            "measuring length dimensions by contact and non-contact method",
+            "measurement of plane and spatial angles by tactile and non-tactile methods",
+            "measurement of thermal expansion"
+          ],
+          "equipment": [
+            {
+              "label": "All equipment",
+              "value": [
+                "Mitutoyo Surftest SV-2000N2 profilometer",
+                "KEYENCE VK-X1100 confocal microscope and 3D laser non-contact profiler",
+                "Barkhausen Noise Digital Analyzer MicroScan 600-1",
+                "Zeiss Prismo 5 coordinate measuring machine",
+                "thermomechanical analyzer TMA PT-1000LT",
+                "system for measuring the temperature during machining",
+                "Zeiss universal microscope",
+                "profile projector"
+              ]
+            }
+          ],
+          "technologies": [
+            {
+              "label": "Measurement of lengths and angles",
+              "value": [
+                "tactile measurement of length and angular dimensions of components up to a maximum size of 800 × 1200 × 500 mm",
+                "non-contact measurement of length and angular dimensions of parts up to a maximum height of 100 × 200 × 300 mm"
+              ]
+            },
+            {
+              "label": "Surface topography of machine parts (Contact and non-contact surface quality measurement)",
+              "value": [
+                "evaluation of parameters and surface roughness curves",
+                "analysis of the depth of the scratches event. other surface defects",
+                "accurate analyzes of complicated shaped surfaces",
+                "3D measurement of surface roughness parameters (grooves, threads, gears, etc.) for metallic, non-metallic, and elastic components",
+                "analysis of the thickness of applied coatings"
+              ]
+            },
+            {
+              "label": "Analysis of the properties of the surface layer of machine parts",
+              "value": [
+                "detection of faults and cracks",
+                "evaluation of the influence of material, machining technology, and cutting conditions on the properties of the surface layer",
+                "evaluation of anomalies caused by changes in residual stress, hardness, and microstructure"
+              ]
+            }
+          ],
+          "photo": "labMetrPhoto"
+        }
+      ],
+      "labels": {
+        "mainFocus": "Main goals and activities of the laboratory:",
+        "profFocus": "The professional focus of the laboratory:",
+        "equipment": "Equipment and measuring systems:",
+        "technologies": "Offered technologies and expert activities:"
+      }
+    },
+    "cooperation": {
+      "mainLabel": "Cooperation with DMA",
+      "cooperationInformation": "The DMA complements' broad professional focus by the offer of professional advice, training, and contract research. Furthermore, cooperation on R&D projects, offering a free capacity of laboratories and additional industrial activities. The above activities support the connection of DMA with industrial practice.",
+      "cooperationOffer": "DMA offers partnerships in research. We will be delighted to help with research in a wide range of areas, from conventional machining of various materials through metrology to the design or optimization of production processes. The overlap of DMA's professional focus includes engineering construction, engineering technology, and prototype production.",
+      "coopAbility": {
+        "label": "How to cooperate with DMA:",
+        "wayPoints": [
+          {
+            "name": "The first contact",
+            "description": "we will be pleased to acquaint ourselves with your request during the first contact, whether it is a solution to current operational or technological problems or a suggestion for cooperation in solving your plans or projects."
+          },
+          {
+            "name": "Design and selection of a team",
+            "description": "during a working meeting (at our workplace or directly at your place), we will get acquainted in detail with your needs and develop a proposal for a solution and arrange cooperation with a specific professional team."
+          },
+          {
+            "name": "Implementation",
+            "description": "we will actively participate in the solution of a common goal, which is a specific output in solving a problematic area, license, or long-term cooperation."
+          }
+        ]
+      }
+    },
     "news": {
       "actualNews": {
         "title": "Actual news"
       },
       "allNews": {
-
+        "title": "All news"
+      },
+      "addNews": {
+        "title": {
+          "admin": "Add news",
+          "user": "Registration"
+        },
+        "toast": {
+          "success": "Success!",
+          "error": "Error!"
+        },
+        "login": "Login",
+        "password": "Password",
+        "newsName": "News title",
+        "newsContent": "News content",
+        "upload": "Upload"
       },
       "noNews": "There is no news yet"
     }
@@ -343,5 +515,13 @@
       "facName": "Faculty of Engineering"
     },
     "copyRight": "Copyright © 2020 Department of Machining and Assembly Faculty of Mechanical Engineering Technical University of Liberec"
+  },
+  "dialog": {
+    "close": "CLOSE",
+    "moreDetails": "MORE INFO",
+    "logIn": "LOG IN",
+    "logOut": "LOG OUT",
+    "addNewUser": "NEW USER",
+    "addNews": "ADD NEWS"
   }
 }

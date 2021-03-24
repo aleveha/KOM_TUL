@@ -4,12 +4,14 @@ import {VpnKey} from "@material-ui/icons";
 import InputNewsForm from "./InputNewsForm";
 import LoginForm, {IUser} from "./LoginForm";
 import AddNewUser from "./AddNewUser";
+import {useTranslation} from "react-i18next";
 
 const AddNews = (props: {
     getAllNews: () => void,
     isLogged: boolean,
     setIsLogged: (value: boolean) => void
 }) => {
+    const {t} = useTranslation();
     const {isLogged, setIsLogged} = props;
     const [openDialog, setOpenDialog] = useState<boolean>(false);
     const [user, setUser] = useState<IUser>({login: "", password: ""});
@@ -17,7 +19,7 @@ const AddNews = (props: {
 
     const handleDialogOpen = () => setOpenDialog(!openDialog);
 
-    const handleNewUser = () => setAddNewUser(true);
+    const handleNewUser = () => setAddNewUser(!addNewUser);
 
     return (
         <div className="addNews">
@@ -30,7 +32,12 @@ const AddNews = (props: {
                 </Button>
             </div>
             <Dialog open={openDialog} onClose={handleDialogOpen} className="dialog addNewsDialog">
-                <DialogTitle>Pridat dalsi novinku</DialogTitle>
+                <DialogTitle>
+                    {isLogged ?
+                        t("main.news.addNews.title.admin") :
+                        t("main.news.addNews.title.user")
+                    }
+                </DialogTitle>
                 <Divider/>
                 <DialogContent className="dialogContent">
                     {isLogged ?
@@ -55,27 +62,30 @@ const AddNews = (props: {
                 </DialogContent>
                 <Divider/>
                 <DialogActions className="buttons">
-                    {isLogged ? <Button
-                        onClick={handleNewUser}
-                        variant="contained"
-                        style={{margin: "0.5rem", color: "var(--blue)"}}
-                        color="default"
-                    >Novy uzivatel</Button> : null}
-                    <Button
-                        onClick={() => {
-                            setIsLogged(false);
-                            setUser({login: "", password: ""});
-                        }}
-                        variant="contained"
-                        style={{margin: "0.5rem", color: "var(--blue)"}}
-                        color="default"
-                    >Vystoupit</Button>
+                    {isLogged ?
+                        <div>
+                            <Button
+                                onClick={handleNewUser}
+                                variant="contained"
+                                style={{margin: "0.5rem", color: "var(--blue)"}}
+                                color="default"
+                            >{addNewUser ? t("dialog.addNews") : t("dialog.addNewUser")}</Button>
+                            <Button
+                                onClick={() => {
+                                    setIsLogged(false);
+                                    setUser({login: "", password: ""});
+                                }}
+                                variant="contained"
+                                style={{margin: "0.5rem", color: "var(--blue)"}}
+                                color="default"
+                            >{t("dialog.logOut")}</Button>
+                        </div> : null}
                     <Button
                         onClick={handleDialogOpen}
                         variant="contained"
                         style={{margin: "0.5rem", color: "var(--blue)"}}
                         color="default"
-                    >Zavrit</Button>
+                    >{t("dialog.close")}</Button>
                 </DialogActions>
             </Dialog>
         </div>

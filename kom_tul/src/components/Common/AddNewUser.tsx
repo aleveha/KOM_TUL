@@ -7,6 +7,7 @@ import * as yup from 'yup';
 import {Button, CircularProgress, TextField} from "@material-ui/core";
 import React from "react";
 import {toast} from "react-toastify";
+import {useTranslation} from "react-i18next";
 
 export interface IUser {
     login: string,
@@ -28,6 +29,8 @@ interface ILoginForm {
 }
 
 const AddNewUser = (props: ILoginForm) => {
+    const {t} = useTranslation();
+
     const addUser = (value: IUser) => {
         return new Promise(((resolve) => {
             fetch('http://www.kom.tul.cz:3000/addUser', {
@@ -75,7 +78,7 @@ const AddNewUser = (props: ILoginForm) => {
                     } = props;
                     return (
                         <Form className="form">
-                            <p className="titleSecond">Uzivatelske jmeno</p>
+                            <p className="titleSecond">{t("main.news.addNews.login")}</p>
                             <TextField
                                 type="text"
                                 name="login"
@@ -89,7 +92,7 @@ const AddNewUser = (props: ILoginForm) => {
                                 error={!!(errors.login && touched.login)}
                             />
 
-                            <p className="titleSecond">Heslo</p>
+                            <p className="titleSecond">{t("main.news.addNews.password")}</p>
                             <TextField
                                 type="text"
                                 name="password"
@@ -118,7 +121,7 @@ const AddNewUser = (props: ILoginForm) => {
                                         variant="contained"
                                         style={{margin: "0.5rem", color: "var(--blue)"}}
                                         color="default"
-                                    >Přidat uzivatele</Button>
+                                    >{t("dialog.addNewUser")}</Button>
                                 </div>}
                         </Form>
                     );

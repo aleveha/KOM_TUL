@@ -25,6 +25,7 @@ export interface ILaboratoryPartDesc {
 }
 
 const LaboratoryInfo = (props: { laboratory: ILaboratory }) => {
+    const {t} = useTranslation();
     const [laboratoryOpen, setLaboratoryOpen] = useState<boolean>(false);
 
     const handleDialogOpen = () => {
@@ -53,24 +54,24 @@ const LaboratoryInfo = (props: { laboratory: ILaboratory }) => {
                     variant="contained"
                     style={{margin: "0.6rem auto", backgroundColor: "var(--fiolet)", color: "white"}}
                     color="default"
-                >Více info</Button>
+                >{t("dialog.moreDetails")}</Button>
             </div>
             <Dialog open={laboratoryOpen} className="dialog">
                 <DialogTitle>{props.laboratory.name}</DialogTitle>
                 <Divider/>
                 <DialogContent className="labDialogContent">
                     <div>
-                        <h3>Hlavní cíle a aktivity laboratoře:</h3>
+                        <h3>{t("main.laboratories.labels.mainFocus")}</h3>
                         <p>{props.laboratory.description}</p>
                     </div>
                     <div>
-                        <h3>Odborné zaměření laboratoře:</h3>
+                        <h3>{t("main.laboratories.labels.profFocus")}</h3>
                         <ul>{props.laboratory.specialization.map(spec =>
                             <li key={spec}>{spec}</li>
                         )}</ul>
                     </div>
                     <div>
-                        <h3>Zařízení a měřicí systémy:</h3>
+                        <h3>{t("main.laboratories.labels.equipment")}</h3>
                         <div>
                             {props.laboratory.equipment && props.laboratory.equipment.map(equip =>
                                 <div key={equip.label ? equip.label : Math.random()}>
@@ -83,7 +84,7 @@ const LaboratoryInfo = (props: { laboratory: ILaboratory }) => {
                         </div>
                     </div>
                     <div>
-                        <h3>Nabízené technologie a expertní činnost:</h3>
+                        <h3>{t("main.laboratories.labels.technologies")}</h3>
                         <div>
                             {props.laboratory.technologies && props.laboratory.technologies.map(tech =>
                                 <div key={tech.label}>
@@ -103,7 +104,7 @@ const LaboratoryInfo = (props: { laboratory: ILaboratory }) => {
                         variant="contained"
                         style={{margin: "0.6rem auto"}}
                         color="default"
-                    >Zavřít</Button>
+                    >{t("dialog.close")}</Button>
                 </DialogActions>
             </Dialog>
         </div>
@@ -113,7 +114,7 @@ const LaboratoryInfo = (props: { laboratory: ILaboratory }) => {
 const Laboratories = () => {
     const {t} = useTranslation();
 
-    const laboratories: ILaboratory[] = t("main.laboratories", {returnObjects: true});
+    const laboratories: ILaboratory[] = t("main.laboratories.labs", {returnObjects: true});
 
     return (
         <div className="laboratories">
