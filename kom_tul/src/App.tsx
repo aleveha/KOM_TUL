@@ -50,7 +50,6 @@ const appContent: Array<IAppContent> = [
 
 const App = () => {
     const [appLanguage, setWebLanguage] = useState<string>('cz');
-    const {t} = useTranslation();
 
     const ChangeLanguage = (value: string) => {
         setWebLanguage(value);
