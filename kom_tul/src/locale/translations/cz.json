@@ -247,6 +247,14 @@
     "projects": {
       "solvedProjects": [
         {
+          "name": "Vývoj nové generace robotického odjehlovacího stroje bez nutnosti kartáčování",
+          "number": "CZ.01.1.02/0.0/0.0/20_321/0024033",
+          "solvingTerm": "2020-2022",
+          "recipient": "Resim s.r.o., Turnov",
+          "provider": "Ministerstvo průmyslu a obchodu ČR",
+          "program": "Operační program Podnikání a inovace pro konkurenceschopnost, výzva VIII. „APLIKACE“"
+        },
+        {
           "name": "Výzkum koncových měrek z hlediska teplotní roztažnosti a nestandardního složení materiálu",
           "number": "TJ02000175",
           "solvingTerm": "2019-2021",

@@ -247,6 +247,14 @@
     "projects": {
       "solvedProjects": [
         {
+          "name": "Development of a new generation of robotic deburring machine without the need for brushing",
+          "number": "CZ.01.1.02/0.0/0.0/20_321/0024033",
+          "solvingTerm": "2020-2022",
+          "recipient": "Resim s.r.o., Turnov",
+          "provider": "Ministry of industry and trade of the Czech Republic",
+          "program": "Operational programme enterprise and innovation for competitiveness, call VIII. „APPLICATION“"
+        },
+        {
           "name": "Research of end gauges in terms of thermal expansion and non-standard material composition",
           "number": "TJ02000175",
           "solvingTerm": "2019-2021",
