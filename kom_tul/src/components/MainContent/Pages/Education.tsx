@@ -608,7 +608,7 @@ const EducationContent = () => {
                                                             <div key={file.id}
                                                                  className="linkToDownload">
                                                                 <a
-                                                                    href={`http://localhost:3000/Files/${file.shortName}.${file.format}`}
+                                                                    href={`http://www.kom.tul.cz:3000/Files/${file.shortName}.${file.format}`}
                                                                     target="_blank"
                                                                     rel="noopener noreferrer"
                                                                     download={file.name}
