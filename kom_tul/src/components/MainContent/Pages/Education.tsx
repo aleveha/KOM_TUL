@@ -597,22 +597,28 @@ const EducationContent = () => {
                                                 Soubory ke stažení
                                             </Button>
                                             <Dialog open={downloadOpen}>
-                                                <DialogTitle style={{color: "var(--blue)", fontWeight: "bold"}}>Soubory ke stažení</DialogTitle>
+                                                <DialogTitle style={{color: "var(--blue)", fontWeight: "bold"}}>Soubory
+                                                    ke stažení</DialogTitle>
                                                 <Divider/>
                                                 <DialogContent>
-                                                    <h3 className="titleSecond" style={{fontWeight: "bold"}}>Technologie III</h3>
-                                                    {DownloadBD.map(file => <div key={file.id}
-                                                                                 className="linkToDownload">
-                                                        <a
-                                                            href={require(`../../../Files/${file.shortName}.${file.format}`)}
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            download={file.name}
-                                                            className="link downloadFile"
-                                                        >
-                                                            {file.name}
-                                                        </a>
-                                                    </div>)}
+                                                    <h3 className="titleSecond" style={{fontWeight: "bold"}}>Technologie
+                                                        III</h3>
+                                                    {DownloadBD.map(file => {
+                                                        return (
+                                                            <div key={file.id}
+                                                                 className="linkToDownload">
+                                                                <a
+                                                                    href={`http://localhost:3000/Files/${file.shortName}.${file.format}`}
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                    download={file.name}
+                                                                    className="link downloadFile"
+                                                                >
+                                                                    {file.name}
+                                                                </a>
+                                                            </div>
+                                                        )
+                                                    })}
                                                 </DialogContent>
                                                 <Divider/>
                                                 <DialogActions style={{float: "left"}}>

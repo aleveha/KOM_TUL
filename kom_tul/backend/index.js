@@ -21,6 +21,10 @@ app.get('/', (req, res) => {
     });
 })
 
+app.get('/files/*', (req, res) => {
+    res.status(200).download("./" + req.path);
+})
+
 app.get('/topNews', (req, res) => {
     newsTable.getTopNews()
         .then(response => res.status(200).send(response))
