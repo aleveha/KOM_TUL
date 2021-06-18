@@ -247,6 +247,15 @@
     "projects": {
       "solvedProjects": [
         {
+          "name": "Vývoj nového typu vyfukovacího stroje pro extruzní vyfukování",
+          "number": "CZ.01.1.02/0.0/0.0/20_321/0024941",
+          "solvingTerm": "2021-2023",
+          "recipient": "G D K spol. s r.o., 360 01 Kolová",
+          "provider": "Ministerstvo průmyslu a obchodu ČR",
+          "program": "Operační program Podnikání a inovace pro konkurenceschopnost, výzva VIII. „APLIKACE“",
+          "solver": "Český metrologický institut, Ing. Eva Tyralíková"
+        },
+        {
           "name": "Vývoj nové generace robotického odjehlovacího stroje bez nutnosti kartáčování",
           "number": "CZ.01.1.02/0.0/0.0/20_321/0024033",
           "solvingTerm": "2020-2022",
