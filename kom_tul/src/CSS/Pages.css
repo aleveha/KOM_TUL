@@ -130,10 +130,6 @@
 }
 
 /*Education*/
-.educationContent {
-    width: 100vw;
-}
-
 .descriptionLine {
     margin-right: 2rem;
 }
@@ -189,6 +185,12 @@
 
     .descriptionLine {
         margin: 1rem 0 1rem 0;
+    }
+}
+
+@media (max-width: 1150px) {
+    .educationContent {
+        width: 100vw;
     }
 }
 
