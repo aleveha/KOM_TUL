@@ -9,6 +9,7 @@ import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './CSS/App.css';
 import i18n from "./locale/translations/i18n";
+import {BrowserRouter as Router} from 'react-router-dom';
 
 interface IAppContent {
     name: string,
@@ -59,29 +60,31 @@ const App = () => {
     }, [appLanguage]);
 
     return (
-        <LanguageContext.Provider value={{value: appLanguage, changeValue: ChangeLanguage}}>
-            <AppContentContext.Provider value={{value: appContent}}>
-                <div className="App">
-                    <div className="WebContent">
-                        <Header/>
-                        <MainContent/>
+        <Router>
+            <LanguageContext.Provider value={{value: appLanguage, changeValue: ChangeLanguage}}>
+                <AppContentContext.Provider value={{value: appContent}}>
+                    <div className="App">
+                        <div className="WebContent">
+                            <Header/>
+                            <MainContent/>
+                        </div>
+                        <Footer/>
                     </div>
-                    <Footer/>
-                </div>
-                <ToastContainer
-                    position="bottom-center"
-                    autoClose={5000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover
-                    limit={3}
-                />
-            </AppContentContext.Provider>
-        </LanguageContext.Provider>
+                    <ToastContainer
+                        position="bottom-center"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        limit={3}
+                    />
+                </AppContentContext.Provider>
+            </LanguageContext.Provider>
+        </Router>
     );
 }
 
