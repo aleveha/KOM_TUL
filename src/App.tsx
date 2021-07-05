@@ -9,7 +9,6 @@ import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './CSS/App.css';
 import i18n from "./locale/translations/i18n";
-import {useTranslation} from "react-i18next";
 
 interface IAppContent {
     name: string,

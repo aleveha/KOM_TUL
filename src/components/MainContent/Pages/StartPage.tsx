@@ -6,7 +6,6 @@ import MainPhoto2 from '../../../img/start_page/2.webp';
 import MainPhoto3 from '../../../img/start_page/3.webp';
 import MainPhoto4 from '../../../img/start_page/4.webp';
 import MainPhoto5 from '../../../img/start_page/5.webp';
-import { Button } from "@material-ui/core";
 import Carousel from "../../Common/Carousel";
 import YoutubePlayer from "../../Common/YoutubePlayer";
 import {useTranslation} from "react-i18next";
