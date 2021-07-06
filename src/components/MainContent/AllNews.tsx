@@ -17,7 +17,7 @@ const AllNews = () => {
 
     const getAllNews = () => {
         setIsLoading(true);
-        fetch('http://www.kom.tul.cz:3000/allNews')
+        fetch('https://www.kom.tul.cz/api/allNews')
             .then(response => {
                 return response.json();
             })

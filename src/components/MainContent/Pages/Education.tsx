@@ -12,16 +12,36 @@ import {
 } from '@material-ui/core';
 import DownloadBD from "../../../Downloads/DataBase";
 
-interface IEducationalProgram {
-    name: string,
-    shortDescription: IShortDescription,
-    programs: Array<IProgram>,
-}
-
 interface IShortDescription {
     form: string,
     basicTerm: string,
     endDegree: string
+}
+
+interface ITrainer {
+    specification: string,
+    person: IEmployee
+}
+
+interface ICourseTable {
+    name: string,
+    shortName: string,
+    semester: string,
+    range: string,
+    exam: string,
+    credits: number,
+    professor: Array<string>
+}
+
+interface ICourseType {
+    name: string,
+    courseTable: Array<ICourseTable>
+}
+
+interface IEducationYear {
+    year: number,
+    required?: ICourseType,
+    requiredOptional?: Array<ICourseType>
 }
 
 interface IProgram {
@@ -33,30 +53,10 @@ interface IProgram {
     links?: Array<string>
 }
 
-interface IEducationYear {
-    year: number,
-    required?: ICourseType,
-    requiredOptional?: Array<ICourseType>
-}
-
-interface ITrainer {
-    specification: string,
-    person: IEmployee
-}
-
-interface ICourseType {
+interface IEducationalProgram {
     name: string,
-    courseTable: Array<ICourseTable>
-}
-
-interface ICourseTable {
-    name: string,
-    shortName: string,
-    semester: string,
-    range: string,
-    exam: string,
-    credits: number,
-    professor: Array<string>
+    shortDescription: IShortDescription,
+    programs: Array<IProgram>,
 }
 
 interface TableProps {
@@ -608,7 +608,7 @@ const EducationContent = () => {
                                                             <div key={file.id}
                                                                  className="linkToDownload">
                                                                 <a
-                                                                    href={`http://www.kom.tul.cz:3000/files/${file.shortName}.${file.format}`}
+                                                                    href={`https://www.kom.tul.cz/api/files/${file.shortName}.${file.format}`}
                                                                     target="_blank"
                                                                     rel="noopener noreferrer"
                                                                     download={file.name}

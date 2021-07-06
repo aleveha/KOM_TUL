@@ -22,7 +22,7 @@ const InputNewsForm = (props: { getAllNews: () => void }) => {
 
     const addNews = (values: INews) => {
         return new Promise(((resolve) => {
-            fetch('http://www.kom.tul.cz:3000/addNews', {
+            fetch('https://www.kom.tul.cz/api/addNews', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

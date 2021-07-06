@@ -33,7 +33,7 @@ const AddNewUser = (props: ILoginForm) => {
 
     const addUser = (value: IUser) => {
         return new Promise(((resolve) => {
-            fetch('http://www.kom.tul.cz:3000/addUser', {
+            fetch('https://www.kom.tul.cz/api/addUser', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

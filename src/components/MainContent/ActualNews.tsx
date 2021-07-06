@@ -18,7 +18,7 @@ const ActualNews = () => {
     }, []);
 
     const getNews = () => {
-        fetch('http://www.kom.tul.cz:3000/topNews')
+        fetch('https://www.kom.tul.cz/api/topNews')
             .then(response => {
                 return response.json();
             })
