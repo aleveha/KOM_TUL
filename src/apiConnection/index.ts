@@ -33,5 +33,5 @@ export const addUser = async (user: IUser): Promise<IUser> => {
 };
 
 export const fileDownloadLink = (file: DownloadFile): string => {
-    return API_URL + `/files/${file.shortName}.${file.format}`;
+    return `https://www.kom.tul.cz/api/files/${file.shortName}.${file.format}`;
 };
