@@ -1,59 +1,59 @@
-import * as React from 'react';
-import {useEffect, useState} from 'react';
+import * as React from "react";
+import { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
 import MainContent from "./components/MainContent/MainContent";
 import Footer from "./components/Footer/Footer";
-import LanguageContext from "./Context/LanguageContext";
-import AppContentContext from "./Context/AppContentContext";
-import {ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import './CSS/App.css';
+import LanguageContext from "./context/LanguageContext";
+import AppContentContext from "./context/AppContentContext";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "./CSS/App.css";
 import i18n from "./locale/translations/i18n";
-import {BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router } from "react-router-dom";
 
 interface IAppContent {
-    name: string,
-    link: string,
-    children?: Array<IAppContent>
+    name: string;
+    link: string;
+    children?: Array<IAppContent>;
 }
 
 const appContent: Array<IAppContent> = [
     {
-        name: 'KOM',
-        link: '/home'
+        name: "KOM",
+        link: "/home",
     },
     {
-        name: 'Department',
-        link: '/department'
+        name: "Department",
+        link: "/department",
     },
     {
-        name: 'Employees',
-        link: '/employees'
+        name: "Employees",
+        link: "/employees",
     },
     {
-        name: 'Projects',
-        link: '/projects'
+        name: "Projects",
+        link: "/projects",
     },
     {
-        name: 'Education',
-        link: '/education'
+        name: "Education",
+        link: "/education",
     },
     {
-        name: 'Laboratories',
-        link: '/laboratories'
+        name: "Laboratories",
+        link: "/laboratories",
     },
     {
-        name: 'Cooperation',
-        link: '/cooperation'
-    }
+        name: "Cooperation",
+        link: "/cooperation",
+    },
 ];
 
 const App = () => {
-    const [appLanguage, setWebLanguage] = useState<string>('cz');
+    const [appLanguage, setWebLanguage] = useState<string>("cz");
 
     const ChangeLanguage = (value: string) => {
         setWebLanguage(value);
-    }
+    };
 
     useEffect(() => {
         i18n.changeLanguage(appLanguage);
@@ -61,14 +61,15 @@ const App = () => {
 
     return (
         <Router>
-            <LanguageContext.Provider value={{value: appLanguage, changeValue: ChangeLanguage}}>
-                <AppContentContext.Provider value={{value: appContent}}>
+            <LanguageContext.Provider
+                value={{ value: appLanguage, changeValue: ChangeLanguage }}>
+                <AppContentContext.Provider value={{ value: appContent }}>
                     <div className="App">
                         <div className="WebContent">
-                            <Header/>
-                            <MainContent/>
+                            <Header />
+                            <MainContent />
                         </div>
-                        <Footer/>
+                        <Footer />
                     </div>
                     <ToastContainer
                         position="bottom-center"
@@ -86,6 +87,6 @@ const App = () => {
             </LanguageContext.Provider>
         </Router>
     );
-}
+};
 
 export default App;

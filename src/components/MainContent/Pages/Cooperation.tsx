@@ -1,22 +1,26 @@
-import {Route, Switch, useRouteMatch} from "react-router-dom";
+import { Route, Switch, useRouteMatch } from "react-router-dom";
 import * as React from "react";
-import {useTranslation} from "react-i18next";
-
-interface IHowToCooperate {
-    label: string,
-    wayPoints: Array<IWayPoint>
-}
+import { useTranslation } from "react-i18next";
 
 interface IWayPoint {
-    name: string,
-    description: string
+    name: string;
+    description: string;
+}
+
+interface IHowToCooperate {
+    label: string;
+    wayPoints: Array<IWayPoint>;
 }
 
 const CooperationContent = () => {
-    const {t} = useTranslation();
-    const cooperationInformation: string = t("main.cooperation.cooperationInformation");
+    const { t } = useTranslation();
+    const cooperationInformation: string = t(
+        "main.cooperation.cooperationInformation"
+    );
     const cooperationOffer: string = t("main.cooperation.cooperationOffer");
-    const coopAbility: IHowToCooperate = t("main.cooperation.coopAbility", {returnObjects: true});
+    const coopAbility: IHowToCooperate = t("main.cooperation.coopAbility", {
+        returnObjects: true,
+    });
 
     return (
         <div className="cooperation padding">
@@ -29,9 +33,12 @@ const CooperationContent = () => {
                 <div className="howToCoop infoBlock">
                     <p className="titleSecond">{coopAbility.label}</p>
                     <ol>
-                        {coopAbility.wayPoints.map(wayPoint => {
+                        {coopAbility.wayPoints.map((wayPoint) => {
                             return (
-                                <li className="border" key={wayPoint.name}><span>{wayPoint.name}</span> - <span>{wayPoint.description}</span></li>
+                                <li className="border" key={wayPoint.name}>
+                                    <span>{wayPoint.name}</span> -{" "}
+                                    <span>{wayPoint.description}</span>
+                                </li>
                             );
                         })}
                     </ol>
@@ -39,13 +46,13 @@ const CooperationContent = () => {
             </div>
         </div>
     );
-}
+};
 
 const Cooperation = () => {
     let match = useRouteMatch();
     return (
         <Switch>
-            <Route path={match.path} exact component={CooperationContent}/>
+            <Route path={match.path} exact component={CooperationContent} />
         </Switch>
     );
 };

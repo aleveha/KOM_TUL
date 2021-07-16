@@ -1,74 +1,70 @@
-import {
-    Formik,
-    FormikProps,
-    Form,
-} from 'formik';
-import * as yup from 'yup';
-import {Button, CircularProgress, TextField} from "@material-ui/core";
-import React, {useState} from "react";
-import {toast} from "react-toastify";
-import {useTranslation} from "react-i18next";
+import { Form, Formik, FormikProps } from "formik";
+import * as yup from "yup";
+import { Button, CircularProgress, TextField } from "@material-ui/core";
+import React, { useState } from "react";
+import { toast } from "react-toastify";
+import { useTranslation } from "react-i18next";
+import * as api from "../../apiConnection";
 
 export interface IUser {
-    login: string,
-    password: string
+    id?: number;
+    login: string;
+    password: string;
 }
 
 const LoginSchema = yup.object().shape({
-    login: yup.string().min(3, "Too short").max(200, "Too long").required("Required"),
-    password: yup.string().min(3, "Too short").max(200, "Too long").required("Required")
+    login: yup
+        .string()
+        .min(3, "Too short")
+        .max(200, "Too long")
+        .required("Required"),
+    password: yup
+        .string()
+        .min(3, "Too short")
+        .max(200, "Too long")
+        .required("Required"),
 });
 
 interface ILoginForm {
-    user: IUser,
-    setUser: (value: IUser) => void,
-    isLogged: boolean,
-    setIsLogged: (value: boolean) => void
+    user: IUser;
+    setUser: (value: IUser) => void;
+    isLogged: boolean;
+    setIsLogged: (value: boolean) => void;
 }
 
 const LoginForm = (props: ILoginForm) => {
-    const {t} = useTranslation();
-    const {login, password} = props.user;
+    const { t } = useTranslation();
+    const { login, password } = props.user;
     const [wrongLogin, setWrongLogin] = useState<boolean>(false);
 
-    const getLoggedIn = (value: IUser) => {
-        return new Promise(((resolve) => {
-            fetch('https://www.kom.tul.cz/api/checkUser', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(value),
-            })
-                .then(response => response.json())
-                .then(data => resolve(data));
-        }))
-    }
+    const checkUser = async (value: IUser): Promise<boolean> => {
+        return await api.checkUser(value);
+    };
 
     return (
         <div className="loginContainer">
             <Formik
-                initialValues={{login, password}}
+                initialValues={{ login, password }}
                 validationSchema={LoginSchema}
-                onSubmit={(
-                    values: IUser,
-                    actions
-                ) => {
-                    getLoggedIn(values).then(res => {
-                        if (typeof res === "boolean") {
-                            props.setUser(values);
-                            props.setIsLogged(res);
-                            setWrongLogin(!res);
-                            res ?
-                                toast.success(t("main.news.addNews.toast.success")) :
-                                toast.error(t("main.news.addNews.toast.error"));
-                        } else {
+                onSubmit={(values: IUser, actions) => {
+                    checkUser(values)
+                        .then((res) => {
+                            if (res) {
+                                props.setUser(values);
+                                props.setIsLogged(res);
+                                toast.success(
+                                    t("main.news.addNews.toast.success")
+                                );
+                            } else {
+                                setWrongLogin(!res);
+                            }
+                        })
+                        .catch(() => {
+                            props.setIsLogged(false);
                             toast.error(t("main.news.addNews.toast.error"));
-                        }
-                        actions.setSubmitting(false);
-                    });
-                }}
-            >
+                        });
+                    actions.setSubmitting(false);
+                }}>
                 {(props: FormikProps<IUser>) => {
                     const {
                         values,
@@ -76,11 +72,13 @@ const LoginForm = (props: ILoginForm) => {
                         errors,
                         handleBlur,
                         handleChange,
-                        isSubmitting
+                        isSubmitting,
                     } = props;
                     return (
                         <Form className="form">
-                            <p className="titleSecond">{t("main.news.addNews.login")}</p>
+                            <p className="titleSecond">
+                                {t("main.news.addNews.login")}
+                            </p>
                             <TextField
                                 type="text"
                                 name="login"
@@ -90,11 +88,17 @@ const LoginForm = (props: ILoginForm) => {
                                 value={values.login}
                                 onChange={handleChange}
                                 onBlur={handleBlur}
-                                helperText={errors.login && touched.login && errors.login}
+                                helperText={
+                                    errors.login &&
+                                    touched.login &&
+                                    errors.login
+                                }
                                 error={!!(errors.login && touched.login)}
                             />
 
-                            <p className="titleSecond">{t("main.news.addNews.password")}</p>
+                            <p className="titleSecond">
+                                {t("main.news.addNews.password")}
+                            </p>
                             <TextField
                                 type="password"
                                 name="password"
@@ -104,36 +108,47 @@ const LoginForm = (props: ILoginForm) => {
                                 value={values.password}
                                 onChange={handleChange}
                                 onBlur={handleBlur}
-                                helperText={errors.password && touched.password && errors.password}
+                                helperText={
+                                    errors.password &&
+                                    touched.password &&
+                                    errors.password
+                                }
                                 error={!!(errors.password && touched.password)}
                             />
 
-                            {isSubmitting ?
-                                <div style={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    alignItems: "center",
-                                    margin: "2rem 0"
-                                }}>
-                                    <CircularProgress size={50}/>
-                                </div> :
+                            {isSubmitting ? (
+                                <div
+                                    style={{
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                        margin: "2rem 0",
+                                    }}>
+                                    <CircularProgress size={50} />
+                                </div>
+                            ) : (
                                 <div className="buttons">
                                     <Button
                                         type="submit"
                                         variant="contained"
-                                        style={{margin: "0.5rem", color: "var(--blue)"}}
-                                        color="default"
-                                    >{t("dialog.logIn")}</Button>
-                                </div>}
+                                        style={{
+                                            margin: "0.5rem",
+                                            color: "var(--blue)",
+                                        }}
+                                        color="default">
+                                        {t("dialog.logIn")}
+                                    </Button>
+                                </div>
+                            )}
                         </Form>
                     );
                 }}
             </Formik>
-            {wrongLogin ?
+            {wrongLogin ? (
                 <h3 className="error">Spanty login nebo heslo</h3>
-                : null}
+            ) : null}
         </div>
     );
-}
+};
 
 export default LoginForm;

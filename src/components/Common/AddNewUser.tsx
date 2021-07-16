@@ -1,72 +1,57 @@
-import {
-    Formik,
-    FormikProps,
-    Form,
-} from 'formik';
-import * as yup from 'yup';
-import {Button, CircularProgress, TextField} from "@material-ui/core";
-import React from "react";
-import {toast} from "react-toastify";
-import {useTranslation} from "react-i18next";
-
-export interface IUser {
-    login: string,
-    password: string
-}
+import { Form, Formik, FormikProps } from "formik";
+import * as yup from "yup";
+import { Button, CircularProgress, TextField } from "@material-ui/core";
+import React, { FC } from "react";
+import { toast } from "react-toastify";
+import { useTranslation } from "react-i18next";
+import * as api from "../../apiConnection";
+import { IUser } from "./LoginForm";
 
 const LoginSchema = yup.object().shape({
-    login: yup.string().min(3, "Too short").max(200, "Too long").required("Required"),
-    password: yup.string().min(3, "Too short").max(200, "Too long").required("Required")
+    login: yup
+        .string()
+        .min(3, "Too short")
+        .max(200, "Too long")
+        .required("Required"),
+    password: yup
+        .string()
+        .min(3, "Too short")
+        .max(200, "Too long")
+        .required("Required"),
 });
 
 interface ILoginForm {
-    user: IUser,
-    setUser: (value: IUser) => void,
-    isLogged: boolean,
-    setIsLogged: (value: boolean) => void,
-    addNewUser: boolean,
-    setAddNewUser: (value: boolean) => void
+    setUser: (value: IUser) => void;
+    setIsLogged: (value: boolean) => void;
+    setAddNewUser: (value: boolean) => void;
 }
 
-const AddNewUser = (props: ILoginForm) => {
-    const {t} = useTranslation();
+const AddNewUser: FC<ILoginForm> = (props) => {
+    const { setUser, setIsLogged, setAddNewUser } = props;
+    const { t } = useTranslation();
 
-    const addUser = (value: IUser) => {
-        return new Promise(((resolve) => {
-            fetch('https://www.kom.tul.cz/api/addUser', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(value),
-            })
-                .then(response => response.json())
-                .then(data => resolve(data))
-        }))
-    }
+    const addUser = async (value: IUser): Promise<IUser | null> => {
+        return await api.addUser(value);
+    };
 
     return (
         <div className="loginContainer">
             <Formik
-                initialValues={{login: "", password: ""}}
+                initialValues={{ login: "", password: "" }}
                 validationSchema={LoginSchema}
-                onSubmit={(
-                    values: IUser,
-                    actions
-                ) => {
-                    addUser(values).then(res => {
-                        if (typeof res === "boolean") {
-                            props.setUser(values);
-                            props.setIsLogged(false);
-                            props.setAddNewUser(false);
+                onSubmit={(values: IUser, actions) => {
+                    addUser(values).then((res) => {
+                        if (res) {
+                            setUser(values);
+                            setIsLogged(false);
+                            setAddNewUser(false);
                             toast.success("Uzivatel pridan");
                         } else {
                             toast.error("Neco se nepovedlo!");
                         }
                         actions.setSubmitting(false);
                     });
-                }}
-            >
+                }}>
                 {(props: FormikProps<IUser>) => {
                     const {
                         values,
@@ -74,11 +59,13 @@ const AddNewUser = (props: ILoginForm) => {
                         errors,
                         handleBlur,
                         handleChange,
-                        isSubmitting
+                        isSubmitting,
                     } = props;
                     return (
                         <Form className="form">
-                            <p className="titleSecond">{t("main.news.addNews.login")}</p>
+                            <p className="titleSecond">
+                                {t("main.news.addNews.login")}
+                            </p>
                             <TextField
                                 type="text"
                                 name="login"
@@ -88,11 +75,17 @@ const AddNewUser = (props: ILoginForm) => {
                                 value={values.login}
                                 onChange={handleChange}
                                 onBlur={handleBlur}
-                                helperText={errors.login && touched.login && errors.login}
+                                helperText={
+                                    errors.login &&
+                                    touched.login &&
+                                    errors.login
+                                }
                                 error={!!(errors.login && touched.login)}
                             />
 
-                            <p className="titleSecond">{t("main.news.addNews.password")}</p>
+                            <p className="titleSecond">
+                                {t("main.news.addNews.password")}
+                            </p>
                             <TextField
                                 type="text"
                                 name="password"
@@ -102,33 +95,44 @@ const AddNewUser = (props: ILoginForm) => {
                                 value={values.password}
                                 onChange={handleChange}
                                 onBlur={handleBlur}
-                                helperText={errors.password && touched.password && errors.password}
+                                helperText={
+                                    errors.password &&
+                                    touched.password &&
+                                    errors.password
+                                }
                                 error={!!(errors.password && touched.password)}
                             />
 
-                            {isSubmitting ?
-                                <div style={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    alignItems: "center",
-                                    margin: "2rem 0"
-                                }}>
-                                    <CircularProgress size={50}/>
-                                </div> :
+                            {isSubmitting ? (
+                                <div
+                                    style={{
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                        margin: "2rem 0",
+                                    }}>
+                                    <CircularProgress size={50} />
+                                </div>
+                            ) : (
                                 <div className="buttons">
                                     <Button
                                         type="submit"
                                         variant="contained"
-                                        style={{margin: "0.5rem", color: "var(--blue)"}}
-                                        color="default"
-                                    >{t("dialog.addNewUser")}</Button>
-                                </div>}
+                                        style={{
+                                            margin: "0.5rem",
+                                            color: "var(--blue)",
+                                        }}
+                                        color="default">
+                                        {t("dialog.addNewUser")}
+                                    </Button>
+                                </div>
+                            )}
                         </Form>
                     );
                 }}
             </Formik>
         </div>
     );
-}
+};
 
 export default AddNewUser;

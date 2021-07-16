@@ -1,7 +1,7 @@
-import * as React from 'react';
+import * as React from "react";
 import ContactsLine from "./ContactsLine";
 import CopyRight from "./CopyRight";
-import '../../CSS/Footer.css';
+import "../../CSS/Footer.css";
 
 const Footer = () => {
     return (
@@ -10,6 +10,6 @@ const Footer = () => {
             <CopyRight />
         </footer>
     );
-}
+};
 
 export default Footer;
