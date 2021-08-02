@@ -247,6 +247,14 @@
     "projects": {
       "solvedProjects": [
         {
+          "name": "Development of a new type of blow molding machine for extrusion blow molding",
+          "number": "CZ.01.1.02/0.0/0.0/20_321/0024941",
+          "solvingTerm": "2021-2023",
+          "recipient": "G D K spol. s r.o., 360 01 Kolová",
+          "provider": "Ministry of industry and trade of the Czech Republic",
+          "program": "Operational programme enterprise and innovation for competitiveness, call VIII. „APPLICATION“"
+        },
+        {
           "name": "Development of a new generation of robotic deburring machine without the need for brushing",
           "number": "CZ.01.1.02/0.0/0.0/20_321/0024033",
           "solvingTerm": "2020-2022",
