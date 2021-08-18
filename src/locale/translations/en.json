@@ -491,28 +491,17 @@
     },
     "news": {
       "actualNews": {
-        "title": "Actual news"
+        "title": "Actual news",
+        "allNewsButton": "Show all news"
       },
       "allNews": {
         "title": "All news"
       },
-      "addNews": {
-        "title": {
-          "admin": "Add news",
-          "user": "Registration"
-        },
-        "toast": {
-          "success": "Success!",
-          "error": "Error!"
-        },
-        "login": "Login",
-        "password": "Password",
-        "newsName": "News title",
-        "newsContent": "News content",
-        "upload": "Upload"
-      },
       "noNews": "There is no news yet"
     }
+  },
+  "toastify": {
+    "error": "Error occurred"
   },
   "footer": {
     "contactsLine": {

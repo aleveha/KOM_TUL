@@ -15,7 +15,7 @@ const AllNewsComponent = () => {
                 setNews(data.length > 0 ? data.reverse() : []);
             })
             .catch(() => {
-                toast.error("Chyba serveru");
+                toast.error(t("toastify.error"));
             });
     }, []);
 

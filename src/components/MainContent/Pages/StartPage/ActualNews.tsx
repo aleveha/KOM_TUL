@@ -15,7 +15,7 @@ const ActualNewsComponent = () => {
     useEffect(() => {
         api.getTopNews()
             .then((data) => setNews(data.length > 0 ? data.reverse() : []))
-            .catch(() => toast.error("Chyba serveru"));
+            .catch(() => toast.error(t("toastify.error")));
     }, []);
 
     return !!news ? (
@@ -33,7 +33,7 @@ const ActualNewsComponent = () => {
                         component={Link}
                         to="/news"
                     >
-                        Všechny novinky
+                        {t("main.news.actualNews.allNewsButton")}
                     </Button>
                 </div>
             ) : (
