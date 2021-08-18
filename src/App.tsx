@@ -1,9 +1,9 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
-import MainContent from "./components/MainContent/MainContent";
+import { MainContent } from "./components/MainContent/MainContent";
 import Footer from "./components/Footer/Footer";
-import LanguageContext from "./context/LanguageContext";
+import LanguageContext, { LanguageType } from "./context/LanguageContext";
 import AppContentContext from "./context/AppContentContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -49,10 +49,10 @@ const appContent: Array<IAppContent> = [
 ];
 
 const App = () => {
-    const [appLanguage, setWebLanguage] = useState<string>("cz");
+    const [appLanguage, setLanguage] = useState<LanguageType>("cz");
 
-    const ChangeLanguage = (value: string) => {
-        setWebLanguage(value);
+    const changeLanguage = (value: LanguageType) => {
+        setLanguage(value);
     };
 
     useEffect(() => {
@@ -62,7 +62,8 @@ const App = () => {
     return (
         <Router>
             <LanguageContext.Provider
-                value={{ value: appLanguage, changeValue: ChangeLanguage }}>
+                value={{ value: appLanguage, changeValue: changeLanguage }}
+            >
                 <AppContentContext.Provider value={{ value: appContent }}>
                     <div className="App">
                         <div className="WebContent">

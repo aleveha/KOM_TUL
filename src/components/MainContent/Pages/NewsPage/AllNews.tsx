@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import NewsContainer from "../Common/NewsContainer";
+import React, { memo, useEffect, useState } from "react";
+import NewsContainer from "../../../Common/NewsContainer";
 import { toast } from "react-toastify";
 import { useTranslation } from "react-i18next";
-import * as api from "../../apiConnection";
-import { INews } from "../../apiConnection/types";
+import * as api from "../../../../apiConnection";
+import { INews } from "../../../../apiConnection/types";
 
-const AllNews = () => {
+const AllNewsComponent = () => {
     const { t } = useTranslation();
     const [news, setNews] = useState<INews[]>();
 
@@ -27,4 +27,4 @@ const AllNews = () => {
     );
 };
 
-export default AllNews;
+export const AllNews = memo(AllNewsComponent);

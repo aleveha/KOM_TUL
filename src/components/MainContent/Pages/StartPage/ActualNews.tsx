@@ -1,14 +1,14 @@
 import * as React from "react";
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import NewsContainer from "../Common/NewsContainer";
+import NewsContainer from "../../../Common/NewsContainer";
 import { toast } from "react-toastify";
 import { useTranslation } from "react-i18next";
-import * as api from "../../apiConnection/index";
-import { INews } from "../../apiConnection/types";
+import * as api from "../../../../apiConnection";
+import { INews } from "../../../../apiConnection/types";
 
-const ActualNews = () => {
+const ActualNewsComponent = () => {
     const [news, setNews] = useState<INews[]>();
     const { t } = useTranslation();
 
@@ -49,4 +49,4 @@ const ActualNews = () => {
     ) : null;
 };
 
-export default ActualNews;
+export const ActualNews = memo(ActualNewsComponent);

@@ -1,10 +1,15 @@
-import React from 'react';
+import React from "react";
+
+export type LanguageType = "cz" | "en";
 
 interface ILangContext {
-    value: string;
-    changeValue: (value: string) => void;
+    value: LanguageType;
+    changeValue: (value: LanguageType) => void;
 }
 
-const LanguageContext = React.createContext<ILangContext>({value: 'CZ', changeValue: () => {}});
+const LanguageContext = React.createContext<ILangContext>({
+    value: "cz",
+    changeValue: () => {},
+});
 
 export default LanguageContext;
