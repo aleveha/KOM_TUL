@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useContext, useState } from "react";
 import {
     Button,
     CircularProgress,
@@ -8,26 +8,17 @@ import {
     DialogTitle,
     Divider,
 } from "@material-ui/core";
-import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
-import { toast } from "react-toastify";
-import * as api from "../../apiConnection";
-
-export interface INews {
-    id?: number;
-    date: string;
-    name: string;
-    content: string;
-}
+import { INews } from "../../apiConnection/types";
+import LanguageContext from "../../context/LanguageContext";
+import moment from "moment";
 
 interface NewsContainerProps {
     news: INews[];
     isLoading: boolean;
-    isLogged?: boolean;
-    getAllNews: () => void;
 }
 
 const NewsContainer: FC<NewsContainerProps> = (props) => {
-    const { news, isLoading, isLogged, getAllNews } = props;
+    const { news, isLoading } = props;
 
     return (
         <div className="newsBlocks">
@@ -42,13 +33,8 @@ const NewsContainer: FC<NewsContainerProps> = (props) => {
                     <CircularProgress size={50} />
                 </div>
             ) : (
-                news.map((elem, index) => (
-                    <SeparatedNews
-                        elem={elem}
-                        key={elem.id ? elem.id : index}
-                        isLogged={isLogged}
-                        getAllNews={getAllNews}
-                    />
+                news.map((elem) => (
+                    <SeparatedNews elem={elem} key={elem.uuid} />
                 ))
             )}
         </div>
@@ -57,37 +43,39 @@ const NewsContainer: FC<NewsContainerProps> = (props) => {
 
 interface SeparatedNewsProps {
     elem: INews;
-    isLogged: boolean | undefined;
-    getAllNews: () => void;
 }
 
 const SeparatedNews: FC<SeparatedNewsProps> = (props) => {
-    const { elem, isLogged, getAllNews } = props;
+    const { elem } = props;
+    const language = useContext(LanguageContext);
+    const isCzech = language.value.toLocaleLowerCase() === "cz";
     const [dialogOpen, setDialogOpen] = useState<boolean>(false);
 
-    const handleDialogOpen = () => {
-        setDialogOpen(!dialogOpen);
+    const data = {
+        date: moment(elem.date).format("DD.MM.YYYY"),
+        name: isCzech ? elem.name_cz : elem.name_en,
+        content: isCzech ? elem.content_cz : elem.content_en,
     };
 
-    const handleDeleteNews = async (value: INews): Promise<boolean> => {
-        return await api.deleteNews(value);
+    const handleFullTextOpen = () => {
+        setDialogOpen(!dialogOpen);
     };
 
     return (
         <div className="paper border newsBlock">
             <div>
-                <p>{elem.date}</p>
-                <h3 className="bluePar">{elem.name}</h3>
-                {elem.content.split(" ").length - 1 > 10 ? (
+                <p>{data.date}</p>
+                <h3 className="bluePar">{data.name}</h3>
+                {data.content.split(" ").length - 1 > 10 ? (
                     <div>
                         <p>
-                            {elem.content.split(" ", 10).map((word, index) => (
-                                <span key={index}> {word}</span>
-                            ))}
-                            <span>...</span>
+                            {data.content
+                                .split(" ", 10)
+                                .join(" ")
+                                .concat("...")}
                         </p>
                         <Button
-                            onClick={handleDialogOpen}
+                            onClick={handleFullTextOpen}
                             variant="contained"
                             style={{
                                 margin: "1rem auto",
@@ -98,94 +86,27 @@ const SeparatedNews: FC<SeparatedNewsProps> = (props) => {
                         </Button>
                     </div>
                 ) : (
-                    <p>{elem.content}</p>
+                    <p>{data.content}</p>
                 )}
-                {isLogged ? (
-                    <DeleteButton
-                        elem={elem}
-                        handleDeleteNews={handleDeleteNews}
-                        getAllNews={props.getAllNews}
-                    />
-                ) : null}
             </div>
             <Dialog
                 open={dialogOpen}
-                onClose={handleDialogOpen}
+                onClose={handleFullTextOpen}
                 className="dialog newsDialog">
-                <DialogTitle>{elem.name}</DialogTitle>
+                <DialogTitle>{data.name}</DialogTitle>
                 <Divider />
                 <DialogContent className="newsDialogContent">
-                    <p>{elem.content}</p>
-                    <p>{elem.date}</p>
-                    {isLogged ? (
-                        <DeleteButton
-                            elem={elem}
-                            handleDeleteNews={handleDeleteNews}
-                            getAllNews={getAllNews}
-                        />
-                    ) : null}
+                    <p>{data.content}</p>
+                    <p>{data.date}</p>
                 </DialogContent>
                 <Divider />
                 <DialogActions>
                     <Button
-                        onClick={handleDialogOpen}
+                        onClick={handleFullTextOpen}
                         variant="contained"
                         style={{ margin: "0.5rem", color: "var(--blue)" }}
                         color="default">
                         Zavřít
-                    </Button>
-                </DialogActions>
-            </Dialog>
-        </div>
-    );
-};
-
-interface DeleteButtonProps {
-    elem: INews;
-    handleDeleteNews: (value: INews) => Promise<boolean>;
-    getAllNews: () => void;
-}
-
-const DeleteButton: FC<DeleteButtonProps> = (props) => {
-    const { elem, handleDeleteNews, getAllNews } = props;
-    const [openDialog, setOpenDialog] = useState<boolean>(false);
-
-    const handleDialog = () => setOpenDialog(!openDialog);
-
-    return (
-        <div className="deleteButtonContainer">
-            <Button
-                style={{ backgroundColor: "white", color: "var(--fiolet)" }}
-                onClick={handleDialog}>
-                <DeleteForeverIcon fontSize="small" />
-            </Button>
-            <Dialog open={openDialog} onClose={handleDialog} className="dialog">
-                <DialogTitle>Chcete vymazat novinku?</DialogTitle>
-                <DialogActions>
-                    <Button
-                        variant="contained"
-                        style={{ color: "var(--blue)" }}
-                        onClick={() => {
-                            handleDeleteNews(elem).then((res) => {
-                                if (res) {
-                                    toast.success("Vyhazeno");
-                                } else {
-                                    toast.error("Neco se nepovedlo!");
-                                }
-
-                                getAllNews();
-                            });
-                        }}>
-                        Ano
-                    </Button>
-                    <Button
-                        variant="contained"
-                        style={{
-                            backgroundColor: "var(--fiolet)",
-                            color: "white",
-                        }}
-                        onClick={handleDialog}>
-                        Ne
                     </Button>
                 </DialogActions>
             </Dialog>
