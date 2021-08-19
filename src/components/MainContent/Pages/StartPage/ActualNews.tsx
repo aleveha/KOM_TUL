@@ -1,50 +1,27 @@
 import * as React from "react";
-import { useEffect, useState } from "react";
-import moment from "moment";
+import { memo, useEffect, useState } from "react";
 import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import NewsContainer, { INews } from "../Common/NewsContainer";
+import NewsContainer from "../../../Common/NewsContainer";
 import { toast } from "react-toastify";
 import { useTranslation } from "react-i18next";
-import * as api from "../../apiConnection/index";
+import * as api from "../../../../apiConnection";
+import { INews } from "../../../../apiConnection/types";
 
-const ActualNews = () => {
+const ActualNewsComponent = () => {
     const [news, setNews] = useState<INews[]>();
     const { t } = useTranslation();
 
     useEffect(() => {
-        getTopNews();
-    }, []);
-
-    const getTopNews = () => {
         api.getTopNews()
-            .then((data) => {
-                setNews(
-                    data.length > 0
-                        ? data.map((row: INews) => {
-                              return {
-                                  id: row.id,
-                                  date: moment(row.date).format("DD.MM.YYYY"),
-                                  name: row.name,
-                                  content: row.content,
-                              };
-                          })
-                        : []
-                );
-            })
-            .catch(() => {
-                toast.error("Chyba serveru");
-            });
-    };
+            .then((data) => setNews(data.length > 0 ? data.reverse() : []))
+            .catch(() => toast.error(t("toastify.error")));
+    }, []);
 
     return !!news ? (
         <div className="actualNews padding">
             <h1>{t("main.news.actualNews.title")}</h1>
-            <NewsContainer
-                news={news}
-                isLoading={!news}
-                getAllNews={getTopNews}
-            />
+            <NewsContainer news={news} isLoading={!news} />
             {news.length > 0 ? (
                 <div>
                     <Button
@@ -54,8 +31,9 @@ const ActualNews = () => {
                             color: "var(--blue)",
                         }}
                         component={Link}
-                        to="/news">
-                        Všechny novinky
+                        to="/news"
+                    >
+                        {t("main.news.actualNews.allNewsButton")}
                     </Button>
                 </div>
             ) : (
@@ -71,4 +49,4 @@ const ActualNews = () => {
     ) : null;
 };
 
-export default ActualNews;
+export const ActualNews = memo(ActualNewsComponent);

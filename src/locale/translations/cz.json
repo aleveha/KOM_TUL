@@ -491,28 +491,17 @@
     },
     "news": {
       "actualNews": {
-        "title": "Aktuální novinky"
+        "title": "Aktuální novinky",
+        "allNewsButton": "Všechny novinky"
       },
       "allNews": {
-        "title": "Všechné novinky"
-      },
-      "addNews": {
-        "title": {
-          "admin": "Přidat další novinku",
-          "user": "Registrace"
-        },
-        "toast": {
-          "success": "Povedlo se!",
-          "error": "Neco se nepovedlo!"
-        },
-        "login": "Uživatelské jméno",
-        "password": "Heslo",
-        "newsName": "Název novinky",
-        "newsContent": "Obsah novinky",
-        "upload": "Nahrát"
+        "title": "Všechny novinky"
       },
       "noNews": "Žádné novinky nejsou"
     }
+  },
+  "toastify": {
+    "error": "Chyba serveru"
   },
   "footer": {
     "contactsLine": {

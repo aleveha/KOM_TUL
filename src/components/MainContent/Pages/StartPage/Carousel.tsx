@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay, virtualize } from "react-swipeable-views-utils";
 import { mod } from "react-swipeable-views-core";
@@ -24,20 +24,19 @@ function slideRenderer(params: any) {
     }
 }
 
-const Carousel = (props: { components: JSX.Element[] }) => {
+const CarouselComponent = (props: { components: JSX.Element[] }) => {
     const [index, setIndex] = useState<number>(0);
-    const handleChangeIndex = (index: number) => {
-        setIndex(index);
-    };
+
+    const handleChangeIndex = (index: number) => setIndex(index);
 
     return (
         <div className="carouselContainer">
             <AutoPlaySwipeableViews
-                index={index}
-                onChangeIndex={handleChangeIndex}
-                ignoreNativeScroll={true}
-                interval={3000}
                 height="100%"
+                ignoreNativeScroll={true}
+                index={index}
+                interval={3000}
+                onChangeIndex={handleChangeIndex}
                 slideRenderer={(params) =>
                     slideRenderer({
                         index: params.index,
@@ -50,4 +49,4 @@ const Carousel = (props: { components: JSX.Element[] }) => {
     );
 };
 
-export default Carousel;
+export const Carousel = memo(CarouselComponent);
