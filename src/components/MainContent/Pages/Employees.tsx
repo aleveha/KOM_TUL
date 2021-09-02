@@ -20,13 +20,6 @@ export interface IEmployee {
     photo?: string;
 }
 
-interface IEmployees {
-    mainWorkers: Array<IEmployee>;
-    teachingStaff: IStaff;
-    researchers: IStaff;
-    PhD: IPhD;
-}
-
 interface IStaff {
     label: string;
     staff: Array<IEmployee>;
@@ -36,6 +29,13 @@ interface IPhD {
     label: string;
     fullTimeStudy: IStaff;
     combinedStudy: IStaff;
+}
+
+interface IEmployees {
+    mainWorkers: Array<IEmployee>;
+    teachingStaff: IStaff;
+    researchers: IStaff;
+    PhD: IPhD;
 }
 
 const Photos: { name: string; path: string }[] = [
@@ -109,7 +109,8 @@ const GetMainInfo = (person: IEmployee, border?: boolean) => {
     return (
         <div
             className={"employeeInfo" + (border ? " border" : "")}
-            key={person.name}>
+            key={person.name}
+        >
             <div>
                 {person.position && (
                     <div className="employeePosition titleSecond">

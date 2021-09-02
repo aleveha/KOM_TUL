@@ -89,7 +89,8 @@ const EducationTable = ({ courseTable }: TableProps) => {
             style={{
                 borderRadius: "10px",
             }}
-            className="tableContainer">
+            className="tableContainer"
+        >
             <Table size="small" className="table">
                 <TableHead className="tableHeader">
                     <TableRow>
@@ -121,14 +122,16 @@ const EducationTable = ({ courseTable }: TableProps) => {
                                             <span
                                                 key={tableLine.professor.indexOf(
                                                     professor
-                                                )}>
+                                                )}
+                                            >
                                                 {professor}
                                             </span>
                                         ) : (
                                             <span
                                                 key={tableLine.professor.indexOf(
                                                     professor
-                                                )}>
+                                                )}
+                                            >
                                                 {professor + ", "}
                                             </span>
                                         );
@@ -170,7 +173,7 @@ const EducationContent = () => {
                                         range: "2+2",
                                         exam: "zk",
                                         credits: 4,
-                                        professor: ["Jersák"],
+                                        professor: ["Dvořáčková"],
                                     },
                                     {
                                         name: "Bakalářský seminář",
@@ -244,7 +247,7 @@ const EducationContent = () => {
                                         range: "2+2",
                                         exam: "zk",
                                         credits: 5,
-                                        professor: ["Jersák", "Popov"],
+                                        professor: ["Popov"],
                                     },
                                     {
                                         name: "Exkurze",
@@ -291,7 +294,7 @@ const EducationContent = () => {
                                             range: "2+2",
                                             exam: "zk",
                                             credits: 5,
-                                            professor: ["Jersák"],
+                                            professor: ["Knap", "Knápek"],
                                         },
                                     ],
                                 },
@@ -345,7 +348,7 @@ const EducationContent = () => {
                                         range: "2+2",
                                         exam: "zk",
                                         credits: 4,
-                                        professor: ["Dvořáčková", "Jersák"],
+                                        professor: ["Kůsa"],
                                     },
                                 ],
                             },
@@ -383,7 +386,7 @@ const EducationContent = () => {
                                             range: "2+2",
                                             exam: "zk",
                                             credits: 4,
-                                            professor: ["Jersák"],
+                                            professor: ["Ledvina"],
                                         },
                                     ],
                                 },
@@ -508,7 +511,8 @@ const EducationContent = () => {
                 return (
                     <div
                         className="educationProgram border"
-                        key={educationProgram.name}>
+                        key={educationProgram.name}
+                    >
                         <div className="programName">
                             <h2 className="mainLabel">
                                 {educationProgram.name}
@@ -547,7 +551,8 @@ const EducationContent = () => {
                                 return (
                                     <div
                                         className="programContent"
-                                        key={program.number}>
+                                        key={program.number}
+                                    >
                                         <div className="programTitle">
                                             <p className="violetPar">
                                                 {program.number}
@@ -567,7 +572,8 @@ const EducationContent = () => {
                                                             className="educationYearInfo"
                                                             key={
                                                                 studyingYear.year
-                                                            }>
+                                                            }
+                                                        >
                                                             <p className="bluePar">
                                                                 {
                                                                     studyingYear.year
@@ -602,7 +608,8 @@ const EducationContent = () => {
                                                                                 className="courses padding"
                                                                                 key={
                                                                                     course.name
-                                                                                }>
+                                                                                }
+                                                                            >
                                                                                 <p className="violetPar">
                                                                                     {
                                                                                         course.name
@@ -631,10 +638,12 @@ const EducationContent = () => {
                                                             program.links.indexOf(
                                                                 link
                                                             )
-                                                        }>
+                                                        }
+                                                    >
                                                         <a
                                                             className="link"
-                                                            href={link}>
+                                                            href={link}
+                                                        >
                                                             {program.additionalInfo &&
                                                                 program.links &&
                                                                 program
@@ -660,7 +669,8 @@ const EducationContent = () => {
                                                             margin: "1rem auto",
                                                             color: "var(--blue)",
                                                         }}
-                                                        color="default">
+                                                        color="default"
+                                                    >
                                                         Soubory ke stažení
                                                     </Button>
                                                     <Dialog open={downloadOpen}>
@@ -669,7 +679,8 @@ const EducationContent = () => {
                                                                 color: "var(--blue)",
                                                                 fontWeight:
                                                                     "bold",
-                                                            }}>
+                                                            }}
+                                                        >
                                                             Soubory ke stažení
                                                         </DialogTitle>
                                                         <Divider />
@@ -679,7 +690,8 @@ const EducationContent = () => {
                                                                 style={{
                                                                     fontWeight:
                                                                         "bold",
-                                                                }}>
+                                                                }}
+                                                            >
                                                                 Technologie III
                                                             </h3>
                                                             {DownloadBD.map(
@@ -689,7 +701,8 @@ const EducationContent = () => {
                                                                             key={
                                                                                 file.id
                                                                             }
-                                                                            className="linkToDownload">
+                                                                            className="linkToDownload"
+                                                                        >
                                                                             <a
                                                                                 href={api.fileDownloadLink(
                                                                                     file
@@ -698,7 +711,8 @@ const EducationContent = () => {
                                                                                 download={
                                                                                     file.name
                                                                                 }
-                                                                                className="link downloadFile">
+                                                                                className="link downloadFile"
+                                                                            >
                                                                                 {
                                                                                     file.name
                                                                                 }
@@ -712,7 +726,8 @@ const EducationContent = () => {
                                                         <DialogActions
                                                             style={{
                                                                 float: "left",
-                                                            }}>
+                                                            }}
+                                                        >
                                                             <Button
                                                                 onClick={
                                                                     handleDialogOpen
@@ -722,7 +737,8 @@ const EducationContent = () => {
                                                                     margin: "0.6rem 0 0.6rem 0",
                                                                     color: "var(--blue)",
                                                                 }}
-                                                                color="default">
+                                                                color="default"
+                                                            >
                                                                 Zavřít
                                                             </Button>
                                                         </DialogActions>
