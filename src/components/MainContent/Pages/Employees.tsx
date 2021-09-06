@@ -5,6 +5,7 @@ import Vrbova from "../../../img/profile_photo/Vrbova.webp";
 import Ledvina from "../../../img/profile_photo/Ledvina.webp";
 import Vana from "../../../img/profile_photo/Vana.webp";
 import Knap from "../../../img/profile_photo/Knap.webp";
+import Knapek from "../../../img/profile_photo/Knapek.webp";
 import { useTranslation } from "react-i18next";
 
 export interface IEmployee {
@@ -45,6 +46,7 @@ const Photos: { name: string; path: string }[] = [
     { name: "Ledvina", path: Ledvina },
     { name: "Vana", path: Vana },
     { name: "Knap", path: Knap },
+    { name: "Knapek", path: Knapek },
 ];
 
 const GetContactsBlock = (props: { info: string; key: string }) => {
