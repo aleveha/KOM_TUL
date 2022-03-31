@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useTranslation } from "react-i18next";
+import EU_LOGO from "../../../img/eu_logo.webp";
 
 interface IProject {
     provider?: string;
@@ -49,6 +50,7 @@ const ProjectsGroup = (props: { projectGroup: IProject[]; title: string }) => {
             {props.projectGroup.map((project) => {
                 return (
                     <div className="projectsBlock border" key={project.name}>
+                        {!project.link && <img src={EU_LOGO} alt="eu_logo" width="50px"/>}
                         {Object.entries(project).map((elem) =>
                             ProjectBlock({
                                 info: elem[1],
