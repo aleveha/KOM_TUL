@@ -109,7 +109,7 @@
           "phoneNumber": "+420 48 535 3369",
           "place": "bud. E1/4.p",
           "consultation": "po dohodě",
-          "specialization": "obrábění plastových a kompozitních materiálů",
+          "specialization": "projektování a montáž",
           "photo": "Kusa"
         },
         {
@@ -131,26 +131,14 @@
           "consultation": "po dohodě",
           "specialization": "obrábění kovových, plastových a kompozitních materiálů",
           "photo": "Vana"
-        },
-        {
-          "position": "Vedoucí laboratoře strojírenské metrologie",
-          "name": "Miloslav LEDVINA",
-          "status": "Ing.",
-          "degree": "Ph.D.",
-          "email": "miloslav.ledvina@tul.cz",
-          "phoneNumber": "+420 48 535 3371",
-          "place": "bud. E1/4.p",
-          "consultation": "po dohodě",
-          "specialization": "metrologie, obrábění kovových, plastových a kompozitních materiálů",
-          "photo": "Ledvina"
         }
       ],
       "researchers": {
-        "label": "Lektoři",
+        "label": "Asistenti",
         "staff": [
           {
             "name": "Artur KNAP",
-            "status": "Bc.",
+            "status": "Ing.",
             "email": "artur.knap@tul.cz",
             "phoneNumber": "+420 48 535 3368",
             "place": "bud. E1/4.p",
@@ -176,16 +164,20 @@
             "email": "stepanka.dvorackova@tul.cz"
           },
           {
+            "name": "Artur KNAP",
+            "status": "Ing.",
+            "email": "artur.knap@tul.cz"
+          },
+          {
+            "name": "Tomáš KNÁPEK",
+            "status": "Ing.",
+            "email": "tomas.knapek@tul.cz"
+          },
+          {
             "name": "Petr KŮSA",
             "status": "Ing.",
             "degree": "Ph.D.",
             "email": "petr.kusa@tul.cz"
-          },
-          {
-            "name": "Miloslav LEDVINA",
-            "status": "Ing.",
-            "degree": "Ph.D.",
-            "email": "miloslav.ledvina@tul.cz"
           },
           {
             "name": "Alexey POPOV",
@@ -267,7 +259,7 @@
           "provider": "Technologická agentura České republiky (TA ČR)",
           "program": "Program na podporu aplikovaného výzkumu ZÉTA",
           "solver": "Český metrologický institut, Ing. Eva Tyralíková",
-          "coSolver": "Technická univerzita v Liberci / Fakulta strojní / Katedra obrábění a montáže, Ing. Miloslav Ledvina, Ph.D.",
+          "coSolver": "Technická univerzita v Liberci / Fakulta strojní / Katedra obrábění a montáže",
           "link": "https://www.rvvi.cz/cep?s=jednoduche-vyhledavani&ss=detail&n=0&h=TJ02000175"
         },
         {

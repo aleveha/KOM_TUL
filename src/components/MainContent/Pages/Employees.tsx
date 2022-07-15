@@ -2,7 +2,6 @@ import * as React from "react";
 import Dvorackova from "../../../img/profile_photo/Dvorackova.webp";
 import Kusa from "../../../img/profile_photo/Kusa.webp";
 import Vrbova from "../../../img/profile_photo/Vrbova.webp";
-import Ledvina from "../../../img/profile_photo/Ledvina.webp";
 import Vana from "../../../img/profile_photo/Vana.webp";
 import Knap from "../../../img/profile_photo/Knap.webp";
 import Knapek from "../../../img/profile_photo/Knapek.webp";
@@ -43,7 +42,6 @@ const Photos: { name: string; path: string }[] = [
     { name: "Dvorackova", path: Dvorackova },
     { name: "Kusa", path: Kusa },
     { name: "Vrbova", path: Vrbova },
-    { name: "Ledvina", path: Ledvina },
     { name: "Vana", path: Vana },
     { name: "Knap", path: Knap },
     { name: "Knapek", path: Knapek },

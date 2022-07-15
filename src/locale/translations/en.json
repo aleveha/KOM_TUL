@@ -131,18 +131,6 @@
           "consultation": "after an agreement",
           "specialization": "machining of metal, plastic, and composite materials",
           "photo": "Vana"
-        },
-        {
-          "position": "Head of the Laboratory of Engineering Metrology",
-          "name": "Miloslav LEDVINA",
-          "status": "Ing.",
-          "degree": "Ph.D.",
-          "email": "miloslav.ledvina@tul.cz",
-          "phoneNumber": "+420 48 535 3371",
-          "place": "building E1/4th floor",
-          "consultation": "after an agreement",
-          "specialization": "metrology, machining of metal, plastic, and composite materials",
-          "photo": "Ledvina"
         }
       ],
       "researchers": {
@@ -180,12 +168,6 @@
             "status": "Ing.",
             "degree": "Ph.D.",
             "email": "petr.kusa@tul.cz"
-          },
-          {
-            "name": "Miloslav LEDVINA",
-            "status": "Ing.",
-            "degree": "Ph.D.",
-            "email": "miloslav.ledvina@tul.cz"
           },
           {
             "name": "Alexey POPOV",
@@ -267,7 +249,7 @@
           "provider": "Technology Agency of the Czech Republic (TA CR)",
           "program": "Program to support applied research ZÉTA",
           "solver": "Czech Metrology Institute, Ing. Eva Tyralikova",
-          "coSolver": "Technical University of Liberec / Faculty of Mechanical Engineering / Department of Machining and Assembly, Ing. Miloslav Ledvina, Ph.D.",
+          "coSolver": "Technical University of Liberec / Faculty of Mechanical Engineering / Department of Machining and Assembly",
           "link": "https://www.rvvi.cz/cep?s=jednoduche-vyhledavani&ss=detail&n=0&h=TJ02000175"
         },
         {

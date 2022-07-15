@@ -386,7 +386,7 @@ const EducationContent = () => {
                                             range: "2+2",
                                             exam: "zk",
                                             credits: 4,
-                                            professor: ["Ledvina"],
+                                            professor: ["Kůsa"],
                                         },
                                     ],
                                 },
